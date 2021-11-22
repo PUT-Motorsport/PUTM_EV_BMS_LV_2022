@@ -1,0 +1,350 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 700  750  700  450 
+U 61996AA1
+F0 "LTC6810" 50
+F1 "LTC6810.sch" 50
+F2 "MOSI" I R 1400 800 50 
+F3 "MISO" I R 1400 900 50 
+F4 "SCK" I R 1400 1000 50 
+F5 "CS" I R 1400 1100 50 
+$EndSheet
+$Comp
+L power:GND #PWR?
+U 1 1 61CE9F35
+P 4400 2050
+F 0 "#PWR?" H 4400 1800 50  0001 C CNN
+F 1 "GND" H 4405 1877 50  0000 C CNN
+F 2 "" H 4400 2050 50  0001 C CNN
+F 3 "" H 4400 2050 50  0001 C CNN
+	1    4400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2050 4400 2050
+$Comp
+L Device:C_Small C?
+U 1 1 61CE8BCF
+P 4700 2050
+F 0 "C?" V 4471 2050 50  0000 C CNN
+F 1 "100n" V 4562 2050 50  0000 C CNN
+F 2 "" H 4700 2050 50  0001 C CNN
+F 3 "~" H 4700 2050 50  0001 C CNN
+	1    4700 2050
+	0    1    1    0   
+$EndComp
+Connection ~ 5050 2050
+Wire Wire Line
+	5050 2050 4800 2050
+Wire Wire Line
+	5050 2050 5150 2050
+Connection ~ 5450 2050
+Wire Wire Line
+	5450 2050 5350 2050
+$Comp
+L Device:L_Small L?
+U 1 1 61CE5CBC
+P 5250 2050
+F 0 "L?" V 5435 2050 50  0000 C CNN
+F 1 "10u" V 5344 2050 50  0000 C CNN
+F 2 "" H 5250 2050 50  0001 C CNN
+F 3 "~" H 5250 2050 50  0001 C CNN
+	1    5250 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61CE5404
+P 7300 2300
+F 0 "#PWR?" H 7300 2050 50  0001 C CNN
+F 1 "GND" H 7305 2127 50  0000 C CNN
+F 2 "" H 7300 2300 50  0001 C CNN
+F 3 "" H 7300 2300 50  0001 C CNN
+	1    7300 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61CE4620
+P 7300 2000
+F 0 "#PWR?" H 7300 1850 50  0001 C CNN
+F 1 "+3.3V" H 7315 2173 50  0000 C CNN
+F 2 "" H 7300 2000 50  0001 C CNN
+F 3 "" H 7300 2000 50  0001 C CNN
+	1    7300 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 7300 2250
+Wire Wire Line
+	7300 2250 7300 2300
+Wire Wire Line
+	6900 2250 6500 2250
+Connection ~ 6900 2250
+Wire Wire Line
+	6500 2250 6100 2250
+Connection ~ 6500 2250
+Wire Wire Line
+	6100 2250 5700 2250
+Connection ~ 6100 2250
+Wire Wire Line
+	7300 2250 6900 2250
+Connection ~ 7300 2050
+Wire Wire Line
+	7300 2050 7300 2000
+Wire Wire Line
+	6900 2050 7300 2050
+Connection ~ 6900 2050
+Wire Wire Line
+	6500 2050 6900 2050
+Connection ~ 6500 2050
+Wire Wire Line
+	6100 2050 6500 2050
+Connection ~ 6100 2050
+Wire Wire Line
+	5700 2050 6100 2050
+Connection ~ 5700 2050
+Connection ~ 5450 2250
+Wire Wire Line
+	5450 2050 5700 2050
+Wire Wire Line
+	5450 2250 5450 2050
+$Comp
+L Device:C_Small C?
+U 1 1 61CE1FB2
+P 7300 2150
+F 0 "C?" H 7392 2196 50  0000 L CNN
+F 1 "100n" H 7392 2105 50  0000 L CNN
+F 2 "" H 7300 2150 50  0001 C CNN
+F 3 "~" H 7300 2150 50  0001 C CNN
+	1    7300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61CE1529
+P 6900 2150
+F 0 "C?" H 6992 2196 50  0000 L CNN
+F 1 "100n" H 6992 2105 50  0000 L CNN
+F 2 "" H 6900 2150 50  0001 C CNN
+F 3 "~" H 6900 2150 50  0001 C CNN
+	1    6900 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61CE0B8D
+P 6500 2150
+F 0 "C?" H 6592 2196 50  0000 L CNN
+F 1 "100n" H 6592 2105 50  0000 L CNN
+F 2 "" H 6500 2150 50  0001 C CNN
+F 3 "~" H 6500 2150 50  0001 C CNN
+	1    6500 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61CE018B
+P 6100 2150
+F 0 "C?" H 6192 2196 50  0000 L CNN
+F 1 "100n" H 6192 2105 50  0000 L CNN
+F 2 "" H 6100 2150 50  0001 C CNN
+F 3 "~" H 6100 2150 50  0001 C CNN
+	1    6100 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 61CDF1C5
+P 5700 2150
+F 0 "C?" H 5792 2196 50  0000 L CNN
+F 1 "100n" H 5792 2105 50  0000 L CNN
+F 2 "" H 5700 2150 50  0001 C CNN
+F 3 "~" H 5700 2150 50  0001 C CNN
+	1    5700 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2300 5050 2050
+Connection ~ 5150 2250
+Wire Wire Line
+	4950 2250 4950 2300
+Wire Wire Line
+	5150 2250 4950 2250
+Wire Wire Line
+	5350 2250 5250 2250
+Connection ~ 5350 2250
+Wire Wire Line
+	5350 2250 5350 2300
+Wire Wire Line
+	5250 2250 5150 2250
+Connection ~ 5250 2250
+Wire Wire Line
+	5250 2250 5250 2300
+Wire Wire Line
+	5150 2250 5150 2300
+Wire Wire Line
+	5450 2250 5350 2250
+Wire Wire Line
+	5450 2300 5450 2250
+Wire Wire Line
+	5050 6000 5150 6000
+Connection ~ 5050 6000
+Wire Wire Line
+	5050 5950 5050 6000
+Wire Wire Line
+	5150 6000 5250 6000
+Connection ~ 5150 6000
+Wire Wire Line
+	5150 5950 5150 6000
+Wire Wire Line
+	5250 6000 5350 6000
+Connection ~ 5250 6000
+Wire Wire Line
+	5250 5950 5250 6000
+Wire Wire Line
+	5350 6000 5350 5950
+Wire Wire Line
+	4950 6000 5050 6000
+Wire Wire Line
+	4950 5950 4950 6000
+$Comp
+L STM32L4P5RET6:STM32L4P5RET6 U?
+U 1 1 61992FF1
+P 5150 4050
+F 0 "U?" H 5700 2050 50  0000 C CNN
+F 1 "STM32L4P5RET6" H 5700 2150 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5150 1850 50  0001 C CNN
+F 3 "" H 5150 1850 50  0001 C CNN
+	1    5150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61D006EF
+P 5150 6050
+F 0 "#PWR?" H 5150 5800 50  0001 C CNN
+F 1 "GND" H 5155 5877 50  0000 C CNN
+F 2 "" H 5150 6050 50  0001 C CNN
+F 3 "" H 5150 6050 50  0001 C CNN
+	1    5150 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 6000 5150 6050
+$Sheet
+S 700  1450 800  650 
+U 61D09503
+F0 "Thermistors" 50
+F1 "Thermistors.sch" 50
+F2 "Therm_1" I R 1500 1500 50 
+F3 "Therm_2" I R 1500 1600 50 
+F4 "Therm_3" I R 1500 1700 50 
+F5 "Therm_4" I R 1500 1800 50 
+F6 "Therm_5" I R 1500 1900 50 
+F7 "Therm_6" I R 1500 2000 50 
+$EndSheet
+$Sheet
+S 700  2400 900  450 
+U 61F4D531
+F0 "CAN" 50
+F1 "CAN.sch" 50
+F2 "CAN-RX" O R 1600 2500 50 
+F3 "CAN-TX" I R 1600 2700 50 
+F4 "CANH" B L 700 2500 50 
+F5 "CANL" B L 700 2700 50 
+$EndSheet
+Text Label 1450 800  0    50   ~ 0
+MOSI
+Wire Wire Line
+	1400 800  1450 800 
+Wire Wire Line
+	5850 4750 5900 4750
+Text Label 5900 4750 0    50   ~ 0
+MOSI
+Wire Wire Line
+	1400 900  1450 900 
+Wire Wire Line
+	1400 1000 1450 1000
+Wire Wire Line
+	1400 1100 1450 1100
+Wire Wire Line
+	1500 1500 1550 1500
+Wire Wire Line
+	1500 1600 1550 1600
+Wire Wire Line
+	1500 1700 1550 1700
+Wire Wire Line
+	1500 1800 1550 1800
+Wire Wire Line
+	1500 1900 1550 1900
+Wire Wire Line
+	1500 2000 1550 2000
+Text Label 1450 900  0    50   ~ 0
+MISO
+Text Label 1450 1000 0    50   ~ 0
+SCK
+Text Label 1450 1100 0    50   ~ 0
+CS
+Text Label 1550 1500 0    50   ~ 0
+Therm_1
+Text Label 1550 1600 0    50   ~ 0
+Therm_2
+Text Label 1550 1700 0    50   ~ 0
+Therm_3
+Text Label 1550 1800 0    50   ~ 0
+Therm_4
+Text Label 1550 1900 0    50   ~ 0
+Therm_5
+Text Label 1550 2000 0    50   ~ 0
+Therm_6
+Wire Wire Line
+	5850 4650 5900 4650
+Wire Wire Line
+	5850 4550 5900 4550
+Text Label 5900 4650 0    50   ~ 0
+MISO
+Text Label 5900 4550 0    50   ~ 0
+SCK
+Text Label 5900 4050 0    50   ~ 0
+CS
+Wire Wire Line
+	5850 4050 5900 4050
+Wire Wire Line
+	5850 2950 5900 2950
+Wire Wire Line
+	5850 3050 5900 3050
+Wire Wire Line
+	5850 3150 5900 3150
+Wire Wire Line
+	5850 3250 5900 3250
+Text Label 5900 3250 0    50   ~ 0
+Therm_4
+Text Label 5900 3150 0    50   ~ 0
+Therm_3
+Text Label 5900 3050 0    50   ~ 0
+Therm_2
+Text Label 5900 2950 0    50   ~ 0
+Therm_1
+Wire Wire Line
+	4450 4850 4400 4850
+Wire Wire Line
+	4450 4950 4400 4950
+Text Label 4400 4850 2    50   ~ 0
+Therm_5
+Text Label 4400 4950 2    50   ~ 0
+Therm_6
+$EndSCHEMATC
