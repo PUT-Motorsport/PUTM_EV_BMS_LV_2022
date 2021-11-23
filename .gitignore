@@ -45,7 +45,7 @@ fp-info-cache
 *.pch
 
 # Libraries
-*.lib
+FIRMWARE/*.lib
 *.a
 *.la
 *.lo
