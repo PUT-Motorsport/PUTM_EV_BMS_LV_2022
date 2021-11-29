@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr User 5906 5906
+$Descr User 7087 5906
 encoding utf-8
-Sheet 9 10
-Title ""
+Sheet 9 13
+Title "Thermistors"
 Date ""
 Rev ""
 Comp ""
@@ -13,408 +13,408 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text HLabel 2250 2350 2    50   Output ~ 0
+Therm_2
+Text HLabel 3150 2350 2    50   Output ~ 0
+Therm_3
 $Comp
-L Device:R_Small R?
-U 1 1 61D0C5CB
-P 1450 1100
-F 0 "R?" V 1254 1100 50  0000 C CNN
-F 1 "10k" V 1345 1100 50  0000 C CNN
-F 2 "" H 1450 1100 50  0001 C CNN
-F 3 "~" H 1450 1100 50  0001 C CNN
-	1    1450 1100
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 61D0D99E
-P 1450 1500
-F 0 "R?" V 1254 1500 50  0000 C CNN
-F 1 "10k" V 1345 1500 50  0000 C CNN
-F 2 "" H 1450 1500 50  0001 C CNN
-F 3 "~" H 1450 1500 50  0001 C CNN
-	1    1450 1500
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 61D0E178
-P 1450 1900
-F 0 "R?" V 1254 1900 50  0000 C CNN
-F 1 "10k" V 1345 1900 50  0000 C CNN
-F 2 "" H 1450 1900 50  0001 C CNN
-F 3 "~" H 1450 1900 50  0001 C CNN
-	1    1450 1900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 61D0ECA4
-P 1450 2300
-F 0 "R?" V 1254 2300 50  0000 C CNN
-F 1 "10k" V 1345 2300 50  0000 C CNN
-F 2 "" H 1450 2300 50  0001 C CNN
-F 3 "~" H 1450 2300 50  0001 C CNN
-	1    1450 2300
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 61D0F7EA
-P 1450 2700
-F 0 "R?" V 1254 2700 50  0000 C CNN
-F 1 "10k" V 1345 2700 50  0000 C CNN
-F 2 "" H 1450 2700 50  0001 C CNN
-F 3 "~" H 1450 2700 50  0001 C CNN
-	1    1450 2700
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 61D104AE
-P 1450 3100
-F 0 "R?" V 1254 3100 50  0000 C CNN
-F 1 "10k" V 1345 3100 50  0000 C CNN
-F 2 "" H 1450 3100 50  0001 C CNN
-F 3 "~" H 1450 3100 50  0001 C CNN
-	1    1450 3100
-	0    1    1    0   
+L Device:Thermistor_PTC TH?
+U 1 1 61B219CC
+P 1950 2600
+F 0 "TH?" V 2200 2650 50  0000 R CNN
+F 1 "Thermistor_PTC" V 2100 2850 50  0000 R CNN
+F 2 "" H 2000 2400 50  0001 L CNN
+F 3 "~" H 1950 2600 50  0001 C CNN
+	1    1950 2600
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1550 1100 1700 1100
+	1950 2000 1950 2050
+Wire Wire Line
+	2200 2800 2200 2650
+Wire Wire Line
+	2200 2450 2200 2350
+$Comp
+L Device:Thermistor_PTC TH?
+U 1 1 61B244E9
+P 2850 2600
+F 0 "TH?" V 3100 2650 50  0000 R CNN
+F 1 "Thermistor_PTC" V 3000 2850 50  0000 R CNN
+F 2 "" H 2900 2400 50  0001 L CNN
+F 3 "~" H 2850 2600 50  0001 C CNN
+	1    2850 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61B244EF
+P 3350 2850
+F 0 "#PWR?" H 3350 2600 50  0001 C CNN
+F 1 "GND" H 3355 2677 50  0000 C CNN
+F 2 "" H 3350 2850 50  0001 C CNN
+F 3 "" H 3350 2850 50  0001 C CNN
+	1    3350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61B244FC
+P 3350 2000
+F 0 "#PWR?" H 3350 1850 50  0001 C CNN
+F 1 "+3.3V" H 3365 2173 50  0000 C CNN
+F 2 "" H 3350 2000 50  0001 C CNN
+F 3 "" H 3350 2000 50  0001 C CNN
+	1    3350 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2000 2850 2050
+Wire Wire Line
+	3100 2800 3100 2650
+Wire Wire Line
+	3100 2450 3100 2350
+Wire Wire Line
+	1950 2250 1950 2350
+Wire Wire Line
+	1950 2750 1950 2800
+Wire Wire Line
+	2850 2250 2850 2350
+Wire Wire Line
+	2850 2750 2850 2800
+Wire Wire Line
+	2200 2350 1950 2350
+Wire Wire Line
+	2200 2800 1950 2800
+Wire Wire Line
+	3100 2350 2850 2350
+Wire Wire Line
+	3100 2800 2850 2800
+Connection ~ 1950 2350
+Wire Wire Line
+	1950 2350 1950 2450
+Connection ~ 1950 2800
+Wire Wire Line
+	1950 2800 1950 2850
+Connection ~ 2850 2350
+Wire Wire Line
+	2850 2350 2850 2450
+Connection ~ 2850 2800
+Wire Wire Line
+	2850 2800 2850 2850
+Wire Wire Line
+	5800 2800 5550 2800
+Wire Wire Line
+	5800 2350 5550 2350
+Wire Wire Line
+	4900 2800 4650 2800
+Wire Wire Line
+	4900 2350 4650 2350
+Wire Wire Line
+	3750 2350 3750 2450
+Connection ~ 3750 2350
+Wire Wire Line
+	4000 2350 3750 2350
+Wire Wire Line
+	3750 2800 3750 2850
+Connection ~ 3750 2800
+Wire Wire Line
+	4000 2800 3750 2800
+Wire Wire Line
+	4650 2750 4650 2800
+Wire Wire Line
+	4650 2250 4650 2350
+Wire Wire Line
+	5550 2750 5550 2800
+Wire Wire Line
+	5550 2250 5550 2350
+Wire Wire Line
+	3750 2750 3750 2800
+Wire Wire Line
+	3750 2250 3750 2350
+Wire Wire Line
+	5800 2450 5800 2350
+Wire Wire Line
+	5800 2800 5800 2650
+Wire Wire Line
+	5550 2000 5550 2050
+$Comp
+L Device:Thermistor_PTC TH?
+U 1 1 61B31D1D
+P 5550 2600
+F 0 "TH?" V 5800 2650 50  0000 R CNN
+F 1 "Thermistor_PTC" V 5700 2850 50  0000 R CNN
+F 2 "" H 5600 2400 50  0001 L CNN
+F 3 "~" H 5550 2600 50  0001 C CNN
+	1    5550 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 2450 4900 2350
+Wire Wire Line
+	4900 2800 4900 2650
+Wire Wire Line
+	4650 2000 4650 2050
+$Comp
+L Device:Thermistor_PTC TH?
+U 1 1 61B2C7C1
+P 4650 2600
+F 0 "TH?" V 4900 2650 50  0000 R CNN
+F 1 "Thermistor_PTC" V 4800 2850 50  0000 R CNN
+F 2 "" H 4700 2400 50  0001 L CNN
+F 3 "~" H 4650 2600 50  0001 C CNN
+	1    4650 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4000 2450 4000 2350
+Wire Wire Line
+	4000 2800 4000 2650
+Wire Wire Line
+	3750 2000 3750 2050
+$Comp
+L Device:Thermistor_PTC TH?
+U 1 1 61B27A00
+P 3750 2600
+F 0 "TH?" V 4000 2650 50  0000 R CNN
+F 1 "Thermistor_PTC" V 3900 2850 50  0000 R CNN
+F 2 "" H 3800 2400 50  0001 L CNN
+F 3 "~" H 3750 2600 50  0001 C CNN
+	1    3750 2600
+	-1   0    0    1   
+$EndComp
+Text HLabel 4950 2350 2    50   Output ~ 0
+Therm_5
+Text HLabel 4050 2350 2    50   Output ~ 0
+Therm_4
+Text HLabel 5850 2350 2    50   Output ~ 0
+Therm_6
+Connection ~ 4650 2350
+Wire Wire Line
+	4650 2350 4650 2450
+Connection ~ 4650 2800
+Wire Wire Line
+	4650 2800 4650 2850
+Connection ~ 5550 2350
+Wire Wire Line
+	5550 2350 5550 2450
+Connection ~ 5550 2800
+Wire Wire Line
+	5550 2800 5550 2850
+Connection ~ 3350 2000
+Wire Wire Line
+	3350 2000 2850 2000
+Wire Wire Line
+	2850 2850 3350 2850
+Connection ~ 3350 2850
+$Comp
+L Device:R_Small R?
+U 1 1 62CFDB9E
+P 1950 2150
+F 0 "R?" H 1891 2196 50  0000 R CNN
+F 1 "10k" H 1891 2105 50  0000 R CNN
+F 2 "" H 1950 2150 50  0001 C CNN
+F 3 "~" H 1950 2150 50  0001 C CNN
+	1    1950 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 62CFF2A0
+P 2850 2150
+F 0 "R?" H 2791 2196 50  0000 R CNN
+F 1 "10k" H 2791 2105 50  0000 R CNN
+F 2 "" H 2850 2150 50  0001 C CNN
+F 3 "~" H 2850 2150 50  0001 C CNN
+	1    2850 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 62D007FE
+P 3750 2150
+F 0 "R?" H 3691 2196 50  0000 R CNN
+F 1 "10k" H 3691 2105 50  0000 R CNN
+F 2 "" H 3750 2150 50  0001 C CNN
+F 3 "~" H 3750 2150 50  0001 C CNN
+	1    3750 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 62D01C61
+P 4650 2150
+F 0 "R?" H 4591 2196 50  0000 R CNN
+F 1 "10k" H 4591 2105 50  0000 R CNN
+F 2 "" H 4650 2150 50  0001 C CNN
+F 3 "~" H 4650 2150 50  0001 C CNN
+	1    4650 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 62D030DD
+P 5550 2150
+F 0 "R?" H 5491 2196 50  0000 R CNN
+F 1 "10k" H 5491 2105 50  0000 R CNN
+F 2 "" H 5550 2150 50  0001 C CNN
+F 3 "~" H 5550 2150 50  0001 C CNN
+	1    5550 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1300 2350
+Wire Wire Line
+	1350 2350 1300 2350
+$Comp
+L Device:R_Small R?
+U 1 1 62CF3EC5
+P 1050 2150
+F 0 "R?" H 991 2196 50  0000 R CNN
+F 1 "10k" H 991 2105 50  0000 R CNN
+F 2 "" H 1050 2150 50  0001 C CNN
+F 3 "~" H 1050 2150 50  0001 C CNN
+	1    1050 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 2800 1050 2850
+Connection ~ 1050 2800
+Wire Wire Line
+	1300 2800 1050 2800
+Wire Wire Line
+	1050 2350 1050 2450
+Connection ~ 1050 2350
+Wire Wire Line
+	1300 2350 1050 2350
+Wire Wire Line
+	1050 2750 1050 2800
+Wire Wire Line
+	1050 2250 1050 2350
+Wire Wire Line
+	1300 2450 1300 2350
+Wire Wire Line
+	1300 2800 1300 2650
+Wire Wire Line
+	1050 2000 1050 2050
+Text HLabel 1350 2350 2    50   Output ~ 0
+Therm_1
 $Comp
 L Device:Thermistor_PTC TH?
 U 1 1 61D11206
-P 1700 3500
-F 0 "TH?" V 1950 3550 50  0000 R CNN
-F 1 "Thermistor_PTC" V 1850 3750 50  0000 R CNN
-F 2 "" H 1750 3300 50  0001 L CNN
-F 3 "~" H 1700 3500 50  0001 C CNN
-	1    1700 3500
+P 1050 2600
+F 0 "TH?" V 1300 2650 50  0000 R CNN
+F 1 "Thermistor_PTC" V 1200 2850 50  0000 R CNN
+F 2 "" H 1100 2400 50  0001 L CNN
+F 3 "~" H 1050 2600 50  0001 C CNN
+	1    1050 2600
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1700 1100 1700 3350
+	5850 2350 5800 2350
+Connection ~ 5800 2350
 Wire Wire Line
-	1700 3650 1700 3850
-$Comp
-L Device:Thermistor_PTC TH?
-U 1 1 61D15015
-P 2200 3500
-F 0 "TH?" V 2450 3550 50  0000 R CNN
-F 1 "Thermistor_PTC" V 2350 3750 50  0000 R CNN
-F 2 "" H 2250 3300 50  0001 L CNN
-F 3 "~" H 2200 3500 50  0001 C CNN
-	1    2200 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:Thermistor_PTC TH?
-U 1 1 61D17BAF
-P 2700 3500
-F 0 "TH?" V 2950 3550 50  0000 R CNN
-F 1 "Thermistor_PTC" V 2850 3750 50  0000 R CNN
-F 2 "" H 2750 3300 50  0001 L CNN
-F 3 "~" H 2700 3500 50  0001 C CNN
-	1    2700 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:Thermistor_PTC TH?
-U 1 1 61D1881B
-P 3200 3500
-F 0 "TH?" V 3450 3550 50  0000 R CNN
-F 1 "Thermistor_PTC" V 3350 3750 50  0000 R CNN
-F 2 "" H 3250 3300 50  0001 L CNN
-F 3 "~" H 3200 3500 50  0001 C CNN
-	1    3200 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:Thermistor_PTC TH?
-U 1 1 61D19576
-P 3700 3500
-F 0 "TH?" V 3950 3550 50  0000 R CNN
-F 1 "Thermistor_PTC" V 3850 3750 50  0000 R CNN
-F 2 "" H 3750 3300 50  0001 L CNN
-F 3 "~" H 3700 3500 50  0001 C CNN
-	1    3700 3500
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:Thermistor_PTC TH?
-U 1 1 61D1A05D
-P 4200 3500
-F 0 "TH?" V 4450 3550 50  0000 R CNN
-F 1 "Thermistor_PTC" V 4350 3750 50  0000 R CNN
-F 2 "" H 4250 3300 50  0001 L CNN
-F 3 "~" H 4200 3500 50  0001 C CNN
-	1    4200 3500
-	-1   0    0    1   
-$EndComp
+	3350 2850 3750 2850
+Connection ~ 3750 2850
 Wire Wire Line
-	4200 3650 4200 3850
+	4650 2850 5550 2850
 Wire Wire Line
-	1700 3850 2200 3850
+	3750 2850 4650 2850
+Connection ~ 4650 2850
 Wire Wire Line
-	3700 3650 3700 3850
-Connection ~ 3700 3850
+	1950 2850 2850 2850
+Connection ~ 2850 2850
 Wire Wire Line
-	3700 3850 4200 3850
+	1050 2850 1950 2850
+Connection ~ 1950 2850
 Wire Wire Line
-	3200 3650 3200 3850
-Connection ~ 3200 3850
+	1050 2000 1950 2000
+Connection ~ 1950 2000
 Wire Wire Line
-	3200 3850 3700 3850
+	1950 2000 2850 2000
+Connection ~ 2850 2000
 Wire Wire Line
-	2700 3650 2700 3850
-Connection ~ 2700 3850
+	3350 2000 3750 2000
+Connection ~ 3750 2000
 Wire Wire Line
-	2700 3850 2950 3850
+	3750 2000 4650 2000
+Connection ~ 4650 2000
 Wire Wire Line
-	2200 3650 2200 3850
-Connection ~ 2200 3850
-Wire Wire Line
-	2200 3850 2700 3850
-Wire Wire Line
-	4200 3350 4200 3100
-Wire Wire Line
-	4200 3100 1550 3100
-Wire Wire Line
-	4200 3100 4550 3100
-Connection ~ 4200 3100
-Wire Wire Line
-	1550 2700 3700 2700
-Wire Wire Line
-	1550 2300 3200 2300
-Wire Wire Line
-	1550 1900 2700 1900
-Wire Wire Line
-	1550 1500 2200 1500
+	4650 2000 5550 2000
 $Comp
 L Device:C_Small C?
-U 1 1 61D2C209
-P 4850 3100
-F 0 "C?" V 4621 3100 50  0000 C CNN
-F 1 "100n" V 4712 3100 50  0000 C CNN
-F 2 "" H 4850 3100 50  0001 C CNN
-F 3 "~" H 4850 3100 50  0001 C CNN
-	1    4850 3100
-	0    1    1    0   
+U 1 1 62D3AF1E
+P 1300 2550
+F 0 "C?" H 1392 2596 50  0000 L CNN
+F 1 "100n" H 1392 2505 50  0000 L CNN
+F 2 "" H 1300 2550 50  0001 C CNN
+F 3 "~" H 1300 2550 50  0001 C CNN
+	1    1300 2550
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3700 3350 3700 2700
-Wire Wire Line
-	3200 3350 3200 2300
-Wire Wire Line
-	2700 3350 2700 1900
-Wire Wire Line
-	2200 3350 2200 1500
-Wire Wire Line
-	2950 3850 2950 3900
-Connection ~ 2950 3850
-Wire Wire Line
-	2950 3850 3200 3850
 $Comp
-L power:GND #PWR?
-U 1 1 61D3120C
-P 2950 3900
-F 0 "#PWR?" H 2950 3650 50  0001 C CNN
-F 1 "GND" H 2955 3727 50  0000 C CNN
-F 2 "" H 2950 3900 50  0001 C CNN
-F 3 "" H 2950 3900 50  0001 C CNN
-	1    2950 3900
+L Device:C_Small C?
+U 1 1 62D3D09F
+P 2200 2550
+F 0 "C?" H 2292 2596 50  0000 L CNN
+F 1 "100n" H 2292 2505 50  0000 L CNN
+F 2 "" H 2200 2550 50  0001 C CNN
+F 3 "~" H 2200 2550 50  0001 C CNN
+	1    2200 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 62D3FB8F
+P 3100 2550
+F 0 "C?" H 3192 2596 50  0000 L CNN
+F 1 "100n" H 3192 2505 50  0000 L CNN
+F 2 "" H 3100 2550 50  0001 C CNN
+F 3 "~" H 3100 2550 50  0001 C CNN
+	1    3100 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 62D42810
+P 4000 2550
+F 0 "C?" H 4092 2596 50  0000 L CNN
+F 1 "100n" H 4092 2505 50  0000 L CNN
+F 2 "" H 4000 2550 50  0001 C CNN
+F 3 "~" H 4000 2550 50  0001 C CNN
+	1    4000 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 62D45530
+P 4900 2550
+F 0 "C?" H 4992 2596 50  0000 L CNN
+F 1 "100n" H 4992 2505 50  0000 L CNN
+F 2 "" H 4900 2550 50  0001 C CNN
+F 3 "~" H 4900 2550 50  0001 C CNN
+	1    4900 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 62D482C3
+P 5800 2550
+F 0 "C?" H 5892 2596 50  0000 L CNN
+F 1 "100n" H 5892 2505 50  0000 L CNN
+F 2 "" H 5800 2550 50  0001 C CNN
+F 3 "~" H 5800 2550 50  0001 C CNN
+	1    5800 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4550 3100 4750 3100
-Connection ~ 4550 3100
-Text HLabel 4550 2950 0    50   Input ~ 0
-Therm_1
+	2200 2350 2250 2350
+Connection ~ 2200 2350
 Wire Wire Line
-	4550 2950 4550 3100
-Connection ~ 3700 2700
-Connection ~ 3200 2300
-Connection ~ 2700 1900
-Connection ~ 2200 1500
-Connection ~ 1700 1100
-$Comp
-L Device:C_Small C?
-U 1 1 61D383D3
-P 4850 2700
-F 0 "C?" V 4621 2700 50  0000 C CNN
-F 1 "100n" V 4712 2700 50  0000 C CNN
-F 2 "" H 4850 2700 50  0001 C CNN
-F 3 "~" H 4850 2700 50  0001 C CNN
-	1    4850 2700
-	0    1    1    0   
-$EndComp
+	3100 2350 3150 2350
+Connection ~ 3100 2350
 Wire Wire Line
-	3700 2700 4550 2700
-$Comp
-L Device:C_Small C?
-U 1 1 61D38E6C
-P 4850 2300
-F 0 "C?" V 4621 2300 50  0000 C CNN
-F 1 "100n" V 4712 2300 50  0000 C CNN
-F 2 "" H 4850 2300 50  0001 C CNN
-F 3 "~" H 4850 2300 50  0001 C CNN
-	1    4850 2300
-	0    1    1    0   
-$EndComp
+	4000 2350 4050 2350
+Connection ~ 4000 2350
 Wire Wire Line
-	3200 2300 4550 2300
-$Comp
-L Device:C_Small C?
-U 1 1 61D398DF
-P 4850 1900
-F 0 "C?" V 4621 1900 50  0000 C CNN
-F 1 "100n" V 4712 1900 50  0000 C CNN
-F 2 "" H 4850 1900 50  0001 C CNN
-F 3 "~" H 4850 1900 50  0001 C CNN
-	1    4850 1900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2700 1900 4550 1900
-$Comp
-L Device:C_Small C?
-U 1 1 61D3A4C4
-P 4850 1500
-F 0 "C?" V 4621 1500 50  0000 C CNN
-F 1 "100n" V 4712 1500 50  0000 C CNN
-F 2 "" H 4850 1500 50  0001 C CNN
-F 3 "~" H 4850 1500 50  0001 C CNN
-	1    4850 1500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2200 1500 4550 1500
-$Comp
-L Device:C_Small C?
-U 1 1 61D3AF15
-P 4850 1100
-F 0 "C?" V 4621 1100 50  0000 C CNN
-F 1 "100n" V 4712 1100 50  0000 C CNN
-F 2 "" H 4850 1100 50  0001 C CNN
-F 3 "~" H 4850 1100 50  0001 C CNN
-	1    4850 1100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1700 1100 4550 1100
-Wire Wire Line
-	4550 2700 4550 2550
-Connection ~ 4550 2700
-Wire Wire Line
-	4550 2700 4750 2700
-Wire Wire Line
-	4550 2300 4550 2150
-Connection ~ 4550 2300
-Wire Wire Line
-	4550 2300 4750 2300
-Wire Wire Line
-	4550 1900 4550 1750
-Connection ~ 4550 1900
-Wire Wire Line
-	4550 1900 4750 1900
-Wire Wire Line
-	4550 1500 4550 1350
-Connection ~ 4550 1500
-Wire Wire Line
-	4550 1500 4750 1500
-Wire Wire Line
-	4550 1100 4550 950 
-Connection ~ 4550 1100
-Wire Wire Line
-	4550 1100 4750 1100
-Text HLabel 4550 2550 0    50   Input ~ 0
-Therm_2
-Text HLabel 4550 2150 0    50   Input ~ 0
-Therm_3
-Text HLabel 4550 1750 0    50   Input ~ 0
-Therm_4
-Text HLabel 4550 1350 0    50   Input ~ 0
-Therm_5
-Text HLabel 4550 950  0    50   Input ~ 0
-Therm_6
-Wire Wire Line
-	4950 1100 5050 1100
-Wire Wire Line
-	5050 1100 5050 1500
-Wire Wire Line
-	5050 3100 4950 3100
-Wire Wire Line
-	4950 2700 5050 2700
-Connection ~ 5050 2700
-Wire Wire Line
-	5050 2700 5050 3100
-Wire Wire Line
-	4950 2300 5050 2300
-Connection ~ 5050 2300
-Wire Wire Line
-	5050 2300 5050 2700
-Wire Wire Line
-	4950 1900 5050 1900
-Connection ~ 5050 1900
-Wire Wire Line
-	5050 1900 5050 2300
-Wire Wire Line
-	4950 1500 5050 1500
-Connection ~ 5050 1500
-Wire Wire Line
-	5050 1500 5050 1900
-Wire Wire Line
-	5050 3100 5050 3150
-Connection ~ 5050 3100
-$Comp
-L power:GND #PWR?
-U 1 1 61D45691
-P 5050 3150
-F 0 "#PWR?" H 5050 2900 50  0001 C CNN
-F 1 "GND" H 5055 2977 50  0000 C CNN
-F 2 "" H 5050 3150 50  0001 C CNN
-F 3 "" H 5050 3150 50  0001 C CNN
-	1    5050 3150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1350 1100 1250 1100
-Wire Wire Line
-	1250 1100 1250 1500
-Wire Wire Line
-	1250 3100 1350 3100
-Wire Wire Line
-	1350 2700 1250 2700
-Connection ~ 1250 2700
-Wire Wire Line
-	1250 2700 1250 3100
-Wire Wire Line
-	1350 2300 1250 2300
-Connection ~ 1250 2300
-Wire Wire Line
-	1250 2300 1250 2700
-Wire Wire Line
-	1350 1900 1250 1900
-Connection ~ 1250 1900
-Wire Wire Line
-	1250 1900 1250 2300
-Wire Wire Line
-	1350 1500 1250 1500
-Connection ~ 1250 1500
-Wire Wire Line
-	1250 1500 1250 1900
-$Comp
-L power:+3.3V #PWR?
-U 1 1 61D62B54
-P 1250 1000
-F 0 "#PWR?" H 1250 850 50  0001 C CNN
-F 1 "+3.3V" H 1265 1173 50  0000 C CNN
-F 2 "" H 1250 1000 50  0001 C CNN
-F 3 "" H 1250 1000 50  0001 C CNN
-	1    1250 1000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1250 1100 1250 1000
-Connection ~ 1250 1100
+	4900 2350 4950 2350
+Connection ~ 4900 2350
 $EndSCHEMATC

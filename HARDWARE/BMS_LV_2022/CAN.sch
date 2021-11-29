@@ -3,8 +3,8 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 10
-Title ""
+Sheet 10 13
+Title "High-Speed CAN Transceiver"
 Date ""
 Rev ""
 Comp ""

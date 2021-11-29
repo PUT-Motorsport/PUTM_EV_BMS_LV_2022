@@ -3,8 +3,8 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 10
-Title ""
+Sheet 2 13
+Title "LTC6810 Application"
 Date ""
 Rev ""
 Comp ""
@@ -289,16 +289,16 @@ Wire Wire Line
 	3750 5800 3850 5800
 Wire Wire Line
 	3750 5950 3850 5950
-Text HLabel 6650 2600 2    50   Input ~ 0
+Text HLabel 6900 2600 2    50   Input ~ 0
 MOSI
-Text HLabel 6650 2700 2    50   Input ~ 0
+Text HLabel 6900 2700 2    50   Input ~ 0
 MISO
 $Comp
 L Device:R_Small R?
 U 1 1 61AF3C75
 P 7000 3000
-F 0 "R?" V 6804 3000 50  0000 C CNN
-F 1 "10k" V 6895 3000 50  0000 C CNN
+F 0 "R?" V 6950 2850 50  0000 C CNN
+F 1 "10k" V 7050 2850 50  0000 C CNN
 F 2 "" H 7000 3000 50  0001 C CNN
 F 3 "~" H 7000 3000 50  0001 C CNN
 	1    7000 3000
@@ -315,9 +315,9 @@ F 3 "~" H 7000 3100 50  0001 C CNN
 	1    7000 3100
 	0    1    1    0   
 $EndComp
-Text HLabel 6650 2800 2    50   Input ~ 0
+Text HLabel 6900 2800 2    50   Input ~ 0
 SCK
-Text HLabel 6650 2900 2    50   Input ~ 0
+Text HLabel 6900 2900 2    50   Input ~ 0
 CS
 $Comp
 L Device:R_Small R?
@@ -675,56 +675,56 @@ $EndComp
 $Comp
 L Connector:Conn_01x01_Female J?
 U 1 1 61AB3B1A
-P 3300 5950
-F 0 "J?" H 3700 6050 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 3700 5950 50  0000 C CNN
-F 2 "" H 3300 5950 50  0001 C CNN
-F 3 "~" H 3300 5950 50  0001 C CNN
-	1    3300 5950
+P 3250 5950
+F 0 "J?" H 3650 6050 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3650 5950 50  0000 C CNN
+F 2 "" H 3250 5950 50  0001 C CNN
+F 3 "~" H 3250 5950 50  0001 C CNN
+	1    3250 5950
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female J?
 U 1 1 61AAFFF2
-P 3300 5350
-F 0 "J?" H 3700 5450 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 3700 5350 50  0000 C CNN
-F 2 "" H 3300 5350 50  0001 C CNN
-F 3 "~" H 3300 5350 50  0001 C CNN
-	1    3300 5350
+P 3250 5350
+F 0 "J?" H 3650 5450 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3650 5350 50  0000 C CNN
+F 2 "" H 3250 5350 50  0001 C CNN
+F 3 "~" H 3250 5350 50  0001 C CNN
+	1    3250 5350
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female J?
 U 1 1 61AAC32A
-P 3300 4750
-F 0 "J?" H 3700 4850 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 3700 4750 50  0000 C CNN
-F 2 "" H 3300 4750 50  0001 C CNN
-F 3 "~" H 3300 4750 50  0001 C CNN
-	1    3300 4750
+P 3250 4750
+F 0 "J?" H 3650 4850 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3650 4750 50  0000 C CNN
+F 2 "" H 3250 4750 50  0001 C CNN
+F 3 "~" H 3250 4750 50  0001 C CNN
+	1    3250 4750
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female J?
 U 1 1 61AA88B9
-P 3300 4150
-F 0 "J?" H 3700 4250 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 3700 4150 50  0000 C CNN
-F 2 "" H 3300 4150 50  0001 C CNN
-F 3 "~" H 3300 4150 50  0001 C CNN
-	1    3300 4150
+P 3250 4150
+F 0 "J?" H 3650 4250 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3650 4150 50  0000 C CNN
+F 2 "" H 3250 4150 50  0001 C CNN
+F 3 "~" H 3250 4150 50  0001 C CNN
+	1    3250 4150
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_01x01_Female J?
 U 1 1 61A9D24A
-P 3300 3550
-F 0 "J?" H 3700 3650 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 3700 3550 50  0000 C CNN
-F 2 "" H 3300 3550 50  0001 C CNN
-F 3 "~" H 3300 3550 50  0001 C CNN
-	1    3300 3550
+P 3250 3550
+F 0 "J?" H 3650 3650 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3650 3550 50  0000 C CNN
+F 2 "" H 3250 3550 50  0001 C CNN
+F 3 "~" H 3250 3550 50  0001 C CNN
+	1    3250 3550
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -740,12 +740,12 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x01_Female J?
 U 1 1 61A336C9
-P 3300 2950
-F 0 "J?" H 3700 3050 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 3700 2950 50  0000 C CNN
-F 2 "" H 3300 2950 50  0001 C CNN
-F 3 "~" H 3300 2950 50  0001 C CNN
-	1    3300 2950
+P 3250 2950
+F 0 "J?" H 3650 3050 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3650 2950 50  0000 C CNN
+F 2 "" H 3250 2950 50  0001 C CNN
+F 3 "~" H 3250 2950 50  0001 C CNN
+	1    3250 2950
 	-1   0    0    -1  
 $EndComp
 Connection ~ 3500 2950
@@ -772,23 +772,142 @@ Connection ~ 3500 2300
 $Comp
 L Connector:Conn_01x01_Female J?
 U 1 1 61A1B6B1
-P 3300 2300
-F 0 "J?" H 3700 2400 50  0000 C CNN
-F 1 "Conn_01x01_Female" H 3700 2300 50  0000 C CNN
-F 2 "" H 3300 2300 50  0001 C CNN
-F 3 "~" H 3300 2300 50  0001 C CNN
-	1    3300 2300
+P 3250 2300
+F 0 "J?" H 3650 2400 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3650 2300 50  0000 C CNN
+F 2 "" H 3250 2300 50  0001 C CNN
+F 3 "~" H 3250 2300 50  0001 C CNN
+	1    3250 2300
 	-1   0    0    -1  
 $EndComp
+Text Label 6700 2900 0    50   ~ 0
+CS
+Text Label 6700 2800 0    50   ~ 0
+SCK
+Text Label 6700 2700 0    50   ~ 0
+MISO
+Text Label 6700 2600 0    50   ~ 0
+MOSI
+Wire Wire Line
+	6900 2600 6650 2600
+Wire Wire Line
+	6650 2700 6900 2700
+Wire Wire Line
+	6650 2800 6900 2800
+Wire Wire Line
+	6650 2900 6900 2900
+Wire Wire Line
+	7550 4850 7700 4850
+Connection ~ 7550 4850
+Wire Wire Line
+	7550 4800 7550 4850
+Wire Wire Line
+	7700 4850 8000 4850
+Connection ~ 7700 4850
+Wire Wire Line
+	7400 4850 7550 4850
+Connection ~ 7400 4850
+Wire Wire Line
+	7100 4850 7400 4850
+$Comp
+L Device:R_Small R?
+U 1 1 61D19CAB
+P 8000 4950
+F 0 "R?" H 8059 4996 50  0000 L CNN
+F 1 "2.2k" H 8059 4905 50  0000 L CNN
+F 2 "" H 8000 4950 50  0001 C CNN
+F 3 "~" H 8000 4950 50  0001 C CNN
+	1    8000 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 61D14087
+P 7700 4950
+F 0 "R?" H 7759 4996 50  0000 L CNN
+F 1 "2.2k" H 7759 4905 50  0000 L CNN
+F 2 "" H 7700 4950 50  0001 C CNN
+F 3 "~" H 7700 4950 50  0001 C CNN
+	1    7700 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 61D0E598
+P 7400 4950
+F 0 "R?" H 7459 4996 50  0000 L CNN
+F 1 "2.2k" H 7459 4905 50  0000 L CNN
+F 2 "" H 7400 4950 50  0001 C CNN
+F 3 "~" H 7400 4950 50  0001 C CNN
+	1    7400 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 61D0640A
+P 7100 4950
+F 0 "R?" H 7159 4996 50  0000 L CNN
+F 1 "2.2k" H 7159 4905 50  0000 L CNN
+F 2 "" H 7100 4950 50  0001 C CNN
+F 3 "~" H 7100 4950 50  0001 C CNN
+	1    7100 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61CFD8CD
+P 7550 4800
+F 0 "#PWR?" H 7550 4650 50  0001 C CNN
+F 1 "+3.3V" H 7565 4973 50  0000 C CNN
+F 2 "" H 7550 4800 50  0001 C CNN
+F 3 "" H 7550 4800 50  0001 C CNN
+	1    7550 4800
+	1    0    0    -1  
+$EndComp
+Text Label 7100 5100 3    50   ~ 0
+MOSI
+Wire Wire Line
+	7100 5050 7100 5100
+Text Label 7400 5100 3    50   ~ 0
+MISO
+Wire Wire Line
+	7400 5050 7400 5100
+Text Label 7700 5100 3    50   ~ 0
+SCK
+Wire Wire Line
+	7700 5050 7700 5100
+Text Label 8000 5100 3    50   ~ 0
+CS
+Wire Wire Line
+	8000 5100 8000 5050
+Wire Wire Line
+	3500 2300 3500 2250
+Wire Wire Line
+	3500 2300 3450 2300
+Wire Wire Line
+	3450 5950 3500 5950
+Wire Wire Line
+	3450 5350 3500 5350
+Connection ~ 3500 5350
+Wire Wire Line
+	3450 4750 3500 4750
+Connection ~ 3500 4750
+Wire Wire Line
+	3450 4150 3500 4150
+Connection ~ 3500 4150
+Wire Wire Line
+	3450 3550 3500 3550
+Wire Wire Line
+	3450 2950 3500 2950
 $Comp
 L power:+24V #PWR?
-U 1 1 61A1A4FA
-P 3500 2300
-F 0 "#PWR?" H 3500 2150 50  0001 C CNN
-F 1 "+24V" H 3515 2473 50  0000 C CNN
-F 2 "" H 3500 2300 50  0001 C CNN
-F 3 "" H 3500 2300 50  0001 C CNN
-	1    3500 2300
+U 1 1 622C9690
+P 3500 2250
+F 0 "#PWR?" H 3500 2100 50  0001 C CNN
+F 1 "+24V" H 3515 2423 50  0000 C CNN
+F 2 "" H 3500 2250 50  0001 C CNN
+F 3 "" H 3500 2250 50  0001 C CNN
+	1    3500 2250
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

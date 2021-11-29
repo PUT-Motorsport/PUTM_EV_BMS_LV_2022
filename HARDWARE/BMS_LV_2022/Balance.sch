@@ -3,8 +3,8 @@ EELAYER 30 0
 EELAYER END
 $Descr User 5906 5906
 encoding utf-8
-Sheet 3 10
-Title ""
+Sheet 3 13
+Title "Balance part of LTC6810"
 Date ""
 Rev ""
 Comp ""
