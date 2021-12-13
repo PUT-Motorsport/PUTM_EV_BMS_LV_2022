@@ -16,14 +16,14 @@ $EndDescr
 $Comp
 L power:+24V #PWR?
 U 1 1 626B571F
-P 2550 1450
+P 1900 1450
 AR Path="/626B571F" Ref="#PWR?"  Part="1" 
 AR Path="/6269845F/626B571F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 2550 1300 50  0001 C CNN
-F 1 "+24V" H 2565 1623 50  0000 C CNN
-F 2 "" H 2550 1450 50  0001 C CNN
-F 3 "" H 2550 1450 50  0001 C CNN
-	1    2550 1450
+F 0 "#PWR?" H 1900 1300 50  0001 C CNN
+F 1 "+24V" H 1915 1623 50  0000 C CNN
+F 2 "" H 1900 1450 50  0001 C CNN
+F 3 "" H 1900 1450 50  0001 C CNN
+	1    1900 1450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -79,15 +79,10 @@ Wire Wire Line
 Wire Wire Line
 	3500 2000 3600 2000
 Wire Wire Line
-	2750 2000 2750 1450
-Wire Wire Line
 	3600 2000 3600 900 
 Connection ~ 3600 2000
 Wire Wire Line
 	3600 2000 3700 2000
-Connection ~ 2750 1450
-Wire Wire Line
-	2750 1450 2750 900 
 $Comp
 L Transistor_FET:BSS138 Q?
 U 1 1 626B577C
@@ -146,18 +141,18 @@ L Device:C_Small C?
 U 1 1 62872278
 P 3500 2200
 F 0 "C?" H 3408 2154 50  0000 R CNN
-F 1 "C_Small" H 3408 2245 50  0000 R CNN
+F 1 "0*" H 3408 2245 50  0000 R CNN
 F 2 "" H 3500 2200 50  0001 C CNN
 F 3 "~" H 3500 2200 50  0001 C CNN
 	1    3500 2200
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L Device:R_Small R?
 U 1 1 62874194
 P 3700 2200
 F 0 "R?" H 3759 2246 50  0000 L CNN
-F 1 "R_Small" H 3759 2155 50  0000 L CNN
+F 1 "10k" H 3759 2155 50  0000 L CNN
 F 2 "" H 3700 2200 50  0001 C CNN
 F 3 "~" H 3700 2200 50  0001 C CNN
 	1    3700 2200
@@ -189,8 +184,6 @@ Wire Wire Line
 	4400 900  4450 900 
 Wire Wire Line
 	4450 2000 4400 2000
-Wire Wire Line
-	2550 1450 2750 1450
 $Comp
 L Device:Fuse F?
 U 1 1 6287D375
@@ -244,7 +237,7 @@ F 1 "Q_PMOS_GDS" V 4451 1000 50  0000 C CNN
 F 2 "" H 4400 1100 50  0001 C CNN
 F 3 "~" H 4200 1000 50  0001 C CNN
 	1    4200 1000
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 Text HLabel 2800 3550 0    50   Input ~ 0
 Switch_Signal
@@ -253,7 +246,7 @@ L Device:R_Small R?
 U 1 1 62887CEF
 P 3600 3100
 F 0 "R?" H 3659 3146 50  0000 L CNN
-F 1 "R_Small" H 3659 3055 50  0000 L CNN
+F 1 "100" H 3659 3055 50  0000 L CNN
 F 2 "" H 3600 3100 50  0001 C CNN
 F 3 "~" H 3600 3100 50  0001 C CNN
 	1    3600 3100
@@ -263,4 +256,31 @@ Text Label 3000 1200 3    50   ~ 0
 Gate
 Text HLabel 4950 1450 2    50   Output ~ 0
 CurrentSensor_IP+
+Wire Wire Line
+	2750 900  2750 1450
+Connection ~ 2750 1450
+Wire Wire Line
+	2750 1450 2750 2000
+Wire Wire Line
+	2500 1450 2500 1300
+Connection ~ 2500 1450
+Wire Wire Line
+	2500 1450 2750 1450
+Text HLabel 2500 900  1    50   Output ~ 0
+VCC_Pin
+Wire Wire Line
+	2500 1000 2500 900 
+$Comp
+L Device:Polyfuse F?
+U 1 1 61C9E38A
+P 2500 1150
+F 0 "F?" H 2588 1196 50  0000 L CNN
+F 1 "Polyfuse" H 2588 1105 50  0000 L CNN
+F 2 "" H 2550 950 50  0001 L CNN
+F 3 "~" H 2500 1150 50  0001 C CNN
+	1    2500 1150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1450 2500 1450
 $EndSCHEMATC
