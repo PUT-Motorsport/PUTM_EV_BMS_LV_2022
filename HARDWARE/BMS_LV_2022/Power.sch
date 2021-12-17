@@ -47,17 +47,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 6150 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D_Schottky D20
-U 1 1 61DBC868
-P 5150 5300
-F 0 "D20" H 5150 5083 50  0000 C CNN
-F 1 "D_Schottky" H 5150 5174 50  0000 C CNN
-F 2 "Diode_SMD:D_SMB" H 5150 5300 50  0001 C CNN
-F 3 "~" H 5150 5300 50  0001 C CNN
-	1    5150 5300
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:C_Small C36
 U 1 1 61DBD742
 P 6600 5450
@@ -96,8 +85,6 @@ Wire Wire Line
 	6150 5650 6600 5650
 Wire Wire Line
 	6150 5650 6150 5700
-Wire Wire Line
-	5300 5300 5450 5300
 Connection ~ 5700 5300
 Wire Wire Line
 	4700 5300 4700 5250
@@ -105,22 +92,6 @@ Wire Wire Line
 	6600 5350 6600 5300
 Wire Wire Line
 	6600 5300 6450 5300
-Wire Wire Line
-	6600 5300 6950 5300
-Wire Wire Line
-	6950 5300 6950 5250
-Connection ~ 6600 5300
-$Comp
-L power:+3.3V #PWR045
-U 1 1 61DCDF1D
-P 6950 5250
-F 0 "#PWR045" H 6950 5100 50  0001 C CNN
-F 1 "+3.3V" H 6965 5423 50  0000 C CNN
-F 2 "" H 6950 5250 50  0001 C CNN
-F 3 "" H 6950 5250 50  0001 C CNN
-	1    6950 5250
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+5V #PWR041
 U 1 1 61DCEF4E
@@ -159,8 +130,6 @@ F 3 "" H 5450 5200 50  0001 C CNN
 	1    5450 5200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4700 5300 5000 5300
 $Comp
 L Device:C_Small C37
 U 1 1 62704F16
@@ -533,4 +502,35 @@ Wire Wire Line
 Wire Wire Line
 	9200 3650 9500 3650
 Connection ~ 9200 3650
+$Comp
+L power:+3.3V #PWR045
+U 1 1 61DCDF1D
+P 6950 5250
+F 0 "#PWR045" H 6950 5100 50  0001 C CNN
+F 1 "+3.3V" H 6965 5423 50  0000 C CNN
+F 2 "" H 6950 5250 50  0001 C CNN
+F 3 "" H 6950 5250 50  0001 C CNN
+	1    6950 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5300 6950 5250
+Wire Wire Line
+	4700 5300 5000 5300
+Wire Wire Line
+	5300 5300 5450 5300
+$Comp
+L Device:D_Schottky D20
+U 1 1 61DBC868
+P 5150 5300
+F 0 "D20" H 5150 5083 50  0000 C CNN
+F 1 "D_Schottky" H 5150 5174 50  0000 C CNN
+F 2 "Diode_SMD:D_SMB" H 5150 5300 50  0001 C CNN
+F 3 "~" H 5150 5300 50  0001 C CNN
+	1    5150 5300
+	-1   0    0    1   
+$EndComp
+Connection ~ 6600 5300
+Wire Wire Line
+	6600 5300 6950 5300
 $EndSCHEMATC

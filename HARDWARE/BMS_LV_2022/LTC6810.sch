@@ -675,7 +675,7 @@ U 1 1 61A22C76
 P 3500 2650
 F 0 "BT1" H 3618 2746 50  0000 L CNN
 F 1 "Battery_Cell" H 3618 2655 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" V 3500 2710 50  0001 C CNN
+F 2 "" V 3500 2710 50  0001 C CNN
 F 3 "~" V 3500 2710 50  0001 C CNN
 	1    3500 2650
 	-1   0    0    -1  

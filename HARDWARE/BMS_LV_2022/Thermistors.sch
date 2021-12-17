@@ -23,7 +23,7 @@ U 1 1 61B219CC
 P 4550 4250
 F 0 "TH2" V 4800 4300 50  0000 R CNN
 F 1 "Thermistor_PTC" V 4700 4500 50  0000 R CNN
-F 2 "" H 4600 4050 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4600 4050 50  0001 L CNN
 F 3 "~" H 4550 4250 50  0001 C CNN
 	1    4550 4250
 	-1   0    0    1   
@@ -40,7 +40,7 @@ U 1 1 61B244E9
 P 5450 4250
 F 0 "TH3" V 5700 4300 50  0000 R CNN
 F 1 "Thermistor_PTC" V 5600 4500 50  0000 R CNN
-F 2 "" H 5500 4050 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5500 4050 50  0001 L CNN
 F 3 "~" H 5450 4250 50  0001 C CNN
 	1    5450 4250
 	-1   0    0    1   
@@ -143,7 +143,7 @@ U 1 1 61B31D1D
 P 8150 4250
 F 0 "TH6" V 8400 4300 50  0000 R CNN
 F 1 "Thermistor_PTC" V 8300 4500 50  0000 R CNN
-F 2 "" H 8200 4050 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8200 4050 50  0001 L CNN
 F 3 "~" H 8150 4250 50  0001 C CNN
 	1    8150 4250
 	-1   0    0    1   
@@ -160,7 +160,7 @@ U 1 1 61B2C7C1
 P 7250 4250
 F 0 "TH5" V 7500 4300 50  0000 R CNN
 F 1 "Thermistor_PTC" V 7400 4500 50  0000 R CNN
-F 2 "" H 7300 4050 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7300 4050 50  0001 L CNN
 F 3 "~" H 7250 4250 50  0001 C CNN
 	1    7250 4250
 	-1   0    0    1   
@@ -177,7 +177,7 @@ U 1 1 61B27A00
 P 6350 4250
 F 0 "TH4" V 6600 4300 50  0000 R CNN
 F 1 "Thermistor_PTC" V 6500 4500 50  0000 R CNN
-F 2 "" H 6400 4050 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6400 4050 50  0001 L CNN
 F 3 "~" H 6350 4250 50  0001 C CNN
 	1    6350 4250
 	-1   0    0    1   
@@ -303,7 +303,7 @@ U 1 1 61D11206
 P 3650 4250
 F 0 "TH1" V 3900 4300 50  0000 R CNN
 F 1 "Thermistor_PTC" V 3800 4500 50  0000 R CNN
-F 2 "" H 3700 4050 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3700 4050 50  0001 L CNN
 F 3 "~" H 3650 4250 50  0001 C CNN
 	1    3650 4250
 	-1   0    0    1   
