@@ -154,7 +154,7 @@ U 1 1 62716589
 P 7400 3650
 F 0 "L2" V 7585 3650 50  0000 C CNN
 F 1 "22u" V 7494 3650 50  0000 C CNN
-F 2 "Inductor_SMD:L_12x12mm_H8mm" H 7400 3650 50  0001 C CNN
+F 2 "Inductor_SMD:L_6.3x6.3_H3" H 7400 3650 50  0001 C CNN
 F 3 "~" H 7400 3650 50  0001 C CNN
 	1    7400 3650
 	0    -1   -1   0   
@@ -457,9 +457,11 @@ Wire Wire Line
 Connection ~ 8650 4300
 Connection ~ 8650 3650
 $Comp
-L FerriteBead:Ferrite_Bead_Small FB1
+L BMS_LV_2022-rescue:Ferrite_Bead_Small-FerriteBead FB1
 U 1 1 61BEAA28
 P 4500 3350
+AR Path="/61BEAA28" Ref="FB1"  Part="1" 
+AR Path="/61D97AE8/61BEAA28" Ref="FB1"  Part="1" 
 F 0 "FB1" V 4263 3350 50  0000 C CNN
 F 1 "Ferrite_Bead_Small" V 4354 3350 50  0000 C CNN
 F 2 "Inductor_SMD:L_0603_1608Metric" V 4430 3350 50  0001 C CNN
@@ -525,7 +527,7 @@ U 1 1 61DBC868
 P 5150 5300
 F 0 "D20" H 5150 5083 50  0000 C CNN
 F 1 "D_Schottky" H 5150 5174 50  0000 C CNN
-F 2 "Diode_SMD:D_SMB" H 5150 5300 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 5150 5300 50  0001 C CNN
 F 3 "~" H 5150 5300 50  0001 C CNN
 	1    5150 5300
 	-1   0    0    1   

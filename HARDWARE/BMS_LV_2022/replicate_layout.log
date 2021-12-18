@@ -1,0 +1,142 @@
+12-17 20:42:47 replicate_layout.action_replicate_layout 313:Plugin executed on: 'linux'
+12-17 20:42:47 replicate_layout.action_replicate_layout 314:Plugin executed with python version: '3.8.10 (default, Jun  2 2021, 10:49:15) \n[GCC 10.3.0]'
+12-17 20:42:47 replicate_layout.action_replicate_layout 315:KiCad build version: 5.1.10-88a1d61d58~90~ubuntu20.10.1
+12-17 20:42:47 replicate_layout.action_replicate_layout 316:Replicate layout plugin version: 74 started
+12-17 20:42:47 replicate_layout.action_replicate_layout 329:All top level windows titles are:
+kicad 5.1.10-88a1d61d58~90~ubuntu20.10.1 /home/jan/documents/put-motorsport/putm_ev_bms_lv_2022/hardware/bms_lv_2022/bms_lv_2022.pro
+
+pcbnew — /home/jan/documents/put-motorsport/putm_ev_bms_lv_2022/hardware/bms_lv_2022/bms_lv_2022.kicad_pcb
+
+
+eeschema — balance.sch [/ltc6810/balance5/] — /home/jan/documents/put-motorsport/putm_ev_bms_lv_2022/hardware/bms_lv_2022
+
+12-17 20:42:47 replicate_layout.action_replicate_layout 330:All top level windows objects are:
+ <wx._core.Frame object at 0x7f0ad24c15e0>
+<wx._core.Frame object at 0x7f0ad24c13a0>
+<wx._core.Frame object at 0x7f0ad24c15e0>
+<wx._core.Frame object at 0x7f0ad24c13a0>
+<wx._core.Frame object at 0x7f0ad24c15e0>
+<wx._core.Frame object at 0x7f0ad24c13a0>
+<wx._core.Frame object at 0x7f0ad24c15e0>
+12-17 20:42:47 replicate_layout.action_replicate_layout 353:Preparing replicator with R42 as a reference
+12-17 20:42:47 replicate_layout.replicatelayout 215:getting project hierarchy from schematics
+12-17 20:42:47 replicate_layout.replicatelayout 217:Project hierarchy looks like:
+{'61996AA1': ['LTC6810', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/LTC6810.sch'], '6199D637': ['Balance1', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Balance.sch'], '61A346F1': ['Balance2', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Balance.sch'], '61A395F7': ['Balance3', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Balance.sch'], '61A3A424': ['Balance4', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Balance.sch'], '61A3B341': ['Balance5', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Balance.sch'], '61A3CF51': ['Balance6', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Balance.sch'], '61D09503': ['Thermistors', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Thermistors.sch'], '61F4D531': ['CAN', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/CAN.sch'], '61D97AE8': ['Power', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/Power.sch'], '6269845F': ['eFuse', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/eFuse.sch'], '62C2DD72': ['CurrentSensor', '/home/jan/Documents/PUT-Motorsport/PUTM_EV_BMS_LV_2022/HARDWARE/BMS_LV_2022/CurrentSensor.sch']}
+12-17 20:42:47 replicate_layout.replicatelayout 225:getting a list of all footprints on board
+12-17 20:42:47 replicate_layout.action_replicate_layout 379:source anchor footprint is 'R42'
+Located on:['LTC6810', 'Balance5']
+With filenames:['LTC6810.sch', 'Balance.sch']
+With sheet_id:['LTC6810', 'Balance5']
+12-17 20:42:47 replicate_layout.action_replicate_layout 384:Corresponding footprints are 
+[('R47', ['LTC6810', 'Balance6']), ('R42', ['LTC6810', 'Balance5']), ('R37', ['LTC6810', 'Balance4']), ('R32', ['LTC6810', 'Balance3']), ('R27', ['LTC6810', 'Balance2']), ('R22', ['LTC6810', 'Balance1'])]
+12-17 20:42:47 replicate_layout.action_replicate_layout 397:Showing dialog
+12-17 20:42:47 replicate_layout.action_replicate_layout 401:Pcbnew position: wx.Point(0, 27)
+12-17 20:42:47 replicate_layout.action_replicate_layout 407:Display 0: wx.Rect(0, 0, 1920, 1080)
+12-17 20:42:47 replicate_layout.action_replicate_layout 411:Toolbar position: wx.Point(1688, 165)
+12-17 20:42:47 replicate_layout.action_replicate_layout 418:Dialog position: wx.Point(1375, 165)
+12-17 20:42:47 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:'LTC6810', file:'LTC6810.sch'
+12-17 20:42:47 replicate_layout.replicatelayout 256:Source sheet path up to the level:['LTC6810']
+12-17 20:42:47 replicate_layout.replicatelayout 260:Footprints on the sheets:
+['R47', 'R42', 'R37', 'R32', 'R27', 'R22']
+12-17 20:42:47 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+['/61996AA1/61A3CF51/6199F863', '/61996AA1/61A3B341/6199F863', '/61996AA1/61A3A424/6199F863', '/61996AA1/61A395F7/6199F863', '/61996AA1/61A346F1/6199F863', '/61996AA1/6199D637/6199F863']
+12-17 20:42:47 replicate_layout.replicatelayout 279:All sheets to replicate:
+[['LTC6810'], ['LTC6810'], ['LTC6810'], ['LTC6810'], ['LTC6810'], ['LTC6810']]
+12-17 20:42:47 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[['LTC6810']]
+12-17 20:42:47 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[]
+12-17 20:42:55 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:'Balance5', file:'Balance.sch'
+12-17 20:42:55 replicate_layout.replicatelayout 256:Source sheet path up to the level:['LTC6810', 'Balance5']
+12-17 20:42:55 replicate_layout.replicatelayout 260:Footprints on the sheets:
+['R47', 'R42', 'R37', 'R32', 'R27', 'R22']
+12-17 20:42:55 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+['/61996AA1/61A3CF51/6199F863', '/61996AA1/61A3B341/6199F863', '/61996AA1/61A3A424/6199F863', '/61996AA1/61A395F7/6199F863', '/61996AA1/61A346F1/6199F863', '/61996AA1/6199D637/6199F863']
+12-17 20:42:55 replicate_layout.replicatelayout 279:All sheets to replicate:
+[['LTC6810', 'Balance6'], ['LTC6810', 'Balance5'], ['LTC6810', 'Balance4'], ['LTC6810', 'Balance3'], ['LTC6810', 'Balance2'], ['LTC6810', 'Balance1']]
+12-17 20:42:55 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[['LTC6810', 'Balance1'], ['LTC6810', 'Balance2'], ['LTC6810', 'Balance3'], ['LTC6810', 'Balance4'], ['LTC6810', 'Balance5'], ['LTC6810', 'Balance6']]
+12-17 20:42:55 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[['LTC6810', 'Balance1'], ['LTC6810', 'Balance2'], ['LTC6810', 'Balance3'], ['LTC6810', 'Balance4'], ['LTC6810', 'Balance6']]
+12-17 20:42:58 replicate_layout.replicatelayout 249:construcing a list of sheets suitable for replication on level:'Balance5', file:'Balance.sch'
+12-17 20:42:58 replicate_layout.replicatelayout 256:Source sheet path up to the level:['LTC6810', 'Balance5']
+12-17 20:42:58 replicate_layout.replicatelayout 260:Footprints on the sheets:
+['R47', 'R42', 'R37', 'R32', 'R27', 'R22']
+12-17 20:42:58 replicate_layout.replicatelayout 263:Footprints raw sheet ids:
+['/61996AA1/61A3CF51/6199F863', '/61996AA1/61A3B341/6199F863', '/61996AA1/61A3A424/6199F863', '/61996AA1/61A395F7/6199F863', '/61996AA1/61A346F1/6199F863', '/61996AA1/6199D637/6199F863']
+12-17 20:42:58 replicate_layout.replicatelayout 279:All sheets to replicate:
+[['LTC6810', 'Balance6'], ['LTC6810', 'Balance5'], ['LTC6810', 'Balance4'], ['LTC6810', 'Balance3'], ['LTC6810', 'Balance2'], ['LTC6810', 'Balance1']]
+12-17 20:42:58 replicate_layout.replicatelayout 284:All sheets to replicate sorted:
+[['LTC6810', 'Balance1'], ['LTC6810', 'Balance2'], ['LTC6810', 'Balance3'], ['LTC6810', 'Balance4'], ['LTC6810', 'Balance5'], ['LTC6810', 'Balance6']]
+12-17 20:42:58 replicate_layout.replicatelayout 290:All sheets to replicate sorted and without source sheet:
+[['LTC6810', 'Balance1'], ['LTC6810', 'Balance2'], ['LTC6810', 'Balance3'], ['LTC6810', 'Balance4'], ['LTC6810', 'Balance6']]
+12-17 20:42:58 replicate_layout.action_replicate_layout 186:Replicating layout
+12-17 20:42:58 replicate_layout.replicatelayout 999:Starting replication of sheets: [['LTC6810', 'Balance1'], ['LTC6810', 'Balance2'], ['LTC6810', 'Balance3'], ['LTC6810', 'Balance4'], ['LTC6810', 'Balance6']]
+on level: ['LTC6810', 'Balance5']
+with tracks=True, zone=True, text=True, containing=True, remove=False, locked=False
+12-17 20:42:58 root 269:updating GUI message: 'Preparing for replication'
+12-17 20:42:58 replicate_layout.replicatelayout 556:Getting the list of source footprints
+12-17 20:42:58 root 274:updating GUI with: 0
+12-17 20:42:58 replicate_layout.replicatelayout 560:Getting the list of all the remaining footprints
+12-17 20:42:58 replicate_layout.replicatelayout 564:Getting nets local to source footprints
+12-17 20:42:58 replicate_layout.replicatelayout 568:Getting source bounding box
+12-17 20:42:58 root 274:updating GUI with: 37
+12-17 20:42:58 replicate_layout.replicatelayout 572:Getting source tracks
+12-17 20:42:58 root 274:updating GUI with: 50
+12-17 20:42:58 replicate_layout.replicatelayout 576:Getting source zones
+12-17 20:42:58 replicate_layout.replicatelayout 580:Getting source text items
+12-17 20:42:58 replicate_layout.replicatelayout 584:Getting source text items
+12-17 20:42:58 root 269:updating GUI message: 'Replicating footprints'
+12-17 20:42:58 replicate_layout.replicatelayout 590:Replicating footprints
+12-17 20:42:58 root 274:updating GUI with: 0
+12-17 20:42:58 replicate_layout.replicatelayout 596:Replicating footprints on sheet ['LTC6810', 'Balance1']
+12-17 20:42:58 root 274:updating GUI with: 13
+12-17 20:42:58 replicate_layout.replicatelayout 596:Replicating footprints on sheet ['LTC6810', 'Balance2']
+12-17 20:42:58 root 274:updating GUI with: 22
+12-17 20:42:58 root 274:updating GUI with: 33
+12-17 20:42:58 replicate_layout.replicatelayout 596:Replicating footprints on sheet ['LTC6810', 'Balance3']
+12-17 20:42:58 root 274:updating GUI with: 44
+12-17 20:42:58 root 274:updating GUI with: 55
+12-17 20:42:58 replicate_layout.replicatelayout 596:Replicating footprints on sheet ['LTC6810', 'Balance4']
+12-17 20:42:58 root 274:updating GUI with: 64
+12-17 20:42:58 root 274:updating GUI with: 73
+12-17 20:42:58 root 274:updating GUI with: 80
+12-17 20:42:58 replicate_layout.replicatelayout 596:Replicating footprints on sheet ['LTC6810', 'Balance6']
+12-17 20:42:58 root 274:updating GUI with: 91
+12-17 20:42:58 root 274:updating GUI with: 100
+12-17 20:42:58 root 269:updating GUI message: 'Replicating tracks'
+12-17 20:42:59 replicate_layout.replicatelayout 720:Replicating tracks
+12-17 20:42:59 root 274:updating GUI with: 0
+12-17 20:42:59 replicate_layout.replicatelayout 726:Replicating tracks on sheet ['LTC6810', 'Balance1']
+12-17 20:42:59 replicate_layout.replicatelayout 726:Replicating tracks on sheet ['LTC6810', 'Balance2']
+12-17 20:42:59 root 274:updating GUI with: 40
+12-17 20:42:59 replicate_layout.replicatelayout 726:Replicating tracks on sheet ['LTC6810', 'Balance3']
+12-17 20:42:59 replicate_layout.replicatelayout 726:Replicating tracks on sheet ['LTC6810', 'Balance4']
+12-17 20:42:59 root 274:updating GUI with: 80
+12-17 20:42:59 replicate_layout.replicatelayout 726:Replicating tracks on sheet ['LTC6810', 'Balance6']
+12-17 20:42:59 root 269:updating GUI message: 'Replicating zones'
+12-17 20:42:59 replicate_layout.replicatelayout 771:Replicating zones
+12-17 20:42:59 root 274:updating GUI with: 0
+12-17 20:42:59 replicate_layout.replicatelayout 778:Replicating zones on sheet ['LTC6810', 'Balance1']
+12-17 20:42:59 replicate_layout.replicatelayout 778:Replicating zones on sheet ['LTC6810', 'Balance2']
+12-17 20:42:59 root 274:updating GUI with: 40
+12-17 20:42:59 replicate_layout.replicatelayout 778:Replicating zones on sheet ['LTC6810', 'Balance3']
+12-17 20:42:59 replicate_layout.replicatelayout 778:Replicating zones on sheet ['LTC6810', 'Balance4']
+12-17 20:42:59 root 274:updating GUI with: 80
+12-17 20:42:59 replicate_layout.replicatelayout 778:Replicating zones on sheet ['LTC6810', 'Balance6']
+12-17 20:42:59 root 269:updating GUI message: 'Replicating text'
+12-17 20:42:59 replicate_layout.replicatelayout 837:Replicating text
+12-17 20:42:59 root 274:updating GUI with: 0
+12-17 20:42:59 replicate_layout.replicatelayout 844:Replicating text on sheet ['LTC6810', 'Balance1']
+12-17 20:42:59 replicate_layout.replicatelayout 844:Replicating text on sheet ['LTC6810', 'Balance2']
+12-17 20:42:59 replicate_layout.replicatelayout 844:Replicating text on sheet ['LTC6810', 'Balance3']
+12-17 20:42:59 replicate_layout.replicatelayout 844:Replicating text on sheet ['LTC6810', 'Balance4']
+12-17 20:42:59 replicate_layout.replicatelayout 844:Replicating text on sheet ['LTC6810', 'Balance6']
+12-17 20:42:59 root 269:updating GUI message: 'Replicating drawings'
+12-17 20:42:59 replicate_layout.replicatelayout 868:Replicating drawings
+12-17 20:42:59 replicate_layout.replicatelayout 874:Replicating drawings on sheet ['LTC6810', 'Balance1']
+12-17 20:42:59 replicate_layout.replicatelayout 874:Replicating drawings on sheet ['LTC6810', 'Balance2']
+12-17 20:42:59 replicate_layout.replicatelayout 874:Replicating drawings on sheet ['LTC6810', 'Balance3']
+12-17 20:42:59 replicate_layout.replicatelayout 874:Replicating drawings on sheet ['LTC6810', 'Balance4']
+12-17 20:42:59 replicate_layout.replicatelayout 874:Replicating drawings on sheet ['LTC6810', 'Balance6']
+12-17 20:42:59 replicate_layout.action_replicate_layout 209:Replication complete

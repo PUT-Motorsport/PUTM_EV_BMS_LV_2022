@@ -1,6 +1,28 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# BMS_LV_2022-rescue_Ferrite_Bead_Small-FerriteBead
+#
+DEF BMS_LV_2022-rescue_Ferrite_Bead_Small-FerriteBead FB 0 0 N Y 1 F N
+F0 "FB" 75 50 50 H V L CNN
+F1 "BMS_LV_2022-rescue_Ferrite_Bead_Small-FerriteBead" 75 -50 50 H V L CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Inductor_*
+ L_*
+ *Ferrite*
+$ENDFPLIST
+DRAW
+T 0 -50 -50 50 0 0 0 + Normal 0 C C
+P 2 0 1 0 0 -50 0 -31 N
+P 2 0 1 0 0 35 0 51 N
+P 5 0 1 0 -72 11 -44 59 72 -8 44 -56 -72 11 N
+X ~ 1 0 100 50 D 50 50 1 1 w
+X ~ 2 0 -100 50 U 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
 # BMS_LV_2022-rescue_LMR23610-LMR23610
 #
 DEF BMS_LV_2022-rescue_LMR23610-LMR23610 U 0 20 Y Y 1 F N
@@ -705,28 +727,6 @@ P 6 0 1 0 -100 -145 -100 -55 -110 -85 -90 -85 -100 -55 -100 -65 F
 P 6 0 1 0 -70 -145 -70 -55 -80 -85 -60 -85 -70 -55 -70 -65 F
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# FerriteBead_Ferrite_Bead_Small
-#
-DEF FerriteBead_Ferrite_Bead_Small FB 0 0 N Y 1 F N
-F0 "FB" 75 50 50 H V L CNN
-F1 "FerriteBead_Ferrite_Bead_Small" 75 -50 50 H V L CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Inductor_*
- L_*
- *Ferrite*
-$ENDFPLIST
-DRAW
-T 0 -50 -50 50 0 0 0 + Normal 0 C C
-P 2 0 1 0 0 -50 0 -31 N
-P 2 0 1 0 0 35 0 51 N
-P 5 0 1 0 -72 11 -44 59 72 -8 44 -56 -72 11 N
-X ~ 1 0 100 50 D 50 50 1 1 w
-X ~ 2 0 -100 50 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #

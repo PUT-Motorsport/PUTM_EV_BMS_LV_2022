@@ -1568,9 +1568,11 @@ BA 00 00 00 00 CA 80 A8 0B 00 00 00 A0 0C 88 BA 00 00 00 00 CA 80 A8 0B 00 00 00
 EndData
 $EndBitmap
 $Comp
-L FerriteBead:Ferrite_Bead_Small FB2
+L BMS_LV_2022-rescue:Ferrite_Bead_Small-FerriteBead FB2
 U 1 1 61BF4101
 P 4300 3850
+AR Path="/61BF4101" Ref="FB2"  Part="1" 
+AR Path="/61F4D531/61BF4101" Ref="FB2"  Part="1" 
 F 0 "FB2" H 4400 3800 50  0000 L CNN
 F 1 "60R@100MHz" H 4400 3900 50  0000 L CNN
 F 2 "Inductor_SMD:L_0603_1608Metric" V 4230 3850 50  0001 C CNN
@@ -1579,9 +1581,11 @@ F 3 "~" H 4300 3850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L FerriteBead:Ferrite_Bead_Small FB3
+L BMS_LV_2022-rescue:Ferrite_Bead_Small-FerriteBead FB3
 U 1 1 61C02070
 P 2350 3850
+AR Path="/61C02070" Ref="FB3"  Part="1" 
+AR Path="/61F4D531/61C02070" Ref="FB3"  Part="1" 
 F 0 "FB3" H 2244 3804 50  0000 R CNN
 F 1 "60R@100MHz" H 2244 3895 50  0000 R CNN
 F 2 "Inductor_SMD:L_0603_1608Metric" V 2280 3850 50  0001 C CNN
