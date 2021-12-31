@@ -206,6 +206,41 @@ X Pin_6 6 200 -300 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Conn_01x07_Female
+#
+DEF Connector_Conn_01x07_Female J 0 40 Y N 1 F N
+F0 "J" 0 400 50 H V C CNN
+F1 "Connector_Conn_01x07_Female" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+A 0 -300 20 901 -901 1 1 6 N 0 -280 0 -320
+A 0 -200 20 901 -901 1 1 6 N 0 -180 0 -220
+A 0 -100 20 901 -901 1 1 6 N 0 -80 0 -120
+A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
+A 0 100 20 901 -901 1 1 6 N 0 120 0 80
+A 0 200 20 901 -901 1 1 6 N 0 220 0 180
+A 0 300 20 901 -901 1 1 6 N 0 320 0 280
+P 2 1 1 6 -50 -300 -20 -300 N
+P 2 1 1 6 -50 -200 -20 -200 N
+P 2 1 1 6 -50 -100 -20 -100 N
+P 2 1 1 6 -50 0 -20 0 N
+P 2 1 1 6 -50 100 -20 100 N
+P 2 1 1 6 -50 200 -20 200 N
+P 2 1 1 6 -50 300 -20 300 N
+X Pin_1 1 -200 300 150 R 50 50 1 1 P
+X Pin_2 2 -200 200 150 R 50 50 1 1 P
+X Pin_3 3 -200 100 150 R 50 50 1 1 P
+X Pin_4 4 -200 0 150 R 50 50 1 1 P
+X Pin_5 5 -200 -100 150 R 50 50 1 1 P
+X Pin_6 6 -200 -200 150 R 50 50 1 1 P
+X Pin_7 7 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Conn_01x12_Male
 #
 DEF Connector_Conn_01x12_Male J 0 40 Y N 1 F N
@@ -675,15 +710,15 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Thermistor_PTC
+# Device_Thermistor_NTC
 #
-DEF Device_Thermistor_PTC TH 0 0 N Y 1 F N
-F0 "TH" -160 0 50 V V C CNN
-F1 "Device_Thermistor_PTC" 120 0 50 V V C CNN
-F2 "" 50 -200 50 H I L CNN
-F3 "" 0 0 50 H I C CNN
+DEF Device_Thermistor_NTC TH 0 0 N Y 1 F N
+F0 "TH" -175 0 50 V V C CNN
+F1 "Device_Thermistor_NTC" 125 0 50 V V C CNN
+F2 "" 0 50 50 H I C CNN
+F3 "" 0 50 50 H I C CNN
 $FPLIST
- *PTC*
+ *NTC*
  *Thermistor*
  PIN?ARRAY*
  bornier*
@@ -702,7 +737,7 @@ S -40 100 40 -100 0 1 10 N
 P 2 0 1 0 -100 85 -100 110 N
 P 4 0 1 0 -70 100 -70 60 70 -60 70 -100 N
 P 6 0 1 0 -100 -145 -100 -55 -110 -85 -90 -85 -100 -55 -100 -65 F
-P 6 0 1 0 -70 -145 -70 -55 -80 -85 -60 -85 -70 -55 -70 -65 F
+P 6 0 1 0 -70 -55 -70 -145 -80 -115 -60 -115 -70 -145 -70 -135 F
 X ~ 1 0 150 50 D 50 50 1 1 P
 X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW

@@ -308,17 +308,6 @@ Wire Wire Line
 Wire Wire Line
 	6150 4200 6300 4200
 Connection ~ 6300 4200
-$Comp
-L Device:D_Schottky D19
-U 1 1 627C310B
-P 4000 3800
-F 0 "D19" V 3954 3880 50  0000 L CNN
-F 1 "D_Schottky" V 4045 3880 50  0000 L CNN
-F 2 "Diode_SMD:D_SMB" H 4000 3800 50  0001 C CNN
-F 3 "~" H 4000 3800 50  0001 C CNN
-	1    4000 3800
-	0    -1   1    0   
-$EndComp
 Connection ~ 5100 3350
 Wire Wire Line
 	5100 3350 5100 3700
@@ -385,35 +374,20 @@ Wire Wire Line
 $Comp
 L Device:D_TVS D18
 U 1 1 61BBDDDA
-P 3400 3800
-F 0 "D18" V 3446 3720 50  0000 R CNN
-F 1 "D_TVS" V 3355 3720 50  0000 R CNN
-F 2 "Diode_SMD:D_SMB" H 3400 3800 50  0001 C CNN
-F 3 "~" H 3400 3800 50  0001 C CNN
-	1    3400 3800
+P 3950 3800
+F 0 "D18" V 3996 3720 50  0000 R CNN
+F 1 "D_TVS" V 3905 3720 50  0000 R CNN
+F 2 "Diode_SMD:D_SMB" H 3950 3800 50  0001 C CNN
+F 3 "~" H 3950 3800 50  0001 C CNN
+	1    3950 3800
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
 	2950 3350 3250 3350
 Wire Wire Line
-	3400 3350 3400 3650
+	3950 3350 3950 3650
 Wire Wire Line
-	3400 4300 4000 4300
-Wire Wire Line
-	3400 3950 3400 4300
-Connection ~ 3400 3350
-Wire Wire Line
-	3400 3350 4000 3350
-Wire Wire Line
-	4000 4300 4000 3950
-Wire Wire Line
-	4000 3650 4000 3350
-Connection ~ 4000 4300
-Wire Wire Line
-	4000 4300 4300 4300
-Connection ~ 4000 3350
-Wire Wire Line
-	4000 3350 4300 3350
+	3950 3950 3950 4300
 $Comp
 L Device:C_Small C40
 U 1 1 61BFB208
@@ -481,8 +455,6 @@ $EndComp
 Wire Wire Line
 	3250 3300 3250 3350
 Connection ~ 3250 3350
-Wire Wire Line
-	3250 3350 3400 3350
 $Comp
 L power:PWR_FLAG #FLG0105
 U 1 1 61DDD67F
@@ -533,4 +505,11 @@ $EndComp
 Connection ~ 6600 5300
 Wire Wire Line
 	6600 5300 6950 5300
+Connection ~ 3950 3350
+Wire Wire Line
+	3950 3350 4300 3350
+Wire Wire Line
+	3950 4300 4300 4300
+Wire Wire Line
+	3250 3350 3950 3350
 $EndSCHEMATC

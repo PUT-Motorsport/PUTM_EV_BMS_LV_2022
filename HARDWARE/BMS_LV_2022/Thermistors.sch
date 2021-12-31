@@ -13,47 +13,25 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 4850 4000 2    50   Output ~ 0
+Text HLabel 4800 4000 2    50   Output ~ 0
 Therm_2
-Text HLabel 5750 4000 2    50   Output ~ 0
+Text HLabel 5700 4000 2    50   Output ~ 0
 Therm_3
-$Comp
-L Device:Thermistor_PTC TH2
-U 1 1 61B219CC
-P 4550 4250
-F 0 "TH2" V 4800 4300 50  0000 R CNN
-F 1 "Thermistor_PTC" V 4700 4500 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4600 4050 50  0001 L CNN
-F 3 "~" H 4550 4250 50  0001 C CNN
-	1    4550 4250
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	4550 3650 4550 3700
 Wire Wire Line
-	4800 4450 4800 4300
+	4750 4450 4750 4300
 Wire Wire Line
-	4800 4100 4800 4000
-$Comp
-L Device:Thermistor_PTC TH3
-U 1 1 61B244E9
-P 5450 4250
-F 0 "TH3" V 5700 4300 50  0000 R CNN
-F 1 "Thermistor_PTC" V 5600 4500 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5500 4050 50  0001 L CNN
-F 3 "~" H 5450 4250 50  0001 C CNN
-	1    5450 4250
-	-1   0    0    1   
-$EndComp
+	4750 4100 4750 4000
 $Comp
 L power:GND #PWR039
 U 1 1 61B244EF
-P 5950 4500
-F 0 "#PWR039" H 5950 4250 50  0001 C CNN
-F 1 "GND" H 5955 4327 50  0000 C CNN
-F 2 "" H 5950 4500 50  0001 C CNN
-F 3 "" H 5950 4500 50  0001 C CNN
-	1    5950 4500
+P 5950 4600
+F 0 "#PWR039" H 5950 4350 50  0001 C CNN
+F 1 "GND" H 5955 4427 50  0000 C CNN
+F 2 "" H 5950 4600 50  0001 C CNN
+F 3 "" H 5950 4600 50  0001 C CNN
+	1    5950 4600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -70,9 +48,9 @@ $EndComp
 Wire Wire Line
 	5450 3650 5450 3700
 Wire Wire Line
-	5700 4450 5700 4300
+	5650 4450 5650 4300
 Wire Wire Line
-	5700 4100 5700 4000
+	5650 4100 5650 4000
 Wire Wire Line
 	4550 3900 4550 4000
 Wire Wire Line
@@ -82,43 +60,34 @@ Wire Wire Line
 Wire Wire Line
 	5450 4400 5450 4450
 Wire Wire Line
-	4800 4000 4550 4000
+	4750 4000 4550 4000
 Wire Wire Line
-	4800 4450 4550 4450
+	4750 4450 4550 4450
 Wire Wire Line
-	5700 4000 5450 4000
+	5650 4000 5450 4000
 Wire Wire Line
-	5700 4450 5450 4450
+	5650 4450 5450 4450
 Connection ~ 4550 4000
 Wire Wire Line
 	4550 4000 4550 4100
-Connection ~ 4550 4450
-Wire Wire Line
-	4550 4450 4550 4500
 Connection ~ 5450 4000
 Wire Wire Line
 	5450 4000 5450 4100
-Connection ~ 5450 4450
 Wire Wire Line
-	5450 4450 5450 4500
+	8350 4450 8150 4450
 Wire Wire Line
-	8400 4450 8150 4450
+	8350 4000 8150 4000
 Wire Wire Line
-	8400 4000 8150 4000
+	7450 4450 7250 4450
 Wire Wire Line
-	7500 4450 7250 4450
-Wire Wire Line
-	7500 4000 7250 4000
+	7450 4000 7250 4000
 Wire Wire Line
 	6350 4000 6350 4100
 Connection ~ 6350 4000
 Wire Wire Line
-	6600 4000 6350 4000
+	6550 4000 6350 4000
 Wire Wire Line
-	6350 4450 6350 4500
-Connection ~ 6350 4450
-Wire Wire Line
-	6600 4450 6350 4450
+	6550 4450 6350 4450
 Wire Wire Line
 	7250 4400 7250 4450
 Wire Wire Line
@@ -132,80 +101,41 @@ Wire Wire Line
 Wire Wire Line
 	6350 3900 6350 4000
 Wire Wire Line
-	8400 4100 8400 4000
+	8350 4100 8350 4000
 Wire Wire Line
-	8400 4450 8400 4300
+	8350 4450 8350 4300
 Wire Wire Line
 	8150 3650 8150 3700
-$Comp
-L Device:Thermistor_PTC TH6
-U 1 1 61B31D1D
-P 8150 4250
-F 0 "TH6" V 8400 4300 50  0000 R CNN
-F 1 "Thermistor_PTC" V 8300 4500 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8200 4050 50  0001 L CNN
-F 3 "~" H 8150 4250 50  0001 C CNN
-	1    8150 4250
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	7500 4100 7500 4000
+	7450 4100 7450 4000
 Wire Wire Line
-	7500 4450 7500 4300
+	7450 4450 7450 4300
 Wire Wire Line
 	7250 3650 7250 3700
-$Comp
-L Device:Thermistor_PTC TH5
-U 1 1 61B2C7C1
-P 7250 4250
-F 0 "TH5" V 7500 4300 50  0000 R CNN
-F 1 "Thermistor_PTC" V 7400 4500 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7300 4050 50  0001 L CNN
-F 3 "~" H 7250 4250 50  0001 C CNN
-	1    7250 4250
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	6600 4100 6600 4000
+	6550 4100 6550 4000
 Wire Wire Line
-	6600 4450 6600 4300
+	6550 4450 6550 4300
 Wire Wire Line
 	6350 3650 6350 3700
-$Comp
-L Device:Thermistor_PTC TH4
-U 1 1 61B27A00
-P 6350 4250
-F 0 "TH4" V 6600 4300 50  0000 R CNN
-F 1 "Thermistor_PTC" V 6500 4500 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6400 4050 50  0001 L CNN
-F 3 "~" H 6350 4250 50  0001 C CNN
-	1    6350 4250
-	-1   0    0    1   
-$EndComp
-Text HLabel 7550 4000 2    50   Output ~ 0
+Text HLabel 7500 4000 2    50   Output ~ 0
 Therm_5
-Text HLabel 6650 4000 2    50   Output ~ 0
+Text HLabel 6600 4000 2    50   Output ~ 0
 Therm_4
-Text HLabel 8450 4000 2    50   Output ~ 0
+Text HLabel 8400 4000 2    50   Output ~ 0
 Therm_6
 Connection ~ 7250 4000
 Wire Wire Line
 	7250 4000 7250 4100
-Connection ~ 7250 4450
-Wire Wire Line
-	7250 4450 7250 4500
 Connection ~ 8150 4000
 Wire Wire Line
 	8150 4000 8150 4100
-Connection ~ 8150 4450
-Wire Wire Line
-	8150 4450 8150 4500
 Connection ~ 5950 3650
 Wire Wire Line
 	5950 3650 5450 3650
 Wire Wire Line
-	5450 4500 5950 4500
-Connection ~ 5950 4500
+	5450 4600 5950 4600
+Connection ~ 5950 4600
 $Comp
 L Device:R_Small R52
 U 1 1 62CFDB9E
@@ -261,9 +191,9 @@ F 3 "~" H 8150 3800 50  0001 C CNN
 	1    8150 3800
 	1    0    0    -1  
 $EndComp
-Connection ~ 3900 4000
+Connection ~ 3850 4000
 Wire Wire Line
-	3950 4000 3900 4000
+	3900 4000 3850 4000
 $Comp
 L Device:R_Small R51
 U 1 1 62CF3EC5
@@ -276,55 +206,41 @@ F 3 "~" H 3650 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 4450 3650 4500
-Connection ~ 3650 4450
-Wire Wire Line
-	3900 4450 3650 4450
+	3850 4450 3650 4450
 Wire Wire Line
 	3650 4000 3650 4100
 Connection ~ 3650 4000
 Wire Wire Line
-	3900 4000 3650 4000
+	3850 4000 3650 4000
 Wire Wire Line
 	3650 4400 3650 4450
 Wire Wire Line
 	3650 3900 3650 4000
 Wire Wire Line
-	3900 4100 3900 4000
+	3850 4100 3850 4000
 Wire Wire Line
-	3900 4450 3900 4300
+	3850 4450 3850 4300
 Wire Wire Line
 	3650 3650 3650 3700
-Text HLabel 3950 4000 2    50   Output ~ 0
+Text HLabel 3900 4000 2    50   Output ~ 0
 Therm_1
-$Comp
-L Device:Thermistor_PTC TH1
-U 1 1 61D11206
-P 3650 4250
-F 0 "TH1" V 3900 4300 50  0000 R CNN
-F 1 "Thermistor_PTC" V 3800 4500 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3700 4050 50  0001 L CNN
-F 3 "~" H 3650 4250 50  0001 C CNN
-	1    3650 4250
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	8450 4000 8400 4000
-Connection ~ 8400 4000
+	8400 4000 8350 4000
+Connection ~ 8350 4000
 Wire Wire Line
-	5950 4500 6350 4500
-Connection ~ 6350 4500
+	5950 4600 6350 4600
+Connection ~ 6350 4600
 Wire Wire Line
-	7250 4500 8150 4500
+	7250 4600 8150 4600
 Wire Wire Line
-	6350 4500 7250 4500
-Connection ~ 7250 4500
+	6350 4600 7250 4600
+Connection ~ 7250 4600
 Wire Wire Line
-	4550 4500 5450 4500
-Connection ~ 5450 4500
+	4550 4600 5450 4600
+Connection ~ 5450 4600
 Wire Wire Line
-	3650 4500 4550 4500
-Connection ~ 4550 4500
+	3650 4600 4550 4600
+Connection ~ 4550 4600
 Wire Wire Line
 	3650 3650 4550 3650
 Connection ~ 4550 3650
@@ -342,79 +258,163 @@ Wire Wire Line
 $Comp
 L Device:C_Small C25
 U 1 1 62D3AF1E
-P 3900 4200
-F 0 "C25" H 3992 4246 50  0000 L CNN
-F 1 "100nF" H 3992 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3900 4200 50  0001 C CNN
-F 3 "~" H 3900 4200 50  0001 C CNN
-	1    3900 4200
+P 3850 4200
+F 0 "C25" H 3942 4246 50  0000 L CNN
+F 1 "100nF" H 3942 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3850 4200 50  0001 C CNN
+F 3 "~" H 3850 4200 50  0001 C CNN
+	1    3850 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C26
 U 1 1 62D3D09F
-P 4800 4200
-F 0 "C26" H 4892 4246 50  0000 L CNN
-F 1 "100nF" H 4892 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4800 4200 50  0001 C CNN
-F 3 "~" H 4800 4200 50  0001 C CNN
-	1    4800 4200
+P 4750 4200
+F 0 "C26" H 4842 4246 50  0000 L CNN
+F 1 "100nF" H 4842 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4750 4200 50  0001 C CNN
+F 3 "~" H 4750 4200 50  0001 C CNN
+	1    4750 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C27
 U 1 1 62D3FB8F
-P 5700 4200
-F 0 "C27" H 5792 4246 50  0000 L CNN
-F 1 "100nF" H 5792 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5700 4200 50  0001 C CNN
-F 3 "~" H 5700 4200 50  0001 C CNN
-	1    5700 4200
+P 5650 4200
+F 0 "C27" H 5742 4246 50  0000 L CNN
+F 1 "100nF" H 5742 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5650 4200 50  0001 C CNN
+F 3 "~" H 5650 4200 50  0001 C CNN
+	1    5650 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C28
 U 1 1 62D42810
-P 6600 4200
-F 0 "C28" H 6692 4246 50  0000 L CNN
-F 1 "100nF" H 6692 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6600 4200 50  0001 C CNN
-F 3 "~" H 6600 4200 50  0001 C CNN
-	1    6600 4200
+P 6550 4200
+F 0 "C28" H 6642 4246 50  0000 L CNN
+F 1 "100nF" H 6642 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6550 4200 50  0001 C CNN
+F 3 "~" H 6550 4200 50  0001 C CNN
+	1    6550 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C29
 U 1 1 62D45530
-P 7500 4200
-F 0 "C29" H 7592 4246 50  0000 L CNN
-F 1 "100nF" H 7592 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7500 4200 50  0001 C CNN
-F 3 "~" H 7500 4200 50  0001 C CNN
-	1    7500 4200
+P 7450 4200
+F 0 "C29" H 7542 4246 50  0000 L CNN
+F 1 "100nF" H 7542 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7450 4200 50  0001 C CNN
+F 3 "~" H 7450 4200 50  0001 C CNN
+	1    7450 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C30
 U 1 1 62D482C3
-P 8400 4200
-F 0 "C30" H 8492 4246 50  0000 L CNN
-F 1 "100nF" H 8492 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 8400 4200 50  0001 C CNN
-F 3 "~" H 8400 4200 50  0001 C CNN
-	1    8400 4200
+P 8350 4200
+F 0 "C30" H 8442 4246 50  0000 L CNN
+F 1 "100nF" H 8442 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8350 4200 50  0001 C CNN
+F 3 "~" H 8350 4200 50  0001 C CNN
+	1    8350 4200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4800 4000 4850 4000
-Connection ~ 4800 4000
+	4750 4000 4800 4000
+Connection ~ 4750 4000
 Wire Wire Line
-	5700 4000 5750 4000
-Connection ~ 5700 4000
+	5650 4000 5700 4000
+Connection ~ 5650 4000
 Wire Wire Line
-	6600 4000 6650 4000
-Connection ~ 6600 4000
+	6550 4000 6600 4000
+Connection ~ 6550 4000
 Wire Wire Line
-	7500 4000 7550 4000
-Connection ~ 7500 4000
+	7450 4000 7500 4000
+Connection ~ 7450 4000
+$Comp
+L Device:Thermistor_NTC TH2
+U 1 1 61C36E59
+P 4550 4250
+F 0 "TH2" V 4250 4350 50  0000 R CNN
+F 1 "Thermistor_NTC" V 4350 4550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4550 4300 50  0001 C CNN
+F 3 "~" H 4550 4300 50  0001 C CNN
+	1    4550 4250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH3
+U 1 1 61C38DDB
+P 5450 4250
+F 0 "TH3" V 5150 4350 50  0000 R CNN
+F 1 "Thermistor_NTC" V 5250 4550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5450 4300 50  0001 C CNN
+F 3 "~" H 5450 4300 50  0001 C CNN
+	1    5450 4250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH4
+U 1 1 61C3A8A4
+P 6350 4250
+F 0 "TH4" V 6050 4350 50  0000 R CNN
+F 1 "Thermistor_NTC" V 6150 4550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6350 4300 50  0001 C CNN
+F 3 "~" H 6350 4300 50  0001 C CNN
+	1    6350 4250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH5
+U 1 1 61C3DAE8
+P 7250 4250
+F 0 "TH5" V 6950 4350 50  0000 R CNN
+F 1 "Thermistor_NTC" V 7050 4550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7250 4300 50  0001 C CNN
+F 3 "~" H 7250 4300 50  0001 C CNN
+	1    7250 4250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH6
+U 1 1 61C3F584
+P 8150 4250
+F 0 "TH6" V 7850 4350 50  0000 R CNN
+F 1 "Thermistor_NTC" V 7950 4550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8150 4300 50  0001 C CNN
+F 3 "~" H 8150 4300 50  0001 C CNN
+	1    8150 4250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH1
+U 1 1 61C2DA50
+P 3650 4250
+F 0 "TH1" V 3350 4350 50  0000 R CNN
+F 1 "Thermistor_NTC" V 3450 4550 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3650 4300 50  0001 C CNN
+F 3 "~" H 3650 4300 50  0001 C CNN
+	1    3650 4250
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3650 4450 3650 4600
+Connection ~ 3650 4450
+Wire Wire Line
+	4550 4450 4550 4600
+Connection ~ 4550 4450
+Wire Wire Line
+	5450 4450 5450 4600
+Connection ~ 5450 4450
+Wire Wire Line
+	6350 4450 6350 4600
+Connection ~ 6350 4450
+Wire Wire Line
+	7250 4450 7250 4600
+Connection ~ 7250 4450
+Wire Wire Line
+	8150 4450 8150 4600
+Connection ~ 8150 4450
 $EndSCHEMATC
