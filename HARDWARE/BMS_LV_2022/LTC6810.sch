@@ -959,31 +959,33 @@ Text Label 2900 5350 0    50   ~ 0
 CellBalance6
 Text Label 2900 5950 0    50   ~ 0
 CellBalance7
-Text Label 9650 3100 2    50   ~ 0
+Text Label 9650 3000 2    50   ~ 0
 CellBalance1
-Text Label 9650 3200 2    50   ~ 0
+Text Label 9650 3100 2    50   ~ 0
 CellBalance2
-Text Label 9650 3300 2    50   ~ 0
+Text Label 9650 3200 2    50   ~ 0
 CellBalance3
-Text Label 9650 3400 2    50   ~ 0
+Text Label 9650 3300 2    50   ~ 0
 CellBalance4
-Text Label 9650 3500 2    50   ~ 0
+Text Label 9650 3400 2    50   ~ 0
 CellBalance5
-Text Label 9650 3600 2    50   ~ 0
+Text Label 9650 3500 2    50   ~ 0
 CellBalance6
-Text Label 9650 3700 2    50   ~ 0
+Text Label 9650 3600 2    50   ~ 0
 CellBalance7
 $Comp
 L Connector:Conn_01x07_Female J11
 U 1 1 61DCAD61
-P 9950 3400
-F 0 "J11" H 9978 3426 50  0000 L CNN
-F 1 "Conn_01x07_Female" H 9978 3335 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical" H 9950 3400 50  0001 C CNN
-F 3 "~" H 9950 3400 50  0001 C CNN
-	1    9950 3400
+P 9950 3300
+F 0 "J11" H 9978 3326 50  0000 L CNN
+F 1 "Conn_01x07_Female" H 9978 3235 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B7B-XH-A_1x07_P2.50mm_Vertical" H 9950 3300 50  0001 C CNN
+F 3 "~" H 9950 3300 50  0001 C CNN
+	1    9950 3300
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	9650 3000 9750 3000
 Wire Wire Line
 	9650 3100 9750 3100
 Wire Wire Line
@@ -996,6 +998,4 @@ Wire Wire Line
 	9650 3500 9750 3500
 Wire Wire Line
 	9650 3600 9750 3600
-Wire Wire Line
-	9650 3700 9750 3700
 $EndSCHEMATC

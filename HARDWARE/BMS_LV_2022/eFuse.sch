@@ -177,8 +177,9 @@ U 1 1 6287D375
 P 7050 2800
 F 0 "F2" V 6853 2800 50  0000 C CNN
 F 1 "Fuse" V 6944 2800 50  0000 C CNN
-F 2 "Fuse:Fuseholder_Blade_Mini_Keystone_3568" V 6980 2800 50  0001 C CNN
+F 2 "footprints:Fuseholder_Keystone_3522-2" V 6980 2800 50  0001 C CNN
 F 3 "~" H 7050 2800 50  0001 C CNN
+F 4 "3522-2" H 7050 2800 50  0001 C CNN "Part Number"
 	1    7050 2800
 	0    1    1    0   
 $EndComp
@@ -219,8 +220,9 @@ U 1 1 61C9E38A
 P 4850 2500
 F 0 "F1" H 4938 2546 50  0000 L CNN
 F 1 "Polyfuse" H 4938 2455 50  0000 L CNN
-F 2 "Diode_SMD:D_SMB" H 4900 2300 50  0001 L CNN
-F 3 "~" H 4850 2500 50  0001 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 4900 2300 50  0001 L CNN
+F 3 "https://pl.mouser.com/datasheet/2/643/ds_CP_0zcj_series-1664160.pdf" H 4850 2500 50  0001 C CNN
+F 4 "0ZCJ0020FF2E" H 5200 2650 50  0001 C CNN "Part Number"
 	1    4850 2500
 	-1   0    0    -1  
 $EndComp
