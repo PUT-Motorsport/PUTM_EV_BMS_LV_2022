@@ -56,11 +56,6 @@ Wire Wire Line
 Wire Wire Line
 	5850 3650 5850 3800
 Wire Wire Line
-	6050 3350 6050 3450
-Connection ~ 6050 3350
-Wire Wire Line
-	6050 3350 6350 3350
-Wire Wire Line
 	6050 3650 6050 3800
 Connection ~ 6050 3800
 Wire Wire Line
@@ -81,8 +76,6 @@ Wire Wire Line
 Wire Wire Line
 	5950 3350 5950 2250
 Connection ~ 5950 3350
-Wire Wire Line
-	5950 3350 6050 3350
 Connection ~ 5950 5150
 Wire Wire Line
 	5950 5150 5950 5200
@@ -242,47 +235,58 @@ F 3 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 5850 4900 50  0001 L 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Q_PMOS_GSD Q12
-U 1 1 61C586C2
-P 6550 3450
-F 0 "Q12" V 6892 3450 50  0000 C CNN
-F 1 "Q_PMOS_GSD" V 6801 3450 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6750 3550 50  0001 C CNN
-F 3 "~" H 6550 3450 50  0001 C CNN
-	1    6550 3450
-	0    1    -1   0   
-$EndComp
-$Comp
-L Device:Q_PMOS_GSD Q9
-U 1 1 61C60292
-P 5350 3450
-F 0 "Q9" V 5692 3450 50  0000 C CNN
-F 1 "Q_PMOS_GSD" V 5601 3450 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 3550 50  0001 C CNN
-F 3 "~" H 5350 3450 50  0001 C CNN
-	1    5350 3450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:Q_PMOS_GSD Q8
-U 1 1 61C62B11
+L Transistor_FET:SiSS27DN Q8
+U 1 1 61EA3DB0
 P 5350 2350
 F 0 "Q8" V 5692 2350 50  0000 C CNN
-F 1 "Q_PMOS_GSD" V 5601 2350 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5550 2450 50  0001 C CNN
-F 3 "~" H 5350 2350 50  0001 C CNN
+F 1 "SiSS05DN" V 5601 2350 50  0000 C CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 5550 2275 50  0001 L CIN
+F 3 "https://www.farnell.com/datasheets/2818743.pdf" V 5350 2350 50  0001 L CNN
+F 4 "SISS05DN-T1-GE3" V 5601 2350 50  0001 C CNN "Part Number"
 	1    5350 2350
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:Q_PMOS_GSD Q11
-U 1 1 61C645F3
+L Transistor_FET:SiSS27DN Q9
+U 1 1 61EA59E3
+P 5350 3450
+F 0 "Q9" V 5692 3450 50  0000 C CNN
+F 1 "SiSS05DN" V 5601 3450 50  0000 C CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 5550 3375 50  0001 L CIN
+F 3 "https://www.farnell.com/datasheets/2818743.pdf" V 5350 3450 50  0001 L CNN
+F 4 "SISS05DN-T1-GE3" H 5350 3450 50  0001 C CNN "Part Number"
+	1    5350 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_FET:SiSS27DN Q11
+U 1 1 61EA704A
 P 6550 2350
 F 0 "Q11" V 6892 2350 50  0000 C CNN
-F 1 "Q_PMOS_GSD" V 6801 2350 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6750 2450 50  0001 C CNN
-F 3 "~" H 6550 2350 50  0001 C CNN
+F 1 "SiSS05DN" V 6801 2350 50  0000 C CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 6750 2275 50  0001 L CIN
+F 3 "https://www.farnell.com/datasheets/2818743.pdf" V 6550 2350 50  0001 L CNN
+F 4 "SISS05DN-T1-GE3" H 6550 2350 50  0001 C CNN "Part Number"
 	1    6550 2350
 	0    1    -1   0   
 $EndComp
+$Comp
+L Transistor_FET:SiSS27DN Q12
+U 1 1 61EA8267
+P 6550 3450
+F 0 "Q12" V 6892 3450 50  0000 C CNN
+F 1 "SiSS05DN" V 6801 3450 50  0000 C CNN
+F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 6750 3375 50  0001 L CIN
+F 3 "https://www.farnell.com/datasheets/2818743.pdf" V 6550 3450 50  0001 L CNN
+F 4 "SISS05DN-T1-GE3" H 6550 3450 50  0001 C CNN "Part Number"
+	1    6550 3450
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5950 3350 6050 3350
+Wire Wire Line
+	6050 3350 6350 3350
+Connection ~ 6050 3350
+Wire Wire Line
+	6050 3350 6050 3450
 $EndSCHEMATC

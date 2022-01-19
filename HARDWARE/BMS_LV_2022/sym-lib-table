@@ -1,3 +1,8 @@
 (sym_lib_table
   (lib (name BMS_LV_2022-rescue)(type Legacy)(uri ${KIPRJMOD}/BMS_LV_2022-rescue.lib)(options "")(descr ""))
+  (lib (name FerriteBead)(type Legacy)(uri ${KIPRJMOD}/libs/FerriteBead.lib)(options "")(descr ""))
+  (lib (name LMR23610)(type Legacy)(uri ${KIPRJMOD}/libs/LMR23610.lib)(options "")(descr ""))
+  (lib (name LTC6810-1)(type Legacy)(uri ${KIPRJMOD}/libs/LTC6810-1.lib)(options "")(descr ""))
+  (lib (name STM32L4P5RET6)(type Legacy)(uri ${KIPRJMOD}/libs/STM32L4P5RET6.lib)(options "")(descr ""))
+  (lib (name XT60PW-M)(type Legacy)(uri ${KIPRJMOD}/libs/XT60PW-M.lib)(options "")(descr ""))
 )
