@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:BMS_LV_2022-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -235,9 +236,11 @@ F 3 "https://www.onsemi.com/pub/Collateral/BSS138-D.PDF" H 5850 4900 50  0001 L 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_FET:SiSS27DN Q8
+L BMS_LV_2022-rescue:SiSS27DN-Transistor_FET Q8
 U 1 1 61EA3DB0
 P 5350 2350
+AR Path="/61EA3DB0" Ref="Q8"  Part="1" 
+AR Path="/6269845F/61EA3DB0" Ref="Q8"  Part="1" 
 F 0 "Q8" V 5692 2350 50  0000 C CNN
 F 1 "SiSS05DN" V 5601 2350 50  0000 C CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 5550 2275 50  0001 L CIN
@@ -247,9 +250,11 @@ F 4 "SISS05DN-T1-GE3" V 5601 2350 50  0001 C CNN "Part Number"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Transistor_FET:SiSS27DN Q9
+L BMS_LV_2022-rescue:SiSS27DN-Transistor_FET Q9
 U 1 1 61EA59E3
 P 5350 3450
+AR Path="/61EA59E3" Ref="Q9"  Part="1" 
+AR Path="/6269845F/61EA59E3" Ref="Q9"  Part="1" 
 F 0 "Q9" V 5692 3450 50  0000 C CNN
 F 1 "SiSS05DN" V 5601 3450 50  0000 C CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 5550 3375 50  0001 L CIN
@@ -259,9 +264,11 @@ F 4 "SISS05DN-T1-GE3" H 5350 3450 50  0001 C CNN "Part Number"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Transistor_FET:SiSS27DN Q11
+L BMS_LV_2022-rescue:SiSS27DN-Transistor_FET Q11
 U 1 1 61EA704A
 P 6550 2350
+AR Path="/61EA704A" Ref="Q11"  Part="1" 
+AR Path="/6269845F/61EA704A" Ref="Q11"  Part="1" 
 F 0 "Q11" V 6892 2350 50  0000 C CNN
 F 1 "SiSS05DN" V 6801 2350 50  0000 C CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 6750 2275 50  0001 L CIN
@@ -271,9 +278,11 @@ F 4 "SISS05DN-T1-GE3" H 6550 2350 50  0001 C CNN "Part Number"
 	0    1    -1   0   
 $EndComp
 $Comp
-L Transistor_FET:SiSS27DN Q12
+L BMS_LV_2022-rescue:SiSS27DN-Transistor_FET Q12
 U 1 1 61EA8267
 P 6550 3450
+AR Path="/61EA8267" Ref="Q12"  Part="1" 
+AR Path="/6269845F/61EA8267" Ref="Q12"  Part="1" 
 F 0 "Q12" V 6892 3450 50  0000 C CNN
 F 1 "SiSS05DN" V 6801 3450 50  0000 C CNN
 F 2 "Package_SO:Vishay_PowerPAK_1212-8_Single" H 6750 3375 50  0001 L CIN

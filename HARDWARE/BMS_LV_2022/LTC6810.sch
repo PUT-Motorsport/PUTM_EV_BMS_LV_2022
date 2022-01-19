@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:BMS_LV_2022-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -705,9 +706,11 @@ Connection ~ 3500 2100
 Wire Wire Line
 	3500 2100 3500 2300
 $Comp
-L Transistor_BJT:BC846 Q1
+L BMS_LV_2022-rescue:BC846-Transistor_BJT Q1
 U 1 1 61C11D6C
 P 7750 3400
+AR Path="/61C11D6C" Ref="Q1"  Part="1" 
+AR Path="/61996AA1/61C11D6C" Ref="Q1"  Part="1" 
 F 0 "Q1" H 7941 3446 50  0000 L CNN
 F 1 "BC846" H 7941 3355 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 7950 3325 50  0001 L CIN

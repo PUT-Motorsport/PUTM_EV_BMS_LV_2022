@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:BMS_LV_2022-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -630,7 +631,7 @@ USB-DM
 Text Label 7000 3600 0    50   ~ 0
 USB-DP
 $Comp
-L Connector:USB_B_Mini J3
+L BMS_LV_2022-rescue:USB_B_Mini-Connector J3
 U 1 1 62011569
 P 10650 1300
 F 0 "J3" H 10707 1767 50  0000 C CNN
