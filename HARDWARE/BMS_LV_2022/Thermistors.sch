@@ -412,17 +412,6 @@ Connection ~ 7300 3300
 Wire Wire Line
 	8200 3300 8200 3450
 Connection ~ 8200 3300
-$Comp
-L Connector:Conn_01x08_Female J12
-U 1 1 61DCB520
-P 6200 4350
-F 0 "J12" H 6228 4326 50  0000 L CNN
-F 1 "Conn_01x08_Female" H 6228 4235 50  0000 L CNN
-F 2 "Connector_JST:JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical" H 6200 4350 50  0001 C CNN
-F 3 "~" H 6200 4350 50  0001 C CNN
-	1    6200 4350
-	1    0    0    -1  
-$EndComp
 Text Label 3750 2850 0    50   ~ 0
 T1
 Text Label 4650 2850 0    50   ~ 0
@@ -436,53 +425,40 @@ T5
 Text Label 8250 2850 0    50   ~ 0
 T6
 Wire Wire Line
-	6000 4150 5900 4150
+	6450 4050 6350 4050
 Wire Wire Line
-	6000 4250 5900 4250
+	6450 4150 6350 4150
 Wire Wire Line
-	6000 4350 5900 4350
+	6450 4250 6350 4250
 Wire Wire Line
-	6000 4450 5900 4450
+	6450 4350 6350 4350
 Wire Wire Line
-	6000 4550 5900 4550
+	6450 4450 6350 4450
 Wire Wire Line
-	6000 4650 5900 4650
-Text Label 5900 4150 2    50   ~ 0
+	6450 4550 6350 4550
+Text Label 6350 4050 2    50   ~ 0
 T1
-Text Label 5900 4250 2    50   ~ 0
+Text Label 6350 4150 2    50   ~ 0
 T2
-Text Label 5900 4350 2    50   ~ 0
+Text Label 6350 4250 2    50   ~ 0
 T3
-Text Label 5900 4450 2    50   ~ 0
+Text Label 6350 4350 2    50   ~ 0
 T4
-Text Label 5900 4550 2    50   ~ 0
+Text Label 6350 4450 2    50   ~ 0
 T5
-Text Label 5900 4650 2    50   ~ 0
+Text Label 6350 4550 2    50   ~ 0
 T6
 Wire Wire Line
-	5650 4750 6000 4750
-Wire Wire Line
-	5650 4050 6000 4050
-$Comp
-L power:GND #PWR0101
-U 1 1 61E005DC
-P 5650 4050
-F 0 "#PWR0101" H 5650 3800 50  0001 C CNN
-F 1 "GND" H 5655 3877 50  0000 C CNN
-F 2 "" H 5650 4050 50  0001 C CNN
-F 3 "" H 5650 4050 50  0001 C CNN
-	1    5650 4050
-	1    0    0    -1  
-$EndComp
+	6100 4850 6450 4850
 $Comp
 L power:GND #PWR0102
 U 1 1 61E02366
-P 5650 4750
-F 0 "#PWR0102" H 5650 4500 50  0001 C CNN
-F 1 "GND" H 5655 4577 50  0000 C CNN
-F 2 "" H 5650 4750 50  0001 C CNN
-F 3 "" H 5650 4750 50  0001 C CNN
-	1    5650 4750
+P 6100 4850
+F 0 "#PWR0102" H 6100 4600 50  0001 C CNN
+F 1 "GND" H 6105 4677 50  0000 C CNN
+F 2 "" H 6100 4850 50  0001 C CNN
+F 3 "" H 6100 4850 50  0001 C CNN
+	1    6100 4850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -492,4 +468,155 @@ Wire Wire Line
 Connection ~ 6000 3450
 Wire Wire Line
 	6000 3450 6400 3450
+$Comp
+L Connector:Conn_01x09_Female J6
+U 1 1 61FC3123
+P 6650 4450
+F 0 "J6" H 6678 4476 50  0000 L CNN
+F 1 "Conn_01x09_Female" H 6678 4385 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B9B-XH-A_1x09_P2.50mm_Vertical" H 6650 4450 50  0001 C CNN
+F 3 "~" H 6650 4450 50  0001 C CNN
+	1    6650 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3300 9200 3300
+Wire Wire Line
+	9400 2850 9200 2850
+Wire Wire Line
+	9200 3250 9200 3300
+Wire Wire Line
+	9200 2750 9200 2850
+Wire Wire Line
+	9400 2950 9400 2850
+Wire Wire Line
+	9400 3300 9400 3150
+Wire Wire Line
+	9200 2500 9200 2550
+Text HLabel 9450 2850 2    50   Output ~ 0
+Therm_7
+Connection ~ 9200 2850
+Wire Wire Line
+	9200 2850 9200 2950
+$Comp
+L Device:R_Small R63
+U 1 1 61FC99C3
+P 9200 2650
+F 0 "R63" H 9141 2696 50  0000 R CNN
+F 1 "10k" H 9141 2605 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9200 2650 50  0001 C CNN
+F 3 "~" H 9200 2650 50  0001 C CNN
+	1    9200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 2850 9400 2850
+Connection ~ 9400 2850
+$Comp
+L Device:C_Small C45
+U 1 1 61FC99CB
+P 9400 3050
+F 0 "C45" H 9492 3096 50  0000 L CNN
+F 1 "100nF" H 9492 3005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9400 3050 50  0001 C CNN
+F 3 "~" H 9400 3050 50  0001 C CNN
+	1    9400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH7
+U 1 1 61FC99D1
+P 9200 3100
+F 0 "TH7" V 8900 3200 50  0000 R CNN
+F 1 "Thermistor_NTC" V 9000 3400 50  0000 R CNN
+F 2 "" H 9200 3150 50  0001 C CNN
+F 3 "~" H 9200 3150 50  0001 C CNN
+	1    9200 3100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9200 3300 9200 3450
+Connection ~ 9200 3300
+Text Label 9250 2850 0    50   ~ 0
+T7
+Wire Wire Line
+	10450 3300 10250 3300
+Wire Wire Line
+	10450 2850 10250 2850
+Wire Wire Line
+	10250 3250 10250 3300
+Wire Wire Line
+	10250 2750 10250 2850
+Wire Wire Line
+	10450 2950 10450 2850
+Wire Wire Line
+	10450 3300 10450 3150
+Wire Wire Line
+	10250 2500 10250 2550
+Text HLabel 10500 2850 2    50   Output ~ 0
+Therm_8
+Connection ~ 10250 2850
+Wire Wire Line
+	10250 2850 10250 2950
+$Comp
+L Device:R_Small R64
+U 1 1 61FCD2E2
+P 10250 2650
+F 0 "R64" H 10191 2696 50  0000 R CNN
+F 1 "10k" H 10191 2605 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 10250 2650 50  0001 C CNN
+F 3 "~" H 10250 2650 50  0001 C CNN
+	1    10250 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 2850 10450 2850
+Connection ~ 10450 2850
+$Comp
+L Device:C_Small C46
+U 1 1 61FCD2EA
+P 10450 3050
+F 0 "C46" H 10542 3096 50  0000 L CNN
+F 1 "100nF" H 10542 3005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10450 3050 50  0001 C CNN
+F 3 "~" H 10450 3050 50  0001 C CNN
+	1    10450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Thermistor_NTC TH8
+U 1 1 61FCD2F0
+P 10250 3100
+F 0 "TH8" V 9950 3200 50  0000 R CNN
+F 1 "Thermistor_NTC" V 10050 3400 50  0000 R CNN
+F 2 "" H 10250 3150 50  0001 C CNN
+F 3 "~" H 10250 3150 50  0001 C CNN
+	1    10250 3100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10250 3300 10250 3450
+Connection ~ 10250 3300
+Text Label 10300 2850 0    50   ~ 0
+T8
+Wire Wire Line
+	8200 3450 9200 3450
+Connection ~ 8200 3450
+Connection ~ 9200 3450
+Wire Wire Line
+	9200 3450 10250 3450
+Wire Wire Line
+	10250 2500 9200 2500
+Connection ~ 8200 2500
+Connection ~ 9200 2500
+Wire Wire Line
+	9200 2500 8200 2500
+Text Label 6350 4650 2    50   ~ 0
+T7
+Text Label 6350 4750 2    50   ~ 0
+T8
+Wire Wire Line
+	6350 4650 6450 4650
+Wire Wire Line
+	6350 4750 6450 4750
 $EndSCHEMATC

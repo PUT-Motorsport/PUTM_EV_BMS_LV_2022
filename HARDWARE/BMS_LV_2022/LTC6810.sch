@@ -807,21 +807,6 @@ F 3 "" H 4100 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R63
-U 1 1 61ECEFC7
-P 4300 6700
-F 0 "R63" V 4104 6700 50  0000 C CNN
-F 1 "0" V 4195 6700 50  0000 C CNN
-F 2 "" H 4300 6700 50  0001 C CNN
-F 3 "~" H 4300 6700 50  0001 C CNN
-	1    4300 6700
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4100 6700 4200 6700
-Wire Wire Line
-	4400 6700 4500 6700
-$Comp
 L power:GNDPWR #PWR0106
 U 1 1 61EEC608
 P 6050 4900
@@ -928,4 +913,6 @@ F 3 "" H 3500 2050 50  0001 C CNN
 	1    3500 2050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4100 6700 4500 6700
 $EndSCHEMATC
