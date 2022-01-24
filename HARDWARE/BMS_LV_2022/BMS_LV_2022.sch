@@ -14,14 +14,14 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 550  1350 700  450 
+S 550  1300 700  450 
 U 61996AA1
 F0 "LTC6810" 50
 F1 "LTC6810.sch" 50
-F2 "MOSI" I R 1250 1400 50 
-F3 "MISO" O R 1250 1500 50 
-F4 "SCK" I R 1250 1600 50 
-F5 "CS" I R 1250 1700 50 
+F2 "MOSI" I R 1250 1350 50 
+F3 "MISO" O R 1250 1450 50 
+F4 "SCK" I R 1250 1550 50 
+F5 "CS" I R 1250 1650 50 
 $EndSheet
 $Comp
 L power:GND #PWR08
@@ -162,43 +162,35 @@ $EndComp
 Wire Wire Line
 	6250 5850 6250 5900
 $Sheet
-S 550  2050 800  850 
+S 550  1950 800  850 
 U 61D09503
 F0 "Thermistors" 50
 F1 "Thermistors.sch" 50
-F2 "Therm_1" O R 1350 2100 50 
-F3 "Therm_2" O R 1350 2200 50 
-F4 "Therm_3" O R 1350 2300 50 
-F5 "Therm_4" O R 1350 2400 50 
-F6 "Therm_5" O R 1350 2500 50 
-F7 "Therm_6" O R 1350 2600 50 
-F8 "Therm_7" O R 1350 2700 50 
-F9 "Therm_8" O R 1350 2800 50 
+F2 "Therm_1" O R 1350 2000 50 
+F3 "Therm_2" O R 1350 2100 50 
+F4 "Therm_3" O R 1350 2200 50 
+F5 "Therm_4" O R 1350 2300 50 
+F6 "Therm_5" O R 1350 2400 50 
+F7 "Therm_6" O R 1350 2500 50 
+F8 "Therm_7" O R 1350 2600 50 
+F9 "Therm_8" O R 1350 2700 50 
 $EndSheet
-$Sheet
-S 850  4500 900  450 
-U 61F4D531
-F0 "CAN" 50
-F1 "CAN.sch" 50
-F2 "CAN-RX" O R 1750 4600 50 
-F3 "CAN-TX" I R 1750 4800 50 
-F4 "CANH" B L 850 4600 50 
-F5 "CANL" B L 850 4800 50 
-$EndSheet
-Text Label 1300 1400 0    50   ~ 0
+Text Label 1300 1350 0    50   ~ 0
 MOSI
 Wire Wire Line
-	1250 1400 1300 1400
+	1250 1350 1300 1350
 Wire Wire Line
 	6950 4600 7000 4600
 Text Label 7000 4600 0    50   ~ 0
 MOSI
 Wire Wire Line
-	1250 1500 1300 1500
+	1250 1450 1300 1450
 Wire Wire Line
-	1250 1600 1300 1600
+	1250 1550 1300 1550
 Wire Wire Line
-	1250 1700 1300 1700
+	1250 1650 1300 1650
+Wire Wire Line
+	1350 2000 1400 2000
 Wire Wire Line
 	1350 2100 1400 2100
 Wire Wire Line
@@ -209,25 +201,23 @@ Wire Wire Line
 	1350 2400 1400 2400
 Wire Wire Line
 	1350 2500 1400 2500
-Wire Wire Line
-	1350 2600 1400 2600
-Text Label 1300 1500 0    50   ~ 0
+Text Label 1300 1450 0    50   ~ 0
 MISO
-Text Label 1300 1600 0    50   ~ 0
+Text Label 1300 1550 0    50   ~ 0
 SCK
-Text Label 1300 1700 0    50   ~ 0
+Text Label 1300 1650 0    50   ~ 0
 CS
-Text Label 1400 2100 0    50   ~ 0
+Text Label 1400 2000 0    50   ~ 0
 Therm_1
-Text Label 1400 2200 0    50   ~ 0
+Text Label 1400 2100 0    50   ~ 0
 Therm_2
-Text Label 1400 2300 0    50   ~ 0
+Text Label 1400 2200 0    50   ~ 0
 Therm_3
-Text Label 1400 2400 0    50   ~ 0
+Text Label 1400 2300 0    50   ~ 0
 Therm_4
-Text Label 1400 2500 0    50   ~ 0
+Text Label 1400 2400 0    50   ~ 0
 Therm_5
-Text Label 1400 2600 0    50   ~ 0
+Text Label 1400 2500 0    50   ~ 0
 Therm_6
 Wire Wire Line
 	6950 4500 7000 4500
@@ -325,14 +315,6 @@ Wire Wire Line
 	6950 4900 7000 4900
 Wire Wire Line
 	6950 5000 7000 5000
-Text Label 1800 4600 0    50   ~ 0
-CAN-RX
-Text Label 1800 4800 0    50   ~ 0
-CAN-TX
-Wire Wire Line
-	1750 4600 1800 4600
-Wire Wire Line
-	1750 4800 1800 4800
 Text Label 7000 4900 0    50   ~ 0
 CAN-RX
 Text Label 7000 5000 0    50   ~ 0
@@ -722,30 +704,13 @@ F 3 "" H 10200 1050 50  0001 C CNN
 	1    10200 1050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	850  4600 800  4600
-Wire Wire Line
-	850  4800 800  4800
-Text Label 800  4600 2    50   ~ 0
-CANH
-Text Label 800  4800 2    50   ~ 0
-CANL
 Text Label 10350 3750 0    50   ~ 0
 CANH
 Text Label 10350 3850 0    50   ~ 0
 CANL
-$Sheet
-S 550  3150 1050 500 
-U 6269845F
-F0 "eFuse" 50
-F1 "eFuse.sch" 50
-F2 "Switch_Signal" I R 1600 3250 50 
-F3 "CurrentSensor_IP+" O R 1600 3550 50 
-F4 "VCC_Pin" I R 1600 3400 50 
-$EndSheet
 Wire Wire Line
-	1600 3250 1650 3250
-Text Label 1650 3250 0    50   ~ 0
+	1600 3100 1650 3100
+Text Label 1650 3100 0    50   ~ 0
 Switch_Signal
 Text Label 7000 2600 0    50   ~ 0
 Switch_Signal
@@ -760,8 +725,8 @@ Interlock
 Text Label 10850 4350 0    50   ~ 0
 Interlock
 Wire Wire Line
-	1600 3550 1650 3550
-Text Label 1650 3550 0    50   ~ 0
+	1600 3400 1650 3400
+Text Label 1650 3400 0    50   ~ 0
 CS_IP+
 Text Label 10450 4500 0    50   ~ 0
 V_Out
@@ -960,27 +925,10 @@ Wire Wire Line
 	850  5950 850  5900
 Wire Wire Line
 	850  5500 850  5450
-Text Label 1950 4150 0    50   ~ 0
-CurrentSensor_Out
-Text Label 1950 4000 0    50   ~ 0
+Text Label 1950 4050 0    50   ~ 0
 V_Out
 Wire Wire Line
-	1900 4150 1950 4150
-Wire Wire Line
-	1900 4000 1950 4000
-Text Label 800  4050 2    50   ~ 0
-CS_IP+
-Wire Wire Line
-	850  4050 800  4050
-$Sheet
-S 850  3850 1050 450 
-U 62C2DD72
-F0 "CurrentSensor" 50
-F1 "CurrentSensor.sch" 50
-F2 "CS_IP+" I L 850 4050 50 
-F3 "V_Out" O R 1900 4000 50 
-F4 "CurrentSensor" O R 1900 4150 50 
-$EndSheet
+	1900 4050 1950 4050
 Wire Wire Line
 	1700 5300 1700 5500
 Wire Notes Line
@@ -988,8 +936,8 @@ Wire Notes Line
 Wire Notes Line
 	2300 6200 500  6200
 Wire Wire Line
-	1600 3400 1650 3400
-Text Label 1650 3400 0    50   ~ 0
+	1600 3250 1650 3250
+Text Label 1650 3250 0    50   ~ 0
 VCC_Pin
 Wire Wire Line
 	10300 4250 10350 4250
@@ -1026,7 +974,6 @@ NoConn ~ 6950 3400
 NoConn ~ 6950 4700
 NoConn ~ 6950 4800
 NoConn ~ 6950 5100
-NoConn ~ 6950 5200
 NoConn ~ 6950 5300
 NoConn ~ 6950 5400
 NoConn ~ 6950 5500
@@ -1234,12 +1181,12 @@ Wire Wire Line
 Wire Notes Line
 	2300 5100 2300 7800
 Wire Wire Line
-	1350 2700 1400 2700
+	1350 2600 1400 2600
 Wire Wire Line
-	1350 2800 1400 2800
-Text Label 1400 2700 0    50   ~ 0
+	1350 2700 1400 2700
+Text Label 1400 2600 0    50   ~ 0
 Therm_7
-Text Label 1400 2800 0    50   ~ 0
+Text Label 1400 2700 0    50   ~ 0
 Therm_8
 Text Label 7000 3100 0    50   ~ 0
 Therm_5
@@ -1255,4 +1202,65 @@ Wire Wire Line
 	10850 4350 10650 4350
 Wire Wire Line
 	10300 4150 10950 4150
+$Sheet
+S 850  3900 1050 450 
+U 62C2DD72
+F0 "CurrentSensor" 50
+F1 "CurrentSensor.sch" 50
+F2 "CS_IP+" I L 850 4100 50 
+F3 "V_Out" O R 1900 4050 50 
+F4 "CurrentSensor" O R 1900 4200 50 
+$EndSheet
+Wire Wire Line
+	850  4100 800  4100
+Text Label 800  4100 2    50   ~ 0
+CS_IP+
+Wire Wire Line
+	1900 4200 1950 4200
+Text Label 1950 4200 0    50   ~ 0
+CurrentSensor_Out
+Text Label 800  4850 2    50   ~ 0
+CANL
+Text Label 800  4650 2    50   ~ 0
+CANH
+Wire Wire Line
+	850  4850 800  4850
+Wire Wire Line
+	850  4650 800  4650
+Wire Wire Line
+	1750 4850 1800 4850
+Wire Wire Line
+	1750 4650 1800 4650
+Text Label 1800 4850 0    50   ~ 0
+CAN-TX
+Text Label 1800 4650 0    50   ~ 0
+CAN-RX
+$Sheet
+S 850  4550 900  450 
+U 61F4D531
+F0 "CAN" 50
+F1 "CAN.sch" 50
+F2 "CAN-RX" O R 1750 4650 50 
+F3 "CAN-TX" I R 1750 4850 50 
+F4 "CANH" B L 850 4650 50 
+F5 "CANL" B L 850 4850 50 
+$EndSheet
+$Sheet
+S 550  3000 1050 650 
+U 6269845F
+F0 "eFuse" 50
+F1 "eFuse.sch" 50
+F2 "Switch_Signal" I R 1600 3100 50 
+F3 "CurrentSensor_IP+" O R 1600 3400 50 
+F4 "VCC_Pin" I R 1600 3250 50 
+F5 "VoltageFuseMeasure" O R 1600 3550 50 
+$EndSheet
+Wire Wire Line
+	1600 3550 1650 3550
+Text Label 1650 3550 0    50   ~ 0
+VoltageFuseMeasure
+Wire Wire Line
+	6950 5200 7000 5200
+Text Label 7000 5200 0    50   ~ 0
+VoltageFuseMeasure
 $EndSCHEMATC

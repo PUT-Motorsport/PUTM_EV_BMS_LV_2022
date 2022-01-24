@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 12 13
+Sheet 13 13
 Title "eFuse"
 Date ""
 Rev ""
@@ -152,8 +152,6 @@ Wire Wire Line
 Wire Wire Line
 	5150 2250 5100 2250
 Wire Wire Line
-	7300 2800 7200 2800
-Wire Wire Line
 	6800 2800 6900 2800
 Wire Wire Line
 	6800 2800 6800 2250
@@ -191,7 +189,7 @@ F 3 "~" H 5950 4450 50  0001 C CNN
 $EndComp
 Text Label 5350 2550 3    50   ~ 0
 Gate
-Text HLabel 7300 2800 2    50   Output ~ 0
+Text HLabel 7800 2800 2    50   Output ~ 0
 CurrentSensor_IP+
 Wire Wire Line
 	5100 2250 5100 2800
@@ -311,4 +309,57 @@ $EndComp
 Wire Wire Line
 	4250 2800 3950 2800
 Connection ~ 4250 2800
+$Comp
+L Device:R_Small R65
+U 1 1 61EF9D80
+P 7400 3000
+F 0 "R65" H 7459 3046 50  0000 L CNN
+F 1 "20k" H 7459 2955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7400 3000 50  0001 C CNN
+F 3 "~" H 7400 3000 50  0001 C CNN
+	1    7400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R66
+U 1 1 61EFA7A0
+P 7400 3400
+F 0 "R66" H 7459 3446 50  0000 L CNN
+F 1 "2,7k" H 7459 3355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7400 3400 50  0001 C CNN
+F 3 "~" H 7400 3400 50  0001 C CNN
+	1    7400 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2900 7400 2800
+Wire Wire Line
+	7200 2800 7400 2800
+Wire Wire Line
+	7400 3100 7400 3200
+Wire Wire Line
+	7400 3500 7400 3600
+$Comp
+L power:GND #PWR?
+U 1 1 61EFD62C
+P 7400 3600
+AR Path="/61EFD62C" Ref="#PWR?"  Part="1" 
+AR Path="/6269845F/61EFD62C" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 7400 3350 50  0001 C CNN
+F 1 "GND" H 7405 3427 50  0000 C CNN
+F 2 "" H 7400 3600 50  0001 C CNN
+F 3 "" H 7400 3600 50  0001 C CNN
+	1    7400 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2800 7800 2800
+Connection ~ 7400 2800
+Wire Wire Line
+	7400 3200 7800 3200
+Connection ~ 7400 3200
+Wire Wire Line
+	7400 3200 7400 3300
+Text HLabel 7800 3200 2    50   Output ~ 0
+VoltageFuseMeasure
 $EndSCHEMATC
