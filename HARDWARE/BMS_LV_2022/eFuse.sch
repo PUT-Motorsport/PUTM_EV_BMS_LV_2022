@@ -170,9 +170,9 @@ U 1 1 6287D375
 P 7050 2800
 F 0 "F2" V 6853 2800 50  0000 C CNN
 F 1 "Fuse" V 6944 2800 50  0000 C CNN
-F 2 "footprints:Fuseholder_Keystone_3522-2" V 6980 2800 50  0001 C CNN
+F 2 "footprints:3557-2" V 6980 2800 50  0001 C CNN
 F 3 "~" H 7050 2800 50  0001 C CNN
-F 4 "3522-2" H 7050 2800 50  0001 C CNN "Part Number"
+F 4 "3557-2" H 7050 2800 50  0001 C CNN "Part Number"
 	1    7050 2800
 	0    1    1    0   
 $EndComp
