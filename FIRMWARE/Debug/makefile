@@ -9,6 +9,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
 -include Drivers/STM32L4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
@@ -77,7 +81,7 @@ main-build: BMSLV_2022.elf secondary-outputs
 
 # Tool invocations
 BMSLV_2022.elf: $(OBJS) $(USER_OBJS) /home/max/Documents/PUT_Motorsport/PUTM_EV_BMS_LV_2022/FIRMWARE/STM32L4P5RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "BMSLV_2022.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/max/Documents/PUT_Motorsport/PUTM_EV_BMS_LV_2022/FIRMWARE/STM32L4P5RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BMSLV_2022.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "BMSLV_2022.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/max/Documents/PUT_Motorsport/PUTM_EV_BMS_LV_2022/FIRMWARE/STM32L4P5RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BMSLV_2022.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
