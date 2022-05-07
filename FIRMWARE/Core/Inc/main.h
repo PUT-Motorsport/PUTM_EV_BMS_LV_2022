@@ -33,6 +33,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "soc_ekf.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -95,6 +96,44 @@ void Error_Handler(void);
 #define SPI1_CS_Pin GPIO_PIN_15
 #define SPI1_CS_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
+#define NUMBER_OF_CELLS 			6
+#define NUMBER_OF_TEMPERATURES		5
+#define NUMBER_OF_CS_SAMPLES		300
+#define NEUTRAL_CURRENT_SENSOR		2160 //TO CHECK
+
+struct Voltages{
+	uint16_t cells[NUMBER_OF_CELLS];
+	uint8_t cells_can[NUMBER_OF_CELLS];
+	uint32_t total;
+};
+
+struct Temperatures{
+	uint16_t values[NUMBER_OF_TEMPERATURES];
+	uint8_t values_can[NUMBER_OF_TEMPERATURES];
+	uint16_t average;
+	volatile uint16_t adc[NUMBER_OF_TEMPERATURES];
+};
+
+struct Current_Sensor{
+	uint32_t adc[NUMBER_OF_CS_SAMPLES] = {0};
+	float value;
+	float value_max;
+	float value_min;
+
+};
+
+struct SoC{
+	SoC_EKF main;
+	float value;
+	uint8_t value_can;
+};
+
+struct Data{
+	Voltages voltages;
+	Temperatures temperatures;
+	Current_Sensor current;
+	SoC soc;
+} data;
 
 /* USER CODE END Private defines */
 

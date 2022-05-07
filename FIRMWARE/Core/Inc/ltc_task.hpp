@@ -11,6 +11,10 @@
 #include <main.h>
 #include <cmsis_os.h>
 
+float temperature_calculations(uint16_t value);
+
+void get_temperatures();
+
 void start_ltc_function(void *argument);
 
 
