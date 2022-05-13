@@ -772,7 +772,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, EFUSE_Pin|SPI1_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(FUSE_VOLTAGE_GPIO_Port, FUSE_VOLTAGE_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, INTERLOCK_Pin|FUSE_VOLTAGE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin, GPIO_PIN_SET);
@@ -784,12 +784,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(EFUSE_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : FUSE_VOLTAGE_Pin */
-  GPIO_InitStruct.Pin = FUSE_VOLTAGE_Pin;
+  /*Configure GPIO pins : INTERLOCK_Pin FUSE_VOLTAGE_Pin */
+  GPIO_InitStruct.Pin = INTERLOCK_Pin|FUSE_VOLTAGE_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(FUSE_VOLTAGE_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED_1_Pin LED_2_Pin LED_3_Pin LED_4_Pin */
   GPIO_InitStruct.Pin = LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin;

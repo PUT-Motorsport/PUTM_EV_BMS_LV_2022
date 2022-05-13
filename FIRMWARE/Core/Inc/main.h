@@ -79,6 +79,8 @@ void Error_Handler(void);
 #define THERM_8_GPIO_Port GPIOB
 #define CURRENT_SENSOR_Pin GPIO_PIN_1
 #define CURRENT_SENSOR_GPIO_Port GPIOB
+#define INTERLOCK_Pin GPIO_PIN_2
+#define INTERLOCK_GPIO_Port GPIOB
 #define FUSE_VOLTAGE_Pin GPIO_PIN_11
 #define FUSE_VOLTAGE_GPIO_Port GPIOB
 #define LED_1_Pin GPIO_PIN_6
@@ -100,6 +102,20 @@ void Error_Handler(void);
 #define NUMBER_OF_TEMPERATURES		5
 #define NUMBER_OF_CS_SAMPLES		300
 #define NEUTRAL_CURRENT_SENSOR		2160 //TO CHECK
+
+#define VOL_DOWN_LIMIT				30000 	//3.3V
+#define VOL_DOWN_OK					36000 	//3.6V
+
+#define VOL_UP_LIMIT				42200 	//4.22V
+#define VOL_UP_OVERCHARGE			42100
+#define VOL_UP_OK					42010 	//4.201V
+#define VOL_UP_NEARLY_OK			41950	//4.195V
+
+#define BALANCE_VALUE				50 		//0.005V
+#define BALANCE_TIME				10000   //10s
+#define UNBALANCE_LIMIT				2000 	// 0.2V
+#define MAX_CELLS_DISCHARGE_AT_ONCE	3
+#define CHARGING_CUTOFF_CURRENT		0.3f
 
 struct Voltages{
 	uint16_t cells[NUMBER_OF_CELLS];
@@ -123,9 +139,15 @@ struct Current_Sensor{
 };
 
 struct SoC{
-	SoC_EKF main;
 	float value;
 	uint8_t value_can;
+};
+
+struct Charging{
+	bool cell_discharge[NUMBER_OF_CELLS];
+	bool charger_state;
+	bool discharge_activation;
+	static uint32_t discharge_tick_end;
 };
 
 struct Data{
@@ -133,6 +155,7 @@ struct Data{
 	Temperatures temperatures;
 	Current_Sensor current;
 	SoC soc;
+	Charging charging;
 } data;
 
 /* USER CODE END Private defines */

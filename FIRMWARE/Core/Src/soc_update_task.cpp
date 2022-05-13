@@ -14,18 +14,9 @@ const float Li_Ion_ocv[] = {418.7120, -1685.2339, 2773.2511, -2389.3256, 1135.46
 const unsigned int Li_Ion_ocv_length = sizeof(Li_Ion_ocv) / sizeof(Li_Ion_ocv[0]);
 static_assert(SOC_OCV_poli_coeff_lenght == Li_Ion_ocv_length, "update define soc-ocv curve");
 
-data.soc.main.set_single_cell_equivalent_model(ICR18650);
-data.soc.main.set_single_cell_ocv_polinomial(Li_Ion_ocv, Li_Ion_ocv_length);
-data.soc.main.set_battery_configuration(1, 3);
-data.soc.main.set_time_sampling(0.05f);
-data.soc.main.set_update_matrix();
-data.soc.main.set_initial_SoC(0.5);
-
-bool first_init_soc = true;
-
-float max_current_sensor_output_voltage = ((float)(CS_POWER_SUPLY * RESISTOR_2) / (float)(RESISTOR_1 + RESISTOR_2)) / 1000;
-float current_sensor_volts_to_amper = ((float)(CS_MVOLT_TO_AMPER * RESISTOR_2) / (float)(RESISTOR_1 + RESISTOR_2)) / 1000;
-float output_current_factor = max_current_sensor_output_voltage / 4096 * (1 / current_sensor_volts_to_amper);
+float max_current_sensor_output_voltage = ((float)(CS_POWER_SUPLY * RESISTOR_2) / (float)(RESISTOR_1 + RESISTOR_2)) / 1000.0;
+float current_sensor_volts_to_amper = ((float)(CS_MVOLT_TO_AMPER * RESISTOR_2) / (float)(RESISTOR_1 + RESISTOR_2)) / 1000.0;
+float output_current_factor = max_current_sensor_output_voltage / 4096.0 * (1.0 / current_sensor_volts_to_amper);
 
 void calculate_current()
 {
@@ -57,6 +48,15 @@ void calculate_current()
 }
 
 void start_soc_function(void *argument){
+	SoC_EKF soc;
+	soc.set_single_cell_equivalent_model(ICR18650);
+	soc.set_single_cell_ocv_polinomial(Li_Ion_ocv, Li_Ion_ocv_length);
+	soc.set_battery_configuration(1, 3);
+	soc.set_time_sampling(0.05f);
+	soc.set_update_matrix();
+	soc.set_initial_SoC(0.5);
+	bool first_init_soc = true;
+
 	for(;;){
 		osDelay(1);
 
