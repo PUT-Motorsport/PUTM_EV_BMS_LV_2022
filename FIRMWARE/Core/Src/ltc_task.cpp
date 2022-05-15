@@ -74,6 +74,28 @@ void get_temperatures()
 	data.temperatures.average = data.temperatures.average / 6;
 }
 
+/*
+ * Brief:	Finding the highest and the lowest cell voltage and index of the highest one
+ * Param:	None
+ * Retval:	data.voltages.lowest_cell_voltage, data.voltages.highest_cell_voltage, data.voltages.highest_cell_voltage_index
+ */
+void min_max_voltage(){
+	data.voltages.lowest_cell_voltage = data.voltages.cells[0];
+	data.voltages.highest_cell_voltage = data.voltages.cells[0];
+	for(unsigned int i = 1; i < NUMBER_OF_CELLS; i++)
+	{
+		if(data.voltages.lowest_cell_voltage > data.voltages.cells[i])
+		{
+			data.voltages.lowest_cell_voltage = data.voltages.cells[i];
+		}
+		if(data.voltages.highest_cell_voltage < data.voltages.cells[i])
+		{
+			data.voltages.highest_cell_voltage = data.voltages.cells[i];
+			data.voltages.highest_cell_voltage_index = i;
+		}
+	}
+}
+
 /**
  * Brief:	ltc_task main function
  * Param:	None
@@ -87,6 +109,8 @@ void start_ltc_function(void *argument){
 		osDelay(30);
 
 		LTC_get_values_adc(data.voltages.cells, data.voltages.total, data.voltages.cells_can);
+
+		min_max_voltage();
 
 		get_temperatures();
 	}

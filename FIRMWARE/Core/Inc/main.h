@@ -101,9 +101,9 @@ void Error_Handler(void);
 #define NUMBER_OF_CELLS 			6
 #define NUMBER_OF_TEMPERATURES		5
 #define NUMBER_OF_CS_SAMPLES		300
-#define NEUTRAL_CURRENT_SENSOR		2160 //TO CHECK
+#define NEUTRAL_CURRENT_SENSOR		2160 	//TO CHECK
 
-#define VOL_DOWN_LIMIT				30000 	//3.3V
+#define VOL_DOWN_LIMIT				30000 	//3.0V
 #define VOL_DOWN_OK					36000 	//3.6V
 
 #define VOL_UP_LIMIT				42200 	//4.22V
@@ -117,10 +117,24 @@ void Error_Handler(void);
 #define MAX_CELLS_DISCHARGE_AT_ONCE	3
 #define CHARGING_CUTOFF_CURRENT		0.3f
 
+#define NEUTRAL_CURRENT_CAR 		0.3 	//to check
+
+#define TIME_TO_SLEEP				1200000 //20 min = 20*60*1000 ms
+#define ERROR_TIME					500   	//500ms
+#define ERROR_TIME_TEMPERATURES		1000  	//1000ms
+
+
+#define TOO_HIGH_CURRENT			20 		//27A
+#define TEMPERATURE_WARNING	50.0f
+#define TEMPERATURE_LIMIT			55.0f
+
 struct Voltages{
 	uint16_t cells[NUMBER_OF_CELLS];
 	uint8_t cells_can[NUMBER_OF_CELLS];
 	uint32_t total;
+	uint16_t lowest_cell_voltage;
+	uint16_t highest_cell_voltage;
+	uint16_t highest_cell_voltage_index;
 };
 
 struct Temperatures{
@@ -145,7 +159,8 @@ struct SoC{
 
 struct Charging{
 	bool cell_discharge[NUMBER_OF_CELLS];
-	bool charger_state;
+	bool charger_plugged;
+	bool charging_state;
 	bool discharge_activation;
 	static uint32_t discharge_tick_end;
 };
