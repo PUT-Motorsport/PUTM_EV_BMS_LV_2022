@@ -15,7 +15,7 @@
  * Param:	index
  * Retval:	index
  */
-int discharge_cells_tail(int *i){
+int discharge_cells_tail(int &i){
 	if(5 == i)
 		return i = -1;
 }
@@ -25,7 +25,7 @@ int discharge_cells_tail(int *i){
  * Param:	Index
  * Retval:	None
  */
-void set_discharge_cell(uint8_t *discharge_at_once, int *i){
+void set_discharge_cell(uint8_t &discharge_at_once, int &i){
 	if(discharge_at_once < MAX_CELLS_DISCHARGE_AT_ONCE)
 	{
 		data.charging.cell_discharge[i] = true;
@@ -43,7 +43,7 @@ void set_discharge_cell(uint8_t *discharge_at_once, int *i){
  * Param:	Index
  * Retval:	None
  */
-void set_discharge_cell_max(uint8_t *discharge_at_once, int *i, bool *max_voltage_discharge_activation){
+void set_discharge_cell_max(uint8_t &discharge_at_once, int &i, bool &max_voltage_discharge_activation){
 	max_voltage_discharge_activation = false;
 	if(discharge_at_once < MAX_CELLS_DISCHARGE_AT_ONCE)
 	{
@@ -67,9 +67,6 @@ void balance_control()
 {
 	uint8_t charged_cells = 0, nearly_charged_cells = 0, cell_overcharged = 0, discharge_at_once = 0;
 	bool max_voltage_discharge_activation= 0, max_voltage_discharge_activation_charging_off = 0;
-
-	min_data.voltages.highest_cell_voltage(data.voltages.lowest_cell_voltage, data.voltages.highest_cell_voltage, data.voltages.highest_cell_voltage_index);
-
 
 	for(unsigned int i = 0; i < NUMBER_OF_CELLS; i++)
 	{
@@ -96,11 +93,11 @@ void balance_control()
 	}
 
 	//EFUSE switch off - battery full
-	if(charged_cells >= 4 && fabsf(outputCurrent) < CHARGING_CUTOFF_CURRENT && nearly_charged_cells == 6)
+	if(charged_cells >= 4 && fabsf(data.current.value) < CHARGING_CUTOFF_CURRENT && nearly_charged_cells == 6)
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
-		soc.set_full_battery();
+		data.soc.main.set_full_battery();
 		data.charging.charging_state = false;
 		//acu state
 	}
@@ -113,7 +110,7 @@ void balance_control()
 		//acu state
 	}
 	//EFUSE switch on
-	else if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == 0 && nearly_charged_cells < 6 && data.charging.discharge_activation == 0 && cell_overcharged == 0 && acuState == 0)
+	else if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == 0 && nearly_charged_cells < 6 && data.charging.discharge_activation == 0 && cell_overcharged == 0)// && acuState == 0)
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);

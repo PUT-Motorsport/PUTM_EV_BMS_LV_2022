@@ -5,6 +5,40 @@
  *      Author: Maks
  */
 #include <comm_err_task.hpp>
+#include <etl/flat_map.h>
+
+enum struct Error_condition{
+	UNBALANCE,
+	VOLTAGE_LOW,
+	VOLTAGE_HIGH,
+	TEMPERATURE_WARNING,
+	TEMPERATURE_HIGH,
+	CURRENT_HIGH,
+	NEUTRAL_CURRENT_CAR
+};
+
+etl::flat_map<Error_condition,etl::pair<int, int>,7> error_conditions = {
+		{Error_condition::UNBALANCE,{2000,INT_MAX}},
+		{Error_condition::VOLTAGE_LOW,{INT_MIN,30000}},
+		{Error_condition::VOLTAGE_HIGH,{42200,INT_MAX}},
+		{Error_condition::TEMPERATURE_WARNING,{48,55}},
+		{Error_condition::TEMPERATURE_HIGH,{55,INT_MAX}},
+		{Error_condition::CURRENT_HIGH,{20,INT_MAX}},
+		{Error_condition::NEUTRAL_CURRENT_CAR,{0,1}}, //float?  //to check
+};
+
+void error_values(){
+
+	Error_condition::UNBALANCE = data.voltages.cells[i] - data.voltages.lowest_cell_voltage;
+	Error_condition::VOLTAGE_LOW = data.voltages.lowest_cell_voltage;
+	Error_condition::VOLTAGE_LOW = data.voltages.highest_cell_voltage;
+	Error_condition::TEMPERATURE_WARNING = data.temperatures.highest_temperature;
+	Error_condition::TEMPERATURE_HIGH = data.temperatures.highest_temperature;
+	Error_condition::CURRENT_HIGH = data.current.value;
+	Error_condition::NEUTRAL_CURRENT_CAR = data.current.value;
+}
+
+
 
 struct Timers{
 	uint32_t balance_error[NUMBER_OF_CELLS];
@@ -40,7 +74,6 @@ struct Error{
 		// led
 	}
  */
-
 
 void if_error_occurs(uint32_t *timers, bool *flag, unsigned int *i, static const int condition, static const int error_time, uint16_t variable)
 {

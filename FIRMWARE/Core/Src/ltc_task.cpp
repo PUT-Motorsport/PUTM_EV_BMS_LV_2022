@@ -96,22 +96,44 @@ void min_max_voltage(){
 	}
 }
 
+
+void min_max_temperature(){
+	data.temperatures.lowest_temperature = data.temperatures.values[0];
+	data.temperatures.highest_temperature = data.temperatures.values[0];
+	for(unsigned int i = 1; i < NUMBER_OF_TEMPERATURES; i++)
+	{
+		if(data.temperatures.lowest_temperature > data.temperatures.values[i])
+		{
+			data.temperatures.lowest_temperature = data.temperatures.values[i];
+		}
+		if(data.temperatures.highest_temperature < data.temperatures.values[i])
+		{
+			data.temperatures.highest_temperature = data.temperatures.values[i];
+		}
+	}
+}
+
+
 /**
  * Brief:	ltc_task main function
  * Param:	None
  * Retval:	None
  */
 void start_ltc_function(void *argument){
+	  init_PEC15_Table();
 	for(;;){
 
 		osDelay(1);
 		LTC_start_cell_adc();
 		osDelay(30);
 
-		LTC_get_values_adc(data.voltages.cells, data.voltages.total, data.voltages.cells_can);
+		LTC_get_values_adc(data.voltages.cells, data.voltages.total, data.voltages.cells_can, data.voltages.total_can);
 
 		min_max_voltage();
 
 		get_temperatures();
+
+		min_max_temperature();
+
 	}
 }

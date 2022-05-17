@@ -5,7 +5,7 @@
  *      Author: Maks
  */
 #include <ltc_library.hpp>
-#include <main.h>
+#include <cstring>
 
 uint16_t pec15Table[256];
 uint16_t CRC15_POLY = 0x4599;
@@ -119,7 +119,7 @@ void LTC_start_cell_adc()
  * Param:	None
  * Retval:	None
  */
-void LTC_get_values_adc(uint16_t *cellValues, uint32_t *cellValuesSum, uint8_t *cellValuesSumCAN)
+void LTC_get_values_adc(uint16_t *cell_values, uint32_t &cell_values_sum, uint8_t *cell_values_can, uint8_t &cell_values_sum_can)
 {
 	uint8_t tab[100], rx_tab[100];
 	uint16_t pec;
@@ -140,9 +140,9 @@ void LTC_get_values_adc(uint16_t *cellValues, uint32_t *cellValuesSum, uint8_t *
 	HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
 
 
-	cellValues[0] = (uint16_t)rx_tab[4] | (((uint16_t)rx_tab[5])<<8);
-	cellValues[1] = (uint16_t)rx_tab[6] | (((uint16_t)rx_tab[7])<<8);
-	cellValues[2] = (uint16_t)rx_tab[8] | (((uint16_t)rx_tab[9])<<8);
+	cell_values[0] = (uint16_t)rx_tab[4] | (((uint16_t)rx_tab[5])<<8);
+	cell_values[1] = (uint16_t)rx_tab[6] | (((uint16_t)rx_tab[7])<<8);
+	cell_values[2] = (uint16_t)rx_tab[8] | (((uint16_t)rx_tab[9])<<8);
 
 
 	// read cell voltage group B
@@ -158,22 +158,22 @@ void LTC_get_values_adc(uint16_t *cellValues, uint32_t *cellValuesSum, uint8_t *
 	HAL_SPI_TransmitReceive(&hspi1, tab, rx_tab, 12, 20);
 	HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
 
-	cellValues[3] = (uint16_t)rx_tab[4] | (((uint16_t)rx_tab[5])<<8);
-	cellValues[4] = (uint16_t)rx_tab[6] | (((uint16_t)rx_tab[7])<<8);
-	cellValues[5] = (uint16_t)rx_tab[8] | (((uint16_t)rx_tab[9])<<8);
+	cell_values[3] = (uint16_t)rx_tab[4] | (((uint16_t)rx_tab[5])<<8);
+	cell_values[4] = (uint16_t)rx_tab[6] | (((uint16_t)rx_tab[7])<<8);
+	cell_values[5] = (uint16_t)rx_tab[8] | (((uint16_t)rx_tab[9])<<8);
 
-	cellValuesSum  = cellValues[0];
 
-	//cells sum calculations for CAN
-	for(unsigned int i = 1; i < NUMBER_OF_CELLS; i++)
+	//voltage calculations for CAN
+	for(int i = 0; i < NUMBER_OF_CELLS; i++)
 	{
-		cellValuesSum += cellValues[i];
+		cell_values_sum += (uint32_t)cell_values[i];
+		cell_values_can[i] = (uint8_t)cell_values[i] / 1000;
 	}
 
-	cellValuesSumCAN = cellValuesSum / 1000;
+	cell_values_sum_can = cell_values_sum / 1000;
 
-	if(cellValuesSumCAN > MAX_SUM_VOLTAGE){
-		cellValuesSumCAN = MAX_SUM_VOLTAGE;
+	if(cell_values_sum_can > MAX_SUM_VOLTAGE){
+		cell_values_sum_can = MAX_SUM_VOLTAGE;
 	}
 
 

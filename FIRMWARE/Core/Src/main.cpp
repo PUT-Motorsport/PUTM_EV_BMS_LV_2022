@@ -25,11 +25,11 @@
 /* USER CODE BEGIN Includes */
 #include "stdbool.h"
 #include "string.h"
+#include "cstring"
 #include "math.h"
+#include "soc_ekf.h"
 //#include "usbd_cdc.h"
 //#include "usbd_cdc_if.h"
-#include "soc_ekf.h"
-#include "ltc_library.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -198,7 +198,6 @@ int main(void)
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
 
-  init_PEC15_Table();
 
   HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
 

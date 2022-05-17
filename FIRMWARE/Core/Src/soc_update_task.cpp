@@ -48,13 +48,12 @@ void calculate_current()
 }
 
 void start_soc_function(void *argument){
-	SoC_EKF soc;
-	soc.set_single_cell_equivalent_model(ICR18650);
-	soc.set_single_cell_ocv_polinomial(Li_Ion_ocv, Li_Ion_ocv_length);
-	soc.set_battery_configuration(1, 3);
-	soc.set_time_sampling(0.05f);
-	soc.set_update_matrix();
-	soc.set_initial_SoC(0.5);
+	data.soc.main.set_single_cell_equivalent_model(ICR18650);
+	data.soc.main.set_single_cell_ocv_polinomial(Li_Ion_ocv, Li_Ion_ocv_length);
+	data.soc.main.set_battery_configuration(1, 3);
+	data.soc.main.set_time_sampling(0.05f);
+	data.soc.main.set_update_matrix();
+	data.soc.main.set_initial_SoC(0.5);
 	bool first_init_soc = true;
 
 	for(;;){

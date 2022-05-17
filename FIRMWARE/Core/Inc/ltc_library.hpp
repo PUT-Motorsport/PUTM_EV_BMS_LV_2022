@@ -5,6 +5,7 @@
  *      Author: Maks
  */
 #include <main.h>
+#include <cmsis_os.h>
 
 #ifndef INC_LTC_LIBRARY_HPP_
 #define INC_LTC_LIBRARY_HPP_
@@ -19,7 +20,7 @@ void LTC_wake_up();
 
 void LTC_start_cell_adc();
 
-void LTC_get_values_adc(uint16_t *cellValues, uint32_t *cellValuesSum, uint8_t *cellValuesSumCAN);
+void LTC_get_values_adc(uint16_t *cell_values, uint32_t &cell_values_sum, uint8_t *cell_values_can, uint8_t &cell_values_sum_can);
 
 void mute_dis();
 

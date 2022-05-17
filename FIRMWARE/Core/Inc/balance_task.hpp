@@ -10,6 +10,7 @@
 
 #include <main.h>
 #include <cmsis_os.h>
+#include <ltc_library.hpp>
 
 void start_balance_function(void *argument);
 
