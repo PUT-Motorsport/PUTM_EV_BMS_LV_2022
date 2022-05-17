@@ -138,12 +138,14 @@ extern SPI_HandleTypeDef hspi1;
 struct Voltages{
 	uint16_t cells[NUMBER_OF_CELLS];
 	uint8_t cells_can[NUMBER_OF_CELLS];
-	uint32_t total;
 	uint8_t total_can;
+	uint32_t total;
 	uint16_t lowest_cell_voltage;
 	uint16_t highest_cell_voltage;
 	uint16_t highest_cell_voltage_index;
 };
+
+
 
 struct Temperatures{
 	uint16_t values[NUMBER_OF_TEMPERATURES];

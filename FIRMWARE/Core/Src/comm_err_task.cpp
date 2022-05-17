@@ -17,25 +17,51 @@ enum struct Error_condition{
 	NEUTRAL_CURRENT_CAR
 };
 
-etl::flat_map<Error_condition,etl::pair<int, int>,7> error_conditions = {
-		{Error_condition::UNBALANCE,{2000,INT_MAX}},
-		{Error_condition::VOLTAGE_LOW,{INT_MIN,30000}},
-		{Error_condition::VOLTAGE_HIGH,{42200,INT_MAX}},
-		{Error_condition::TEMPERATURE_WARNING,{48,55}},
-		{Error_condition::TEMPERATURE_HIGH,{55,INT_MAX}},
-		{Error_condition::CURRENT_HIGH,{20,INT_MAX}},
-		{Error_condition::NEUTRAL_CURRENT_CAR,{0,1}}, //float?  //to check
+
+struct Error_and_connditions{
+	Error_condition error;
+	float min;
+	float max;
+	//const float &value;
 };
+
+
+// error if value is in range <min, max>
+std::array< Error_and_connditions, 7> error_conditions = {
+		Error_and_connditions{Error_condition::UNBALANCE,{2000,INT_MAX}},
+		Error_and_connditions{Error_condition::VOLTAGE_LOW,{INT_MIN,30000}},
+		Error_and_connditions{Error_condition::VOLTAGE_HIGH,{42200,INT_MAX}},
+		Error_and_connditions{Error_condition::TEMPERATURE_WARNING,{48,55}},
+		Error_and_connditions{Error_condition::TEMPERATURE_HIGH,{55,INT_MAX}},
+		Error_and_connditions{Error_condition::CURRENT_HIGH,{20,INT_MAX}},
+		Error_and_connditions{Error_condition::NEUTRAL_CURRENT_CAR,{0,1}} //float?  //to check
+};
+
+
 
 void error_values(){
 
-	Error_condition::UNBALANCE = data.voltages.cells[i] - data.voltages.lowest_cell_voltage;
-	Error_condition::VOLTAGE_LOW = data.voltages.lowest_cell_voltage;
-	Error_condition::VOLTAGE_LOW = data.voltages.highest_cell_voltage;
-	Error_condition::TEMPERATURE_WARNING = data.temperatures.highest_temperature;
-	Error_condition::TEMPERATURE_HIGH = data.temperatures.highest_temperature;
-	Error_condition::CURRENT_HIGH = data.current.value;
-	Error_condition::NEUTRAL_CURRENT_CAR = data.current.value;
+//	Error_condition::UNBALANCE = data.voltages.cells[i] - data.voltages.lowest_cell_voltage;
+//	Error_condition::VOLTAGE_LOW = data.voltages.lowest_cell_voltage;
+//	Error_condition::VOLTAGE_LOW = data.voltages.highest_cell_voltage;
+//	Error_condition::TEMPERATURE_WARNING = data.temperatures.highest_temperature;
+//	Error_condition::TEMPERATURE_HIGH = data.temperatures.highest_temperature;
+//	Error_condition::CURRENT_HIGH = data.current.value;
+//	Error_condition::NEUTRAL_CURRENT_CAR = data.current.value;
+
+	etl::vector<Error_condition, 10> errors;
+
+	for( const auto& error : error_conditions){
+		if(error.min <= error.value && error.value <= error.max){
+			errors.emplace_back(error.error);
+		}
+	}
+
+	for (auto error : errors){
+		// do sth
+	}
+
+
 }
 
 
@@ -57,13 +83,11 @@ struct Flags{
 	bool high_temperature_error[NUMBER_OF_CELLS];
 	bool high_current_error[1];
 	bool sleep[1];
-
 };
 
 struct Error{
 	Timers timers;
 	Flags flags;
-
 }error;
 
 /*
