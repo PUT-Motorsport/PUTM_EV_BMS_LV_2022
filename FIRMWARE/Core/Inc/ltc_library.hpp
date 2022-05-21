@@ -10,8 +10,6 @@
 #ifndef INC_LTC_LIBRARY_HPP_
 #define INC_LTC_LIBRARY_HPP_
 
-#define MAX_SUM_VOLTAGE 255
-
 void init_PEC15_Table();
 
 uint16_t pec15(char *data , int len);

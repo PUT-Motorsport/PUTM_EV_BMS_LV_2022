@@ -69,6 +69,7 @@ void start_soc_function(void *argument){
 			float temp_voltage = (float)data.voltages.cells[0] / 10000.0f;
 			data.soc.main.update(data.current.value, temp_voltage);
 			data.soc.value = data.soc.main.get_SoC();
+			data.soc.value_can = (uint8_t)(data.soc.value * 100);
 		}
 
 	}

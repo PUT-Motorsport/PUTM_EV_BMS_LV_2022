@@ -119,7 +119,7 @@ void LTC_start_cell_adc()
  * Param:	None
  * Retval:	None
  */
-void LTC_get_values_adc(uint16_t *cell_values, uint32_t &cell_values_sum, uint8_t *cell_values_can, uint8_t &cell_values_sum_can)
+void LTC_get_values_adc(uint16_t *cell_values, uint32_t &cell_values_sum, uint8_t *cell_values_can, uint16_t &cell_values_sum_can)
 {
 	uint8_t tab[100], rx_tab[100];
 	uint16_t pec;
@@ -170,11 +170,7 @@ void LTC_get_values_adc(uint16_t *cell_values, uint32_t &cell_values_sum, uint8_
 		cell_values_can[i] = (uint8_t)cell_values[i] / 1000;
 	}
 
-	cell_values_sum_can = cell_values_sum / 1000;
-
-	if(cell_values_sum_can > MAX_SUM_VOLTAGE){
-		cell_values_sum_can = MAX_SUM_VOLTAGE;
-	}
+	cell_values_sum_can = cell_values_sum / 100;
 
 
 }

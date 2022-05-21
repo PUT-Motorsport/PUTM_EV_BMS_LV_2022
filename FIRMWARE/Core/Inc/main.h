@@ -32,8 +32,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 #include "soc_ekf.h"
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -99,6 +99,8 @@ void Error_Handler(void);
 #define SPI1_CS_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 extern SPI_HandleTypeDef hspi1;
+extern CAN_HandleTypeDef hcan1;
+extern RTC_HandleTypeDef hrtc;
 
 #define NUMBER_OF_CELLS 			6
 #define NUMBER_OF_TEMPERATURES		5
@@ -110,36 +112,29 @@ extern SPI_HandleTypeDef hspi1;
 #define RESISTOR_2 					3300	//voltage divider down
 #define CS_MVOLT_TO_AMPER 			100
 
-//#define VOL_DOWN_LIMIT				30000 	//3.0V
+
 #define VOL_DOWN_OK					36000 	//3.6V
 
-//#define VOL_UP_LIMIT				42200 	//4.22V
 #define VOL_UP_OVERCHARGE			42100
 #define VOL_UP_OK					42010 	//4.201V
 #define VOL_UP_NEARLY_OK			41950	//4.195V
 
 #define BALANCE_VALUE				50 		//0.005V
 #define BALANCE_TIME				10000   //10s
-//#define UNBALANCE_LIMIT				2000 	// 0.2V
 #define MAX_CELLS_DISCHARGE_AT_ONCE	3
 #define CHARGING_CUTOFF_CURRENT		0.3f
-
-//#define NEUTRAL_CURRENT_CAR 		0.3 	//to check
 
 #define TIME_TO_SLEEP				1200000 //20 min = 20*60*1000 ms
 #define ERROR_TIME					500   	//500ms
 #define ERROR_TIME_TEMPERATURES		1000  	//1000ms
 
 
-//#define TOO_HIGH_CURRENT			20 		//20A
-//#define TEMPERATURE_WARNING	50.0f
-//#define TEMPERATURE_LIMIT			55.0f
 
 struct Voltages{
 	uint16_t cells[NUMBER_OF_CELLS];
 	uint8_t cells_can[NUMBER_OF_CELLS];
-	uint8_t total_can;
 	uint32_t total;
+	uint16_t total_can;
 	uint16_t lowest_cell_voltage;
 	uint16_t highest_cell_voltage;
 	uint16_t highest_cell_voltage_index;
@@ -148,11 +143,10 @@ struct Voltages{
 
 
 struct Temperatures{
-	uint16_t values[NUMBER_OF_TEMPERATURES];
-	uint16_t lowest_temperature;
-	uint16_t highest_temperature;
-	uint8_t values_can[NUMBER_OF_TEMPERATURES];
-	uint16_t average;
+	uint8_t values[NUMBER_OF_TEMPERATURES];
+	uint8_t lowest_temperature;
+	uint8_t highest_temperature;
+	uint8_t average;
 	volatile uint16_t adc[NUMBER_OF_TEMPERATURES];
 };
 
@@ -185,6 +179,7 @@ struct Data{
 	Current_Sensor current;
 	State_of_Charge soc;
 	Charging charging;
+	uint8_t acu_state;
 } data;
 
 /* USER CODE END Private defines */
