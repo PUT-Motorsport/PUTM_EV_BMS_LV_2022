@@ -1,10 +1,12 @@
 /*
  * balance_task.cpp
  *
- *  Created on: May 6, 2022
+ *  Created on: May 22, 2022
  *      Author: Maks
  */
+
 #include <balance_task.hpp>
+
 
 
 /*
@@ -211,6 +213,3 @@ void start_balance_function(void *argument){
 		HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
 	}
 }
-
-
-

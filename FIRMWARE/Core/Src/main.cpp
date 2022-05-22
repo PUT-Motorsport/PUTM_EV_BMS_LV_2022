@@ -6,13 +6,12 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.
   *
-  * This software component is licensed by ST under Ultimate Liberty license
-  * SLA0044, the "License"; You may not use this file except in compliance with
-  * the License. You may obtain a copy of the License at:
-  *                             www.st.com/SLA0044
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
   */
@@ -24,10 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "stdbool.h"
-#include "string.h"
-#include "cstring"
-#include "math.h"
+#include "soc_ekf.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +43,7 @@ typedef StaticTask_t osStaticThreadDef_t;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-ADC_HandleTypeDef hadc1;
+ ADC_HandleTypeDef hadc1;
 ADC_HandleTypeDef hadc2;
 DMA_HandleTypeDef hdma_adc1;
 DMA_HandleTypeDef hdma_adc2;
@@ -64,14 +60,9 @@ TIM_HandleTypeDef htim8;
 
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
-uint32_t defaultTaskBuffer[ 128 ];
-osStaticThreadDef_t defaultTaskControlBlock;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
-  .cb_mem = &defaultTaskControlBlock,
-  .cb_size = sizeof(defaultTaskControlBlock),
-  .stack_mem = &defaultTaskBuffer[0],
-  .stack_size = sizeof(defaultTaskBuffer),
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* Definitions for ltc_task */
@@ -88,14 +79,14 @@ const osThreadAttr_t ltc_task_attributes = {
 };
 /* Definitions for soc_update_task */
 osThreadId_t soc_update_taskHandle;
-uint32_t soc_updateBuffer[ 128 ];
-osStaticThreadDef_t soc_updateControlBlock;
+uint32_t soc_update_taskBuffer[ 128 ];
+osStaticThreadDef_t soc_update_taskControlBlock;
 const osThreadAttr_t soc_update_task_attributes = {
   .name = "soc_update_task",
-  .cb_mem = &soc_updateControlBlock,
-  .cb_size = sizeof(soc_updateControlBlock),
-  .stack_mem = &soc_updateBuffer[0],
-  .stack_size = sizeof(soc_updateBuffer),
+  .cb_mem = &soc_update_taskControlBlock,
+  .cb_size = sizeof(soc_update_taskControlBlock),
+  .stack_mem = &soc_update_taskBuffer[0],
+  .stack_size = sizeof(soc_update_taskBuffer),
   .priority = (osPriority_t) osPriorityNormal2,
 };
 /* Definitions for balance_task */
@@ -112,26 +103,22 @@ const osThreadAttr_t balance_task_attributes = {
 };
 /* Definitions for comm_err_task */
 osThreadId_t comm_err_taskHandle;
-uint32_t communication_eBuffer[ 128 ];
-osStaticThreadDef_t communication_eControlBlock;
+uint32_t comm_err_taskBuffer[ 128 ];
+osStaticThreadDef_t comm_err_taskControlBlock;
 const osThreadAttr_t comm_err_task_attributes = {
   .name = "comm_err_task",
-  .cb_mem = &communication_eControlBlock,
-  .cb_size = sizeof(communication_eControlBlock),
-  .stack_mem = &communication_eBuffer[0],
-  .stack_size = sizeof(communication_eBuffer),
+  .cb_mem = &comm_err_taskControlBlock,
+  .cb_size = sizeof(comm_err_taskControlBlock),
+  .stack_mem = &comm_err_taskBuffer[0],
+  .stack_size = sizeof(comm_err_taskBuffer),
   .priority = (osPriority_t) osPriorityAboveNormal,
 };
 /* USER CODE BEGIN PV */
 
-
-
-
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
-void SystemClock_Config(void);
+extern "C" void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
@@ -142,11 +129,11 @@ static void MX_SPI1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM6_Init(void);
 static void MX_TIM8_Init(void);
-void start_default_task(void *argument);
+void StartDefaultTask(void *argument);
 extern void start_ltc_function(void *argument);
 extern void start_soc_function(void *argument);
 extern void start_balance_function(void *argument);
-extern void start_comm_function(void *argument);
+extern void start_comm_err_function(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -196,39 +183,6 @@ int main(void)
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
 
-
-  HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
-
-  //canInit();
-  HAL_TIM_Base_Start_IT(&htim3);
-  HAL_TIM_Base_Start(&htim6);
-  HAL_TIM_Base_Start(&htim8);
-
-  /*
-  // define detail single cell dynamic model
-  const float ICR18650[] = {0.05016, 115.753797, 20.957554, 0.024685, 0.013414, 3.0};
-  const float Li_Ion_ocv[] = {418.7120, -1685.2339, 2773.2511, -2389.3256, 1135.4684,
-		  -277.8532, 22.4610, 3.9510, 2.7624};
-  const unsigned int Li_Ion_ocv_length = sizeof(Li_Ion_ocv) / sizeof(Li_Ion_ocv[0]);
-  static_assert(SOC_OCV_poli_coeff_lenght == Li_Ion_ocv_length, "update define soc-ocv curve");
-
-  SoC_EKF soc;
-  soc.set_single_cell_equivalent_model(ICR18650);
-  soc.set_single_cell_ocv_polinomial(Li_Ion_ocv, Li_Ion_ocv_length);
-  soc.set_battery_configuration(1, 3);
-  soc.set_time_sampling(0.05f);
-  soc.set_update_matrix();
-  soc.set_initial_SoC(0.5);
-  //soc.update_SoC_based_on_voltage((float)cellValues[0]/10000);
-*/
-
-  HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
-  HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
-
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)data.temperatures.adc, NUMBER_OF_TEMPERATURES);
-  HAL_ADC_Start_DMA(&hadc2, (uint32_t*)data.current.adc, NUMBER_OF_CS_SAMPLES);
-
-
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -252,7 +206,7 @@ int main(void)
 
   /* Create the thread(s) */
   /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(start_default_task, NULL, &defaultTask_attributes);
+  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* creation of ltc_task */
   ltc_taskHandle = osThreadNew(start_ltc_function, NULL, &ltc_task_attributes);
@@ -264,7 +218,7 @@ int main(void)
   balance_taskHandle = osThreadNew(start_balance_function, NULL, &balance_task_attributes);
 
   /* creation of comm_err_task */
-  comm_err_taskHandle = osThreadNew(start_comm_function, NULL, &comm_err_task_attributes);
+  comm_err_taskHandle = osThreadNew(start_comm_err_function, NULL, &comm_err_task_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -304,6 +258,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
@@ -323,6 +278,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -356,6 +312,7 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 1 */
 
   /* USER CODE END ADC1_Init 1 */
+
   /** Common config
   */
   hadc1.Instance = ADC1;
@@ -377,6 +334,7 @@ static void MX_ADC1_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure the ADC multi-mode
   */
   multimode.Mode = ADC_MODE_INDEPENDENT;
@@ -384,6 +342,7 @@ static void MX_ADC1_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure Regular Channel
   */
   sConfig.Channel = ADC_CHANNEL_8;
@@ -419,6 +378,7 @@ static void MX_ADC2_Init(void)
   /* USER CODE BEGIN ADC2_Init 1 */
 
   /* USER CODE END ADC2_Init 1 */
+
   /** Common config
   */
   hadc2.Instance = ADC2;
@@ -440,6 +400,7 @@ static void MX_ADC2_Init(void)
   {
     Error_Handler();
   }
+
   /** Configure Regular Channel
   */
   sConfig.Channel = ADC_CHANNEL_16;
@@ -482,7 +443,7 @@ static void MX_CAN1_Init(void)
   hcan1.Init.TimeTriggeredMode = DISABLE;
   hcan1.Init.AutoBusOff = DISABLE;
   hcan1.Init.AutoWakeUp = DISABLE;
-  hcan1.Init.AutoRetransmission = ENABLE;
+  hcan1.Init.AutoRetransmission = DISABLE;
   hcan1.Init.ReceiveFifoLocked = DISABLE;
   hcan1.Init.TransmitFifoPriority = DISABLE;
   if (HAL_CAN_Init(&hcan1) != HAL_OK)
@@ -513,6 +474,7 @@ static void MX_RTC_Init(void)
   /* USER CODE BEGIN RTC_Init 1 */
 
   /* USER CODE END RTC_Init 1 */
+
   /** Initialize RTC Only
   */
   hrtc.Instance = RTC;
@@ -772,14 +734,14 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, INTERLOCK_Pin|FUSE_VOLTAGE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOC, LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : EFUSE_Pin */
-  GPIO_InitStruct.Pin = EFUSE_Pin;
+  /*Configure GPIO pins : EFUSE_Pin SPI1_CS_Pin */
+  GPIO_InitStruct.Pin = EFUSE_Pin|SPI1_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(EFUSE_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : INTERLOCK_Pin FUSE_VOLTAGE_Pin */
   GPIO_InitStruct.Pin = INTERLOCK_Pin|FUSE_VOLTAGE_Pin;
@@ -795,27 +757,20 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : SPI1_CS_Pin */
-  GPIO_InitStruct.Pin = SPI1_CS_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  HAL_GPIO_Init(SPI1_CS_GPIO_Port, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
 
-/* USER CODE BEGIN Header_start_default_task */
+/* USER CODE BEGIN Header_StartDefaultTask */
 /**
   * @brief  Function implementing the defaultTask thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_start_default_task */
-void start_default_task(void *argument)
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void *argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
@@ -880,5 +835,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

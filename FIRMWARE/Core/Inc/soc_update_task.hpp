@@ -1,7 +1,7 @@
 /*
- * soc_update.hpp
+ * soc_update_task.hpp
  *
- *  Created on: May 6, 2022
+ *  Created on: May 22, 2022
  *      Author: Maks
  */
 
@@ -10,10 +10,10 @@
 
 #include <main.h>
 #include <cmsis_os.h>
+#include <global_variables.hpp>
 
 void calculate_current();
 
 void start_soc_function(void *argument);
-
 
 #endif /* INC_SOC_UPDATE_TASK_HPP_ */

@@ -1,7 +1,7 @@
 #ifndef SOC_EKF_H
 #define SOC_EKF_H
 
-#include <array>
+//#include <array>
 #include <math.h>
 const unsigned int SOC_OCV_poli_coeff_lenght = 9;
 
@@ -34,7 +34,6 @@ struct Battery_characteristic{
     float battery_ocv_poli[SOC_OCV_poli_coeff_lenght];
     float battery_d_ocv_poli[SOC_OCV_poli_coeff_lenght];
 };
-
 
 
 

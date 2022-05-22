@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 -include ../makefile.init
@@ -66,14 +66,14 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 EXECUTABLES += \
 BMSLV_2022.elf \
 
+MAP_FILES += \
+BMSLV_2022.map \
+
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
 BMSLV_2022.list \
-
-OBJCOPY_BIN += \
-BMSLV_2022.bin \
 
 
 # All Target
@@ -83,7 +83,7 @@ all: main-build
 main-build: BMSLV_2022.elf secondary-outputs
 
 # Tool invocations
-BMSLV_2022.elf: $(OBJS) $(USER_OBJS) F:\GitHub\PUTM_EV_BMS_LV_2022\FIRMWARE\STM32L4P5RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+BMSLV_2022.elf BMSLV_2022.map: $(OBJS) $(USER_OBJS) F:\GitHub\PUTM_EV_BMS_LV_2022\FIRMWARE\STM32L4P5RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-g++ -o "BMSLV_2022.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"F:\GitHub\PUTM_EV_BMS_LV_2022\FIRMWARE\STM32L4P5RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BMSLV_2022.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -98,17 +98,12 @@ BMSLV_2022.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-BMSLV_2022.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "BMSLV_2022.bin"
-	@echo 'Finished building: $@'
-	@echo ' '
-
 # Other Targets
 clean:
-	-$(RM) BMSLV_2022.bin BMSLV_2022.elf BMSLV_2022.list default.size.stdout
+	-$(RM) BMSLV_2022.elf BMSLV_2022.list BMSLV_2022.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

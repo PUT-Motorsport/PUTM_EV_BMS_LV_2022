@@ -1,14 +1,13 @@
 /*
  * comm_err_task.cpp
  *
- *  Created on: May 6, 2022
+ *  Created on: May 22, 2022
  *      Author: Maks
  */
-#include <comm_err_task.hpp>
-#include <etl/vector.h>
-#include <can_interface.hpp>
 
-const static int normal_state = 0;
+#include <comm_err_task.hpp>
+
+
 
 enum struct Error_condition{
 	UNBALANCE,
@@ -70,7 +69,7 @@ void error_check(){
 
 	if(errors_vector.empty())
 	{
-		data.acu_state = normal_state;
+		data.acu_state = NORMAL_STATE;
 	}
 
 	/*for (auto error : errors_vector){
@@ -91,11 +90,13 @@ void error_execute(){
 
 				HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
 
+				/*char tab[1];
+				uint32_t n=1;
 				//wait for key through USB
-				status = CDC_Receive_FS(tab,1);
+				auto status = CDC_Receive_FS((uint8_t*)tab,n);
 				if(USBD_OK == status){
 					break;
-				}
+				}*/
 			}
 		}
 	}
@@ -163,7 +164,7 @@ void serialPrint()
 	CDC_Transmit_FS((uint8_t*)tab, n);
 }
 
-void start_comm_function(void *argument){
+void start_comm_err_function(void *argument){
 
 	for(;;){
 		osDelay(20);
@@ -187,7 +188,7 @@ void start_comm_function(void *argument){
 			0//data.temperatures.values[7]
 		};
 
-		serialPrint();
+		//serialPrint();
 
 		auto can_message_main_frame = PUTM_CAN::Can_tx_message<BMS_LV_main>(can_message_main, can_tx_header_BMS_LV_MAIN);
 		auto can_message_temp_frame = PUTM_CAN::Can_tx_message<BMS_LV_temperature>(can_message_temp, can_tx_header_BMS_LV_TEMPERATURE);
@@ -200,6 +201,5 @@ void start_comm_function(void *argument){
 		error_execute();
 	}
 }
-
 
 

@@ -1,7 +1,7 @@
 /*
  * comm_err_task.hpp
  *
- *  Created on: May 6, 2022
+ *  Created on: May 22, 2022
  *      Author: Maks
  */
 
@@ -10,9 +10,17 @@
 
 #include <main.h>
 #include <cmsis_os.h>
+#include <global_variables.hpp>
+#include <etl/vector.h>
+#include <can_interface.hpp>
+#include <usbd_cdc_if.h>
 
-void start_comm_function(void *argument);
+void error_check();
 
+void error_execute();
 
+void serialPrint();
+
+void start_comm_err_function(void *argument);
 
 #endif /* INC_COMM_ERR_TASK_HPP_ */

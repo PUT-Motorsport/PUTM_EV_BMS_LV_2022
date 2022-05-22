@@ -1,6 +1,7 @@
 "./Core/Src/balance_task.o"
 "./Core/Src/comm_err_task.o"
 "./Core/Src/freertos.o"
+"./Core/Src/global_variables.o"
 "./Core/Src/ltc_library.o"
 "./Core/Src/ltc_task.o"
 "./Core/Src/main.o"

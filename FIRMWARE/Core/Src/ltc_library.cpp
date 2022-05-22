@@ -1,9 +1,10 @@
 /*
  * ltc_library.cpp
  *
- *  Created on: May 6, 2022
+ *  Created on: May 22, 2022
  *      Author: Maks
  */
+
 #include <ltc_library.hpp>
 #include <cstring>
 
@@ -119,7 +120,7 @@ void LTC_start_cell_adc()
  * Param:	None
  * Retval:	None
  */
-void LTC_get_values_adc(uint16_t *cell_values, uint32_t &cell_values_sum, uint8_t *cell_values_can, uint16_t &cell_values_sum_can)
+void LTC_get_values_adc(uint16_t *cell_values)
 {
 	uint8_t tab[100], rx_tab[100];
 	uint16_t pec;
@@ -161,16 +162,6 @@ void LTC_get_values_adc(uint16_t *cell_values, uint32_t &cell_values_sum, uint8_
 	cell_values[3] = (uint16_t)rx_tab[4] | (((uint16_t)rx_tab[5])<<8);
 	cell_values[4] = (uint16_t)rx_tab[6] | (((uint16_t)rx_tab[7])<<8);
 	cell_values[5] = (uint16_t)rx_tab[8] | (((uint16_t)rx_tab[9])<<8);
-
-
-	//voltage calculations for CAN
-	for(int i = 0; i < NUMBER_OF_CELLS; i++)
-	{
-		cell_values_sum += (uint32_t)cell_values[i];
-		cell_values_can[i] = (uint8_t)cell_values[i] / 1000;
-	}
-
-	cell_values_sum_can = cell_values_sum / 100;
 
 
 }
@@ -358,5 +349,6 @@ void LTC_turn_off_discharge()
 
 	mute_dis();
 }
+
 
 

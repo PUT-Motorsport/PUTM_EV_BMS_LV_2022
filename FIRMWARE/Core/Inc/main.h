@@ -7,13 +7,12 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.
   *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
   */
@@ -24,7 +23,7 @@
 #define __MAIN_H
 
 #ifdef __cplusplus
-//extern "C" {
+extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
@@ -32,7 +31,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "soc_ekf.h"
 
 /* USER CODE END Includes */
 
@@ -101,93 +99,10 @@ void Error_Handler(void);
 extern SPI_HandleTypeDef hspi1;
 extern CAN_HandleTypeDef hcan1;
 extern RTC_HandleTypeDef hrtc;
-
-#define NUMBER_OF_CELLS 			6
-#define NUMBER_OF_TEMPERATURES		5
-#define NUMBER_OF_CS_SAMPLES		300
-#define NEUTRAL_CURRENT_SENSOR		2160 	//TO CHECK
-
-#define CS_POWER_SUPLY				5000	//5V
-#define RESISTOR_1 					1500	//voltage divider up
-#define RESISTOR_2 					3300	//voltage divider down
-#define CS_MVOLT_TO_AMPER 			100
-
-
-#define VOL_DOWN_OK					36000 	//3.6V
-
-#define VOL_UP_OVERCHARGE			42100
-#define VOL_UP_OK					42010 	//4.201V
-#define VOL_UP_NEARLY_OK			41950	//4.195V
-
-#define BALANCE_VALUE				50 		//0.005V
-#define BALANCE_TIME				10000   //10s
-#define MAX_CELLS_DISCHARGE_AT_ONCE	3
-#define CHARGING_CUTOFF_CURRENT		0.3f
-
-#define TIME_TO_SLEEP				1200000 //20 min = 20*60*1000 ms
-#define ERROR_TIME					500   	//500ms
-#define ERROR_TIME_TEMPERATURES		1000  	//1000ms
-
-
-
-struct Voltages{
-	uint16_t cells[NUMBER_OF_CELLS];
-	uint8_t cells_can[NUMBER_OF_CELLS];
-	uint32_t total;
-	uint16_t total_can;
-	uint16_t lowest_cell_voltage;
-	uint16_t highest_cell_voltage;
-	uint16_t highest_cell_voltage_index;
-};
-
-
-
-struct Temperatures{
-	uint8_t values[NUMBER_OF_TEMPERATURES];
-	uint8_t lowest_temperature;
-	uint8_t highest_temperature;
-	uint8_t average;
-	volatile uint16_t adc[NUMBER_OF_TEMPERATURES];
-};
-
-struct Current_Sensor{
-	uint32_t adc[NUMBER_OF_CS_SAMPLES] = {0};
-	float value;
-	float value_max;
-	float value_min;
-
-};
-
-struct State_of_Charge{
-
-	SoC_EKF main;
-	float value;
-	uint8_t value_can;
-};
-
-struct Charging{
-	bool cell_discharge[NUMBER_OF_CELLS];
-	bool charger_plugged;
-	bool charging_state;
-	bool discharge_activation;
-	static uint32_t discharge_tick_end;
-};
-
-struct Data{
-	Voltages voltages;
-	Temperatures temperatures;
-	Current_Sensor current;
-	State_of_Charge soc;
-	Charging charging;
-	uint8_t acu_state;
-} data;
-
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
-//}
+}
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

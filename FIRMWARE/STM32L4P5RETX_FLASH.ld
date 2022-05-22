@@ -8,6 +8,8 @@
 ** @brief       : Linker script for STM32L4P5RETx Device from STM32L4PLUS series
 **                      512Kbytes FLASH
 **                      320Kbytes RAM
+**                      64Kbytes RAM2
+**                      128Kbytes RAM3
 **
 **                Set heap size, stack size and stack location according
 **                to application requirements.
@@ -22,13 +24,12 @@
 ******************************************************************************
 ** @attention
 **
-** <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
-** All rights reserved.</center></h2>
+** Copyright (c) 2022 STMicroelectronics.
+** All rights reserved.
 **
-** This software component is licensed by ST under BSD 3-Clause license,
-** the "License"; You may not use this file except in compliance with the
-** License. You may obtain a copy of the License at:
-**                        opensource.org/licenses/BSD-3-Clause
+** This software is licensed under terms that can be found in the LICENSE file
+** in the root directory of this software component.
+** If no LICENSE file comes with this software, it is provided AS-IS.
 **
 ******************************************************************************
 */
@@ -46,6 +47,8 @@ _Min_Stack_Size = 0x400 ; /* required amount of stack */
 MEMORY
 {
   RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 320K
+  RAM2    (xrw)    : ORIGIN = 0x10000000,   LENGTH = 64K
+  RAM3    (xrw)    : ORIGIN = 0x20030000,   LENGTH = 128K
   FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 512K
 }
 

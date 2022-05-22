@@ -1,10 +1,12 @@
 /*
- * soc_update.cpp
+ * soc_update_task.cpp
  *
- *  Created on: May 6, 2022
+ *  Created on: May 22, 2022
  *      Author: Maks
  */
+
 #include <soc_update_task.hpp>
+
 
 
 // define detail single cell dynamic model
@@ -74,7 +76,4 @@ void start_soc_function(void *argument){
 
 	}
 }
-
-
-
 

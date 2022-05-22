@@ -1,11 +1,14 @@
 /*
  * ltc_task.cpp
  *
- *  Created on: May 1, 2022
- *      Author: max
+ *  Created on: May 22, 2022
+ *      Author: Maks
  */
+
 #include <ltc_task.hpp>
 #include <ltc_library.hpp>
+#include <global_variables.hpp>
+
 
 const int temperature_map[26][2] = {
 //	  adc value ,  temperature *C
@@ -113,6 +116,17 @@ void min_max_temperature(){
 	}
 }
 
+void voltage_can_calc(){
+	//voltage calculations for CAN
+	for(int i = 0; i < NUMBER_OF_CELLS; i++)
+	{
+		data.voltages.total += (uint32_t)data.voltages.cells[i];
+		data.voltages.cells_can[i] = (uint8_t)data.voltages.cells[i] / 1000;
+	}
+
+	data.voltages.total_can = data.voltages.total / 100;
+}
+
 
 /**
  * Brief:	ltc_task main function
@@ -127,7 +141,9 @@ void start_ltc_function(void *argument){
 		LTC_start_cell_adc();
 		osDelay(30);
 
-		LTC_get_values_adc(data.voltages.cells, data.voltages.total, data.voltages.cells_can, data.voltages.total_can);
+		LTC_get_values_adc(data.voltages.cells);
+
+		voltage_can_calc();
 
 		min_max_voltage();
 
@@ -137,3 +153,4 @@ void start_ltc_function(void *argument){
 
 	}
 }
+
