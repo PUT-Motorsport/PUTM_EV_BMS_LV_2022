@@ -14,6 +14,7 @@
 #include <etl/vector.h>
 #include <can_interface.hpp>
 #include <usbd_cdc_if.h>
+#include <etl/algorithm.h>
 
 void error_check();
 

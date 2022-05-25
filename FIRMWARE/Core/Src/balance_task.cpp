@@ -20,6 +20,8 @@
 int discharge_cells_tail(int &i){
 	if(5 == i)
 		return i = -1;
+	else
+		return i;
 }
 
 /**
@@ -98,7 +100,7 @@ void balance_control()
 	if(charged_cells >= 4 && fabsf(data.current.value) < CHARGING_CUTOFF_CURRENT && nearly_charged_cells == 6)
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
 		data.soc.main.set_full_battery();
 		data.charging.charging_state = false;
 		data.acu_state = 0;
@@ -107,7 +109,7 @@ void balance_control()
 	else if(cell_overcharged > 1)
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
 		data.charging.charging_state = false;
 		data.acu_state = 0;
 	}
@@ -115,7 +117,7 @@ void balance_control()
 	else if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == 0 && nearly_charged_cells < 6 && data.charging.discharge_activation == 0 && cell_overcharged == 0)// && acuState == 0)
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
 		data.charging.charging_state = true;
 		data.acu_state = 1;
 	}
@@ -200,16 +202,20 @@ void balance_activation_deactivation()
 
 void start_balance_function(void *argument){
 	data.charging.charger_plugged = HAL_GPIO_ReadPin(INTERLOCK_GPIO_Port, INTERLOCK_Pin);
-	if(true == data.charging.charger_plugged) //charger is plugged
-	{
-		HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_SET);
-		for(;;){
+	for(;;){
+		osDelay(30);
+		if(data.charging.charger_plugged) //charger is plugged
+		{
+			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
+
 			balance_control();
 			balance_activation_deactivation();
+
 		}
-	}
-	else	//charger is unplugged
-	{
-		HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
+		else	//charger is unplugged
+		{
+			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_SET);
+		}
+
 	}
 }

@@ -117,11 +117,12 @@ void min_max_temperature(){
 }
 
 void voltage_can_calc(){
+	data.voltages.total = 0;
 	//voltage calculations for CAN
 	for(int i = 0; i < NUMBER_OF_CELLS; i++)
 	{
 		data.voltages.total += (uint32_t)data.voltages.cells[i];
-		data.voltages.cells_can[i] = (uint8_t)data.voltages.cells[i] / 1000;
+		data.voltages.cells_can[i] = (uint8_t)(data.voltages.cells[i] / 1000);
 	}
 
 	data.voltages.total_can = data.voltages.total / 100;

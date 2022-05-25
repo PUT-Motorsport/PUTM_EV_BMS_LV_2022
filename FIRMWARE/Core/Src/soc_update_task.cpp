@@ -16,9 +16,9 @@ const float Li_Ion_ocv[] = {418.7120, -1685.2339, 2773.2511, -2389.3256, 1135.46
 const unsigned int Li_Ion_ocv_length = sizeof(Li_Ion_ocv) / sizeof(Li_Ion_ocv[0]);
 static_assert(SOC_OCV_poli_coeff_lenght == Li_Ion_ocv_length, "update define soc-ocv curve");
 
-float max_current_sensor_output_voltage = ((float)(CS_POWER_SUPLY * RESISTOR_2) / (float)(RESISTOR_1 + RESISTOR_2)) / 1000.0;
+float max_divided_current_sensor_output_voltage = ((float)(CS_MAX_OUTPUT_VOLTAGE * RESISTOR_2) / (float)(RESISTOR_1 + RESISTOR_2)) / 1000.0;
 float current_sensor_volts_to_amper = ((float)(CS_MVOLT_TO_AMPER * RESISTOR_2) / (float)(RESISTOR_1 + RESISTOR_2)) / 1000.0;
-float output_current_factor = max_current_sensor_output_voltage / 4096.0 * (1.0 / current_sensor_volts_to_amper);
+float output_current_factor = max_divided_current_sensor_output_voltage / 4096.0 * (1.0 / current_sensor_volts_to_amper);
 
 void calculate_current()
 {
@@ -59,7 +59,7 @@ void start_soc_function(void *argument){
 	bool first_init_soc = true;
 
 	for(;;){
-		osDelay(1);
+		osDelay(30);
 
 		calculate_current();
 

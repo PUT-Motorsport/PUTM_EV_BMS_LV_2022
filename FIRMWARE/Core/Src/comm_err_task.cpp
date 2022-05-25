@@ -33,18 +33,36 @@ struct Error_and_connditions{
 };
 
 
-
 Error_and_connditions error_conditions[7] = {
-		{Error_condition::NEUTRAL_CURRENT_CAR,0,0.3,data.current.value,1200000,8}, //to check //acu_state 0 or 8?
-		{Error_condition::UNBALANCE,2000,50000,(float)(data.voltages.highest_cell_voltage-data.voltages.lowest_cell_voltage),500,2},
-		{Error_condition::TEMPERATURE_WARNING,48,55,(float)data.temperatures.highest_temperature,1000,3},
-		{Error_condition::VOLTAGE_LOW,0,30000,(float)data.voltages.lowest_cell_voltage,500,4},
-		{Error_condition::VOLTAGE_HIGH,42200,500000,(float)data.voltages.highest_cell_voltage,500,5},
-		{Error_condition::TEMPERATURE_HIGH,55,120,(float)data.temperatures.highest_temperature,500,6},
-		{Error_condition::CURRENT_HIGH,20,100,data.current.value,500,7}
+		{Error_condition::NEUTRAL_CURRENT_CAR,-0.3,0.3,data.current.value,TIME_TO_SLEEP,8}, //to check //acu_state 0 or 8?
+		{Error_condition::UNBALANCE,2000,50000,(float)(data.voltages.highest_cell_voltage-data.voltages.lowest_cell_voltage),ERROR_TIME,2},
+		{Error_condition::TEMPERATURE_WARNING,48,55,(float)data.temperatures.highest_temperature,ERROR_TIME_TEMPERATURES,3},
+		{Error_condition::VOLTAGE_LOW,0,30000,(float)data.voltages.lowest_cell_voltage,ERROR_TIME,4},
+		{Error_condition::VOLTAGE_HIGH,42200,500000,(float)data.voltages.highest_cell_voltage,ERROR_TIME,5},
+		{Error_condition::TEMPERATURE_HIGH,55,120,(float)data.temperatures.highest_temperature,ERROR_TIME_TEMPERATURES,6},
+		{Error_condition::CURRENT_HIGH,20,100,data.current.value,ERROR_TIME,7}
 
 };
 
+void can_init()
+{
+	CAN_FilterTypeDef filter;
+	filter.FilterActivation = ENABLE;
+	filter.FilterBank = 10;
+	filter.FilterFIFOAssignment = CAN_FILTER_FIFO0;
+	filter.FilterIdHigh = 0x00;
+	filter.FilterIdLow = 0x00;
+	filter.FilterMaskIdHigh = 0x00;
+	filter.FilterMaskIdLow = 0x00;
+	filter.FilterMode = CAN_FILTERMODE_IDMASK;
+	filter.FilterScale = CAN_FILTERSCALE_32BIT;
+	filter.SlaveStartFilterBank = 10;
+
+	HAL_CAN_ConfigFilter(&hcan1, &filter);
+	HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
+	HAL_CAN_Start(&hcan1);
+
+}
 
 // error if value is in range <min, max>
 void error_check(){
@@ -52,13 +70,12 @@ void error_check(){
 
 	for(auto& error : error_conditions){
 		if(error.min <= error.value && error.value <= error.max){
-
+			errors_vector.emplace_back(error.error);
+			data.acu_state=error.acu_state_code;
 			if(false == error.flag)
 			{
-				errors_vector.emplace_back(error.error);
 				error.timer = HAL_GetTick() + error.error_time;
 				error.flag = true;
-				data.acu_state=error.acu_state_code;
 			}
 		}
 		else{
@@ -78,6 +95,7 @@ void error_check(){
 }
 
 void error_execute(){
+	uint32_t time = HAL_GetTick();
 	if(error_conditions[0].timer <= HAL_GetTick()) //shut down and sleep
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
@@ -100,6 +118,8 @@ void error_execute(){
 			}
 		}
 	}
+
+	data.EFUSE_state = HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin);
 }
 
 void serialPrint()
@@ -115,29 +135,29 @@ void serialPrint()
 	float cell_values_sum = (float)data.voltages.total / 10000;
 	n += sprintf(&tab[n], "%02d:%02d:%02d\r\n", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
 	n += sprintf(&tab[n], "*** Battery state: %d ***", data.acu_state);
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "LEGEND FOR BATTERY STATE:");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "0- all good");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "1- charging");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "2- unbalanced(difference from lowest to highest >0.2V)");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "3- highest temperature is more than 48C");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "4- too low voltage");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "5- too high voltage");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "6- too high temperature");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "7- too high current");
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "8- sleep mode");
 	n += sprintf(&tab[n], "\r\n\n");
 	n += sprintf(&tab[n], "*** Stack voltage:\t%3.2f V ***", cell_values_sum);
-	n += sprintf(&tab[n], "\n");
+	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "*** State of charge: %f ***", data.soc.value * 100);
 	n += sprintf(&tab[n], "\r\n");
 
@@ -146,16 +166,14 @@ void serialPrint()
 		float cell_value = (float)data.voltages.cells[i] / 10000;
 		n += sprintf(&tab[n], "-V.%d-\t", i+1);
 		n += sprintf(&tab[n], "%1.3f%c\t", cell_value, data.charging.cell_discharge[i] == 0 ? ' ' : '*');
-		n += sprintf(&tab[n], " -T.%d-\t", i+1);
 		if(i != 5)
+		n += sprintf(&tab[n], " -T.%d-\t", i+1);
 		n += sprintf(&tab[n], "%d\t", data.temperatures.values[i]);
 		n += sprintf(&tab[n], "\r\n");
 	}
 
 	n += sprintf(&tab[n], "\r\n");
 	n += sprintf(&tab[n], "Output current:\t%3.2f\r\n", data.current.value);
-	//n += sprintf(&tab[n], "Max current:\t%3.2f\r\n", data.current.value_max);
-	//n += sprintf(&tab[n], "Min current:\t%3.2f\r\n", data.current.value_min);
 	n += sprintf(&tab[n], "\r\n");
 
 	n += sprintf(&tab[n], "EFUSE state:\t%d\r\n", HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin));
@@ -165,9 +183,17 @@ void serialPrint()
 }
 
 void start_comm_err_function(void *argument){
-
+	can_init();
 	for(;;){
 		osDelay(20);
+
+		error_conditions[0].value = data.current.value;
+		error_conditions[1].value = (float)(data.voltages.highest_cell_voltage-data.voltages.lowest_cell_voltage);
+		error_conditions[2].value = (float)data.temperatures.highest_temperature;
+		error_conditions[3].value = (float)data.voltages.lowest_cell_voltage;
+		error_conditions[4].value = (float)data.voltages.highest_cell_voltage;
+		error_conditions[5].value = (float)data.temperatures.highest_temperature;
+		error_conditions[6].value = data.current.value;
 
 		BMS_LV_main can_message_main{
 			data.voltages.total_can,
@@ -188,7 +214,7 @@ void start_comm_err_function(void *argument){
 			0//data.temperatures.values[7]
 		};
 
-		//serialPrint();
+		serialPrint();
 
 		auto can_message_main_frame = PUTM_CAN::Can_tx_message<BMS_LV_main>(can_message_main, can_tx_header_BMS_LV_MAIN);
 		auto can_message_temp_frame = PUTM_CAN::Can_tx_message<BMS_LV_temperature>(can_message_temp, can_tx_header_BMS_LV_TEMPERATURE);
