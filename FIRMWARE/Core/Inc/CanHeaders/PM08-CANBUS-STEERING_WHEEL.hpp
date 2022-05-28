@@ -3,8 +3,8 @@
 #define STEERING_WHEEL
 
 #include <cstdint>
-#include "message_abstraction.hpp"
 
+namespace PUTM_CAN {
 
 enum struct buttonStates: uint8_t {
 	not_pressed,
@@ -58,6 +58,8 @@ STEERING_WHEEL_MAIN_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, STEERING_WHEEL_MAIN
 
 const CAN_TxHeaderTypeDef can_tx_header_STEERING_WHEEL_EVENT{
 STEERING_WHEEL_EVENT_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, STEERING_WHEEL_EVENT_CAN_DLC, DISABLE};
+
+} // namespace can
 
 #endif
 

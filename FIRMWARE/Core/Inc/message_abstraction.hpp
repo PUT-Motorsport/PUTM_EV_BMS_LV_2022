@@ -4,7 +4,7 @@
 #ifdef UNIT_TESTS
 #include "../hal_can.hpp"
 #else
-#include "stm32l4xx_hal.h"
+#include "main.h"
 #endif
 
 #include <cstdint>

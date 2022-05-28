@@ -3,7 +3,8 @@
 #define WHEELTEMP
 
 #include <cstdint>
-#include "message_abstraction.hpp"
+
+namespace PUTM_CAN {
 
 enum struct WheelTemp_states: uint8_t {
 	Power_up,
@@ -23,6 +24,8 @@ const uint8_t WHEELTEMP_MAIN_FREQUENCY = 1;
 
 const CAN_TxHeaderTypeDef can_tx_header_WHEELTEMP_MAIN{
 WHEELTEMP_MAIN_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, WHEELTEMP_MAIN_CAN_DLC, DISABLE};
+
+} //namespace can
 
 #endif
 

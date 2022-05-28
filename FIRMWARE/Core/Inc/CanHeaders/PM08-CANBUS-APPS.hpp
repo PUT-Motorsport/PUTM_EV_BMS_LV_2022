@@ -3,7 +3,8 @@
 #define APPS
 
 #include <cstdint>
-#include "message_abstraction.hpp"
+
+namespace PUTM_CAN {
 
 enum struct Apps_states: uint8_t {
 	Normal_operation,
@@ -30,5 +31,6 @@ const uint8_t APPS_MAIN_FREQUENCY = 100;
 const CAN_TxHeaderTypeDef can_tx_header_APPS_MAIN{
 APPS_MAIN_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, APPS_MAIN_CAN_DLC, DISABLE};
 
+} //namespace can
 #endif
 

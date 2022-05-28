@@ -3,7 +3,8 @@
 #define YAWPROBE
 
 #include <cstdint>
-#include "message_abstraction.hpp"
+
+namespace PUTM_CAN {
 
 enum struct YawProbe_states: uint8_t {
 	Power_up,
@@ -23,6 +24,8 @@ const uint8_t YAWPROBE_AIR_FLOW_FREQUENCY = 1;
 
 const CAN_TxHeaderTypeDef can_tx_header_YAWPROBE_AIR_FLOW{
 YAWPROBE_AIR_FLOW_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, YAWPROBE_AIR_FLOW_CAN_DLC, DISABLE};
+
+} //namespace can
 
 #endif
 

@@ -3,7 +3,8 @@
 #define LAP_TIMER
 
 #include <cstdint>
-#include "message_abstraction.hpp"
+
+namespace PUTM_CAN {
 
 enum struct Lap_timer_states: uint8_t {
 	Power_up,
@@ -32,6 +33,8 @@ LAP_TIMER_MAIN_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, LAP_TIMER_MAIN_CAN_DLC, 
 
 const CAN_TxHeaderTypeDef can_tx_header_LAP_TIMER_PASS{
 LAP_TIMER_PASS_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, LAP_TIMER_PASS_CAN_DLC, DISABLE};
+
+} // namespace can
 
 #endif
 

@@ -4,6 +4,8 @@
 
 #include <cstdint>
 
+namespace PUTM_CAN {
+
 enum struct Dash_states: uint8_t {
 	Power_up,
 	Normal_operation,
@@ -68,5 +70,7 @@ DASH_STEERING_WHEEL_REQUEST_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, DASH_STEERI
 
 const CAN_TxHeaderTypeDef can_tx_header_DASH_LAP_FINISHED{
 DASH_LAP_FINISHED_CAN_ID, 0xFFF, CAN_ID_STD, CAN_RTR_DATA, DASH_LAP_FINISHED_CAN_DLC, DISABLE};
+
+} //namespace can
 
 #endif

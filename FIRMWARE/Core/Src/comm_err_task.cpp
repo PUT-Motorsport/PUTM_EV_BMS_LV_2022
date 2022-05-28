@@ -195,15 +195,15 @@ void start_comm_err_function(void *argument){
 		error_conditions[5].value = (float)data.temperatures.highest_temperature;
 		error_conditions[6].value = data.current.value;
 
-		BMS_LV_main can_message_main{
+		PUTM_CAN::BMS_LV_main can_message_main{
 			data.voltages.total_can,
 			data.soc.value_can,
 			data.temperatures.average,
 			(uint8_t)data.current.value,
-			static_cast<BMS_LV_states>(data.acu_state)
+			static_cast<PUTM_CAN::BMS_LV_states>(data.acu_state)
 		};
 
-		BMS_LV_temperature can_message_temp{
+		PUTM_CAN::BMS_LV_temperature can_message_temp{
 			data.temperatures.values[0],
 			data.temperatures.values[1],
 			data.temperatures.values[2],
@@ -216,8 +216,8 @@ void start_comm_err_function(void *argument){
 
 		serialPrint();
 
-		auto can_message_main_frame = PUTM_CAN::Can_tx_message<BMS_LV_main>(can_message_main, can_tx_header_BMS_LV_MAIN);
-		auto can_message_temp_frame = PUTM_CAN::Can_tx_message<BMS_LV_temperature>(can_message_temp, can_tx_header_BMS_LV_TEMPERATURE);
+		auto can_message_main_frame = PUTM_CAN::Can_tx_message<PUTM_CAN::BMS_LV_main>(can_message_main, PUTM_CAN::can_tx_header_BMS_LV_MAIN);
+		auto can_message_temp_frame = PUTM_CAN::Can_tx_message<PUTM_CAN::BMS_LV_temperature>(can_message_temp, PUTM_CAN::can_tx_header_BMS_LV_TEMPERATURE);
 
 		auto status_main = can_message_main_frame.send(hcan1);
 		auto status_temp = can_message_temp_frame.send(hcan1);
