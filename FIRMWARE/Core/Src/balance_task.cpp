@@ -204,7 +204,7 @@ void start_balance_function(void *argument){
 	data.charging.charger_plugged = HAL_GPIO_ReadPin(INTERLOCK_GPIO_Port, INTERLOCK_Pin);
 	for(;;){
 		osDelay(30);
-		if(data.charging.charger_plugged) //charger is plugged
+		if(!data.charging.charger_plugged) //charger is plugged
 		{
 			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
 

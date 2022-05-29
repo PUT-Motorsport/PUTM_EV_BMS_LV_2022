@@ -208,7 +208,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan) {
   if (rx.status == HAL_StatusTypeDef::HAL_OK) {
     if (not PUTM_CAN::can.parse_message(rx)) {
       // Unknown message
-      Error_Handler();
+      //Error_Handler();
     }
   }
 }
