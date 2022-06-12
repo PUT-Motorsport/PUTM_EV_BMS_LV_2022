@@ -18,7 +18,7 @@
  * Retval:	index
  */
 int discharge_cells_tail(int &i){
-	if(5 == i)
+	if(5 == i || 6 == i)
 		return i = -1;
 	else
 		return i;
@@ -35,11 +35,10 @@ void set_discharge_cell(uint8_t &discharge_at_once, int &i){
 		data.charging.cell_discharge[i] = true;
 		discharge_at_once++;
 		i++;	//impossible to discharge 2 cells next to each other
+		i=discharge_cells_tail(i);
 	}
 	data.charging.discharge_activation = true;
 	data.charging.discharge_tick_end = HAL_GetTick() + BALANCE_TIME;
-
-	i=discharge_cells_tail(i);
 }
 
 /**
@@ -54,12 +53,12 @@ void set_discharge_cell_max(uint8_t &discharge_at_once, int &i, bool &max_voltag
 		data.charging.cell_discharge[data.voltages.highest_cell_voltage_index] = true;
 		discharge_at_once++;
 		i = data.voltages.highest_cell_voltage_index + 1; //impossible to discharge 2 cells next to each other
+		i=discharge_cells_tail(i);
 	}
 
 	data.charging.discharge_activation = true;
 	data.charging.discharge_tick_end = HAL_GetTick() + BALANCE_TIME;
 
-	i=discharge_cells_tail(i);
 }
 
 /**
@@ -106,7 +105,7 @@ void balance_control()
 		data.acu_state = 0;
 	}
 	//EFUSE switch off - cell overcharged
-	else if(cell_overcharged > 1)
+	else if(cell_overcharged > 1 && data.charging.discharge_activation == 0)
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
@@ -114,7 +113,7 @@ void balance_control()
 		data.acu_state = 0;
 	}
 	//EFUSE switch on
-	else if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == 0 && nearly_charged_cells < 6 && data.charging.discharge_activation == 0 && cell_overcharged == 0)// && acuState == 0)
+	else if(!data.charging.charger_plugged && nearly_charged_cells < 6 && cell_overcharged == 0 && data.charging.discharge_activation == 0)// && acuState == 0
 	{
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
@@ -136,7 +135,7 @@ void balance_control()
 					set_discharge_cell_max(discharge_at_once, i, max_voltage_discharge_activation);
 				}
 				//discharge activation for the cells with maximum voltage level - 4.201V
-				else if(data.voltages.cells[i] > VOL_UP_OK)
+				else if(data.voltages.cells[i] > VOL_DIS)
 				{
 					set_discharge_cell(discharge_at_once, i);
 				}
@@ -146,7 +145,7 @@ void balance_control()
 					set_discharge_cell(discharge_at_once, i);
 				}
 				else
-					data.charging.cell_discharge[i] = 0;
+					data.charging.cell_discharge[i] = false;
 			}
 		}
 	}
@@ -163,12 +162,12 @@ void balance_control()
 					set_discharge_cell_max(discharge_at_once, i, max_voltage_discharge_activation_charging_off);
 				}
 				//discharge activation for the cells with maximum voltage level - 4.201V
-				else if(data.voltages.cells[i] > VOL_UP_OK)
+				else if(data.voltages.cells[i] > VOL_DIS)
 				{
 					set_discharge_cell(discharge_at_once, i);
 				}
 				else
-					data.charging.cell_discharge[i] = 0;
+					data.charging.cell_discharge[i] = false;
 			}
 		}
 	}
@@ -192,9 +191,13 @@ void balance_activation_deactivation()
 		}
 
 	}
-	else if(data.charging.discharge_tick_end <= HAL_GetTick())
+	if(data.charging.discharge_tick_end <= HAL_GetTick())
 	{
 		data.charging.discharge_activation = 0;
+		for(int i = 0; i < NUMBER_OF_CELLS ; i++)
+		{
+			data.charging.cell_discharge[i] = false;
+		}
 		LTC_turn_off_discharge();
 		osDelay(1500);
 	}
@@ -215,6 +218,7 @@ void start_balance_function(void *argument){
 		else	//charger is unplugged
 		{
 			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_SET);
+			balance_activation_deactivation();
 		}
 
 	}

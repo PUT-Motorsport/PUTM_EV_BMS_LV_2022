@@ -7,7 +7,9 @@
 
 #include <comm_err_task.hpp>
 
-
+uint32_t serial_tick = 0;
+uint32_t can_main_tick = 0;
+uint32_t can_temp_ick = 0;
 
 enum struct Error_condition{
 	UNBALANCE,
@@ -164,11 +166,13 @@ void serialPrint()
 	for(int i = 0; i < NUMBER_OF_CELLS; i++)
 	{
 		float cell_value = (float)data.voltages.cells[i] / 10000;
-		n += sprintf(&tab[n], "-V.%d-\t", i+1);
+		n += sprintf(&tab[n], "-V.%d-\t", i);
 		n += sprintf(&tab[n], "%1.3f%c\t", cell_value, data.charging.cell_discharge[i] == 0 ? ' ' : '*');
 		if(i != 5)
-		n += sprintf(&tab[n], " -T.%d-\t", i+1);
+		{
+		n += sprintf(&tab[n], " -T.%d-\t", i);
 		n += sprintf(&tab[n], "%d\t", data.temperatures.values[i]);
+		}
 		n += sprintf(&tab[n], "\r\n");
 	}
 
@@ -183,6 +187,7 @@ void serialPrint()
 }
 
 void start_comm_err_function(void *argument){
+
 	can_init();
 	for(;;){
 		osDelay(20);
@@ -213,18 +218,31 @@ void start_comm_err_function(void *argument){
 			0,//data.temperatures.values[6],
 			0//data.temperatures.values[7]
 		};
-
-		serialPrint();
+		if(serial_tick < HAL_GetTick())
+		{
+			serialPrint();
+			serial_tick = HAL_GetTick() + 500; //0.5s
+		}
 
 		auto can_message_main_frame = PUTM_CAN::Can_tx_message<PUTM_CAN::BMS_LV_main>(can_message_main, PUTM_CAN::can_tx_header_BMS_LV_MAIN);
 		auto can_message_temp_frame = PUTM_CAN::Can_tx_message<PUTM_CAN::BMS_LV_temperature>(can_message_temp, PUTM_CAN::can_tx_header_BMS_LV_TEMPERATURE);
 
-		auto status_main = can_message_main_frame.send(hcan1);
-		auto status_temp = can_message_temp_frame.send(hcan1);
-
+		if(can_main_tick < HAL_GetTick())
+		{
+			auto status_main = can_message_main_frame.send(hcan1);
+			can_main_tick = HAL_GetTick() + 40; //0.04s
+		}
+		if(can_main_tick < HAL_GetTick())
+		{
+			auto status_temp = can_message_temp_frame.send(hcan1);
+			can_main_tick = HAL_GetTick() + 200; //0.2s
+		}
+		if(data.charging.charger_plugged) //charger is unplugged
+		{
 		error_check();
 
 		error_execute();
+		}
 	}
 }
 

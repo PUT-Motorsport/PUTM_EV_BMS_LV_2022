@@ -71,7 +71,7 @@ void get_temperatures()
 	data.temperatures.average = 0;
 	for(unsigned int i = 0; i < NUMBER_OF_TEMPERATURES; i++)
 	{
-		data.temperatures.values[i] = (uint16_t)temperature_calculations(data.temperatures.adc[i]);
+		data.temperatures.values[i] = (uint16_t)temperature_calculations(data.temperatures.adc[7-i]);
 		data.temperatures.average += data.temperatures.values[i];
 	}
 	data.temperatures.average = data.temperatures.average / 6;

@@ -17,7 +17,7 @@ const static int NUMBER_OF_CELLS = 6;
 const static int MAX_NUMBER_OF_TEMPERATURES = 8;
 const static int NUMBER_OF_TEMPERATURES = 5;
 const static int NUMBER_OF_CS_SAMPLES = 100;
-const static int NEUTRAL_CURRENT_SENSOR	= 2090;
+const static int NEUTRAL_CURRENT_SENSOR	= 2075;
 
 const static int CS_MAX_OUTPUT_VOLTAGE = 4500;				//4,5V
 const static int RESISTOR_1 = 1000;					//voltage divider up
@@ -28,12 +28,13 @@ const static int CS_MVOLT_TO_AMPER = 66;
 const static int VOL_DOWN_OK = 36000; 				//3.6V
 
 const static int VOL_UP_OVERCHARGE = 42100;
-const static int VOL_UP_OK = 42010; 				//4.201V
-const static int VOL_UP_NEARLY_OK = 41950;			//4.195V
+const static int VOL_UP_OK = 41995; 				//4.1995V
+const static int VOL_DIS = 42010; 					//4.201V
+const static int VOL_UP_NEARLY_OK = 41920;			//4.192V
 
 const static int BALANCE_VALUE = 50; 				//0.005V
 const static int BALANCE_TIME = 10000;   			//10s
-const static int MAX_CELLS_DISCHARGE_AT_ONCE = 3;
+const static int MAX_CELLS_DISCHARGE_AT_ONCE = 2;
 const static float CHARGING_CUTOFF_CURRENT = 0.3f;
 
 const static int TIME_TO_SLEEP = 1200000; 			//20 min = 1200000 = 20*60*1000 ms
