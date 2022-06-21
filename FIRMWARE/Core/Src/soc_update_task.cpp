@@ -10,7 +10,7 @@
 
 
 // define detail single cell dynamic model
-const float ICR18650[] = {0.05016, 115.753797, 20.957554, 0.024685, 0.013414, 3.0};
+const float ICR18650[] = {0.05016, 115.753797, 20.957554, 0.024685, 0.013414, 5.0};
 const float Li_Ion_ocv[] = {418.7120, -1685.2339, 2773.2511, -2389.3256, 1135.4684,
 		-277.8532, 22.4610, 3.9510, 2.7624};
 const unsigned int Li_Ion_ocv_length = sizeof(Li_Ion_ocv) / sizeof(Li_Ion_ocv[0]);
@@ -52,27 +52,25 @@ void calculate_current()
 void start_soc_function(void *argument){
 	data.soc.main.set_single_cell_equivalent_model(ICR18650);
 	data.soc.main.set_single_cell_ocv_polinomial(Li_Ion_ocv, Li_Ion_ocv_length);
-	data.soc.main.set_battery_configuration(1, 3);
-	data.soc.main.set_time_sampling(0.05f);
+	data.soc.main.set_battery_configuration(1, 2);
+	data.soc.main.set_time_sampling(0.03f);
 	data.soc.main.set_update_matrix();
 	data.soc.main.set_initial_SoC(0.5);
-	bool first_init_soc = true;
+
+	osDelay(100);
+
+	float temp_voltage = (float)data.voltages.cells[0] / 10'000.0f;
+	data.soc.main.update_SoC_based_on_voltage(temp_voltage);
 
 	for(;;){
 		osDelay(30);
 
 		calculate_current();
 
-		if(first_init_soc){
-			float temp_voltage = (float)data.voltages.cells[0] / 10000.0f;
-			data.soc.main.update_SoC_based_on_voltage(temp_voltage);
-			first_init_soc = false;
-		}else{
-			float temp_voltage = (float)data.voltages.cells[0] / 10000.0f;
-			data.soc.main.update(data.current.value, temp_voltage);
-			data.soc.value = data.soc.main.get_SoC();
-			data.soc.value_can = (uint8_t)(data.soc.value * 100);
-		}
+		float temp_voltage = (float)data.voltages.cells[0] / 10'000.0f;
+		data.soc.main.update(data.current.value, temp_voltage);
+		data.soc.value = data.soc.main.get_SoC();
+		data.soc.value_can = (uint8_t)(data.soc.value * 100);
 
 	}
 }

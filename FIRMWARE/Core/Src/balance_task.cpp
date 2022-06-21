@@ -17,9 +17,9 @@
  * Param:	index
  * Retval:	index
  */
-int discharge_cells_tail(int &i){
+int discharge_cells_tail(int i){
 	if(5 == i || 6 == i)
-		return i = -1;
+		return -1;
 	else
 		return i;
 }
@@ -152,7 +152,7 @@ void balance_control()
 	else //charging off
 	{
 		//balance if the cell voltages are overcharged
-		if(false == data.charging.discharge_activation)
+		if(not  data.charging.discharge_activation)
 		{
 			for(int i = 0; i < NUMBER_OF_CELLS; i++)
 			{
@@ -199,6 +199,7 @@ void balance_activation_deactivation()
 			data.charging.cell_discharge[i] = false;
 		}
 		LTC_turn_off_discharge();
+		// FIXME tick counter
 		osDelay(1500);
 	}
 }

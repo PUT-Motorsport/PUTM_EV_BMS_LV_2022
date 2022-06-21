@@ -13,7 +13,7 @@
 #include <ltc_library.hpp>
 #include <global_variables.hpp>
 
-int discharge_cells_tail(int &i);
+int discharge_cells_tail(int i);
 
 void set_discharge_cell(uint8_t &discharge_at_once, int &i);
 

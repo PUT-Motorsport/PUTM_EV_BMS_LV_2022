@@ -126,6 +126,8 @@ void error_execute(){
 
 void serialPrint()
 {
+	// FIXME count chars
+	// or use {fmt}
 	static char tab[3500];
 	uint16_t n=0;
 
@@ -201,11 +203,14 @@ void start_comm_err_function(void *argument){
 		error_conditions[6].value = data.current.value;
 
 		PUTM_CAN::BMS_LV_main can_message_main{
-			data.voltages.total_can,
-			data.soc.value_can,
-			data.temperatures.average,
-			(uint8_t)data.current.value,
-			static_cast<PUTM_CAN::BMS_LV_states>(data.acu_state)
+			.voltage_sum{data.voltages.total_can},
+			.soc{data.soc.value_can}
+//			data.voltages.total_can,
+//			data.soc.value_can,
+//			data.temperatures.average,
+//			(uint8_t)data.current.value,
+			// FIXME include lib/header/bms_lv ...
+//			static_cast<PUTM_CAN::BMS_LV_states>(data.acu_state)
 		};
 
 		PUTM_CAN::BMS_LV_temperature can_message_temp{
@@ -218,6 +223,7 @@ void start_comm_err_function(void *argument){
 			0,//data.temperatures.values[6],
 			0//data.temperatures.values[7]
 		};
+
 		if(serial_tick < HAL_GetTick())
 		{
 			serialPrint();
@@ -232,6 +238,7 @@ void start_comm_err_function(void *argument){
 			auto status_main = can_message_main_frame.send(hcan1);
 			can_main_tick = HAL_GetTick() + 40; //0.04s
 		}
+		// FIXME freq Temp frame
 		if(can_main_tick < HAL_GetTick())
 		{
 			auto status_temp = can_message_temp_frame.send(hcan1);
@@ -239,9 +246,9 @@ void start_comm_err_function(void *argument){
 		}
 		if(data.charging.charger_plugged) //charger is unplugged
 		{
-		error_check();
+			error_check();
 
-		error_execute();
+			error_execute();
 		}
 	}
 }

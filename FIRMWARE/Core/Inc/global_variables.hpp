@@ -83,6 +83,7 @@ struct Charging{
 };
 
 struct Data{
+	// FIXME
 	Voltages voltages;
 	Temperatures temperatures;
 	Current_Sensor current;
