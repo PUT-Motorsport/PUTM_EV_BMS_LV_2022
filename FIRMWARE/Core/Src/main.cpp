@@ -231,7 +231,6 @@ int main(void)
 
   HAL_Delay(2000);
   HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
-  //canInit();
   HAL_TIM_Base_Start_IT(&htim3);
   HAL_TIM_Base_Start(&htim6);
   HAL_TIM_Base_Start(&htim8);

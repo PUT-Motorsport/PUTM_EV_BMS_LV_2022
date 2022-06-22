@@ -12,7 +12,7 @@
 #include <cmsis_os.h>
 #include <global_variables.hpp>
 #include <etl/vector.h>
-#include <can_interface.hpp>
+#include <PUTM_EV_CAN_LIBRARY/lib/can_interface.hpp>
 #include <usbd_cdc_if.h>
 #include <etl/algorithm.h>
 

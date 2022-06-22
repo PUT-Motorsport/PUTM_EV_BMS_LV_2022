@@ -8,6 +8,8 @@
 #include <balance_task.hpp>
 
 
+bool balance_deactivation_flag = false;
+uint32_t tick_counter = 20;
 
 /*
  * Brief:	If the index indicates the last cell because
@@ -189,38 +191,40 @@ void balance_activation_deactivation()
 				LTC_turn_on_discharge(i, data.charging.cell_discharge);
 			}
 		}
-
+		balance_deactivation_flag = true;
 	}
-	if(data.charging.discharge_tick_end <= HAL_GetTick())
+	if(data.charging.discharge_tick_end <= HAL_GetTick() && balance_deactivation_flag)
 	{
+		balance_deactivation_flag = false;
 		data.charging.discharge_activation = 0;
 		for(int i = 0; i < NUMBER_OF_CELLS ; i++)
 		{
 			data.charging.cell_discharge[i] = false;
 		}
 		LTC_turn_off_discharge();
-		// FIXME tick counter
-		osDelay(1500);
+		tick_counter = 0; // time to wait for proper voltage values
 	}
 }
 
 void start_balance_function(void *argument){
 	data.charging.charger_plugged = HAL_GPIO_ReadPin(INTERLOCK_GPIO_Port, INTERLOCK_Pin);
 	for(;;){
-		osDelay(30);
-		if(!data.charging.charger_plugged) //charger is plugged
-		{
-			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
+		osDelay(100);
+		tick_counter++;
+		if(tick_counter > BALANCE_TICKS_AFTER_BALANCE){
+			if(!data.charging.charger_plugged) //charger is plugged
+			{
+				HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
 
-			balance_control();
-			balance_activation_deactivation();
+				balance_control();
+				balance_activation_deactivation();
 
+			}
+			else	//charger is unplugged
+			{
+				HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_SET);
+				balance_activation_deactivation();
+			}
 		}
-		else	//charger is unplugged
-		{
-			HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_SET);
-			balance_activation_deactivation();
-		}
-
 	}
 }

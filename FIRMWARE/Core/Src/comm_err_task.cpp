@@ -9,7 +9,7 @@
 
 uint32_t serial_tick = 0;
 uint32_t can_main_tick = 0;
-uint32_t can_temp_ick = 0;
+uint32_t can_temp_tick = 0;
 
 enum struct Error_condition{
 	UNBALANCE,
@@ -90,10 +90,6 @@ void error_check(){
 	{
 		data.acu_state = NORMAL_STATE;
 	}
-
-	/*for (auto error : errors_vector){
-		// do sth
-	}*/
 }
 
 void error_execute(){
@@ -136,7 +132,7 @@ void serialPrint()
 	HAL_RTC_GetTime(&hrtc, &rtc_time, RTC_FORMAT_BIN);
 	HAL_RTC_GetDate(&hrtc, &rtc_date, RTC_FORMAT_BIN);
 
-	float cell_values_sum = (float)data.voltages.total / 10000;
+	float cell_values_sum = (float)data.voltages.total / 10'000.0;
 	n += sprintf(&tab[n], "%02d:%02d:%02d\r\n", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
 	n += sprintf(&tab[n], "*** Battery state: %d ***", data.acu_state);
 	n += sprintf(&tab[n], "\r\n");
@@ -167,7 +163,7 @@ void serialPrint()
 
 	for(int i = 0; i < NUMBER_OF_CELLS; i++)
 	{
-		float cell_value = (float)data.voltages.cells[i] / 10000;
+		float cell_value = (float)data.voltages.cells[i] / 10'000.0;
 		n += sprintf(&tab[n], "-V.%d-\t", i);
 		n += sprintf(&tab[n], "%1.3f%c\t", cell_value, data.charging.cell_discharge[i] == 0 ? ' ' : '*');
 		if(i != 5)
@@ -204,13 +200,10 @@ void start_comm_err_function(void *argument){
 
 		PUTM_CAN::BMS_LV_main can_message_main{
 			.voltage_sum{data.voltages.total_can},
-			.soc{data.soc.value_can}
-//			data.voltages.total_can,
-//			data.soc.value_can,
-//			data.temperatures.average,
-//			(uint8_t)data.current.value,
-			// FIXME include lib/header/bms_lv ...
-//			static_cast<PUTM_CAN::BMS_LV_states>(data.acu_state)
+			.soc{data.soc.value_can},
+			.temp_avg{data.temperatures.average},
+			.current{(uint8_t)data.current.value},
+			.device_state{static_cast<PUTM_CAN::BMS_LV_states>(data.acu_state)}
 		};
 
 		PUTM_CAN::BMS_LV_temperature can_message_temp{
@@ -238,11 +231,11 @@ void start_comm_err_function(void *argument){
 			auto status_main = can_message_main_frame.send(hcan1);
 			can_main_tick = HAL_GetTick() + 40; //0.04s
 		}
-		// FIXME freq Temp frame
-		if(can_main_tick < HAL_GetTick())
+
+		if(can_temp_tick < HAL_GetTick())
 		{
 			auto status_temp = can_message_temp_frame.send(hcan1);
-			can_main_tick = HAL_GetTick() + 200; //0.2s
+			can_temp_tick = HAL_GetTick() + 200; //0.2s
 		}
 		if(data.charging.charger_plugged) //charger is unplugged
 		{
