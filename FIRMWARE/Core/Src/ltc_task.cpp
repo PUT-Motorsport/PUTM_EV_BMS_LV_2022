@@ -85,7 +85,8 @@ void get_temperatures()
 void min_max_voltage(){
 	data.voltages.lowest_cell_voltage = data.voltages.cells[0];
 	data.voltages.highest_cell_voltage = data.voltages.cells[0];
-	for(unsigned int i = 1; i < NUMBER_OF_CELLS; i++)
+	data.voltages.highest_cell_voltage_index = 0;
+	for(uint8_t i = 1; i < NUMBER_OF_CELLS; i++)
 	{
 		if(data.voltages.lowest_cell_voltage > data.voltages.cells[i])
 		{
@@ -98,7 +99,6 @@ void min_max_voltage(){
 		}
 	}
 }
-
 
 void min_max_temperature(){
 	data.temperatures.lowest_temperature = data.temperatures.values[0];
@@ -144,9 +144,9 @@ void start_ltc_function(void *argument){
 
 		LTC_get_values_adc(data.voltages.cells);
 
-		voltage_can_calc();
-
 		min_max_voltage();
+
+		voltage_can_calc();
 
 		get_temperatures();
 

@@ -41,16 +41,16 @@ const static int TIME_TO_SLEEP = 1200000; 			//20 min = 1200000 = 20*60*1000 ms
 const static int ERROR_TIME	= 500;   				//500ms
 const static int ERROR_TIME_TEMPERATURES = 1000;  	//1000ms
 
-const static int BALANCE_TICKS_AFTER_BALANCE = 30; //which means value*100ms
+const static int BALANCE_TICKS_AFTER_BALANCE = 30; //which means time = value*100ms
 
 struct Voltages{
 	uint16_t cells[NUMBER_OF_CELLS];	//eg. 34567 means 3.4567V
 	uint8_t cells_can[NUMBER_OF_CELLS];
+	uint8_t highest_cell_voltage_index;
 	uint32_t total;
 	uint16_t total_can;
 	uint16_t lowest_cell_voltage;
 	uint16_t highest_cell_voltage;
-	uint16_t highest_cell_voltage_index;
 };
 
 struct Temperatures{

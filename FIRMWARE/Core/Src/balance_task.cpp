@@ -9,7 +9,7 @@
 
 
 bool balance_deactivation_flag = false;
-uint32_t tick_counter = 20;
+uint32_t tick_counter = 0;
 
 /*
  * Brief:	If the index indicates the last cell because
@@ -38,9 +38,10 @@ void set_discharge_cell(uint8_t &discharge_at_once, int &i){
 		discharge_at_once++;
 		i++;	//impossible to discharge 2 cells next to each other
 		i=discharge_cells_tail(i);
+
+		data.charging.discharge_activation = true;
+		data.charging.discharge_tick_end = HAL_GetTick() + BALANCE_TIME;
 	}
-	data.charging.discharge_activation = true;
-	data.charging.discharge_tick_end = HAL_GetTick() + BALANCE_TIME;
 }
 
 /**
@@ -56,11 +57,10 @@ void set_discharge_cell_max(uint8_t &discharge_at_once, int &i, bool &max_voltag
 		discharge_at_once++;
 		i = data.voltages.highest_cell_voltage_index + 1; //impossible to discharge 2 cells next to each other
 		i=discharge_cells_tail(i);
+
+		data.charging.discharge_activation = true;
+		data.charging.discharge_tick_end = HAL_GetTick() + BALANCE_TIME;
 	}
-
-	data.charging.discharge_activation = true;
-	data.charging.discharge_tick_end = HAL_GetTick() + BALANCE_TIME;
-
 }
 
 /**
@@ -125,7 +125,7 @@ void balance_control()
 
 
 	//cell choice algorithm when charger is connected
-	if(true == data.charging.charging_state) //charging on
+	if(true == data.charging.charging_state && fabsf(data.current.value) > CHARGING_CUTOFF_CURRENT ) //charging on
 	{
 		if(false == data.charging.discharge_activation)
 		{
@@ -206,10 +206,15 @@ void balance_activation_deactivation()
 	}
 }
 
+
+
 void start_balance_function(void *argument){
 	data.charging.charger_plugged = HAL_GPIO_ReadPin(INTERLOCK_GPIO_Port, INTERLOCK_Pin);
 	for(;;){
 		osDelay(100);
+		//balance test on cell 0
+		//data.charging.cell_discharge[0]=true;
+		//LTC_turn_on_discharge(0, data.charging.cell_discharge);
 		tick_counter++;
 		if(tick_counter > BALANCE_TICKS_AFTER_BALANCE){
 			if(!data.charging.charger_plugged) //charger is plugged
