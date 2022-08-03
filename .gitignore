@@ -75,3 +75,5 @@ FIRMWARE/*.lib
 *.cmd
 .tmp_versions/
 
+# kiri files
+.kiri/

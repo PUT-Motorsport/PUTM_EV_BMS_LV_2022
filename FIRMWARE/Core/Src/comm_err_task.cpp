@@ -17,6 +17,7 @@ enum struct Error_condition{
 	VOLTAGE_HIGH,
 	TEMPERATURE_WARNING,
 	TEMPERATURE_HIGH,
+	TEMPERATURE_LOST,
 	CURRENT_HIGH,
 	NEUTRAL_CURRENT_CAR
 };
@@ -35,13 +36,14 @@ struct Error_and_connditions{
 };
 
 
-Error_and_connditions error_conditions[7] = {
+Error_and_connditions error_conditions[8] = {
 		{Error_condition::NEUTRAL_CURRENT_CAR,-0.3,0.3,data.current.value,TIME_TO_SLEEP,8}, //to check //acu_state 0 or 8?
 		{Error_condition::UNBALANCE,2000,50000,(float)(data.voltages.highest_cell_voltage-data.voltages.lowest_cell_voltage),ERROR_TIME,2},
 		{Error_condition::TEMPERATURE_WARNING,48,55,(float)data.temperatures.highest_temperature,ERROR_TIME_TEMPERATURES,3},
 		{Error_condition::VOLTAGE_LOW,0,30000,(float)data.voltages.lowest_cell_voltage,ERROR_TIME,4},
 		{Error_condition::VOLTAGE_HIGH,42200,500000,(float)data.voltages.highest_cell_voltage,ERROR_TIME,5},
 		{Error_condition::TEMPERATURE_HIGH,55,120,(float)data.temperatures.highest_temperature,ERROR_TIME_TEMPERATURES,6},
+		{Error_condition::TEMPERATURE_LOST,-1,1,data.temperatures.lowest_temperature,ERROR_TIME_TEMPERATURES,6},
 		{Error_condition::CURRENT_HIGH,20,100,data.current.value,ERROR_TIME,7}
 
 };
@@ -68,7 +70,7 @@ void can_init()
 
 // error if value is in range <min, max>
 void error_check(){
-	etl::vector<Error_condition, 7> errors_vector;
+	etl::vector<Error_condition, 8> errors_vector;
 
 	for(auto& error : error_conditions){
 		if(error.min <= error.value && error.value <= error.max){
@@ -99,7 +101,7 @@ void error_execute(){
 		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
 		HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI);
 	}
-	for(unsigned int i = 3; i < 7; i++){
+	for(unsigned int i = 3; i < 8; i++){
 		{
 			if(error_conditions[i].timer <= HAL_GetTick()) //shut down
 			{
@@ -196,7 +198,8 @@ void start_comm_err_function(void *argument){
 		error_conditions[3].value = (float)data.voltages.lowest_cell_voltage;
 		error_conditions[4].value = (float)data.voltages.highest_cell_voltage;
 		error_conditions[5].value = (float)data.temperatures.highest_temperature;
-		error_conditions[6].value = data.current.value;
+		error_conditions[6].value = data.temperatures.lowest_temperature;
+		error_conditions[7].value = data.current.value;
 
 		PUTM_CAN::BMS_LV_main can_message_main{
 			.voltage_sum{data.voltages.total_can},
