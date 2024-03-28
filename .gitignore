@@ -28,6 +28,8 @@ fp-info-cache
 # For C++ STM32 project
 # Prerequisites
 *.d
+*.cyclo
+*.mk
 
 # Object files
 *.o
