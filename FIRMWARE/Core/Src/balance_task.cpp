@@ -6,10 +6,14 @@
  */
 
 #include <balance_task.hpp>
+#include "ring_buffer.h"
+#include "parser.h"
 
 
 bool balance_deactivation_flag = false;
 uint32_t tick_counter = 0;
+
+RingBuffer_t USB_Receive_Buffer;
 
 /*
  * Brief:	If the index indicates the last cell because
