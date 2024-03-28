@@ -5,6 +5,8 @@
 "./Core/Src/ltc_library.o"
 "./Core/Src/ltc_task.o"
 "./Core/Src/main.o"
+"./Core/Src/parser.o"
+"./Core/Src/ring_buffer.o"
 "./Core/Src/soc_ekf.o"
 "./Core/Src/soc_update_task.o"
 "./Core/Src/stm32l4xx_hal_msp.o"
