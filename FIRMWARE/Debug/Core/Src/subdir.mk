@@ -11,12 +11,12 @@ CPP_SRCS += \
 ../Core/Src/ltc_library.cpp \
 ../Core/Src/ltc_task.cpp \
 ../Core/Src/main.cpp \
+../Core/Src/parser.cpp \
 ../Core/Src/soc_ekf.cpp \
 ../Core/Src/soc_update_task.cpp 
 
 C_SRCS += \
 ../Core/Src/freertos.c \
-../Core/Src/parser.c \
 ../Core/Src/ring_buffer.c \
 ../Core/Src/stm32l4xx_hal_msp.c \
 ../Core/Src/stm32l4xx_hal_timebase_tim.c \
@@ -27,7 +27,6 @@ C_SRCS += \
 
 C_DEPS += \
 ./Core/Src/freertos.d \
-./Core/Src/parser.d \
 ./Core/Src/ring_buffer.d \
 ./Core/Src/stm32l4xx_hal_msp.d \
 ./Core/Src/stm32l4xx_hal_timebase_tim.d \
@@ -62,6 +61,7 @@ CPP_DEPS += \
 ./Core/Src/ltc_library.d \
 ./Core/Src/ltc_task.d \
 ./Core/Src/main.d \
+./Core/Src/parser.d \
 ./Core/Src/soc_ekf.d \
 ./Core/Src/soc_update_task.d 
 
