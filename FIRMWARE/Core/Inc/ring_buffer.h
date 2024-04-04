@@ -8,7 +8,7 @@
 #ifndef INC_RING_BUFFER_H_
 #define INC_RING_BUFFER_H_
 
-
+#include<stdint.h>
 //global definition of the size of all buffers in the library "Ring Buffer"
 #define RING_BUFFER_SIZE 16
 
