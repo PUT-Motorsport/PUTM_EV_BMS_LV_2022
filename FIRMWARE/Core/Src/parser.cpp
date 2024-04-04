@@ -8,9 +8,9 @@
 
 
 
-#include "main.h"
-#include "ring_buffer.h"
-#include "parser.h"
+#include <global_variables.hpp>
+#include <parser.hpp>
+#include <ring_buffer.h>
 #include "string.h"
 #include <usbd_cdc_if.h>
 
@@ -21,12 +21,11 @@ int CheckMessage(RingBuffer_t *Buf) {
 
     while(RB_Read(Buf, &tmpByte) == RB_OK) {
         if(tmpByte == ENDLINE) {
-            lineBuffer[lineIndex] = '\0';
-            lineIndex = 0;
 
             // Check if the line contains "BB_Start"
             if(strcmp((char*)lineBuffer, "BB_Start") == 0) {
-                return 1; // Znaleziono ciąg znaków
+            	data.charging.balance_on = true;
+            	return 1;// Znaleziono ciąg znaków
             }
         } else {
         	// Build lines of text
@@ -34,8 +33,9 @@ int CheckMessage(RingBuffer_t *Buf) {
                 lineBuffer[lineIndex++] = tmpByte;
             }
         }
+        return 0;
     }
 
-    return 0; // "BB_Start" not found
+   // return 0; // "BB_Start" not found
 }
 

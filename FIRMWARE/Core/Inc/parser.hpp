@@ -4,17 +4,13 @@
  *  Created on: Mar 23, 2024
  *      Author: Michał Błotniak
  */
+#ifndef INC_PARSER_HPP
+#define INC_PARSER_HPP
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-#include "ring_buffer.h"
+#include <ring_buffer.h>
 
 #define ENDLINE '\n'
 
 int CheckMessage(RingBuffer_t *Buf);
 
-#ifdef __cplusplus
-}
-#endif
+#endif /*INC_PARSER_HPP*/
