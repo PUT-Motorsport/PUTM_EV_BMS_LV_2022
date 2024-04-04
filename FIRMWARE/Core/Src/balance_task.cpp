@@ -6,8 +6,8 @@
  */
 
 #include <balance_task.hpp>
-#include "ring_buffer.h"
-#include "parser.h"
+#include <parser.hpp>
+#include <ring_buffer.h>
 
 
 bool balance_deactivation_flag = false;
@@ -221,12 +221,14 @@ void start_balance_function(void *argument){
 		//LTC_turn_on_discharge(0, data.charging.cell_discharge);
 		tick_counter++;
 		if(tick_counter > BALANCE_TICKS_AFTER_BALANCE){
-			if(!data.charging.charger_plugged && CheckMessage(&USB_Receive_Buffer)) //charger is plugged
+			if(!data.charging.charger_plugged) //charger is plugged
 			{
 				HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
-
+				if(1 == data.charging.balance_on)
+				{
 				balance_control();
 				balance_activation_deactivation();
+				}
 
 			}
 			else	//charger is unplugged
