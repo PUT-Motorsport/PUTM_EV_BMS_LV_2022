@@ -240,7 +240,7 @@ void start_comm_err_function(void *argument){
 			auto status_temp = can_message_temp_frame.send(hcan1);
 			can_temp_tick = HAL_GetTick() + 200; //0.2s
 		}
-		if(!CheckMessage(&USB_Receive_Buffer)) //error check is on
+		if(!data.charging.balance_on) //error check is on
 		{
 			error_check();
 			error_execute();
