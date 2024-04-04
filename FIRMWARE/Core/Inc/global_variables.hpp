@@ -81,6 +81,7 @@ struct Charging{
 	bool charger_plugged;
 	bool charging_state;
 	bool discharge_activation;
+	bool balance_on;
 	uint32_t discharge_tick_end;
 };
 

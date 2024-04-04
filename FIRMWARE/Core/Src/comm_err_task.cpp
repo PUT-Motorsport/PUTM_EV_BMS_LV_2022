@@ -240,11 +240,17 @@ void start_comm_err_function(void *argument){
 			auto status_temp = can_message_temp_frame.send(hcan1);
 			can_temp_tick = HAL_GetTick() + 200; //0.2s
 		}
-		if(data.charging.charger_plugged) //charger is unplugged
+		if(!CheckMessage(&USB_Receive_Buffer)) //error check is on
 		{
 			error_check();
-
 			error_execute();
+		} 
+		else //error check is off
+		{
+			if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == GPIO_PIN_RESET)
+			{
+				HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
+			}
 		}
 	}
 }
