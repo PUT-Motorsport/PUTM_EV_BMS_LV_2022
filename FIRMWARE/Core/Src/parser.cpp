@@ -14,28 +14,41 @@
 #include "string.h"
 #include <usbd_cdc_if.h>
 
+// Function to check if the ring buffer contains "BB_Start" or "BB_Stop"
+// Returns 1 for "BB_Start", 0 for "BB_Stop", or -1 if neither of these strings are found
 int CheckMessage(RingBuffer_t *Buf) {
-    static uint8_t lineBuffer[20];  // Buffer for text lines, adjust size as needed
-    static uint8_t lineIndex = 0;   // used to write subsequent bytes of data.
-    uint8_t tmpByte;                //Temporary byte storage
+    char command[9]; // Sized to fit "BB_Start\0" or "BB_Stop\0"
+    uint8_t index = 0;
+    uint8_t value;
 
-    while(RB_Read(Buf, &tmpByte) == RB_OK) {
-        if(tmpByte == ENDLINE) {
-
-            // Check if the line contains "BB_Start"
-            if(strcmp((char*)lineBuffer, "BB_Start") == 0) {
-            	data.charging.balance_on = true;
-            	return 1;// Znaleziono ciąg znaków
-            }
-        } else {
-        	// Build lines of text
-            if(lineIndex < sizeof(lineBuffer) - 1) {
-                lineBuffer[lineIndex++] = tmpByte;
-            }
+    // Read bytes from the buffer until a command is assembled or the buffer is exhausted
+    while (RB_Read(Buf, &value) == RB_OK) {
+        // Check if we've reached the end of a command ('\0' or '\n')
+        if (value == '\0' || value == '\n') {
+            break;
         }
+        // Ensure we do not exceed the command buffer size
+        if (index < sizeof(command) - 1) {
+            command[index++] = value;
+        } else {
+            // Too much data for one command, something went wrong
+            return -1;
+        }
+    }
+    command[index] = '\0'; // Null-terminate the string
+
+    // Compare the assembled command
+    if (strcmp(command, "BB_Start") == 0)
+    {
+    	data.charging.balance_on = true;
+        return 1;
+    }
+    else if (strcmp(command, "BB_Stop") == 0)
+    {
+    	data.charging.balance_on = false;
         return 0;
     }
 
-   // return 0; // "BB_Start" not found
+    // Neither "BB_Start" nor "BB_Stop" were found
+    return -1;
 }
-

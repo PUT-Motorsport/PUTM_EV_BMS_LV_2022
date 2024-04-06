@@ -9,8 +9,6 @@
 
 #include <ring_buffer.h>
 
-#define ENDLINE '\n'
-
 int CheckMessage(RingBuffer_t *Buf);
 
 #endif /*INC_PARSER_HPP*/
