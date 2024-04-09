@@ -5,6 +5,7 @@
  *      Author: Michał Błotniak
  */
 
+
 #ifndef INC_RING_BUFFER_H_
 #define INC_RING_BUFFER_H_
 
@@ -12,6 +13,9 @@
 //global definition of the size of all buffers in the library "Ring Buffer"
 #define RING_BUFFER_SIZE 16
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /* -Succes status- */
 typedef enum
@@ -47,5 +51,8 @@ RB_Status RB_Read(RingBuffer_t *Buf, uint8_t *Value);
 //The function clears the contents of the buffer
 void RB_Flush(RingBuffer_t *Buf);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* INC_RING_BUFFER_H_ */

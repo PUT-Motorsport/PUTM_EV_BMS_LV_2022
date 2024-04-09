@@ -216,6 +216,8 @@ void start_balance_function(void *argument){
 	data.charging.charger_plugged = HAL_GPIO_ReadPin(INTERLOCK_GPIO_Port, INTERLOCK_Pin);
 	for(;;){
 		osDelay(100);
+		//calling the function that checks messages from USB
+		CheckMessage(&USB_Receive_Buffer);
 		//balance test on cell 0
 		//data.charging.cell_discharge[0]=true;
 		//LTC_turn_on_discharge(0, data.charging.cell_discharge);
