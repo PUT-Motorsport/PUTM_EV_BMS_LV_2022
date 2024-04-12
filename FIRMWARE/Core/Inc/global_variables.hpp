@@ -32,7 +32,7 @@ const static int VOL_UP_OK = 41995; 				//4.1995V
 const static int VOL_DIS = 42010; 					//4.201V
 const static int VOL_UP_NEARLY_OK = 41920;			//4.192V
 
-const static int BALANCE_VALUE = 50; 				//0.005V
+const static int BALANCE_VALUE = 500; 				//0.05V
 const static int BALANCE_TIME = 10000;   			//10s
 const static int MAX_CELLS_DISCHARGE_AT_ONCE = 2;
 const static float CHARGING_CUTOFF_CURRENT = 0.3f;
@@ -81,6 +81,7 @@ struct Charging{
 	bool charger_plugged;
 	bool charging_state;
 	bool discharge_activation;
+	bool balance_on;
 	uint32_t discharge_tick_end;
 };
 

@@ -6,10 +6,14 @@
  */
 
 #include <balance_task.hpp>
+#include <parser.hpp>
+#include <ring_buffer.h>
 
 
 bool balance_deactivation_flag = false;
 uint32_t tick_counter = 0;
+
+RingBuffer_t USB_Receive_Buffer;
 
 /*
  * Brief:	If the index indicates the last cell because
@@ -212,6 +216,8 @@ void start_balance_function(void *argument){
 	data.charging.charger_plugged = HAL_GPIO_ReadPin(INTERLOCK_GPIO_Port, INTERLOCK_Pin);
 	for(;;){
 		osDelay(100);
+		//calling the function that checks messages from USB
+		CheckMessage(&USB_Receive_Buffer);
 		//balance test on cell 0
 		//data.charging.cell_discharge[0]=true;
 		//LTC_turn_on_discharge(0, data.charging.cell_discharge);
@@ -220,9 +226,11 @@ void start_balance_function(void *argument){
 			if(!data.charging.charger_plugged) //charger is plugged
 			{
 				HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, GPIO_PIN_RESET);
-
+				if(1 == data.charging.balance_on)
+				{
 				balance_control();
 				balance_activation_deactivation();
+				}
 
 			}
 			else	//charger is unplugged
