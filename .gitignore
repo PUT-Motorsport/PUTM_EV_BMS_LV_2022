@@ -8,6 +8,7 @@
 *.kicad_pcb-bak
 *.sch-bak
 *~
+./HARDWARE/BMS_LV_2022/*-backups
 _autosave-*
 *.tmp
 *-save.pro
