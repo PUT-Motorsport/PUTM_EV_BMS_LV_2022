@@ -4345,6 +4345,7 @@
 	)
 	(label "CellBalance2"
 		(at 73.66 74.93 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4355,6 +4356,7 @@
 	)
 	(label "CellBalance3"
 		(at 52.07 92.71 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4365,6 +4367,7 @@
 	)
 	(label "CS"
 		(at 203.2 129.54 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4375,6 +4378,7 @@
 	)
 	(label "SCK"
 		(at 195.58 129.54 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4385,6 +4389,7 @@
 	)
 	(label "CellBalance4"
 		(at 52.07 95.25 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4395,6 +4400,7 @@
 	)
 	(label "MISO"
 		(at 170.18 68.58 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4405,6 +4411,7 @@
 	)
 	(label "CellBalance6"
 		(at 52.07 100.33 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4415,6 +4422,7 @@
 	)
 	(label "CellBalance6"
 		(at 73.66 135.89 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4425,6 +4433,7 @@
 	)
 	(label "CellBalance1"
 		(at 52.07 87.63 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4435,6 +4444,7 @@
 	)
 	(label "CS"
 		(at 170.18 73.66 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4445,6 +4455,7 @@
 	)
 	(label "MOSI"
 		(at 180.34 129.54 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4455,6 +4466,7 @@
 	)
 	(label "CellBalance2"
 		(at 52.07 90.17 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4465,6 +4477,7 @@
 	)
 	(label "CellBalance4"
 		(at 73.66 105.41 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4475,6 +4488,7 @@
 	)
 	(label "CellBalance7"
 		(at 52.07 102.87 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4485,6 +4499,7 @@
 	)
 	(label "CellBalance5"
 		(at 52.07 97.79 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4495,6 +4510,7 @@
 	)
 	(label "CellBalance3"
 		(at 73.66 90.17 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4505,6 +4521,7 @@
 	)
 	(label "CellBalance1"
 		(at 73.66 58.42 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4515,6 +4532,7 @@
 	)
 	(label "MOSI"
 		(at 170.18 66.04 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4525,6 +4543,7 @@
 	)
 	(label "MISO"
 		(at 187.96 129.54 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4535,6 +4554,7 @@
 	)
 	(label "SCK"
 		(at 170.18 71.12 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4545,6 +4565,7 @@
 	)
 	(label "CellBalance5"
 		(at 73.66 120.65 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4555,6 +4576,7 @@
 	)
 	(label "CellBalance7"
 		(at 73.66 151.13 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4566,6 +4588,7 @@
 	(hierarchical_label "CS"
 		(shape input)
 		(at 175.26 73.66 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4577,6 +4600,7 @@
 	(hierarchical_label "MOSI"
 		(shape input)
 		(at 175.26 66.04 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4588,6 +4612,7 @@
 	(hierarchical_label "MISO"
 		(shape input)
 		(at 175.26 68.58 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4599,6 +4624,7 @@
 	(hierarchical_label "SCK"
 		(shape input)
 		(at 175.26 71.12 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5004,6 +5030,14 @@
 		)
 		(pin "1"
 			(uuid "7da7d8b2-e8cd-4645-ad01-7d0aa0ba49ff")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -5702,10 +5736,6 @@
 					(reference "Q1")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "Q1")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -5966,6 +5996,14 @@
 		)
 		(pin "1"
 			(uuid "c9569eb9-7491-4d17-8527-79999d0d5cee")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6643,6 +6681,14 @@
 		(pin "1"
 			(uuid "c3931fae-9df1-4830-8e92-34e1e71f466a")
 		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "BMS_LV_2022-rescue:GNDPWR-power")
@@ -6699,6 +6745,14 @@
 		)
 		(pin "1"
 			(uuid "44288f9e-3b8a-4073-a4cc-06bcdc544abe")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6757,6 +6811,14 @@
 		(pin "1"
 			(uuid "35de9a78-33f9-484a-a56c-6d49b0c357c8")
 		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "BMS_LV_2022-rescue:GNDPWR-power")
@@ -6813,6 +6875,14 @@
 		)
 		(pin "1"
 			(uuid "edcacd14-1dc9-4f7a-8eac-e8cf0b58fbf7")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0107")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6871,6 +6941,14 @@
 		(pin "1"
 			(uuid "d6cb9e6a-2a46-4241-a0a9-695c72e4d14a")
 		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0108")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "BMS_LV_2022-rescue:+BATT-power")
@@ -6927,6 +7005,14 @@
 		)
 		(pin "1"
 			(uuid "d4d1b3b7-c68a-4370-8c16-02f1cdcaf1e5")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0120")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6985,6 +7071,14 @@
 		(pin "1"
 			(uuid "0e36865c-174b-4031-a209-b7812dea86da")
 		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0109")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "BMS_LV_2022-rescue:GNDPWR-power")
@@ -7042,6 +7136,14 @@
 		(pin "1"
 			(uuid "e064866a-d7cb-4bcc-af66-7ba30ed36ecc")
 		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0110")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "BMS_LV_2022-rescue:GNDPWR-power")
@@ -7098,6 +7200,14 @@
 		)
 		(pin "1"
 			(uuid "073d034f-027d-4dd1-8538-f0e5ec199aea")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0111")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(sheet

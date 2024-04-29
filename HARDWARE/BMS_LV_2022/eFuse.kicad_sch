@@ -750,139 +750,6 @@
 				)
 			)
 		)
-		(symbol "Device:Fuse"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "F"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Fuse"
-				(at -1.905 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Fuse"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "fuse"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "*Fuse*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Fuse_0_1"
-				(rectangle
-					(start -0.762 -2.54)
-					(end 0.762 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Fuse_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:Polyfuse"
 			(pin_numbers hide)
 			(pin_names
@@ -1448,12 +1315,6 @@
 		)
 	)
 	(junction
-		(at 187.96 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "035eb3ef-4c0d-4d57-b3ec-86cd6115a8c2")
-	)
-	(junction
 		(at 148.59 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1520,7 +1381,7 @@
 		(uuid "8aa06b60-f9bb-474c-86cd-213798e1b984")
 	)
 	(junction
-		(at 187.96 81.28)
+		(at 180.34 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bed5bcad-6dcf-4202-80e9-b29c2a8d9532")
@@ -1530,6 +1391,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ca7b2900-1c48-43a6-a8da-75eb2fe8e213")
+	)
+	(junction
+		(at 180.34 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9f1349b-7c53-40ef-bf2d-2081ea916102")
 	)
 	(junction
 		(at 151.13 57.15)
@@ -1649,7 +1516,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 71.12) (xy 198.12 71.12)
+			(xy 180.34 71.12) (xy 190.5 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1719,7 +1586,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 88.9) (xy 187.96 91.44)
+			(xy 180.34 88.9) (xy 180.34 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1849,7 +1716,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 81.28) (xy 187.96 83.82)
+			(xy 180.34 81.28) (xy 180.34 83.82)
 		)
 		(stroke
 			(width 0)
@@ -1859,7 +1726,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 78.74) (xy 187.96 81.28)
+			(xy 180.34 78.74) (xy 180.34 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1879,16 +1746,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 71.12) (xy 187.96 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c242b24f-3a48-4b6c-8104-ea060417dc87")
-	)
-	(wire
-		(pts
 			(xy 135.89 96.52) (xy 148.59 96.52)
 		)
 		(stroke
@@ -1896,6 +1753,16 @@
 			(type default)
 		)
 		(uuid "c44a1eab-9c1a-4193-ab0f-e18850302c98")
+	)
+	(wire
+		(pts
+			(xy 172.72 71.12) (xy 180.34 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caee3222-508f-4055-a572-58c4faedbf50")
 	)
 	(wire
 		(pts
@@ -1919,7 +1786,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 73.66) (xy 187.96 71.12)
+			(xy 180.34 73.66) (xy 180.34 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1929,7 +1796,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 81.28) (xy 198.12 81.28)
+			(xy 180.34 81.28) (xy 190.5 81.28)
 		)
 		(stroke
 			(width 0)
@@ -1966,16 +1833,6 @@
 			(type default)
 		)
 		(uuid "e739fd79-657a-4703-a601-7c8ea866f26f")
-	)
-	(wire
-		(pts
-			(xy 172.72 71.12) (xy 175.26 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9c0e690-d6e4-4f1e-a189-5da54f37118d")
 	)
 	(wire
 		(pts
@@ -2019,6 +1876,7 @@
 	)
 	(label "Gate"
 		(at 166.37 64.77 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2029,6 +1887,7 @@
 	)
 	(label "Gate"
 		(at 151.13 101.6 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2039,6 +1898,7 @@
 	)
 	(label "Gate"
 		(at 135.89 64.77 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2050,6 +1910,7 @@
 	(hierarchical_label "VCC_Pin"
 		(shape output)
 		(at 123.19 57.15 90)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2060,7 +1921,8 @@
 	)
 	(hierarchical_label "VoltageFuseMeasure"
 		(shape output)
-		(at 198.12 81.28 0)
+		(at 190.5 81.28 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2071,7 +1933,8 @@
 	)
 	(hierarchical_label "CurrentSensor_IP+"
 		(shape output)
-		(at 198.12 71.12 0)
+		(at 190.5 71.12 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2083,6 +1946,7 @@
 	(hierarchical_label "Switch_Signal"
 		(shape input)
 		(at 130.81 124.46 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2256,10 +2120,6 @@
 					(reference "Q8")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "Q8")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -2345,10 +2205,6 @@
 		(instances
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
-					(reference "Q9")
-					(unit 1)
-				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
 					(reference "Q9")
 					(unit 1)
 				)
@@ -2441,10 +2297,6 @@
 					(reference "Q11")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "Q11")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -2534,10 +2386,6 @@
 					(reference "Q12")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "Q12")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -2608,7 +2456,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 187.96 76.2 0)
+		(at 180.34 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2616,7 +2464,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061ef9d80")
 		(property "Reference" "R65"
-			(at 189.4586 75.0316 0)
+			(at 181.8386 75.0316 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2625,7 +2473,7 @@
 			)
 		)
 		(property "Value" "20k"
-			(at 189.4586 77.343 0)
+			(at 181.8386 77.343 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2634,7 +2482,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 187.96 76.2 0)
+			(at 180.34 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2643,7 +2491,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 76.2 0)
+			(at 180.34 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2652,7 +2500,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 187.96 76.2 0)
+			(at 180.34 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2677,7 +2525,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 187.96 86.36 0)
+		(at 180.34 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2685,7 +2533,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061efa7a0")
 		(property "Reference" "R66"
-			(at 189.4586 85.1916 0)
+			(at 181.8386 85.1916 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2694,7 +2542,7 @@
 			)
 		)
 		(property "Value" "2,7k"
-			(at 189.4586 87.503 0)
+			(at 181.8386 87.503 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2703,7 +2551,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 187.96 86.36 0)
+			(at 180.34 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2712,7 +2560,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 187.96 86.36 0)
+			(at 180.34 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2721,7 +2569,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 187.96 86.36 0)
+			(at 180.34 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2746,7 +2594,7 @@
 	)
 	(symbol
 		(lib_id "BMS_LV_2022-rescue:GND-power")
-		(at 187.96 91.44 0)
+		(at 180.34 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2754,7 +2602,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061efd62c")
 		(property "Reference" "#PWR0101"
-			(at 187.96 97.79 0)
+			(at 180.34 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2763,7 +2611,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 188.087 95.8342 0)
+			(at 180.467 95.8342 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2771,7 +2619,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 187.96 91.44 0)
+			(at 180.34 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2780,7 +2628,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 91.44 0)
+			(at 180.34 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2789,7 +2637,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 187.96 91.44 0)
+			(at 180.34 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2804,10 +2652,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
 					(reference "#PWR0101")
-					(unit 1)
-				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -2875,10 +2719,6 @@
 					(reference "#PWR047")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "#PWR?")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -2942,10 +2782,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
 					(reference "#PWR048")
-					(unit 1)
-				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -3023,10 +2859,6 @@
 					(reference "Q10")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "Q?")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -3094,10 +2926,6 @@
 					(reference "R59")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "R?")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -3163,10 +2991,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
 					(reference "R60")
-					(unit 1)
-				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -3306,82 +3130,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
 					(reference "R62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse")
-		(at 179.07 71.12 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00006287d375")
-		(property "Reference" "F2"
-			(at 179.07 66.1162 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Fuse"
-			(at 179.07 68.4276 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footprints:3557-2"
-			(at 179.07 69.342 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 179.07 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 179.07 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "3557-2"
-			(at 179.07 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c247b6db-1f35-44ec-a9ed-ae681bb6065d")
-		)
-		(pin "1"
-			(uuid "b62e2767-bf62-4e58-9f06-e98f1525a858")
-		)
-		(instances
-			(project "BMS_LV_2022"
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
-					(reference "F2")
 					(unit 1)
 				)
 			)

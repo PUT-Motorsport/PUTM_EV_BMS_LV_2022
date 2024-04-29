@@ -1396,6 +1396,7 @@
 	(hierarchical_label "PreviousBalance"
 		(shape input)
 		(at 154.94 93.98 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1407,6 +1408,7 @@
 	(hierarchical_label "Cx"
 		(shape input)
 		(at 185.42 91.44 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1418,6 +1420,7 @@
 	(hierarchical_label "NextBalance"
 		(shape input)
 		(at 154.94 138.43 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1429,6 +1432,7 @@
 	(hierarchical_label "Sx"
 		(shape input)
 		(at 173.99 118.11 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1440,6 +1444,7 @@
 	(hierarchical_label "Cell"
 		(shape input)
 		(at 128.27 91.44 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2340,10 +2345,6 @@
 				)
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1/00000000-0000-0000-0000-000061a3b341"
 					(reference "#PWR0116")
-					(unit 1)
-				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
-					(reference "#PWR?")
 					(unit 1)
 				)
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1/00000000-0000-0000-0000-000061a3a424"

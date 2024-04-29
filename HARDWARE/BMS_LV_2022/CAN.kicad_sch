@@ -2433,6 +2433,7 @@
 	)
 	(label "CAN+"
 		(at 207.01 92.71 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2443,6 +2444,7 @@
 	)
 	(label "CAN-"
 		(at 166.37 102.87 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2453,6 +2455,7 @@
 	)
 	(label "+3V3_VIO"
 		(at 116.84 102.87 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2463,6 +2466,7 @@
 	)
 	(label "CAN-"
 		(at 186.69 92.71 270)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2473,6 +2477,7 @@
 	)
 	(label "CAN+"
 		(at 166.37 97.79 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2483,6 +2488,7 @@
 	)
 	(label "CAN-"
 		(at 219.71 111.76 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2493,6 +2499,7 @@
 	)
 	(label "+5V_CAN_VDD"
 		(at 137.16 85.09 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2503,6 +2510,7 @@
 	)
 	(label "+5V_CAN_VDD"
 		(at 83.82 102.87 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2513,6 +2521,7 @@
 	)
 	(label "CAN+"
 		(at 219.71 90.17 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2524,6 +2533,7 @@
 	(hierarchical_label "CAN-RX"
 		(shape output)
 		(at 124.46 97.79 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2535,6 +2545,7 @@
 	(hierarchical_label "CAN-TX"
 		(shape input)
 		(at 124.46 95.25 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2546,6 +2557,7 @@
 	(hierarchical_label "CANL"
 		(shape bidirectional)
 		(at 170.18 102.87 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2557,6 +2569,7 @@
 	(hierarchical_label "CANH"
 		(shape bidirectional)
 		(at 170.18 97.79 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2992,7 +3005,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061a2b36b")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR019"
 			(at 109.22 96.52 0)
 			(effects
 				(font

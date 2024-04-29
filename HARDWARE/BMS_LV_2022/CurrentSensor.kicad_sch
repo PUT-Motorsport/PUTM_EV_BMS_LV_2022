@@ -341,6 +341,139 @@
 				)
 			)
 		)
+		(symbol "Device:Fuse"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R_Small"
 			(pin_numbers hide)
 			(pin_names
@@ -694,6 +827,12 @@
 		)
 	)
 	(junction
+		(at 123.19 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7375d71c-c4a0-4fc1-8d4c-a1bdf6b696b3")
+	)
+	(junction
 		(at 185.42 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -735,6 +874,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 99.06) (xy 123.19 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c5d2872-a56a-4363-ab1f-9010e86a64e4")
+	)
+	(wire
+		(pts
 			(xy 162.56 93.98) (xy 162.56 96.52)
 		)
 		(stroke
@@ -765,6 +914,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 101.6) (xy 121.92 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2079546b-4d2f-4399-a58d-48208f33c931")
+	)
+	(wire
+		(pts
 			(xy 162.56 104.14) (xy 162.56 106.68)
 		)
 		(stroke
@@ -772,6 +931,26 @@
 			(type default)
 		)
 		(uuid "227ca82a-9cf0-492a-8ea3-6971aa6af2d7")
+	)
+	(wire
+		(pts
+			(xy 123.19 99.06) (xy 123.19 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22fca7fe-a1bb-41d1-ba22-f1bcf31cff46")
+	)
+	(wire
+		(pts
+			(xy 123.19 96.52) (xy 121.92 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2981bc2b-ccc7-477a-af67-52f71c7472e7")
 	)
 	(wire
 		(pts
@@ -795,6 +974,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 99.06) (xy 123.19 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e4e89c9-67f8-4a53-83fd-da1b0f42f386")
+	)
+	(wire
+		(pts
 			(xy 149.86 96.52) (xy 149.86 97.79)
 		)
 		(stroke
@@ -802,6 +991,26 @@
 			(type default)
 		)
 		(uuid "738304bf-82a4-40a9-b262-61ce06455a38")
+	)
+	(wire
+		(pts
+			(xy 111.76 101.6) (xy 114.3 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ae1c16f-cc9e-4306-bccf-7c77caa3a129")
+	)
+	(wire
+		(pts
+			(xy 111.76 96.52) (xy 114.3 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d357784-5243-4ad4-aced-174497800c47")
 	)
 	(wire
 		(pts
@@ -865,16 +1074,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 99.06) (xy 123.19 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb78603f-1e26-4b1f-b37b-91426dfd8f34")
-	)
-	(wire
-		(pts
 			(xy 185.42 116.84) (xy 185.42 118.11)
 		)
 		(stroke
@@ -926,6 +1125,7 @@
 	(hierarchical_label "CS_IP+"
 		(shape input)
 		(at 123.19 88.9 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -937,6 +1137,7 @@
 	(hierarchical_label "CurrentSensor"
 		(shape output)
 		(at 168.91 104.14 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -945,9 +1146,22 @@
 		)
 		(uuid "4ad96dca-41ea-46af-a4af-bf939fdfb397")
 	)
-	(hierarchical_label "V_Out"
+	(hierarchical_label "V_Out_Pin_2"
 		(shape output)
-		(at 123.19 99.06 180)
+		(at 111.76 101.6 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7b23fa77-ace6-4975-9cdf-17c7f0479093")
+	)
+	(hierarchical_label "V_Out_Pin_1"
+		(shape output)
+		(at 111.76 96.52 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1178,10 +1392,6 @@
 					(reference "U5")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "U?")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -1249,10 +1459,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
 					(reference "C42")
-					(unit 1)
-				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "C?")
 					(unit 1)
 				)
 			)
@@ -1324,10 +1530,6 @@
 					(reference "C43")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "C?")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -1391,10 +1593,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
 					(reference "#PWR050")
-					(unit 1)
-				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -1462,8 +1660,157 @@
 					(reference "#PWR049")
 					(unit 1)
 				)
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "#PWR?")
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 118.11 96.52 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0271505b-1f8c-4187-8510-9119c71acd28")
+		(property "Reference" "F3"
+			(at 118.11 91.5162 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fuse"
+			(at 118.11 93.8276 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:0154001.DRT"
+			(at 118.11 94.742 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_154_154t_154l_154tl_datasheet.pdf.pdf"
+			(at 118.11 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "0154010.DR"
+			(at 118.11 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "edc14b4e-169b-4f3f-9c0e-3a6e9678ed06")
+		)
+		(pin "1"
+			(uuid "dc77e80b-6ebd-4fbc-b565-05e0142b3446")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
+					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 118.11 101.6 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f0ba67db-d73a-4e17-8aed-d3bf61779afd")
+		(property "Reference" "F4"
+			(at 118.11 106.6038 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fuse"
+			(at 118.11 104.2924 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:0154001.DRT"
+			(at 118.11 103.378 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://m.littelfuse.com/~/media/electronics/datasheets/fuses/littelfuse_fuse_154_154t_154l_154tl_datasheet.pdf.pdf"
+			(at 118.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "0154010.DR"
+			(at 118.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "13d2e124-c69c-44e0-9317-90c9b6cebf56")
+		)
+		(pin "1"
+			(uuid "5fd31530-49f7-4dcf-9aca-18890a86b445")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
+					(reference "F4")
 					(unit 1)
 				)
 			)
