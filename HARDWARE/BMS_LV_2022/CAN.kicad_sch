@@ -2554,7 +2554,7 @@
 		)
 		(uuid "2c9c2056-1038-4df7-b9ea-24738bce976d")
 	)
-	(hierarchical_label "CANL"
+	(hierarchical_label "CAN-"
 		(shape bidirectional)
 		(at 170.18 102.87 0)
 		(fields_autoplaced yes)
@@ -2566,7 +2566,7 @@
 		)
 		(uuid "861c24e5-38d4-42a5-9ae6-dd4427e8f530")
 	)
-	(hierarchical_label "CANH"
+	(hierarchical_label "CAN+"
 		(shape bidirectional)
 		(at 170.18 97.79 0)
 		(fields_autoplaced yes)
@@ -3160,7 +3160,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm"
 			(at 226.06 95.25 0)
 			(effects
 				(font
