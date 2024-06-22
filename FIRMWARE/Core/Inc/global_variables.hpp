@@ -15,9 +15,9 @@ const static int NORMAL_STATE = 0;
 
 const static int NUMBER_OF_CELLS = 6;
 const static int MAX_NUMBER_OF_TEMPERATURES = 8;
-const static int NUMBER_OF_TEMPERATURES = 5;
+const static int NUMBER_OF_TEMPERATURES = 8;
 const static int NUMBER_OF_CS_SAMPLES = 100;
-const static int NEUTRAL_CURRENT_SENSOR	= 2075;
+const static int NEUTRAL_CURRENT_SENSOR	= 2090;
 
 const static int CS_MAX_OUTPUT_VOLTAGE = 4500;				//4,5V
 const static int RESISTOR_1 = 1000;					//voltage divider up

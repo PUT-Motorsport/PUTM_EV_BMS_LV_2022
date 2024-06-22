@@ -19,9 +19,10 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
-#include <ring_buffer.h>
 #include "usbd_cdc_if.h"
+
 /* USER CODE BEGIN INCLUDE */
+#include <ring_buffer.h>
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/

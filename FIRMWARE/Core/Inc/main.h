@@ -95,6 +95,7 @@ void SystemClock_Config(void);
 #define SW_CLK_GPIO_Port GPIOA
 #define SPI1_CS_Pin GPIO_PIN_15
 #define SPI1_CS_GPIO_Port GPIOA
+
 /* USER CODE BEGIN Private defines */
 extern SPI_HandleTypeDef hspi1;
 extern CAN_HandleTypeDef hcan1;

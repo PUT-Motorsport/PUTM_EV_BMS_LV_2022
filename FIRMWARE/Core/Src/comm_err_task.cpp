@@ -126,7 +126,7 @@ void serialPrint()
 {
 	// FIXME count chars
 	// or use {fmt}
-	static char tab[3500];
+	static char tab[1000];
 	uint16_t n=0;
 
 	RTC_DateTypeDef rtc_date;
@@ -168,11 +168,11 @@ void serialPrint()
 		float cell_value = (float)data.voltages.cells[i] / 10'000.0;
 		n += sprintf(&tab[n], "-V.%d-\t", i);
 		n += sprintf(&tab[n], "%1.3f%c\t", cell_value, data.charging.cell_discharge[i] == 0 ? ' ' : '*');
-		if(i != 5)
-		{
-		n += sprintf(&tab[n], " -T.%d-\t", i);
-		n += sprintf(&tab[n], "%d\t", data.temperatures.values[i]);
-		}
+//		if(i != 5)
+//		{
+//		n += sprintf(&tab[n], " -T.%d-\t", i);
+//		n += sprintf(&tab[n], "%d\t", data.temperatures.values[i]);
+//		}
 		n += sprintf(&tab[n], "\r\n");
 	}
 
@@ -215,9 +215,9 @@ void start_comm_err_function(void *argument){
 			data.temperatures.values[2],
 			data.temperatures.values[3],
 			data.temperatures.values[4],
-			0,//data.temperatures.values[5],
-			0,//data.temperatures.values[6],
-			0//data.temperatures.values[7]
+			data.temperatures.values[5],
+			data.temperatures.values[6],
+			data.temperatures.values[7]
 		};
 
 		if(serial_tick < HAL_GetTick())
