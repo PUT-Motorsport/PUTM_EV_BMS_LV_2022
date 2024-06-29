@@ -1,3 +1,0 @@
-[submodule "FIRMWARE/Core/Inc/PUTM_EV_CAN_LIBRARY"]
-	path = FIRMWARE/Core/Inc/PUTM_EV_CAN_LIBRARY
-	url = https://github.com/PUT-Motorsport/PUTM_EV_CAN_LIBRARY
