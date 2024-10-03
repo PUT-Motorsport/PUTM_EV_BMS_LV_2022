@@ -37,7 +37,7 @@ struct Error_and_connditions{
 
 
 Error_and_connditions error_conditions[8] = {
-		{Error_condition::NEUTRAL_CURRENT_CAR,-0.3,0.3,data.current.value,TIME_TO_SLEEP,8}, //to check //acu_state 0 or 8?
+		{Error_condition::NEUTRAL_CURRENT_CAR,-0.3,0.3,data.current.value,TIME_TO_SLEEP,0}, //to check //acu_state 0 or 8?
 		{Error_condition::UNBALANCE,2000,50000,(float)(data.voltages.highest_cell_voltage-data.voltages.lowest_cell_voltage),ERROR_TIME,2},
 		{Error_condition::TEMPERATURE_WARNING,48,55,(float)data.temperatures.highest_temperature,ERROR_TIME_TEMPERATURES,3},
 		{Error_condition::VOLTAGE_LOW,0,30000,(float)data.voltages.lowest_cell_voltage,ERROR_TIME,4},
@@ -96,11 +96,11 @@ void error_check(){
 
 void error_execute(){
 	uint32_t time = HAL_GetTick();
-	if(error_conditions[0].timer <= HAL_GetTick()) //shut down and sleep
-	{
-		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
-		HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI);
-	}
+//	if(error_conditions[0].timer <= HAL_GetTick()) //shut down and sleep
+//	{
+//		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
+//		HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI);
+//	}
 	for(unsigned int i = 3; i < 8; i++){
 		{
 			if(error_conditions[i].timer <= HAL_GetTick()) //shut down
@@ -163,16 +163,16 @@ void serialPrint()
 	n += sprintf(&tab[n], "*** State of charge: %f ***", data.soc.value * 100);
 	n += sprintf(&tab[n], "\r\n");
 
-	for(int i = 0; i < NUMBER_OF_CELLS; i++)
+	for(int i = 0; i < NUMBER_OF_TEMPERATURES; i++)
 	{
-		float cell_value = (float)data.voltages.cells[i] / 10'000.0;
-		n += sprintf(&tab[n], "-V.%d-\t", i);
-		n += sprintf(&tab[n], "%1.3f%c\t", cell_value, data.charging.cell_discharge[i] == 0 ? ' ' : '*');
-//		if(i != 5)
-//		{
-//		n += sprintf(&tab[n], " -T.%d-\t", i);
-//		n += sprintf(&tab[n], "%d\t", data.temperatures.values[i]);
-//		}
+		n += sprintf(&tab[n], " -T.%d-\t", i);
+		n += sprintf(&tab[n], "%d\t", data.temperatures.values[i]);
+		if(i< NUMBER_OF_CELLS)
+		{
+			float cell_value = (float)data.voltages.cells[i] / 10'000.0;
+			n += sprintf(&tab[n], "-V.%d-\t", i);
+			n += sprintf(&tab[n], "%1.3f%c\t", cell_value, data.charging.cell_discharge[i] == 0 ? ' ' : '*');
+		}
 		n += sprintf(&tab[n], "\r\n");
 	}
 
@@ -240,18 +240,24 @@ void start_comm_err_function(void *argument){
 			auto status_temp = can_message_temp_frame.send(hcan1);
 			can_temp_tick = HAL_GetTick() + 200; //0.2s
 		}
-		if(!data.charging.balance_on) //error check is on
-		{
-			error_check();
-			error_execute();
-		} 
-		else //error check is off
-		{
-			if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == GPIO_PIN_RESET)
-			{
-				HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
-			}
-		}
+
+		//if error check shouldn't always be on, use this code (charging wire overwrites error)
+//		if(!data.charging.balance_on) //error check is on
+//		{
+//			error_check();
+//			error_execute();
+//		}
+//		else //error check is off
+//		{
+//			if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == GPIO_PIN_RESET)
+//			{
+//				HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
+//			}
+//		}
+
+		//if error check should always be on, use this code (charging wire doesn't overwrite error)
+		error_check();
+		error_execute();
 	}
 }
 

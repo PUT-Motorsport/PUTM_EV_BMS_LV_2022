@@ -1056,7 +1056,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "BMS_LV_2022.step",
       "svg": "",
       "vrml": ""
     },
