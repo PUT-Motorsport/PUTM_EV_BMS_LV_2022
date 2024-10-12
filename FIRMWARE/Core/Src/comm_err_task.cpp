@@ -188,6 +188,9 @@ void serialPrint()
 
 void start_comm_err_function(void *argument){
 
+	//default error detection enabled
+	data.ErrorDetection = true;
+
 	can_init();
 	for(;;){
 		osDelay(20);
