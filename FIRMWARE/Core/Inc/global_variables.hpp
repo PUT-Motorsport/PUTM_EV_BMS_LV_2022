@@ -94,6 +94,7 @@ struct Data{
 	Charging charging;
 	uint8_t acu_state;
 	bool EFUSE_state;
+	bool ErrorDetection;
 };
 
 extern Data data;

@@ -48,7 +48,16 @@ int CheckMessage(RingBuffer_t *Buf) {
     	data.charging.balance_on = false;
         return 0;
     }
+    else if (strcmp(command, "ED_ON") == 0)
+    {
+    	data.ErrorDetection = true;
+    	return 0;
+    }
+    else if (strcmp(command, "ED_OFF") == 0)
+    {
+    	data.ErrorDetection = false;
+        return 0;
+    }
 
-    // Neither "BB_Start" nor "BB_Stop" were found
     return -1;
 }

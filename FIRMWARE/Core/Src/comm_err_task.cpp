@@ -242,18 +242,18 @@ void start_comm_err_function(void *argument){
 		}
 
 		//if error check shouldn't always be on, use this code (charging wire overwrites error)
-//		if(!data.charging.balance_on) //error check is on
-//		{
-//			error_check();
-//			error_execute();
-//		}
-//		else //error check is off
-//		{
-//			if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == GPIO_PIN_RESET)
-//			{
-//				HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
-//			}
-//		}
+	    if(data.ErrorDetection) //error check is on
+		{
+			error_check();
+			error_execute();
+		}
+		else //error check is off
+		{
+			if(HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin) == GPIO_PIN_RESET)
+			{
+				HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
+			}
+		}
 
 		//if error check should always be on, use this code (charging wire doesn't overwrite error)
 		error_check();
