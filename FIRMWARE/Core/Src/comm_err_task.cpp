@@ -180,7 +180,11 @@ void serialPrint()
 	n += sprintf(&tab[n], "Output current:\t%3.2f\r\n", data.current.value);
 	n += sprintf(&tab[n], "\r\n");
 
-	n += sprintf(&tab[n], "EFUSE state:\t%d\r\n", HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin));
+	n += sprintf(&tab[n], "EFUSE state:%d\r\n", HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin));
+
+	n += sprintf(&tab[n], "Balance Status:%d\r\n", data.charging.balance_on);
+	n += sprintf(&tab[n], "Error Detection:%d\r\n", data.ErrorDetection);
+
 	n += sprintf(&tab[n], "\r\n");
 
 	CDC_Transmit_FS((uint8_t*)tab, n);
