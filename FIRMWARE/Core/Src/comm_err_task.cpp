@@ -184,6 +184,7 @@ void serialPrint()
 
 	n += sprintf(&tab[n], "Balance Status:%d\r\n", data.charging.balance_on);
 	n += sprintf(&tab[n], "Error Detection:%d\r\n", data.ErrorDetection);
+	n += sprintf(&tab[n], "CAN Error:%d\r\n", data.CanError);
 
 	n += sprintf(&tab[n], "\r\n");
 
@@ -240,13 +241,19 @@ void start_comm_err_function(void *argument){
 		{
 			auto status_main = can_message_main_frame.send(hcan1);
 			can_main_tick = HAL_GetTick() + 40; //0.04s
+			//If sending was successful -> CanError = 0, if sending failed -> CanError = 1
+			data.CanError = (status_main == 0) ? 0 : 1;
 		}
+
 
 		if(can_temp_tick < HAL_GetTick())
 		{
 			auto status_temp = can_message_temp_frame.send(hcan1);
 			can_temp_tick = HAL_GetTick() + 200; //0.2s
+			//If sending was successful -> CanError = 0, if sending failed -> CanError = 1
+			data.CanError = (status_temp == 0) ? 0 : 1;
 		}
+
 
 		//if error check shouldn't always be on, use this code (charging wire overwrites error)
 	    if(data.ErrorDetection) //error check is on
