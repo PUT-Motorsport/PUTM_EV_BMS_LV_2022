@@ -95,6 +95,7 @@ struct Data{
 	uint8_t acu_state;
 	bool EFUSE_state;
 	bool ErrorDetection;
+	bool CanError;
 };
 
 extern Data data;
