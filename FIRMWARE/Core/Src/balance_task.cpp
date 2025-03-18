@@ -101,47 +101,32 @@ void balance_control()
 		}
 	}
 
-//	//EFUSE switch off - battery full
-//	if(charged_cells >= 4 && fabsf(data.current.value) < CHARGING_CUTOFF_CURRENT && nearly_charged_cells == 6)
-//	{
-//		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
-//		data.soc.main.set_full_battery();
-//		data.charging.charging_state = false;
-//		data.acu_state = 0;
-//	}
-//	//EFUSE switch off - cell overcharged
-//	else if(cell_overcharged > 1 && data.charging.discharge_activation == 0)
-//	{
-//		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
-//		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
-//		data.charging.charging_state = false;
-//		data.acu_state = 0;
-//	}
-//	//EFUSE switch on
-//	else if(!data.charging.charger_plugged && nearly_charged_cells < 6 && cell_overcharged == 0 && data.charging.discharge_activation == 0)// && acuState == 0
-//	{
-//		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
-//		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
-//		data.charging.charging_state = true;
-//		data.acu_state = 1;
-//	}
+	//EFUSE switch off - battery full
+	if(charged_cells >= 4 && fabsf(data.current.value) < CHARGING_CUTOFF_CURRENT && nearly_charged_cells == 6)
+	{
+		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
+		data.soc.main.set_full_battery();
+		data.charging.charging_state = false;
+		data.acu_state = 0;
+	}
+	//EFUSE switch off - cell overcharged
+	else if(cell_overcharged > 1 && data.charging.discharge_activation == 0)
+	{
+		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
+		data.charging.charging_state = false;
+		data.acu_state = 0;
+	}
+	//EFUSE switch on
+	else if(!data.charging.charger_plugged && nearly_charged_cells < 6 && cell_overcharged == 0 && data.charging.discharge_activation == 0)// && acuState == 0
+	{
+		HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
+		data.charging.charging_state = true;
+		data.acu_state = 1;
+	}
 
-		//EFUSE switch on
-		if(!data.charging.charger_plugged && data.charging.discharge_activation == 0)// && acuState == 0
-		{
-			HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_SET);
-			data.charging.charging_state = true;
-			data.acu_state = 1;
-		}
-		else
-		{
-			HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, GPIO_PIN_RESET);
-			data.charging.charging_state = false;
-			data.acu_state = 0;
-		}
 
 
 
