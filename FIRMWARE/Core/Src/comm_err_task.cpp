@@ -124,71 +124,39 @@ void error_execute(){
 
 void serialPrint()
 {
-	// FIXME count chars
-	// or use {fmt}
-	static char tab[1000];
-	uint16_t n=0;
+	// Creating a JSON object with a buffer size of 1024 bytes
+	    embeddedjson::Json<1024> json;
 
-	RTC_DateTypeDef rtc_date;
-	RTC_TimeTypeDef rtc_time;
-	HAL_RTC_GetTime(&hrtc, &rtc_time, RTC_FORMAT_BIN);
-	HAL_RTC_GetDate(&hrtc, &rtc_date, RTC_FORMAT_BIN);
+	    // Dodawanie danych do JSON
+	    json.add("time", "TODO: Add time formatting");
+	    json.add("battery_state", data.acu_state);
+	    json.add("stack_voltage", (float)data.voltages.total / 10'000.0);
+	    json.add("state_of_charge", data.soc.value * 100);
+	    json.add("output_current", data.current.value);
+	    json.add("efuse_state", HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin));
+	    json.add("balance_status", data.charging.balance_on);
+	    json.add("error_detection", data.ErrorDetection);
+	    json.add("can_error", data.CanError);
 
-	float cell_values_sum = (float)data.voltages.total / 10'000.0;
-	n += sprintf(&tab[n], "%02d:%02d:%02d\r\n", rtc_time.Hours, rtc_time.Minutes, rtc_time.Seconds);
-	n += sprintf(&tab[n], "*** Battery state: %d ***", data.acu_state);
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "LEGEND FOR BATTERY STATE:");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "0- all good");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "1- charging");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "2- unbalanced(difference from lowest to highest >0.2V)");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "3- highest temperature is more than 48C");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "4- too low voltage");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "5- too high voltage");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "6- too high temperature");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "7- too high current");
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "8- sleep mode");
-	n += sprintf(&tab[n], "\r\n\n");
-	n += sprintf(&tab[n], "*** Stack voltage:\t%3.2f V ***", cell_values_sum);
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "*** State of charge: %f ***", data.soc.value * 100);
-	n += sprintf(&tab[n], "\r\n");
+	    // Adding temperatures
+	    std::array<float, 8> temperatures;
+	    for (int i = 0; i < NUMBER_OF_TEMPERATURES; i++) {
+	        temperatures[i] = data.temperatures.values[i];
+	    }
+	    json.add("temperatures", temperatures);
 
-	for(int i = 0; i < NUMBER_OF_TEMPERATURES; i++)
-	{
-		n += sprintf(&tab[n], " -T.%d-\t", i);
-		n += sprintf(&tab[n], "%d\t", data.temperatures.values[i]);
-		if(i< NUMBER_OF_CELLS)
-		{
-			float cell_value = (float)data.voltages.cells[i] / 10'000.0;
-			n += sprintf(&tab[n], "-V.%d-\t", i);
-			n += sprintf(&tab[n], "%1.3f%c\t", cell_value, data.charging.cell_discharge[i] == 0 ? ' ' : '*');
-		}
-		n += sprintf(&tab[n], "\r\n");
-	}
+	    // Adding tensions
+	    std::array<float, NUMBER_OF_CELLS> voltages;
+	    for (int i = 0; i < NUMBER_OF_CELLS; i++) {
+	        voltages[i] = (float)data.voltages.cells[i] / 10'000.0;
+	    }
+	    json.add("voltages", voltages);
 
-	n += sprintf(&tab[n], "\r\n");
-	n += sprintf(&tab[n], "Output current:\t%3.2f\r\n", data.current.value);
-	n += sprintf(&tab[n], "\r\n");
+	    // Downloading JSON as a string
+	    auto [json_data, json_size] = json.get_as_c_array();
 
-	n += sprintf(&tab[n], "EFUSE state:%d\r\n", HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin));
-
-	n += sprintf(&tab[n], "Balance Status:%d\r\n", data.charging.balance_on);
-	n += sprintf(&tab[n], "Error Detection:%d\r\n", data.ErrorDetection);
-	n += sprintf(&tab[n], "CAN Error:%d\r\n", data.CanError);
-
-	n += sprintf(&tab[n], "\r\n");
-
-	CDC_Transmit_FS((uint8_t*)tab, n);
+	    // Send JSON from USB
+	    CDC_Transmit_FS((uint8_t*)json_data, json_size);
 }
 
 void start_comm_err_function(void *argument){

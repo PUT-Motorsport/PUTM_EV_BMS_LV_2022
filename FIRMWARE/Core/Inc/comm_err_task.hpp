@@ -15,6 +15,7 @@
 #include <PUTM_EV_CAN_LIBRARY/lib/can_interface.hpp>
 #include <usbd_cdc_if.h>
 #include <etl/algorithm.h>
+#include <Embedded_Json/embedded_json.hpp>
 
 void error_check();
 
