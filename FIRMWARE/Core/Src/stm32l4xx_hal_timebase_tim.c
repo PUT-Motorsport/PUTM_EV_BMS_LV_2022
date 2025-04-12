@@ -42,9 +42,9 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
 {
   RCC_ClkInitTypeDef    clkconfig;
   uint32_t              uwTimclock;
-
   uint32_t              uwPrescalerValue;
   uint32_t              pFLatency;
+
   HAL_StatusTypeDef     status = HAL_OK;
 
   /* Enable TIM16 clock */
@@ -63,12 +63,11 @@ HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
   htim16.Instance = TIM16;
 
   /* Initialize TIMx peripheral as follow:
-
-  + Period = [(TIM16CLK/1000) - 1]. to have a (1/1000) s time base.
-  + Prescaler = (uwTimclock/1000000 - 1) to have a 1MHz counter clock.
-  + ClockDivision = 0
-  + Counter direction = Up
-  */
+   * Period = [(TIM16CLK/1000) - 1]. to have a (1/1000) s time base.
+   * Prescaler = (uwTimclock/1000000 - 1) to have a 1MHz counter clock.
+   * ClockDivision = 0
+   * Counter direction = Up
+   */
   htim16.Init.Period = (1000000U / 1000U) - 1U;
   htim16.Init.Prescaler = uwPrescalerValue;
   htim16.Init.ClockDivision = 0;

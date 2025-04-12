@@ -130,7 +130,7 @@ void serialPrint()
 	    // Dodawanie danych do JSON
 	    json.add("time", "TODO: Add time formatting");
 	    json.add("battery_state", data.acu_state);
-	    json.add("stack_voltage", (float)data.voltages.total / 10'000.0);
+	    //json.add("stack_voltage", (float)data.voltages.total / 10'000.0);
 	    json.add("state_of_charge", data.soc.value * 100);
 	    json.add("output_current", data.current.value);
 	    json.add("efuse_state", HAL_GPIO_ReadPin(EFUSE_GPIO_Port, EFUSE_Pin));
