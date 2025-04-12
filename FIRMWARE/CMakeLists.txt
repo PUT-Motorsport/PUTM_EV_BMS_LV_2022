@@ -49,13 +49,19 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
 )
 
-file(GLOB CXX_SRC1 "${PROJECT_SOURCE_DIR}/Core/Src/*.cpp")
-file(GLOB CXX_SRC2 "${PROJECT_SOURCE_DIR}/Core/Src/*.c")
+file(GLOB CXX_SRC "${PROJECT_SOURCE_DIR}/Core/Src/*.cpp")
+# file(GLOB C_SRC "${PROJECT_SOURCE_DIR}/Core/Src/*.c")
+
+message("CXX_SRC: " ${CXX_SRC})
+message("C_SRC: " ${C_SRC})
+set(C_SRC
+    "${PROJECT_SOURCE_DIR}/Core/Src/ring_buffer.c"
+)
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    ${CXX_SRC1}
-    ${CXX_SRC2}
+    ${CXX_SRC}
+    ${C_SRC}
     # Add user defined source files
 )
 
