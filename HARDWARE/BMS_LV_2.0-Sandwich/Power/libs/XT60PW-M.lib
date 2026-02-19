@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# XT60PW-M
+#
+DEF XT60PW-M J 0 40 Y Y 1 L N
+F0 "J" -200 225 50 H V L BNN
+F1 "XT60PW-M" -200 -200 50 H V L BNN
+F2 "AMASS_XT60PW-M" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "Manufacturer recommendations" 0 0 50 H I L BNN "STANDARD"
+F5 "8.4 mm" 0 0 50 H I L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F6 "AMASS" 0 0 50 H I L BNN "MANUFACTURER"
+F7 "V1.2" 0 0 50 H I L BNN "PARTREV"
+DRAW
+S -200 -100 200 200 0 0 10 f
+X + 1 -400 100 200 R 40 40 0 0 P 
+X - 2 -400 0 200 R 40 40 0 0 P 
+ENDDRAW
+ENDDEF
+#
+# End Library

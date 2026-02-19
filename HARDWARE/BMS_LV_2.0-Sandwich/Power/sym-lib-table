@@ -1,0 +1,12 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "FerriteBead")(type "Legacy")(uri "${KIPRJMOD}/libs/FerriteBead.lib")(options "")(descr ""))
+  (lib (name "LMR23610")(type "Legacy")(uri "${KIPRJMOD}/libs/LMR23610.lib")(options "")(descr ""))
+  (lib (name "STM32L4P5RET6")(type "Legacy")(uri "${KIPRJMOD}/libs/STM32L4P5RET6.lib")(options "")(descr ""))
+  (lib (name "XT60PW-M")(type "Legacy")(uri "${KIPRJMOD}/libs/XT60PW-M.lib")(options "")(descr ""))
+  (lib (name "ltc6810-2")(type "Legacy")(uri "${KIPRJMOD}/libs/ltc6810-2.lib")(options "")(descr ""))
+  (lib (name "stm32l4p5ret6")(type "Legacy")(uri "${KIPRJMOD}/libs/stm32l4p5ret6.lib")(options "")(descr ""))
+  (lib (name "ftsh-107-01-l-dv-k-a")(type "KiCad")(uri "${KIPRJMOD}/libs/ftsh-107-01-l-dv-k-a.kicad_sym")(options "")(descr ""))
+  (lib (name "USB-C_GCT_USB4145-03-0070-C")(type "KiCad")(uri "${KIPRJMOD}/libs/USB-C_GCT_USB4145-03-0070-C.kicad_sym")(options "")(descr ""))
+  (lib (name "as214-97pn")(type "KiCad")(uri "${KIPRJMOD}/libs/as214-97pn.kicad_sym")(options "")(descr ""))
+)
