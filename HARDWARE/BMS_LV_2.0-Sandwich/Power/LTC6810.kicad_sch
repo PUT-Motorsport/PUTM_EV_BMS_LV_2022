@@ -2436,6 +2436,12 @@
 		(uuid "145a66e4-7e74-4430-bfe2-8b8c18b16713")
 	)
 	(junction
+		(at 109.22 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "159740d6-a416-4204-b5a5-44d9eb66856a")
+	)
+	(junction
 		(at 101.6 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3401,6 +3407,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 170.18) (xy 114.3 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "688c3e90-832e-4478-8004-f44711f6a606")
+	)
+	(wire
+		(pts
 			(xy 118.11 91.44) (xy 123.19 91.44)
 		)
 		(stroke
@@ -4191,7 +4207,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 170.18) (xy 114.3 170.18)
+			(xy 104.14 170.18) (xy 109.22 170.18)
 		)
 		(stroke
 			(width 0)
@@ -7215,6 +7231,71 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
 					(reference "#PWR0111")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "BMS_LV_2022-rescue:GNDPWR-power")
+		(at 109.22 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "058103ab-ea60-4815-ac3d-d19d7e77d959")
+		(property "Reference" "#PWR0121"
+			(at 109.22 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 109.3216 174.0916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2778097c-99df-4cb2-88bf-26bc1539cb0e")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000061996aa1"
+					(reference "#PWR0121")
 					(unit 1)
 				)
 			)

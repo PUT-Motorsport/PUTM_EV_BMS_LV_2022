@@ -2075,7 +2075,7 @@
 				)
 			)
 		)
-		(property "Value" "330"
+		(property "Value" "1k5"
 			(at 104.14 106.045 0)
 			(effects
 				(font
@@ -2142,7 +2142,7 @@
 				)
 			)
 		)
-		(property "Value" "330"
+		(property "Value" "1k5"
 			(at 116.205 111.125 0)
 			(effects
 				(font
