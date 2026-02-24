@@ -1,0 +1,6 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "STM32G484RET6")(type "KiCad")(uri "${KIPRJMOD}/Include/Symbol/STM32G484RET6.kicad_sym")(options "")(descr ""))
+  (lib (name "MEM2085-00-115-00-A")(type "KiCad")(uri "${KIPRJMOD}/Include/Symbol/MEM2085-00-115-00-A.kicad_sym")(options "")(descr ""))
+  (lib (name "M24M02E-UFMN6TP")(type "KiCad")(uri "${KIPRJMOD}/Include/Symbol/M24M02E-UFMN6TP.kicad_sym")(options "")(descr ""))
+)
