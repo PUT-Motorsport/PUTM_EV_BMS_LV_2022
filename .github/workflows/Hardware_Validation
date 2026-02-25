@@ -1,0 +1,360 @@
+name: KiCad Hardware Validation
+
+on:
+  push:
+    branches:
+      - 'dev-hard-**'
+
+jobs:
+  validate-kicad:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install KiCad CLI
+        run: |
+          sudo add-apt-repository --yes ppa:kicad/kicad-8-releases
+          sudo apt-get update
+          sudo apt-get install -y kicad kicad-footprints kicad-symbols
+
+      - name: Find KiCad project files
+        id: find_files
+        run: |
+          HARDWARE_DIR=$(find "${{ github.workspace }}" -maxdepth 1 -type d \
+            \( -iname "hardware" -o -iname "pcb" \) | head -n 1)
+
+          if [ -z "$HARDWARE_DIR" ]; then
+            echo "::error::Hardware directory not found (expected: hardware or pcb, case-insensitive)"
+            exit 1
+          fi
+
+          echo "hardware_dir=$HARDWARE_DIR" >> $GITHUB_OUTPUT
+
+          SCH_FILES=$(find "$HARDWARE_DIR" -name "*.kicad_sch" | tr '\n' ' ')
+          PCB_FILES=$(find "$HARDWARE_DIR" -name "*.kicad_pcb" | tr '\n' ' ')
+
+          if [ -z "$SCH_FILES" ]; then
+            echo "::warning::No .kicad_sch files found in $HARDWARE_DIR"
+          fi
+          if [ -z "$PCB_FILES" ]; then
+            echo "::warning::No .kicad_pcb files found in $HARDWARE_DIR"
+          fi
+
+          echo "sch_files=$SCH_FILES" >> $GITHUB_OUTPUT
+          echo "pcb_files=$PCB_FILES" >> $GITHUB_OUTPUT
+
+      - name: Validate component fields
+        id: validate_fields
+        run: |
+          python3 << 'EOF'
+          import os, sys, json, re
+          from pathlib import Path
+
+          REQUIRED_FIELDS = [
+              "Reference",
+              "Value",
+              "Footprint",
+              "Datasheet",
+              "Description",
+              "Manufacturer_Name",
+              "Manufacturer_Part_Number",
+              "Mouser Part Number",
+              "Mouser Price/Stock",
+          ]
+
+          URL_FIELDS = ["Datasheet", "Mouser Price/Stock"]
+          URL_PATTERN = re.compile(r'^https?://.+')
+
+          hardware_dir = os.environ.get("HARDWARE_DIR")
+          sch_files = list(Path(hardware_dir).rglob("*.kicad_sch"))
+
+          errors = []
+          warnings = []
+          total_components = 0
+
+          for sch_file in sch_files:
+              content = sch_file.read_text(encoding="utf-8")
+              # Parse symbols (components) from schematic
+              # KiCad 6+ format: (symbol (lib_id ...) ... (property "Key" "Value" ...))
+              symbol_blocks = re.findall(r'\(symbol\s+\(lib_id[^)]+\)(.*?)(?=\n\s+\(symbol|\Z)', content, re.DOTALL)
+
+              for i, block in enumerate(symbol_blocks):
+                  # Extract reference to identify component
+                  ref_match = re.search(r'\(property\s+"Reference"\s+"([^"]+)"', block)
+                  if not ref_match:
+                      continue
+                  reference = ref_match.group(1)
+
+                  # Skip power symbols (PWR, GND, VCC etc.)
+                  if reference.startswith('#') or reference in ('PWR', 'GND', 'VCC', 'VDD'):
+                      continue
+
+                  total_components += 1
+                  component_errors = []
+
+                  # Extract all properties
+                  properties = dict(re.findall(r'\(property\s+"([^"]+)"\s+"([^"]*)"', block))
+
+                  for field in REQUIRED_FIELDS:
+                      value = properties.get(field, "").strip()
+                      if not value or value in ("~", "~{}"):
+                          component_errors.append(f"Missing field: `{field}`")
+                      elif field in URL_FIELDS and not URL_PATTERN.match(value):
+                          component_errors.append(f"Field `{field}` is not a valid URL: `{value}`")
+
+                  if component_errors:
+                      errors.append({
+                          "file": str(sch_file.relative_to(Path(hardware_dir).parent)),
+                          "reference": reference,
+                          "issues": component_errors
+                      })
+
+          # Write results to file for next steps
+          results = {
+              "total_components": total_components,
+              "failed_components": len(errors),
+              "errors": errors
+          }
+          with open("/tmp/field_validation.json", "w") as f:
+              json.dump(results, f, indent=2)
+
+          if errors:
+              print(f"::error::Field validation FAILED: {len(errors)}/{total_components} components have missing or invalid fields")
+              sys.exit(1)
+          else:
+              print(f"Field validation PASSED: all {total_components} components have required fields")
+
+          EOF
+        env:
+          HARDWARE_DIR: ${{ steps.find_files.outputs.hardware_dir }}
+
+      - name: Run ERC (Electrical Rules Check)
+        id: erc
+        if: always()
+        run: |
+          ERC_FAILED=0
+          ERC_OUTPUT=""
+
+          for SCH in ${{ steps.find_files.outputs.sch_files }}; do
+            echo "Running ERC on: $SCH"
+            OUTPUT_FILE="/tmp/erc_$(basename $SCH .kicad_sch).json"
+
+            kicad-cli sch erc \
+              --output "$OUTPUT_FILE" \
+              --format json \
+              --exit-code-violations \
+              "$SCH" || ERC_FAILED=1
+
+            ERC_OUTPUT="$ERC_OUTPUT\n### ERC: $(basename $SCH)\n"
+            if [ -f "$OUTPUT_FILE" ]; then
+              VIOLATIONS=$(python3 -c "
+          import json, sys
+          data = json.load(open('$OUTPUT_FILE'))
+          sheets = data.get('sheets', [])
+          total = sum(len(s.get('violations', [])) for s in sheets)
+          print(f'{total} violation(s)')
+          for s in sheets:
+              for v in s.get('violations', []):
+                  sev = v.get('severity','error').upper()
+                  desc = v.get('description','')
+                  print(f'  [{sev}] {desc}')
+          ")
+              ERC_OUTPUT="$ERC_OUTPUT$VIOLATIONS\n"
+            fi
+          done
+
+          echo "erc_output<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$ERC_OUTPUT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          if [ $ERC_FAILED -ne 0 ]; then
+            echo "erc_failed=true" >> $GITHUB_OUTPUT
+            echo "::error::ERC check FAILED — violations found"
+          else
+            echo "erc_failed=false" >> $GITHUB_OUTPUT
+            echo "ERC check PASSED"
+          fi
+
+      - name: Run DRC (Design Rules Check)
+        id: drc
+        if: always()
+        run: |
+          DRC_FAILED=0
+          DRC_OUTPUT=""
+
+          for PCB in ${{ steps.find_files.outputs.pcb_files }}; do
+            echo "Running DRC on: $PCB"
+            OUTPUT_FILE="/tmp/drc_$(basename $PCB .kicad_pcb).json"
+
+            kicad-cli pcb drc \
+              --output "$OUTPUT_FILE" \
+              --format json \
+              --exit-code-violations \
+              --schematic-parity \
+              "$PCB" || DRC_FAILED=1
+
+            DRC_OUTPUT="$DRC_OUTPUT\n### DRC: $(basename $PCB)\n"
+            if [ -f "$OUTPUT_FILE" ]; then
+              VIOLATIONS=$(python3 -c "
+          import json, sys
+          data = json.load(open('$OUTPUT_FILE'))
+          violations = data.get('violations', [])
+          unconnected = data.get('unconnected_items', [])
+          print(f'{len(violations)} violation(s), {len(unconnected)} unconnected net(s)')
+          for v in violations:
+              sev = v.get('severity','error').upper()
+              desc = v.get('description','')
+              print(f'  [{sev}] {desc}')
+          for u in unconnected:
+              print(f'  [UNCONNECTED] {u.get(\"description\",\"\")}')
+          ")
+              DRC_OUTPUT="$DRC_OUTPUT$VIOLATIONS\n"
+            fi
+          done
+
+          echo "drc_output<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$DRC_OUTPUT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          if [ $DRC_FAILED -ne 0 ]; then
+            echo "drc_failed=true" >> $GITHUB_OUTPUT
+            echo "::error::DRC check FAILED — violations found"
+          else
+            echo "drc_failed=false" >> $GITHUB_OUTPUT
+            echo "DRC check PASSED"
+          fi
+
+      - name: Generate validation report
+        id: report
+        if: always()
+        run: |
+          python3 << 'EOF'
+          import json, os
+          from pathlib import Path
+
+          branch = os.environ.get("BRANCH_NAME", "unknown")
+          commit = os.environ.get("COMMIT_SHA", "unknown")[:7]
+          erc_failed = os.environ.get("ERC_FAILED", "false") == "true"
+          drc_failed = os.environ.get("DRC_FAILED", "false") == "true"
+
+          # Load field validation results
+          try:
+              with open("/tmp/field_validation.json") as f:
+                  field_data = json.load(f)
+              field_failed = field_data["failed_components"] > 0
+          except Exception:
+              field_data = {"total_components": 0, "failed_components": 0, "errors": []}
+              field_failed = True
+
+          overall = not (field_failed or erc_failed or drc_failed)
+          icon = "✅" if overall else "❌"
+
+          lines = [
+              f"## {icon} KiCad Validation Report",
+              f"**Branch:** `{branch}` | **Commit:** `{commit}`",
+              "",
+              "| Check | Result |",
+              "|-------|--------|",
+              f"| 📋 Component Fields | {'✅ PASS' if not field_failed else '❌ FAIL'} |",
+              f"| ⚡ ERC | {'✅ PASS' if not erc_failed else '❌ FAIL'} |",
+              f"| 📐 DRC | {'✅ PASS' if not drc_failed else '❌ FAIL'} |",
+              "",
+          ]
+
+          if field_failed:
+              lines.append("### ❌ Component Field Errors")
+              lines.append(f"**{field_data['failed_components']}/{field_data['total_components']} components** have missing or invalid fields:")
+              lines.append("")
+              for err in field_data["errors"]:
+                  lines.append(f"**`{err['reference']}`** (`{err['file']}`):")
+                  for issue in err["issues"]:
+                      lines.append(f"  - {issue}")
+              lines.append("")
+
+          erc_out = os.environ.get("ERC_OUTPUT", "")
+          if erc_failed and erc_out:
+              lines.append("### ⚡ ERC Violations")
+              lines.append("```")
+              lines.append(erc_out)
+              lines.append("```")
+              lines.append("")
+
+          drc_out = os.environ.get("DRC_OUTPUT", "")
+          if drc_failed and drc_out:
+              lines.append("### 📐 DRC Violations")
+              lines.append("```")
+              lines.append(drc_out)
+              lines.append("```")
+              lines.append("")
+
+          if overall:
+              lines.append("---")
+              lines.append("_All checks passed. Hardware is ready for review._ 🎉")
+
+          report = "\n".join(lines)
+          with open("/tmp/validation_report.md", "w") as f:
+              f.write(report)
+
+          print(report)
+          EOF
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
+          COMMIT_SHA: ${{ github.sha }}
+          ERC_FAILED: ${{ steps.erc.outputs.erc_failed }}
+          DRC_FAILED: ${{ steps.drc.outputs.drc_failed }}
+          ERC_OUTPUT: ${{ steps.erc.outputs.erc_output }}
+          DRC_OUTPUT: ${{ steps.drc.outputs.drc_output }}
+
+      - name: Upload validation report as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kicad-validation-report-${{ github.sha }}
+          path: /tmp/validation_report.md
+          retention-days: 30
+
+      - name: Post comment on commit
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/validation_report.md', 'utf8');
+
+            await github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: report
+            });
+
+      - name: Fail workflow if any check failed
+        if: always()
+        run: |
+          FAILED=0
+
+          if [ -f "/tmp/field_validation.json" ]; then
+            FAILED_COMPONENTS=$(python3 -c "import json; d=json.load(open('/tmp/field_validation.json')); print(d['failed_components'])")
+            if [ "$FAILED_COMPONENTS" -gt "0" ]; then
+              echo "::error::Component field validation failed"
+              FAILED=1
+            fi
+          fi
+
+          if [ "${{ steps.erc.outputs.erc_failed }}" = "true" ]; then
+            echo "::error::ERC failed"
+            FAILED=1
+          fi
+
+          if [ "${{ steps.drc.outputs.drc_failed }}" = "true" ]; then
+            echo "::error::DRC failed"
+            FAILED=1
+          fi
+
+          exit $FAILED
