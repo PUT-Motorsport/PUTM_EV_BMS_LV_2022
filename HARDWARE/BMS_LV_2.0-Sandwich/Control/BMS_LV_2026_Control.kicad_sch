@@ -1865,6 +1865,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.275 117.475) (xy 168.275 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d10d3b66-a2de-4079-9e66-7a6bffecd261")
+	)
+	(wire
+		(pts
 			(xy 133.35 88.265) (xy 127 88.265)
 		)
 		(stroke
@@ -2252,6 +2262,16 @@
 			(justify right bottom)
 		)
 		(uuid "c68a6d19-c57d-4dab-bbf6-b2dd5fbc70ad")
+	)
+	(label "Interlock"
+		(at 168.275 137.16 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c8397bd5-30e9-4ac7-a710-e37eb1aa91be")
 	)
 	(label "USB1{USB_DN USB_DP}"
 		(at 60.96 128.905 0)
@@ -3230,6 +3250,16 @@
 		(pin "Transistor_control" output
 			(at 163.83 117.475 270)
 			(uuid "35ca74bc-e43c-4a19-bf8f-5387c60b1b8a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "Interlock" input
+			(at 168.275 117.475 270)
+			(uuid "8ddc574a-a78c-4879-b150-8f1dcc5e676e")
 			(effects
 				(font
 					(size 1.27 1.27)

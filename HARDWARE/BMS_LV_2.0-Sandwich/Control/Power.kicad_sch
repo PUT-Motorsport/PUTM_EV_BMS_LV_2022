@@ -1756,6 +1756,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 94.615) (xy 99.06 95.885)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03bcbd66-d558-4538-8c7c-02731875f43a")
+	)
+	(wire
+		(pts
 			(xy 141.605 141.605) (xy 131.445 141.605)
 		)
 		(stroke
@@ -2156,7 +2166,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 100.965) (xy 99.06 101.6)
+			(xy 99.06 99.695) (xy 99.06 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3129,75 +3139,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Fuse_Small")
-		(at 151.765 122.555 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "10da4ab1-0620-4e9f-812e-3914663bd3a0")
-		(property "Reference" "F5"
-			(at 147.955 121.92 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SF-0603FP050M-2"
-			(at 149.86 124.46 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 151.765 122.555 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/SF-0603FP050M-2?qs=fAHHVMwC%252BbjmUEdZYoiM2w%3D%3D"
-			(at 151.765 122.555 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "500mA 0603 Fuse"
-			(at 161.925 122.555 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "20530179-eb9f-43be-aabc-c88f13a55d16")
-		)
-		(pin "1"
-			(uuid "3a23832f-c312-4a70-a023-ad685921fe6c")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/69df93bd-9473-41c8-b75c-1c01f11397f2"
-					(reference "F5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 111.76 41.275 180)
 		(unit 1)
@@ -3437,7 +3378,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "F0603G0R05FNTR"
+		(property "Value" "SMDH2920B150TF"
 			(at 135.89 78.74 90)
 			(effects
 				(font
@@ -3446,7 +3387,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+		(property "Footprint" "Fuse:Fuse_2920_7451Metric_Pad2.10x5.45mm_HandSolder"
 			(at 137.795 76.835 0)
 			(effects
 				(font
@@ -3456,7 +3397,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Kamaya/FCCR16151ABTP?qs=iLbezkQI%252BsgGZHcPKnwGpQ%3D%3D"
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/YAGEO/SMDH2920B150TF?qs=jcD%2FCkGBYeMJsuSx6iuINA%3D%3D"
 			(at 137.795 76.835 0)
 			(effects
 				(font
@@ -3465,7 +3406,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "50mA 0603 Fuse"
+		(property "Description" "1.5A 20mOhm"
 			(at 147.955 76.835 90)
 			(effects
 				(font
@@ -3602,6 +3543,75 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/69df93bd-9473-41c8-b75c-1c01f11397f2"
 					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 151.765 122.555 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "451cbcd5-6082-4b90-8a31-41ff53c539a8")
+		(property "Reference" "F4"
+			(at 147.955 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMDH2920B150TF"
+			(at 149.86 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_2920_7451Metric_Pad2.10x5.45mm_HandSolder"
+			(at 151.765 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/YAGEO/SMDH2920B150TF?qs=jcD%2FCkGBYeMJsuSx6iuINA%3D%3D"
+			(at 151.765 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A 20mOhm"
+			(at 161.925 122.555 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "9e65328f-e156-4d88-b9ca-cceaae5726db")
+		)
+		(pin "1"
+			(uuid "f60efefd-1b4a-4e74-9f3c-99c995782639")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/69df93bd-9473-41c8-b75c-1c01f11397f2"
+					(reference "F4")
 					(unit 1)
 				)
 			)
@@ -4124,75 +4134,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/69df93bd-9473-41c8-b75c-1c01f11397f2"
 					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse_Small")
-		(at 88.9 41.275 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5f3d20e6-7961-4993-9c9f-407e95f11e89")
-		(property "Reference" "F6"
-			(at 88.265 45.085 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SF-0603FP050M-2"
-			(at 99.695 46.355 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Fuse:Fuse_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
-			(at 88.9 41.275 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bourns/SF-0603FP050M-2?qs=fAHHVMwC%252BbjmUEdZYoiM2w%3D%3D"
-			(at 88.9 41.275 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "500mA 0603 Fuse"
-			(at 88.9 38.735 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "fd715a4c-dff8-48d6-9aad-6e0199fbb9bc")
-		)
-		(pin "1"
-			(uuid "e4eb3acb-6bbb-4597-9d0f-0746ce854401")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/69df93bd-9473-41c8-b75c-1c01f11397f2"
-					(reference "F6")
 					(unit 1)
 				)
 			)
@@ -4772,7 +4713,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 99.06 98.425 180)
+		(at 99.06 97.155 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4780,7 +4721,7 @@
 		(dnp no)
 		(uuid "818ecbbb-fde7-4768-9d1c-6407ef0d48dd")
 		(property "Reference" "C31"
-			(at 106.045 97.155 0)
+			(at 106.045 95.885 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4789,7 +4730,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 106.68 99.695 0)
+			(at 106.68 98.425 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4798,7 +4739,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4807,7 +4748,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4816,7 +4757,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4825,7 +4766,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "--"
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4834,7 +4775,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4843,7 +4784,7 @@
 			)
 		)
 		(property "In Order" ""
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4852,7 +4793,7 @@
 			)
 		)
 		(property "Mouser Part Number" "80-C0603C104J3R"
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4861,7 +4802,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4870,7 +4811,7 @@
 			)
 		)
 		(property "Author" ""
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4878,7 +4819,7 @@
 			)
 		)
 		(property "License" ""
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4886,7 +4827,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4894,7 +4835,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4902,7 +4843,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 99.06 98.425 0)
+			(at 99.06 97.155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5299,6 +5240,75 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/69df93bd-9473-41c8-b75c-1c01f11397f2"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 88.9 41.275 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ac63c835-1940-47d3-b64e-4e234a551b22")
+		(property "Reference" "F5"
+			(at 87.63 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SMDH2920B150TF"
+			(at 97.79 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Fuse:Fuse_2920_7451Metric_Pad2.10x5.45mm_HandSolder"
+			(at 88.9 41.275 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/YAGEO/SMDH2920B150TF?qs=jcD%2FCkGBYeMJsuSx6iuINA%3D%3D"
+			(at 88.9 41.275 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.5A 20mOhm"
+			(at 88.9 38.735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "17725b12-0d16-4cee-a906-7691950cdcd9")
+		)
+		(pin "1"
+			(uuid "f0f5f01e-07d3-47ae-b541-2a450526b2da")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/69df93bd-9473-41c8-b75c-1c01f11397f2"
+					(reference "F5")
 					(unit 1)
 				)
 			)

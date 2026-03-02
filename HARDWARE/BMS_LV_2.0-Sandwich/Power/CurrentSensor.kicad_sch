@@ -1942,7 +1942,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:FUSC6125X279N"
+		(property "Footprint" "footprints:01550900DR"
 			(at 118.11 94.742 90)
 			(effects
 				(font
@@ -1951,7 +1951,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bel-Fuse/0680L9100-05?qs=XeJtXLiO41RjXNhvn3uPUw%3D%3D"
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Littelfuse/0451012.MRL?qs=vco6xy%252BeH1r0kN0Ehg8CxQ%3D%3D"
 			(at 118.11 96.52 0)
 			(effects
 				(font
@@ -1978,6 +1978,15 @@
 				(hide yes)
 			)
 		)
+		(property "Holder" "https://www.mouser.co.il/ProductDetail/Littelfuse/01550900DR?qs=DRkmTr78QATmF52QRk2Q4g%3D%3D"
+			(at 118.11 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "edc14b4e-169b-4f3f-9c0e-3a6e9678ed06")
 		)
@@ -1988,6 +1997,91 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
 					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 118.11 101.6 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "467591cc-5684-46ae-8f60-410ac62f7da0")
+		(property "Reference" "F4"
+			(at 118.11 106.045 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Fuse"
+			(at 118.11 103.505 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:01550900DR"
+			(at 118.11 99.822 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Littelfuse/0451012.MRL?qs=vco6xy%252BeH1r0kN0Ehg8CxQ%3D%3D"
+			(at 118.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "500A interrupt fuse"
+			(at 118.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Number" "0680L9100-05 "
+			(at 118.11 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Holder" "https://www.mouser.co.il/ProductDetail/Littelfuse/01550900DR?qs=DRkmTr78QATmF52QRk2Q4g%3D%3D"
+			(at 118.11 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "01c825e1-ce55-473d-835c-882efec1f915")
+		)
+		(pin "1"
+			(uuid "72767014-6a7e-4699-8158-b748560ff14d")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
+					(reference "F4")
 					(unit 1)
 				)
 			)
@@ -2053,82 +2147,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
 					(reference "#PWR051")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Fuse")
-		(at 118.11 101.6 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "93da6561-7b32-44cf-b5a6-430c7678aebb")
-		(property "Reference" "F4"
-			(at 118.11 96.5962 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Fuse"
-			(at 118.11 98.9076 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "footprints:FUSC6125X279N"
-			(at 118.11 99.822 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Bel-Fuse/0680L9100-05?qs=XeJtXLiO41RjXNhvn3uPUw%3D%3D"
-			(at 118.11 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "500A interrupt fuse"
-			(at 118.11 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "0680L9100-05 "
-			(at 118.11 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d97da1ee-7caa-4038-ad8a-5190d62df686")
-		)
-		(pin "1"
-			(uuid "2174fefd-6147-46dd-9d16-51d0ddd3e3f9")
-		)
-		(instances
-			(project "BMS_LV_2022"
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-000062c2dd72"
-					(reference "F4")
 					(unit 1)
 				)
 			)
