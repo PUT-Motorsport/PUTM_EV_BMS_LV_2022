@@ -6038,7 +6038,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061d0640a")
 		(property "Reference" "R16"
@@ -6107,7 +6107,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061d0e598")
 		(property "Reference" "R17"
@@ -6176,7 +6176,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061d14087")
 		(property "Reference" "R18"
@@ -6245,7 +6245,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
+		(on_board no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000061d19cab")
 		(property "Reference" "R20"
