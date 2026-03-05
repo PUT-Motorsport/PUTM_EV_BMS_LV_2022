@@ -277,7 +277,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "power_pin_not_driven|2628900|819150|e19d4bee-d0b5-41e7-97b4-f4999569a635|00000000-0000-0000-0000-000000000000|/fb6504b5-591d-4b10-ab86-0c46f59e8b7d|/fb6504b5-591d-4b10-ab86-0c46f59e8b7d|",
+        "No wychodzi z złącza cnie"
+      ]
+    ],
     "meta": {
       "version": 0
     },

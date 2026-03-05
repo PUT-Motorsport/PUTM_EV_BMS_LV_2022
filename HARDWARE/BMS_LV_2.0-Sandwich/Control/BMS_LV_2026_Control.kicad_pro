@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.0
+          "min_clearance": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "starved_thermal|152392501|95210000|b8f284ec-6528-4d7c-8606-589fe3cea1ca|d7150796-7085-44e7-a9d9-75cd20adcd92|F.Cu",
+          "Ma wystarczająco podłączeń"
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -543,7 +548,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../Assembly/BMS_LV_2026_Control.step",
       "svg": "",
       "vrml": ""
     },

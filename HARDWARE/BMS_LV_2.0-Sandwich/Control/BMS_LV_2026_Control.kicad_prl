@@ -5,7 +5,7 @@
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
-    "high_contrast_mode": 0,
+    "high_contrast_mode": 1,
     "net_color_mode": 1,
     "opacity": {
       "images": 0.6,
@@ -74,6 +74,8 @@
       false,
       false,
       false,
+      false,
+      false,
       false
     ],
     "col_order": [
@@ -88,7 +90,9 @@
       8,
       9,
       10,
-      11
+      11,
+      12,
+      13
     ],
     "col_widths": [
       162,
@@ -99,6 +103,8 @@
       91,
       91,
       71,
+      91,
+      91,
       91,
       91,
       91,
