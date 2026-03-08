@@ -1823,6 +1823,16 @@
 		)
 		(uuid "fb5869d4-fcde-4e96-b76f-77825da7d50e")
 	)
+	(wire
+		(pts
+			(xy 173.355 62.23) (xy 177.165 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "feecb74b-e472-447f-a48b-7d051074fe75")
+	)
 	(label "SPI.CS"
 		(at 41.275 73.025 180)
 		(effects
@@ -1872,6 +1882,16 @@
 			(justify right bottom)
 		)
 		(uuid "2ea89466-91d0-41e1-96c7-7a347eee485b")
+	)
+	(label "5V"
+		(at 173.355 62.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "331e57d5-1ac4-4062-ac48-a0599d89e051")
 	)
 	(label "3V3"
 		(at 42.545 118.745 180)
@@ -2704,6 +2724,16 @@
 		(pin "Therm_[1..8]" input
 			(at 177.165 55.88 180)
 			(uuid "cbc0f4b1-b6b3-44ed-a804-f2ae689aea71")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "5V" input
+			(at 177.165 62.23 180)
+			(uuid "0b91f74d-7884-442d-a8e9-949405e4f25b")
 			(effects
 				(font
 					(size 1.27 1.27)
