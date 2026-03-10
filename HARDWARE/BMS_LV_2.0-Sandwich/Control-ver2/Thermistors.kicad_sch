@@ -676,156 +676,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Zener_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "D_Zener_Small"
-				(at 0 -2.286 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Zener diode, small symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "D_Zener_Small_0_1"
-				(polyline
-					(pts
-						(xy -0.254 1.016) (xy -0.762 1.016) (xy -0.762 -1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 1.016) (xy -0.762 0) (xy 0.762 -1.016) (xy 0.762 1.016)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0) (xy -0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "D_Zener_Small_1_1"
-				(pin passive line
-					(at -2.54 0 0)
-					(length 1.778)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 0 180)
-					(length 1.778)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R_Small"
 			(pin_numbers
 				(hide yes)
@@ -1211,16 +1061,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Impedancja wejscia 50K\nprąd pomiaru gpio 0.5mA \ndioda zenera wystarczy"
-		(exclude_from_sim no)
-		(at 114.3 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "6118461e-a397-44a3-bc55-bcfde617c6d3")
-	)
 	(junction
 		(at 185.42 87.63)
 		(diameter 0)
@@ -1318,16 +1158,16 @@
 		(uuid "607b57b3-6c5b-429b-b69b-d46e367d0ed9")
 	)
 	(junction
+		(at 100.965 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6123fe02-7197-4ef8-9fbf-93bd839f26aa")
+	)
+	(junction
 		(at 157.48 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "61978e0d-b94a-44bd-8366-7752bc0f5261")
-	)
-	(junction
-		(at 133.985 53.975)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6adab3cd-8a63-4885-845a-604f63f9a012")
 	)
 	(junction
 		(at 111.76 102.87)
@@ -1573,16 +1413,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.985 54.61) (xy 133.985 53.975)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "084e6755-a1da-46b3-837d-c65fe9e384d8")
-	)
-	(wire
-		(pts
 			(xy 185.42 87.63) (xy 180.34 87.63)
 		)
 		(stroke
@@ -1620,16 +1450,6 @@
 			(type default)
 		)
 		(uuid "0cc8ddcf-6c9e-4c46-ad5c-cf06b1187e86")
-	)
-	(wire
-		(pts
-			(xy 133.985 53.975) (xy 133.985 52.705)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d5ad8dc-43af-4864-91a6-16a5eb1255d0")
 	)
 	(wire
 		(pts
@@ -1673,13 +1493,13 @@
 	)
 	(wire
 		(pts
-			(xy 133.985 59.69) (xy 133.985 62.865)
+			(xy 100.965 72.39) (xy 100.965 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1c656312-c408-47e7-ad6b-5dc1a70e2872")
+		(uuid "1cd92259-3527-4501-99e2-573780a826a9")
 	)
 	(wire
 		(pts
@@ -1823,16 +1643,6 @@
 	)
 	(wire
 		(pts
-			(xy 133.985 53.975) (xy 137.795 53.975)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46838246-9c0a-4e38-b26c-deb1094fac50")
-	)
-	(wire
-		(pts
 			(xy 157.48 127) (xy 154.94 127)
 		)
 		(stroke
@@ -1910,16 +1720,6 @@
 			(type default)
 		)
 		(uuid "4be1c4f3-8f76-4573-8222-3b107a95268d")
-	)
-	(wire
-		(pts
-			(xy 133.985 45.72) (xy 133.985 47.625)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ce3cce0-c19b-41bd-b6a8-130d74fe03dd")
 	)
 	(wire
 		(pts
@@ -2113,6 +1913,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.965 78.74) (xy 111.76 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "700dbd10-4676-4c43-8776-fd4951057f71")
+	)
+	(wire
+		(pts
 			(xy 157.48 129.54) (xy 154.94 129.54)
 		)
 		(stroke
@@ -2223,7 +2033,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 78.74) (xy 111.76 78.74)
+			(xy 88.9 78.74) (xy 100.965 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2941,16 +2751,6 @@
 		)
 		(uuid "7a1e07f0-8052-43e7-8f1d-fb40624c2be0")
 	)
-	(label "3V3_zener"
-		(at 116.84 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7ea2fd19-e60b-4c8d-9ae3-9c8ff4c4ecb2")
-	)
 	(label "Therm_6"
 		(at 212.725 52.705 180)
 		(effects
@@ -3030,16 +2830,6 @@
 			(justify right bottom)
 		)
 		(uuid "cff06c93-30a5-48b6-917c-98fec6ddcbae")
-	)
-	(label "3V3_zener"
-		(at 137.795 53.975 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d1461f5e-4b25-4c6c-885d-5fb3402f12fc")
 	)
 	(label "T5"
 		(at 158.75 87.63 0)
@@ -3131,9 +2921,9 @@
 		)
 		(uuid "f91b50cf-1c4c-4d58-920d-4b05aef5b031")
 	)
-	(hierarchical_label "5V"
+	(hierarchical_label "3V3A"
 		(shape input)
-		(at 133.985 45.72 90)
+		(at 100.965 72.39 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4762,75 +4552,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 133.985 50.165 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5d12f00d-4073-4bbd-b944-7735ca667bc5")
-		(property "Reference" "R72"
-			(at 132.4864 48.9966 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100"
-			(at 132.4864 51.308 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 133.985 50.165 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 133.985 50.165 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 133.985 50.165 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a3180d5b-1c4f-4997-a27f-efc196adbd48")
-		)
-		(pin "1"
-			(uuid "f1d5de2e-26da-4082-92f1-88c6e169d27e")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/1aa87767-600b-4e1e-941b-d56d179c3d84"
-					(reference "R72")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 237.49 92.71 0)
 		(unit 1)
@@ -4894,71 +4615,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/1aa87767-600b-4e1e-941b-d56d179c3d84"
 					(reference "C56")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BMS_LV_2022-rescue:GND-power")
-		(at 133.985 62.865 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "755bcdeb-9266-43f8-89f2-04f970c791f5")
-		(property "Reference" "#PWR041"
-			(at 133.985 69.215 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 134.112 67.2592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 133.985 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 133.985 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 133.985 62.865 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ea1cef34-b2dc-4a3e-b864-7918b994928e")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/1aa87767-600b-4e1e-941b-d56d179c3d84"
-					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -5097,76 +4753,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/1aa87767-600b-4e1e-941b-d56d179c3d84"
 					(reference "C55")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Zener_Small")
-		(at 133.985 57.15 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d27320df-d870-46f9-8878-1766a79e80e5")
-		(property "Reference" "D1"
-			(at 135.89 55.8799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "D_Zener_Small"
-			(at 135.89 58.4199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-			(at 133.985 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Taiwan-Semiconductor/BZY55B3V3-RBG?qs=mAH9sUMRCtvrJdI%2FtfeTug%3D%3D"
-			(at 133.985 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Zener diode, small symbol"
-			(at 133.985 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "344c2f32-1a5d-4f88-8367-01c3ebc419cf")
-		)
-		(pin "1"
-			(uuid "7cd73861-82c0-42ca-b88a-2fa1998a7f17")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/1aa87767-600b-4e1e-941b-d56d179c3d84"
-					(reference "D1")
 					(unit 1)
 				)
 			)

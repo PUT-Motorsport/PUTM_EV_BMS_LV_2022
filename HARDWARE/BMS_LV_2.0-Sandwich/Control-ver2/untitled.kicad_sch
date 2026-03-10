@@ -3758,7 +3758,7 @@
 		(uuid "aae8d0d5-f423-4755-a9e9-e6525c6663d0")
 	)
 	(junction
-		(at 32.385 75.565)
+		(at 23.495 75.565)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "016c3844-bc4d-4e99-859f-d5d5acc711b0")
@@ -3770,19 +3770,13 @@
 		(uuid "14b1af87-54a3-462e-9bcc-85f3d06b1bbc")
 	)
 	(junction
-		(at 196.215 55.245)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "250cc3b3-d044-4d91-a7f0-87332c7944d5")
-	)
-	(junction
-		(at 50.165 75.565)
+		(at 41.275 75.565)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b034bc2-44e1-4f5f-97f0-ffabec9b23a6")
 	)
 	(junction
-		(at 41.275 75.565)
+		(at 32.385 75.565)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "430728f2-60d3-48c4-a7c8-5ad7842c6a62")
@@ -3804,6 +3798,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "509cce14-9afd-43cc-87de-c0a03c4da45f")
+	)
+	(junction
+		(at 66.675 75.565)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5c1e1869-4a85-421f-880b-cffe66513ed9")
 	)
 	(junction
 		(at 193.675 55.245)
@@ -3846,12 +3846,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "de7798ef-384c-460e-9d1c-b7a210f6d899")
-	)
-	(junction
-		(at 59.055 75.565)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ee29b60d-f14a-48cc-a348-e3389606432a")
 	)
 	(no_connect
 		(at 173.355 79.375)
@@ -4175,16 +4169,6 @@
 	)
 	(wire
 		(pts
-			(xy 106.045 179.705) (xy 96.52 179.705)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10d152aa-b39b-42b9-b635-0c5d851390b6")
-	)
-	(wire
-		(pts
 			(xy 31.115 169.545) (xy 33.655 169.545)
 		)
 		(stroke
@@ -4195,7 +4179,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.275 75.565) (xy 41.275 77.47)
+			(xy 32.385 75.565) (xy 32.385 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4205,7 +4189,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.945 86.36) (xy 67.945 82.55)
+			(xy 49.53 86.36) (xy 49.53 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4252,6 +4236,36 @@
 			(type default)
 		)
 		(uuid "220e9afd-0fa3-4fd8-86d6-4159dcccc99c")
+	)
+	(wire
+		(pts
+			(xy 198.755 51.435) (xy 198.755 59.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22fdaf96-ae15-4044-8e4b-eb8d84fddfef")
+	)
+	(wire
+		(pts
+			(xy 66.675 75.565) (xy 66.675 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23331471-b104-4f19-8f3c-bf01ea36cd17")
+	)
+	(wire
+		(pts
+			(xy 66.675 72.39) (xy 66.675 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26400608-883b-495b-9c06-de27ec3ca1f4")
 	)
 	(bus
 		(pts
@@ -4425,23 +4439,13 @@
 	)
 	(wire
 		(pts
-			(xy 59.055 75.565) (xy 67.945 75.565)
+			(xy 41.275 75.565) (xy 49.53 75.565)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "45e72f3c-0a10-4bb5-b5fd-03fd71282323")
-	)
-	(wire
-		(pts
-			(xy 50.165 75.565) (xy 59.055 75.565)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "491ae053-dcf0-4b40-8ce0-20df625b484d")
 	)
 	(wire
 		(pts
@@ -4515,13 +4519,23 @@
 	)
 	(wire
 		(pts
-			(xy 32.385 73.025) (xy 32.385 75.565)
+			(xy 23.495 73.025) (xy 23.495 75.565)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "52a6d985-0c35-45f2-889e-2a257ade7e70")
+	)
+	(wire
+		(pts
+			(xy 109.22 95.885) (xy 116.205 95.885)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53774921-a157-4c13-9f95-4bd7264ffac9")
 	)
 	(wire
 		(pts
@@ -4535,17 +4549,17 @@
 	)
 	(wire
 		(pts
-			(xy 59.055 86.995) (xy 59.055 82.55)
+			(xy 96.52 179.705) (xy 105.41 179.705)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5a76d3db-656e-44fe-9af8-675b265b3ac0")
+		(uuid "55610cfd-f7ec-4175-a762-4e4044fbeba7")
 	)
 	(wire
 		(pts
-			(xy 67.945 75.565) (xy 67.945 77.47)
+			(xy 49.53 75.565) (xy 49.53 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4615,13 +4629,23 @@
 	)
 	(wire
 		(pts
-			(xy 109.855 102.235) (xy 116.84 102.235)
+			(xy 109.22 92.075) (xy 116.205 92.075)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "6892f3e0-44e9-42d5-b9b7-43ef01fb8c37")
+	)
+	(wire
+		(pts
+			(xy 66.675 82.55) (xy 66.675 86.995)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68d6061a-6c6c-4a5f-894d-f6fa7885945b")
 	)
 	(wire
 		(pts
@@ -4635,7 +4659,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.165 75.565) (xy 50.165 77.47)
+			(xy 41.275 75.565) (xy 41.275 77.47)
 		)
 		(stroke
 			(width 0)
@@ -4675,7 +4699,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.165 86.995) (xy 50.165 82.55)
+			(xy 41.275 86.995) (xy 41.275 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4755,17 +4779,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.055 75.565) (xy 59.055 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8067a143-a7fe-4bfa-9158-e3a82f81a4ff")
-	)
-	(wire
-		(pts
-			(xy 41.275 75.565) (xy 50.165 75.565)
+			(xy 32.385 75.565) (xy 41.275 75.565)
 		)
 		(stroke
 			(width 0)
@@ -4845,13 +4859,33 @@
 	)
 	(wire
 		(pts
-			(xy 41.275 86.995) (xy 41.275 82.55)
+			(xy 75.565 82.55) (xy 75.565 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90f3fff8-f3cb-4e3e-a105-833dd1d51f11")
+	)
+	(wire
+		(pts
+			(xy 32.385 86.995) (xy 32.385 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "93518509-f937-4d59-9f10-a3ee94a41496")
+	)
+	(wire
+		(pts
+			(xy 96.52 174.625) (xy 105.41 174.625)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93f95dbf-88c5-46db-85e5-6f2589fcd42d")
 	)
 	(wire
 		(pts
@@ -4905,6 +4939,16 @@
 	)
 	(wire
 		(pts
+			(xy 75.565 77.47) (xy 75.565 75.565)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6ffbed4-0051-4ee2-92b7-618886c0e52b")
+	)
+	(wire
+		(pts
 			(xy 147.32 168.91) (xy 159.385 168.91)
 		)
 		(stroke
@@ -4952,16 +4996,6 @@
 			(type default)
 		)
 		(uuid "ae195136-b13a-4580-bb77-0130f0f043e9")
-	)
-	(wire
-		(pts
-			(xy 96.52 174.625) (xy 106.045 174.625)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b0cd68b9-954c-40c9-a99d-890dbb8a7910")
 	)
 	(wire
 		(pts
@@ -5032,16 +5066,6 @@
 			(type default)
 		)
 		(uuid "badf3898-4252-4bf8-ae0c-1ab28c6a3b16")
-	)
-	(wire
-		(pts
-			(xy 196.215 55.245) (xy 198.755 55.245)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb08b64b-df61-43d6-a4f2-964abb1c011a")
 	)
 	(wire
 		(pts
@@ -5125,7 +5149,7 @@
 	)
 	(wire
 		(pts
-			(xy 32.385 86.995) (xy 32.385 82.55)
+			(xy 23.495 86.995) (xy 23.495 82.55)
 		)
 		(stroke
 			(width 0)
@@ -5135,7 +5159,7 @@
 	)
 	(wire
 		(pts
-			(xy 32.385 75.565) (xy 32.385 77.47)
+			(xy 23.495 75.565) (xy 23.495 77.47)
 		)
 		(stroke
 			(width 0)
@@ -5205,13 +5229,13 @@
 	)
 	(wire
 		(pts
-			(xy 198.755 55.245) (xy 198.755 59.055)
+			(xy 75.565 75.565) (xy 66.675 75.565)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dec67a2d-e671-4ceb-9bb6-1c17755338eb")
+		(uuid "dd84aeeb-9255-4508-ae0b-2a31f7b2e63b")
 	)
 	(wire
 		(pts
@@ -5315,7 +5339,7 @@
 	)
 	(wire
 		(pts
-			(xy 32.385 75.565) (xy 41.275 75.565)
+			(xy 23.495 75.565) (xy 32.385 75.565)
 		)
 		(stroke
 			(width 0)
@@ -7211,7 +7235,25 @@
 			"AFAATABNAFIAVQBWAEgAYQBjAE0AMwBXAHgARgBUAHQAWgBEAGgAawA2AE0AaQBWAFYAMgBpAEoA"
 			"UgBWAFoAdQBYAGQAQQAzADUAdwBSAEoAQQBwAEEARgB1ADIAZAArAG0AeQBJAHMAdQBSAGUAOQA0"
 			"AE4AVQA3AFIAQgB3ADEAWABWAHQAYwBDADEAUwBQAHQAZQBzAEsAVwAzAFIAaQA4ADUASgBUAGkA"
-			"ZQBmAHUANA=="
+			"ZQBmAHUANAAAAAgAAAAAAAAA4Ka4kuQBAAABAAAAAAAAAAAAAAAAAAAAJLOWpwCWAoAAAAAAAAAA"
+			"AAMAAAAAAAAAICvukuQBAAABAAAAAAAAAAAAAAAAAAAAI7OTpwCXAoAAAAAAAAAAAAMAAAAAAAAA"
+			"EMnvkuQBAAABAAAAAAAAAAAAAAAAAAAALrOQpwCYAoBDOi9XaW5kb3dzL2ZvbnRzXHNlcmYxMjU1"
+			"LmZvbgAAAAAAAAAAAAAALbOdpwCZAoAAAAAAAAAAAAMAAAAAAAAAwCnukuQBAAABAAAAAAAAAAAA"
+			"AAAAAAAAKLOapwCaAoAAAAAAAAAAAAMAAAAAAAAAgM7vkuQBAAABAAAAAAAAAAAAAAAAAAAAF7On"
+			"pwCbAoAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAErOkpwCcAoAAAAAA"
+			"AAAAAAMAAAAAAAAAUCzukuQBAAABAAAAAAAAAAAAAAAAAAAAEbOhpwCdAoBDOi9XaW5kb3dzL2Zv"
+			"bnRzXHNlcmlmZS5mb24AAAAAAAAAAAAAAAAAHLOupwCeAoAAAAAAAAAAAAMAAAAAAAAAAMrvkuQB"
+			"AAABAAAAAAAAAAAAAAAAAAAAG7OrpwCfAoBDOi9XaW5kb3dzL2ZvbnRzXHNlcmUxMjU1LmZvbgAA"
+			"AAAAAAAAAAAABrOopwCgAoAAAAAAAAAAAAMAAAAAAAAAMCrukuQBAAABAAAAAAAAAAAAAAAAAAAA"
+			"BbO1pwChAoAAAAAAAAAAAAMAAAAAAAAAkM3vkuQBAAABAAAAAAAAAAAAAAAAAAAAALOypwCiAoAA"
+			"AAAAAAAAAAMAAAAAAAAAECrukuQBAAABAAAAAAAAAAAAAAAAAAAAD7O/pwCjAoAAAAAAAAAAAAMA"
+			"AAAAAAAAMHjtkuQBAAABAAAAAAAAAAAAAAAAAAAACrO8pwCkAoAAAAAAAAAAAAgAAAAAAAAAoKu4"
+			"kuQBAAABAAAAAAAAAAAAAAAAAAAACbO5pwClAoAAAAAAAAAAAAMAAAAAAAAAMNDvkuQBAAABAAAA"
+			"AAAAAAAAAAAAAAAA9LJGqACmAoBDOi9XaW5kb3dzL2ZvbnRzXHNlcmlmZWcuZm9uAAAAAAAAAAAA"
+			"AAAA87JDqACnAoAAAAAAAAAAAAMAAAAAAAAA0HHtkuQBAAABAAAAAAAAAAAAAAAAAAAA/rJAqACo"
+			"AoAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA/bJNqACpAoAAAAAAAAAA"
+			"AAMAAAAAAAAAcCzukuQBAAABAAAAAAAAAAAAAAAAAAAA+LJKqACqAoAAAAAAAAAAAAQAAAAAAAAA"
+			"AAAAAAAAAA=="
 		)
 	)
 	(image
@@ -8658,7 +8700,25 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-			"AAAAAAAAAAAAAA=="
+			"AAAAAAAAAAAAAEkARwBxAGgAeABQAE8ANAB3ADkAZQBHAHkALwA1AHQAeQB4AHEASQBHAGYASQBZ"
+			"AFcAYgB3AHoAUABNAEgAaAA3AE4AcgBIAC8AawBOADcAaQBaAGgASgBuADIARwBkAGwAOQAwADkA"
+			"VgB6AGMAcwBhAFAAdgBKAGsAeQAzAHEATAB2AHoAYQA5AG4AdABpAE0AaABNAGsAVgBxAFgASQBj"
+			"AE4AdABmADgAUwBVAFcAYwBlAGYALwA5AC8AdwB6AGYAdQBGAFIATABuAFoAdQBRAEEAMQArADAA"
+			"YgBpADYAdwBBAHQATwBpADIANwB0AEQAdQAwAGQAagBvAG8AVABZAHcAYwAzADIAZAAwAFIATgB6"
+			"AGYAcwAzAFkATQBpAFoALwBwADQAagBoAHAANwA4ADEASgAxAGQAOQBSAFoAWQBmAEQAagBBAGEA"
+			"ZQA0AG4AcwB2AE8ASAB1AG0AWAA3ADMATgBUADcATwB2AFQAaABzAHcAKwBlAFIAYgBOAGMAOQA1"
+			"AFIANAA0AHYANgBtAFoAQwBWAG4AKwArAGEATQBIAFYAMgBhAEYAZABOADkAeQBjAFAAMwBHAGgA"
+			"MQAvAFYAMQA3AFQAagAvAFcARwAvAE4AWABoAEYAdgA4AHcAVQA0AHMAKwBwAHEAbwBJAEYAeAAz"
+			"AFcAagA0AHQAMQBkAE4ATwAvAHEARwA1AFQAZgB6AHkAdQBtAFYAYgBUAFcAcgBMADUAegBSAGsA"
+			"cgBtAEgAUgBuAG8ATgBqADkAagA1AHgANQA5AGgAQQBSAHYAOQBhAG8AdwBKAHUAZAAwAFgAWAA5"
+			"ADcAYwBnADUAUQB0ADcATQBmAGoAMwB6AEkAagB6AGYAOQBuAC8AcAA5AGwALwBQADgAUQBGAGQA"
+			"bABKADkAKwBOAGUAZgBDAG8AbAB0AGMAMQBhAGUAWAByAGEAYQBOAFcATQBKAEMAVQBTAEMAaABF"
+			"AGsAQwBGAHoANgBaAG0ASAB0AEQAeQBtAFIAawBFAEkAUQBJADMAQwBzADcARQAzADgAcgBVAGUA"
+			"WgBmAEoANQBGAGEAOAA4ADIARgB0AHgANgB0AHgAZABSADIAYwBjAG4AOQB4ADYAawBaAFEAdgBW"
+			"AGoAUgB5ADkAdgBlADEAMQBHAEwAVgBGAFUAZwBoAGkAaABDAEQANwA2AGMAMwBvADEANQBpADUA"
+			"cAA3ACsASABxAFYAcgAxAGwAeQBVAGYAbgA4AFkALwBTAGYAdABhAHAAbQBiAG0ANwBPAHQAcABw"
+			"ADEAMwBIAHoAOABxAHoAawB4ADgAOQBmAFAAawB4AHIAdwB5AHcAOQBhAHgAZAB2AFYAMAB0AHUA"
+			"WABnADkAcwBVAA=="
 		)
 	)
 	(image
@@ -10299,8 +10359,36 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmADgAcABZAEcARwA1ADUALwB2ACsAUQA5AFMARwBs"
+			"ADgAcwBzAGcASwBvAHIATgAvAEoAagAvAGcAWABCAGQAcwBPAGYAYgBNACsAYgBNAHkALwAxAHQA"
+			"UQBVAFoASwBIAGUAWgBlAHEAbQB3AEUAYQBEAGwAOAB6ADEAawBPAFAAOQBwAHgARwA0AFoATABZ"
+			"ADkAdwBrAG0ALwBjAHkATwBIAEMANgBTAHMAZgAzADkAUgAvAGoANwBtACsAbgBJADcANgBkAFkA"
+			"VABaAEEAeQBOAE4AQwBHAEEAcwBSAHUAYgB5AEgAMQBLAGoAbgArACsAYwArAFUAaABWADgANQBv"
+			"AHoATAB6AEoAeAB2AHcAMwA2AGkAQQA1ADUANQArAG4AOQBhAFYAegBzAHgANwBlAFQATwBjAHQA"
+			"UgB3AEIAcAB1AHYAcQA2AEsAdgBEAFAAUQA4AHoASABUAG4AQwBYAHgAdAA3AGQAQwBJAHQAaQBO"
+			"AGgAOQBoAHgAMQA2AEkAeQBDAFAAMABCAG8AMABiAHAAQwBqAHEAUQBqAFYAUAByAGoANgB0AGgA"
+			"bgBzAE8AWABUAEQAZABqAHYAOQBHAHAANQB6AEgAdgBOADEALwBiAHQAdgB6AGEANABBADYALwA4"
+			"AEoAZQBFAHkAZQBaADgASAA2AEgAbABiAHoAYwByAFEASABPAHIAUwBnAHIASgB3AEEAZwByADIA"
+			"OABiAFUAZABrADUAMQAyADQAbgBBAGgAVwBIADYAZgBPAEcAYQB2AEQAYwBBAE8AawB4AFoAdQAw"
+			"AFUAMgA0ADQAYgBCAHQATAB4AG4AagBUAEsAaABIAGMARwByAE8AYgBoAFoAbwBjAFEAbgBKAHIA"
+			"SwA2AHMANwBXAHkAWQB5ADgAZQBhAE0AYQBxAEEAKwBkAFAAOAArAGEASgB6ADgAawA1AHoANQB2"
+			"ACsANgA3AHQAZQAxAGIANQBhAEEAaQAvADcAOQB0AGUAawBVADcAVgAwAEwAWABBAFUAbABJAEEA"
+			"NQA3ADYANQBlAHYAUgBHAFYAbgBWAHoAYwAwAHQANwByAEgAeQBTAC8AcgBIAGkAdwBoAHcAdABV"
+			"AFMARwBtADUAdgA2AGwAbQA5AFcAUQAwAGUAagBGAFUAMwBxADAAdgBxADAAcAA1AHoASgBuAHAA"
+			"bwBjAFUASgAvAFAATwBqAFUAegArAFUAaABlAFEAagBPAGYAbwBNAFkAWQB0AEwANQBjAGkAdQBw"
+			"AGEAVwBLAGgAQwBrADUAVAA1AHUAdQBGAGwATAByAGEAaQBhAGwAWQBrAEcANABIAHkAdQByAG0A"
+			"MQBkAHMASwBNAGoAMQB5AEIAaAAxAFgAag=="
 		)
+	)
+	(label "3V3A"
+		(at 116.205 95.885 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "02a423b3-4e73-4aaa-9d08-ff161c406630")
 	)
 	(label "Therm_2"
 		(at 132.08 115.57 0)
@@ -10311,6 +10399,16 @@
 			(justify left bottom)
 		)
 		(uuid "05013665-4a59-4ffd-85f5-78243c052784")
+	)
+	(label "3V3A"
+		(at 66.675 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0cddfd6f-f2e9-4368-b0ef-9f5796186f77")
 	)
 	(label "YELLOW"
 		(at 216.535 125.095 180)
@@ -10333,7 +10431,7 @@
 		(uuid "202db28b-b319-46f8-9104-ad58d092adc2")
 	)
 	(label "URAT_TX"
-		(at 106.045 179.705 180)
+		(at 105.41 174.625 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10351,16 +10449,6 @@
 			(justify left bottom)
 		)
 		(uuid "256453ce-0f1f-4685-b15e-0d0acfd6d269")
-	)
-	(label "3V3"
-		(at 158.75 66.675 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2662f000-6088-4b59-b7a8-4aacfa1b24d8")
 	)
 	(label "SPI.SCK"
 		(at 220.345 79.375 180)
@@ -10383,7 +10471,7 @@
 		(uuid "2f0e72ff-7b10-435d-bb54-9d1327c60402")
 	)
 	(label "3V3"
-		(at 32.385 73.025 0)
+		(at 23.495 73.025 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10433,7 +10521,7 @@
 		(uuid "3b9cada7-65f1-4721-be6d-4ea11eb655c8")
 	)
 	(label "URAT_RX"
-		(at 106.045 174.625 180)
+		(at 105.41 179.705 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10471,6 +10559,16 @@
 			(justify left bottom)
 		)
 		(uuid "4aca3e17-b2a3-41b0-ae40-b03e5ab157cf")
+	)
+	(label "3V3A"
+		(at 158.75 66.675 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4f4e9512-080a-4fdf-9c6e-6301443cb93e")
 	)
 	(label "USB1.USB_DN"
 		(at 223.52 94.615 180)
@@ -10692,8 +10790,18 @@
 		)
 		(uuid "b23092c0-1b88-422f-b706-49bcb70f07da")
 	)
+	(label "3V3A"
+		(at 198.755 51.435 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b3a0e355-9a19-417a-89b5-556c2b34d8d2")
+	)
 	(label "3V3"
-		(at 116.84 102.235 0)
+		(at 116.205 92.075 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10875,7 +10983,7 @@
 	)
 	(hierarchical_label "3V3"
 		(shape input)
-		(at 109.855 102.235 180)
+		(at 109.22 92.075 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10905,6 +11013,17 @@
 			(justify left)
 		)
 		(uuid "724b05e5-38ac-46a1-9087-a993ea1a5a97")
+	)
+	(hierarchical_label "3V3A"
+		(shape input)
+		(at 109.22 95.885 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7b100bc2-0830-459f-b11e-5d4291d5e55b")
 	)
 	(hierarchical_label "SPI{MOSI MISO SCK CS} "
 		(shape bidirectional)
@@ -10974,15 +11093,15 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 32.385 80.01 180)
+		(at 66.675 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0ce55b04-a449-4661-b7ad-1e660f8c99bc")
-		(property "Reference" "C29"
-			(at 29.845 83.82 0)
+		(uuid "04d63e66-1a53-4345-a6c5-8e7a6ac3cc46")
+		(property "Reference" "C60"
+			(at 64.135 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10991,7 +11110,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 29.21 86.36 0)
+			(at 64.135 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11000,7 +11119,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11009,7 +11128,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11018,7 +11137,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11027,7 +11146,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "--"
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11036,7 +11155,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11045,7 +11164,7 @@
 			)
 		)
 		(property "In Order" ""
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11054,7 +11173,7 @@
 			)
 		)
 		(property "Mouser Part Number" "80-C0603C104J3R"
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11063,7 +11182,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11072,7 +11191,7 @@
 			)
 		)
 		(property "Author" ""
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11080,7 +11199,7 @@
 			)
 		)
 		(property "License" ""
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11088,7 +11207,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11096,7 +11215,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11104,7 +11223,161 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 32.385 80.01 0)
+			(at 66.675 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3bd3c7b-73c3-44b5-b98e-ab7c55329168")
+		)
+		(pin "2"
+			(uuid "54649ba2-ec7c-4076-9cc8-6797854d9f88")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "C60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 23.495 80.01 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0ce55b04-a449-4661-b7ad-1e660f8c99bc")
+		(property "Reference" "C29"
+			(at 20.955 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 20.32 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "--"
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "In Order" ""
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-C0603C104J3R"
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Author" ""
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 23.495 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 23.495 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11262,7 +11535,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 67.945 80.01 180)
+		(at 49.53 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11270,7 +11543,7 @@
 		(dnp no)
 		(uuid "2303aae1-33ad-4068-ad07-aa990bb65691")
 		(property "Reference" "C34"
-			(at 65.405 83.82 0)
+			(at 46.99 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11279,7 +11552,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 65.405 86.36 0)
+			(at 46.99 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11288,7 +11561,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11297,7 +11570,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11306,7 +11579,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11315,7 +11588,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "--"
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11324,7 +11597,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11333,7 +11606,7 @@
 			)
 		)
 		(property "In Order" ""
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11342,7 +11615,7 @@
 			)
 		)
 		(property "Mouser Part Number" "80-C0603C104J3R"
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11351,7 +11624,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11360,7 +11633,7 @@
 			)
 		)
 		(property "Author" ""
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11368,7 +11641,7 @@
 			)
 		)
 		(property "License" ""
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11376,7 +11649,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11384,7 +11657,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11392,7 +11665,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 67.945 80.01 0)
+			(at 49.53 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11409,71 +11682,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "C34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 59.055 86.995 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "25000c82-f368-40ad-9b4b-60cbdca16bee")
-		(property "Reference" "#PWR025"
-			(at 59.055 93.345 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 59.182 91.3892 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.055 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.055 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 59.055 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7c33f5c1-d117-41a3-8bee-612ab2e2036a")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -11607,7 +11815,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 41.275 86.995 0)
+		(at 32.385 86.995 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11615,6 +11823,136 @@
 		(dnp no)
 		(uuid "34c7979d-47de-43bb-bd5c-565faf64623e")
 		(property "Reference" "#PWR023"
+			(at 32.385 93.345 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 32.512 91.3892 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 32.385 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 32.385 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 32.385 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5bb97c9a-9420-4620-940b-366d7a224a94")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 23.495 86.995 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "34e4f113-d62e-471b-b8d2-c34b175074ec")
+		(property "Reference" "#PWR022"
+			(at 23.495 93.345 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 23.495 92.075 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 23.495 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 23.495 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 23.495 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "921574c4-bbd5-4737-be17-c1de301029ee")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 41.275 86.995 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "44bfda75-9147-4172-a453-e19368c3f18b")
+		(property "Reference" "#PWR024"
 			(at 41.275 93.345 0)
 			(effects
 				(font
@@ -11659,142 +11997,77 @@
 			)
 		)
 		(pin "1"
-			(uuid "5bb97c9a-9420-4620-940b-366d7a224a94")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 32.385 86.995 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "34e4f113-d62e-471b-b8d2-c34b175074ec")
-		(property "Reference" "#PWR022"
-			(at 32.385 93.345 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 32.385 92.075 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 32.385 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 32.385 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 32.385 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "921574c4-bbd5-4737-be17-c1de301029ee")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 50.165 86.995 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "44bfda75-9147-4172-a453-e19368c3f18b")
-		(property "Reference" "#PWR024"
-			(at 50.165 93.345 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 50.292 91.3892 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 50.165 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 50.165 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 50.165 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
 			(uuid "f0713d2f-d3e1-4203-8f8d-f850798b9750")
 		)
 		(instances
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 66.675 86.995 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "45929a16-a302-46fe-b031-6ed58768740d")
+		(property "Reference" "#PWR030"
+			(at 66.675 93.345 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 66.802 91.3892 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.675 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.675 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 66.675 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d3e9c72c-dced-41f8-b230-b99fe4639d1e")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -12769,7 +13042,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 50.165 80.01 180)
+		(at 41.275 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12777,7 +13050,7 @@
 		(dnp no)
 		(uuid "73ee82e3-8b4f-4552-93ba-711ebc3dce16")
 		(property "Reference" "C32"
-			(at 47.625 83.82 0)
+			(at 38.735 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12786,7 +13059,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 47.625 86.36 0)
+			(at 38.735 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12795,7 +13068,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12804,7 +13077,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12813,7 +13086,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12822,7 +13095,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "--"
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12831,7 +13104,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12840,7 +13113,7 @@
 			)
 		)
 		(property "In Order" ""
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12849,7 +13122,7 @@
 			)
 		)
 		(property "Mouser Part Number" "80-C0603C104J3R"
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12858,7 +13131,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12867,7 +13140,7 @@
 			)
 		)
 		(property "Author" ""
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12875,7 +13148,7 @@
 			)
 		)
 		(property "License" ""
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12883,7 +13156,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12891,7 +13164,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12899,7 +13172,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 50.165 80.01 0)
+			(at 41.275 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13048,160 +13321,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 59.055 80.01 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7af7de80-6c2c-4f99-9627-cf60d9cd7f67")
-		(property "Reference" "C33"
-			(at 56.515 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 56.515 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "--"
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "In Order" ""
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "80-C0603C104J3R"
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Author" ""
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "License" ""
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 59.055 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0cf82b5f-2b1c-4230-8d12-8c1597dc0c0a")
-		)
-		(pin "2"
-			(uuid "2dd404e6-bf93-4073-aca0-73a1c6a8e47c")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -13389,7 +13508,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 67.945 86.36 0)
+		(at 49.53 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13397,7 +13516,7 @@
 		(dnp no)
 		(uuid "8f337597-8af9-43f6-aabb-f1f0929ad289")
 		(property "Reference" "#PWR026"
-			(at 67.945 92.71 0)
+			(at 49.53 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13406,7 +13525,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 68.072 90.7542 0)
+			(at 49.657 90.7542 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13414,7 +13533,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 67.945 86.36 0)
+			(at 49.53 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13423,7 +13542,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 67.945 86.36 0)
+			(at 49.53 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13432,7 +13551,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 67.945 86.36 0)
+			(at 49.53 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13644,6 +13763,71 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 75.565 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "996598fb-e57e-4128-ad7f-ccc110d1a921")
+		(property "Reference" "#PWR033"
+			(at 75.565 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 75.692 92.0242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 75.565 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 75.565 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 75.565 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cb222791-122e-4e51-860d-1ffd94e747f3")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -14158,6 +14342,160 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 75.565 80.01 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f030d380-a910-43f1-9a03-401c9fb00a7c")
+		(property "Reference" "C61"
+			(at 73.025 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 73.025 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "--"
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "In Order" ""
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-C0603C104J3R"
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Author" ""
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 75.565 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "03452e61-454c-41ad-9462-7612057f6c0a")
+		)
+		(pin "2"
+			(uuid "25a687c5-44f0-48da-aa8e-39fedd0962b1")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "C61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 31.115 128.905 0)
 		(unit 1)
@@ -14224,7 +14562,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 41.275 80.01 180)
+		(at 32.385 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14232,7 +14570,7 @@
 		(dnp no)
 		(uuid "fba1b5eb-8c29-452a-b03f-2bf9e8f4ce1b")
 		(property "Reference" "C30"
-			(at 38.735 83.82 0)
+			(at 29.845 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14241,7 +14579,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 38.1 86.36 0)
+			(at 29.21 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14250,7 +14588,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14259,7 +14597,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/datasheet/2/281/1/GRM033R6YA104ME14_01A-1982036.pdf"
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14268,7 +14606,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14277,7 +14615,7 @@
 			)
 		)
 		(property "Manufacturer_Name" "--"
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14286,7 +14624,7 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" "C0603C104J3RACTU"
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14295,7 +14633,7 @@
 			)
 		)
 		(property "In Order" ""
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14304,7 +14642,7 @@
 			)
 		)
 		(property "Mouser Part Number" "80-C0603C104J3R"
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14313,7 +14651,7 @@
 			)
 		)
 		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Murata-Electronics/GRM033R6YA104ME14D?qs=P%2FC4Eoq9CDwjSVlAMBrT%252Bw%3D%3D"
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14322,7 +14660,7 @@
 			)
 		)
 		(property "Author" ""
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14330,7 +14668,7 @@
 			)
 		)
 		(property "License" ""
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14338,7 +14676,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14346,7 +14684,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14354,7 +14692,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 41.275 80.01 0)
+			(at 32.385 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)

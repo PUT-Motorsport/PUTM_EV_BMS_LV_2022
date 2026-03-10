@@ -2513,18 +2513,40 @@
 		(uuid "e91a6ac3-3944-42b9-8c48-2c58b0dda5d8")
 	)
 	(no_connect
+		(at 270.51 46.355)
+		(uuid "4f6075c1-f0a9-47c6-a077-5a5a83dc9a92")
+	)
+	(no_connect
+		(at 270.51 41.275)
+		(uuid "5298b06c-dd3e-4634-9e70-6b4865a29e9f")
+	)
+	(no_connect
+		(at 270.51 53.975)
+		(uuid "715213e6-fe98-44dc-803e-e2368726576d")
+	)
+	(no_connect
+		(at 270.51 59.055)
+		(uuid "75aaed7b-fb55-4ba6-bf0f-b6ce6c103754")
+	)
+	(no_connect
+		(at 270.51 48.895)
+		(uuid "954fdb48-1f00-4ec0-8151-4eeaf5e33c47")
+	)
+	(no_connect
+		(at 270.51 56.515)
+		(uuid "c3b07659-131e-4bb9-97d0-442743e11576")
+	)
+	(no_connect
+		(at 270.51 43.815)
+		(uuid "d3935a76-5c73-4d78-87f4-fe02438513f5")
+	)
+	(no_connect
+		(at 270.51 51.435)
+		(uuid "e604b9de-45f7-4bc3-b35a-18b2529129b2")
+	)
+	(no_connect
 		(at 251.46 139.7)
 		(uuid "f34224e5-3a7a-4c70-97c7-a43ccd5f063f")
-	)
-	(wire
-		(pts
-			(xy 258.445 46.355) (xy 270.51 46.355)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "071a838e-a471-4b21-910e-24b066a3edcb")
 	)
 	(wire
 		(pts
@@ -2538,16 +2560,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 58.42) (xy 35.56 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d153188-d0e9-4de4-aa7e-b46dcbd28869")
-	)
-	(wire
-		(pts
 			(xy 258.445 61.595) (xy 270.51 61.595)
 		)
 		(stroke
@@ -2555,16 +2567,6 @@
 			(type default)
 		)
 		(uuid "0e36eacc-3546-4557-a7ca-39d0a151ce3a")
-	)
-	(wire
-		(pts
-			(xy 34.29 60.96) (xy 35.56 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11a18174-524d-42ec-be30-4b9489831a93")
 	)
 	(wire
 		(pts
@@ -2678,16 +2680,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 50.8) (xy 35.56 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36d2f109-d27c-4fc6-bebd-4d573f9c21df")
-	)
-	(wire
-		(pts
 			(xy 251.46 132.08) (xy 266.7 132.08)
 		)
 		(stroke
@@ -2766,16 +2758,6 @@
 		)
 		(uuid "4a835ba2-b50d-4320-8fc6-c92aeaf5f4f7")
 	)
-	(wire
-		(pts
-			(xy 258.445 43.815) (xy 270.51 43.815)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4aaa6c8a-614d-4e35-b6c0-0b164648fb08")
-	)
 	(polyline
 		(pts
 			(xy 228.6 109.22) (xy 284.48 109.22)
@@ -2805,26 +2787,6 @@
 			(type default)
 		)
 		(uuid "53691469-3484-4cc2-9836-65c19b9387c1")
-	)
-	(wire
-		(pts
-			(xy 34.29 63.5) (xy 35.56 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54f933fd-f747-4908-b81a-133b71f3fc48")
-	)
-	(wire
-		(pts
-			(xy 258.445 53.975) (xy 270.51 53.975)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5938758b-6e7e-430c-ae7d-5fa084fbbef8")
 	)
 	(wire
 		(pts
@@ -2898,16 +2860,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 66.04) (xy 35.56 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e346803-4981-4238-8603-40ee9359a9c2")
-	)
-	(wire
-		(pts
 			(xy 259.715 36.195) (xy 270.51 36.195)
 		)
 		(stroke
@@ -2935,16 +2887,6 @@
 			(type default)
 		)
 		(uuid "871afc6a-72b3-49d2-a641-344e64603b60")
-	)
-	(wire
-		(pts
-			(xy 258.445 59.055) (xy 270.51 59.055)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ee55fbf-01a4-48e8-aa0b-f162e1dfe780")
 	)
 	(wire
 		(pts
@@ -3015,16 +2957,6 @@
 			(type default)
 		)
 		(uuid "a413838a-45e0-468b-906b-eebdbb1944b9")
-	)
-	(wire
-		(pts
-			(xy 34.29 55.88) (xy 35.56 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af8b7eae-f517-4d5b-bc13-a7397f0c7644")
 	)
 	(wire
 		(pts
@@ -3118,16 +3050,6 @@
 	)
 	(wire
 		(pts
-			(xy 258.445 41.275) (xy 270.51 41.275)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c8cae6df-9b3a-4ca6-b04b-62f14f8664a5")
-	)
-	(wire
-		(pts
 			(xy 251.46 134.62) (xy 268.605 134.62)
 		)
 		(stroke
@@ -3148,16 +3070,6 @@
 	)
 	(wire
 		(pts
-			(xy 258.445 56.515) (xy 270.51 56.515)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d183bae1-0b7b-43f0-ad8e-98ffab8fb8ca")
-	)
-	(wire
-		(pts
 			(xy 48.26 104.14) (xy 49.53 104.14)
 		)
 		(stroke
@@ -3165,16 +3077,6 @@
 			(type default)
 		)
 		(uuid "d2cc4542-74e4-4c07-9573-e1b168b1ab5f")
-	)
-	(wire
-		(pts
-			(xy 34.29 68.58) (xy 35.56 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db4d9cb3-01e8-416a-a190-ed3fdced0709")
 	)
 	(wire
 		(pts
@@ -3205,26 +3107,6 @@
 			(type default)
 		)
 		(uuid "f13c08d0-b0e9-4938-bef6-63d361b50522")
-	)
-	(wire
-		(pts
-			(xy 258.445 51.435) (xy 270.51 51.435)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f71be29c-d200-4486-ac67-ed6e2655471f")
-	)
-	(wire
-		(pts
-			(xy 34.29 53.34) (xy 35.56 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fbdd1ef4-2543-4e00-9ff1-e5388a26949e")
 	)
 	(wire
 		(pts
@@ -3286,16 +3168,6 @@
 		)
 		(uuid "ff3865cd-016b-482e-bb48-b39efbcdf761")
 	)
-	(wire
-		(pts
-			(xy 258.445 48.895) (xy 270.51 48.895)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffc53adc-c0e6-42ad-a974-2a5ac35fef66")
-	)
 	(label "VoltageFuseMeasure"
 		(at 247.015 66.675 0)
 		(effects
@@ -3325,26 +3197,6 @@
 			(justify left bottom)
 		)
 		(uuid "0e401aff-2d68-4030-b29c-533cd09aebfd")
-	)
-	(label "Therm_8"
-		(at 258.445 59.055 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1a3052a9-f498-468d-8b91-0be1bf84c162")
-	)
-	(label "Therm_3"
-		(at 258.445 46.355 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1c28a636-8d71-4c49-926f-bccb9d204d42")
 	)
 	(label "CAN+"
 		(at 266.7 124.46 0)
@@ -3386,16 +3238,6 @@
 		)
 		(uuid "2edef7e7-168f-4eb5-943a-dea40901b4fe")
 	)
-	(label "Therm_8"
-		(at 35.56 68.58 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3a81ab79-925c-426e-8697-f5506c5cb762")
-	)
 	(label "USB1-"
 		(at 266.7 142.24 0)
 		(effects
@@ -3436,16 +3278,6 @@
 		)
 		(uuid "54b63f7e-9e0e-4b72-bfe2-e4f650af3d9a")
 	)
-	(label "Therm_2"
-		(at 35.56 53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5a07d157-b406-48db-aa71-8ae2cebb8747")
-	)
 	(label "USB+"
 		(at 252.095 144.78 0)
 		(effects
@@ -3455,26 +3287,6 @@
 			(justify left bottom)
 		)
 		(uuid "5bd2e08a-bf46-4f2d-bdc9-b5b0e4eee0e5")
-	)
-	(label "Therm_2"
-		(at 258.445 43.815 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5d607d65-5c74-41c1-8435-c0a43d804f43")
-	)
-	(label "Therm_7"
-		(at 35.56 66.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6b2a02e5-a07d-4234-a558-efe864cadeee")
 	)
 	(label "CAN-"
 		(at 261.62 69.215 0)
@@ -3495,16 +3307,6 @@
 			(justify left bottom)
 		)
 		(uuid "79f98239-6667-4bc0-8c03-928517d1b5d2")
-	)
-	(label "Therm_3"
-		(at 35.56 55.88 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7a2a17a5-f67e-4c09-9480-ddfbc7585717")
 	)
 	(label "USB-"
 		(at 252.095 142.24 0)
@@ -3586,26 +3388,6 @@
 		)
 		(uuid "92b4ecf0-73e0-4302-a2cb-d419b0455a02")
 	)
-	(label "Therm_4"
-		(at 258.445 48.895 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a289f356-85a4-403c-91e9-c98510e76373")
-	)
-	(label "Therm_4"
-		(at 35.56 58.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a477f1b5-30cf-4d68-8d55-f4189465ac21")
-	)
 	(label "MOSI"
 		(at 33.02 34.29 0)
 		(effects
@@ -3625,16 +3407,6 @@
 			(justify left bottom)
 		)
 		(uuid "a77cb7d3-c495-4ffb-a68b-6a9e4b5c4c06")
-	)
-	(label "Therm_5"
-		(at 258.445 51.435 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a85570b2-d0bf-468f-a3a2-059849b091ab")
 	)
 	(label "CS"
 		(at 259.715 38.735 0)
@@ -3676,26 +3448,6 @@
 		)
 		(uuid "b792eed6-fe39-4209-ba9a-484f79386f0e")
 	)
-	(label "Therm_1"
-		(at 258.445 41.275 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bb5704fb-4282-4d51-93cb-19a4079a0b73")
-	)
-	(label "Therm_6"
-		(at 258.445 53.975 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "beb9c344-3647-43de-b0ed-15bfa1111221")
-	)
 	(label "V_Out_Pin_2"
 		(at 49.53 104.14 0)
 		(effects
@@ -3715,26 +3467,6 @@
 			(justify left bottom)
 		)
 		(uuid "c452d8d1-1467-4b04-888a-d54a0463d1ce")
-	)
-	(label "Therm_6"
-		(at 35.56 63.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c5a1c283-ae06-439e-a8ab-be303dadd16b")
-	)
-	(label "Therm_1"
-		(at 35.56 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cf6d5722-a612-43e1-a978-61cc9b7ce88e")
 	)
 	(label "V_Out_Pin_1"
 		(at 271.78 149.86 0)
@@ -3756,16 +3488,6 @@
 		)
 		(uuid "d515c600-d234-47a8-a983-c5dfba153bc5")
 	)
-	(label "Therm_7"
-		(at 258.445 56.515 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "dd401521-3239-4b52-9310-ef9a2484bbe4")
-	)
 	(label "Interlock"
 		(at 266.7 129.54 0)
 		(effects
@@ -3775,16 +3497,6 @@
 			(justify left bottom)
 		)
 		(uuid "df495110-cfc3-4edd-b2d4-326c069a2de3")
-	)
-	(label "Therm_5"
-		(at 35.56 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f8cfc9d0-6f86-424e-a2ea-b01c63794553")
 	)
 	(global_label "VCC"
 		(shape input)
@@ -5459,128 +5171,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
 					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 13.97 49.53)
-		(size 20.32 21.59)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "00000000-0000-0000-0000-000061d09503")
-		(property "Sheetname" "Thermistors"
-			(at 13.97 48.8184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Thermistors.kicad_sch"
-			(at 13.97 71.7046 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "Therm_1" output
-			(at 34.29 50.8 0)
-			(uuid "331304a6-6304-46cd-af58-d148e0475092")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Therm_2" output
-			(at 34.29 53.34 0)
-			(uuid "a6d88ab9-2013-41e5-a319-9ff249f648a7")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Therm_3" output
-			(at 34.29 55.88 0)
-			(uuid "85f8f1e7-4222-4a6e-86ef-dec0d94041f2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Therm_4" output
-			(at 34.29 58.42 0)
-			(uuid "ae2129e3-9725-4a24-9baf-6793441d2f70")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Therm_5" output
-			(at 34.29 60.96 0)
-			(uuid "489bbc8d-639b-4069-88fe-a1ad396a4c88")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Therm_6" output
-			(at 34.29 63.5 0)
-			(uuid "86997ce7-87b2-4673-88ab-12047405a6ee")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Therm_7" output
-			(at 34.29 66.04 0)
-			(uuid "41d8f8c6-1376-44d5-a6b5-c4acc18cb06c")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "Therm_8" output
-			(at 34.29 68.58 0)
-			(uuid "5c6ec022-99b6-4192-9e08-69e9902130eb")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(instances
-			(project "BMS_LV_2022"
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(page "10")
 				)
 			)
 		)
