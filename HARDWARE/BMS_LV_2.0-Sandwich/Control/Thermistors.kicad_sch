@@ -3529,7 +3529,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/JST-Commercial/S9B-XH-A-1LFSN?qs=QpmGXVUTftFDX1WKhvMsKA%3D%3D"
 			(at 162.56 134.62 0)
 			(effects
 				(font
