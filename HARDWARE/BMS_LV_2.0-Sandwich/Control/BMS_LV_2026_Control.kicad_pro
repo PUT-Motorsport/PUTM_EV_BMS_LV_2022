@@ -3,6 +3,8 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
+        "apply_defaults_to_fp_barcodes": false,
+        "apply_defaults_to_fp_dimensions": false,
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
@@ -60,51 +62,7 @@
       ],
       "drc_exclusions": [
         [
-          "items_not_allowed|181750000|101385000|b9f87578-2a33-4d29-ad1f-c1535adf76ef|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|102655000|b0f0a248-4b4a-4e5c-87dc-35c3196acbe3|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|103925000|526ea1d4-cf0c-469f-9706-e3cbee793359|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|105195000|e6abc0f3-ae75-466e-8f6e-593f661b3321|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|106465000|06d2358a-526e-4c49-898e-321d4eb80ce3|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|107735000|809214f7-431d-4edd-a0ec-99247c0bee60|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|109005000|7712fc9a-6946-4a56-897a-ad50a43a5fa6|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|110275000|e0a23752-c577-4f61-bb25-f147ff578dd7|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|111545000|fc569688-2afd-4cf8-858e-a25ce54a93a0|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "items_not_allowed|181750000|112815000|6235855b-2397-4495-8644-a97bebebe3e3|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "starved_thermal|144250000|104050000|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|9d3113de-38e9-45a0-b8f8-c94f25d7dc28|B.Cu",
-          ""
-        ],
-        [
-          "starved_thermal|154540000|102965000|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|6d546757-d818-4b51-8662-2721b3f013aa|B.Cu",
+          "starved_thermal|144200000|106300000|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|d6bdb3f0-2fc9-4862-b1c5-473ccd8f0ff3|B.Cu",
           ""
         ],
         [
@@ -130,6 +88,7 @@
         "extra_footprint": "warning",
         "footprint": "error",
         "footprint_filters_mismatch": "ignore",
+        "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
@@ -147,6 +106,7 @@
         "mirrored_text_on_front_layer": "warning",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
+        "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
         "npth_inside_courtyard": "ignore",
@@ -166,9 +126,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
+        "track_not_centered_on_via": "ignore",
+        "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
+        "tuning_profile_track_geometries": "ignore",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -290,17 +253,28 @@
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
+      "bom_rev": "",
       "dist": "",
       "distpn": "",
       "internal_id": "",
       "mfg": "",
-      "mpn": ""
+      "mpn": "",
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
     "viewports": []
   },
   "boards": [],
+  "component_class_settings": {
+    "assignments": [],
+    "meta": {
+      "version": 0
+    },
+    "sheet_component_classes": {
+      "enabled": false
+    }
+  },
   "cvpcb": {
     "equivalence_files": []
   },
@@ -548,6 +522,7 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
@@ -559,7 +534,8 @@
         "name": "CAN",
         "pcb_color": "rgb(158, 255, 54)",
         "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
       },
       {
         "clearance": 0.2,
@@ -569,11 +545,12 @@
         "name": "USB",
         "pcb_color": "rgb(239, 50, 255)",
         "priority": 1,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "tuning_profile": ""
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -593,7 +570,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../../../../CONTROL/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "../Assembly/BMS_LV_2026_Control_v2.step",
@@ -675,6 +652,7 @@
       "sort_asc": true,
       "sort_field": "Reference"
     },
+    "bus_aliases": {},
     "connection_grid_size": 50.0,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
@@ -713,7 +691,14 @@
     "spice_save_all_dissipations": false,
     "spice_save_all_voltages": false,
     "subpart_first_id": 65,
-    "subpart_id_separator": 0
+    "subpart_id_separator": 0,
+    "top_level_sheets": [
+      {
+        "filename": "BMS_LV_2026_Control.kicad_sch",
+        "name": "BMS_LV_2026_Control",
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      }
+    ]
   },
   "sheets": [
     [
@@ -737,5 +722,11 @@
       "Thermistors"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {},
+  "tuning_profiles": {
+    "meta": {
+      "version": 0
+    },
+    "tuning_profiles_impedance_geometric": []
+  }
 }
