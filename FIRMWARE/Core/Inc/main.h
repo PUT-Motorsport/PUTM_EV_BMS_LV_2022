@@ -27,7 +27,7 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32l4xx_hal.h"
+#include "stm32g4xx_hal.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -57,44 +57,40 @@ void SystemClock_Config(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define EFUSE_Pin GPIO_PIN_2
-#define EFUSE_GPIO_Port GPIOA
-#define THERM_1_Pin GPIO_PIN_3
-#define THERM_1_GPIO_Port GPIOA
-#define THERM_2_Pin GPIO_PIN_4
-#define THERM_2_GPIO_Port GPIOA
-#define THERM_3_Pin GPIO_PIN_5
-#define THERM_3_GPIO_Port GPIOA
-#define THERM_4_Pin GPIO_PIN_6
-#define THERM_4_GPIO_Port GPIOA
-#define THERM_5_Pin GPIO_PIN_7
-#define THERM_5_GPIO_Port GPIOA
-#define THERM_6_Pin GPIO_PIN_4
+#define THERM_4_Pin GPIO_PIN_0
+#define THERM_4_GPIO_Port GPIOC
+#define THERM_5_Pin GPIO_PIN_1
+#define THERM_5_GPIO_Port GPIOC
+#define THERM_6_Pin GPIO_PIN_2
 #define THERM_6_GPIO_Port GPIOC
-#define THERM_7_Pin GPIO_PIN_5
-#define THERM_7_GPIO_Port GPIOC
-#define THERM_8_Pin GPIO_PIN_0
+#define THERM_1_Pin GPIO_PIN_0
+#define THERM_1_GPIO_Port GPIOA
+#define THERM_2_Pin GPIO_PIN_1
+#define THERM_2_GPIO_Port GPIOA
+#define THERM_3_Pin GPIO_PIN_2
+#define THERM_3_GPIO_Port GPIOA
+#define THERM_7_Pin GPIO_PIN_3
+#define THERM_7_GPIO_Port GPIOA
+#define Standby_Pin GPIO_PIN_0
+#define Standby_GPIO_Port GPIOB
+#define Transistor_control_Pin GPIO_PIN_11
+#define Transistor_control_GPIO_Port GPIOB
+#define THERM_8_Pin GPIO_PIN_14
 #define THERM_8_GPIO_Port GPIOB
-#define CURRENT_SENSOR_Pin GPIO_PIN_1
-#define CURRENT_SENSOR_GPIO_Port GPIOB
-#define INTERLOCK_Pin GPIO_PIN_2
-#define INTERLOCK_GPIO_Port GPIOB
-#define FUSE_VOLTAGE_Pin GPIO_PIN_11
-#define FUSE_VOLTAGE_GPIO_Port GPIOB
-#define LED_1_Pin GPIO_PIN_6
-#define LED_1_GPIO_Port GPIOC
-#define LED_2_Pin GPIO_PIN_7
-#define LED_2_GPIO_Port GPIOC
-#define LED_3_Pin GPIO_PIN_8
-#define LED_3_GPIO_Port GPIOC
-#define LED_4_Pin GPIO_PIN_9
-#define LED_4_GPIO_Port GPIOC
-#define SW_DIO_Pin GPIO_PIN_13
-#define SW_DIO_GPIO_Port GPIOA
-#define SW_CLK_Pin GPIO_PIN_14
-#define SW_CLK_GPIO_Port GPIOA
-#define SPI1_CS_Pin GPIO_PIN_15
+#define VOLTAGE_FUSE_MEASURE_Pin GPIO_PIN_15
+#define VOLTAGE_FUSE_MEASURE_GPIO_Port GPIOB
+#define INTERLOCK_Pin GPIO_PIN_6
+#define INTERLOCK_GPIO_Port GPIOC
+#define SPI1_CS_Pin GPIO_PIN_8
 #define SPI1_CS_GPIO_Port GPIOA
+#define UART_TX_Pin GPIO_PIN_10
+#define UART_TX_GPIO_Port GPIOC
+#define RED_Pin GPIO_PIN_4
+#define RED_GPIO_Port GPIOB
+#define GREEN_Pin GPIO_PIN_5
+#define GREEN_GPIO_Port GPIOB
+#define YELLOW_Pin GPIO_PIN_6
+#define YELLOW_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 extern SPI_HandleTypeDef hspi1;
