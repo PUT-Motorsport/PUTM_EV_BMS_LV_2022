@@ -56,55 +56,59 @@ UART_HandleTypeDef huart4;
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
   .name = "defaultTask",
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityLow,
-  .stack_size = 128 * 4
 };
+
 /* Definitions for ltc_task */
 osThreadId_t ltc_taskHandle;
 uint32_t ltc_taskBuffer[ 512 ];
 osStaticThreadDef_t ltc_taskControlBlock;
 const osThreadAttr_t ltc_task_attributes = {
   .name = "ltc_task",
-  .stack_mem = &ltc_taskBuffer[0],
-  .stack_size = sizeof(ltc_taskBuffer),
   .cb_mem = &ltc_taskControlBlock,
   .cb_size = sizeof(ltc_taskControlBlock),
+  .stack_mem = &ltc_taskBuffer[0],
+  .stack_size = sizeof(ltc_taskBuffer),
   .priority = (osPriority_t) osPriorityNormal,
 };
+
 /* Definitions for soc_update_task */
 osThreadId_t soc_update_taskHandle;
 uint32_t soc_update_taskBuffer[ 512 ];
 osStaticThreadDef_t soc_update_taskControlBlock;
 const osThreadAttr_t soc_update_task_attributes = {
   .name = "soc_update_task",
-  .stack_mem = &soc_update_taskBuffer[0],
-  .stack_size = sizeof(soc_update_taskBuffer),
   .cb_mem = &soc_update_taskControlBlock,
   .cb_size = sizeof(soc_update_taskControlBlock),
+  .stack_mem = &soc_update_taskBuffer[0],
+  .stack_size = sizeof(soc_update_taskBuffer),
   .priority = (osPriority_t) osPriorityBelowNormal,
 };
+
 /* Definitions for balance_task */
 osThreadId_t balance_taskHandle;
 uint32_t balance_taskBuffer[ 512 ];
 osStaticThreadDef_t balance_taskControlBlock;
 const osThreadAttr_t balance_task_attributes = {
   .name = "balance_task",
-  .stack_mem = &balance_taskBuffer[0],
-  .stack_size = sizeof(balance_taskBuffer),
   .cb_mem = &balance_taskControlBlock,
   .cb_size = sizeof(balance_taskControlBlock),
+  .stack_mem = &balance_taskBuffer[0],
+  .stack_size = sizeof(balance_taskBuffer),
   .priority = (osPriority_t) osPriorityAboveNormal,
 };
+
 /* Definitions for comm_err_task */
 osThreadId_t comm_err_taskHandle;
 uint32_t comm_err_taskBuffer[ 512 ];
 osStaticThreadDef_t comm_err_taskControlBlock;
 const osThreadAttr_t comm_err_task_attributes = {
   .name = "comm_err_task",
-  .stack_mem = &comm_err_taskBuffer[0],
-  .stack_size = sizeof(comm_err_taskBuffer),
   .cb_mem = &comm_err_taskControlBlock,
   .cb_size = sizeof(comm_err_taskControlBlock),
+  .stack_mem = &comm_err_taskBuffer[0],
+  .stack_size = sizeof(comm_err_taskBuffer),
   .priority = (osPriority_t) osPriorityHigh,
 };
 /* USER CODE BEGIN PV */
@@ -112,7 +116,7 @@ const osThreadAttr_t comm_err_task_attributes = {
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
-void SystemClock_Config(void);
+extern "C" void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
@@ -647,10 +651,10 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-#ifdef USE_FULL_ASSERT
+#ifdef  USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
+  * where the assert_param error has occurred.
   * @param  file: pointer to the source file name
   * @param  line: assert_param error line source number
   * @retval None
