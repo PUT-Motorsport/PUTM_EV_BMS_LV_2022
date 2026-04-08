@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2022 STMicroelectronics.
+  * Copyright (c) 2026 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -53,7 +53,7 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-void SystemClock_Config(void);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -93,9 +93,7 @@ void SystemClock_Config(void);
 #define YELLOW_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-extern SPI_HandleTypeDef hspi1;
-extern CAN_HandleTypeDef hcan1;
-extern RTC_HandleTypeDef hrtc;
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
