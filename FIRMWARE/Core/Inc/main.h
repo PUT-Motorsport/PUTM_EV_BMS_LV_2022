@@ -73,12 +73,12 @@ void Error_Handler(void);
 #define THERM_7_GPIO_Port GPIOA
 #define Standby_Pin GPIO_PIN_0
 #define Standby_GPIO_Port GPIOB
-#define Transistor_control_Pin GPIO_PIN_11
-#define Transistor_control_GPIO_Port GPIOB
+#define EFUSE_Pin GPIO_PIN_11
+#define EFUSE_GPIO_Port GPIOB
 #define THERM_8_Pin GPIO_PIN_14
 #define THERM_8_GPIO_Port GPIOB
-#define VOLTAGE_FUSE_MEASURE_Pin GPIO_PIN_15
-#define VOLTAGE_FUSE_MEASURE_GPIO_Port GPIOB
+#define FUSE_VOLTAGE_Pin GPIO_PIN_15
+#define FUSE_VOLTAGE_GPIO_Port GPIOB
 #define INTERLOCK_Pin GPIO_PIN_6
 #define INTERLOCK_GPIO_Port GPIOC
 #define SPI1_CS_Pin GPIO_PIN_8

@@ -25,8 +25,6 @@ endif()
 # Set the project name
 set(CMAKE_PROJECT_NAME BMSLV_2022)
 
-# Include toolchain file
-include("cmake/gcc-arm-none-eabi.cmake")
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
@@ -55,7 +53,7 @@ file(GLOB CXX_SRC "${PROJECT_SOURCE_DIR}/Core/Src/*.cpp")
 message("CXX_SRC: " ${CXX_SRC})
 message("C_SRC: " ${C_SRC})
 set(C_SRC
-    # "${PROJECT_SOURCE_DIR}/Core/Src/ring_buffer.c"
+    "${PROJECT_SOURCE_DIR}/Core/Src/ring_buffer.c"
 )
 
 # Add sources to executable
