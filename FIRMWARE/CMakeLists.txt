@@ -41,7 +41,8 @@ add_executable(${CMAKE_PROJECT_NAME})
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
-
+#Add Can library
+add_subdirectory(Core/Inc/PUTM_EV_CAN_LIBRARY)
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
@@ -66,6 +67,9 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     "${PROJECT_SOURCE_DIR}/Drivers/ETL/include/"
+    "${PROJECT_SOURCE_DIR}/Core/Inc"
+    "${PROJECT_SOURCE_DIR}/Core/Inc/PUTM_EV_CAN_LIBRARY/include"
+    "${PROJECT_SOURCE_DIR}/Core/Inc/PUTM_EV_CAN_LIBRARY/database/generated"
     # Add user defined include paths
 )
 
@@ -77,6 +81,6 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
-
+    putm_ev_can
     # Add user defined libraries
 )
