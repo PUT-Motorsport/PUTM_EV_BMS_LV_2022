@@ -407,9 +407,12 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:LED_BKGR"
+		(symbol "Device:LED_Small"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0)
+				(offset 0.254)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -418,27 +421,29 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "D"
-				(at 0 9.398 0)
+				(at -1.27 3.175 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "LED_BKGR"
-				(at 0 -8.89 0)
+			(property "Value" "LED_Small"
+				(at -4.445 -2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 0 -1.27 0)
+				(at 0 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -449,7 +454,7 @@
 				)
 			)
 			(property "Datasheet" ""
-				(at 0 -1.27 0)
+				(at 0 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -459,7 +464,7 @@
 					)
 				)
 			)
-			(property "Description" "RGB LED, blue/cathode/green/red"
+			(property "Description" "Light emitting diode, small symbol"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -470,7 +475,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "LED RGB diode"
+			(property "ki_keywords" "LED diode light-emitting-diode"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -492,369 +497,73 @@
 					)
 				)
 			)
-			(symbol "LED_BKGR_0_0"
-				(text "R"
-					(at 1.905 3.81 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
+			(symbol "LED_Small_0_1"
+				(polyline
+					(pts
+						(xy -0.762 -1.016) (xy -0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
-				(text "G"
-					(at 1.905 -1.27 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy -0.508 1.27) (xy -0.254 1.27) (xy -0.508 1.27) (xy -0.508 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
-				(text "B"
-					(at 1.905 -6.35 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
+				(polyline
+					(pts
+						(xy 0.508 1.27) (xy 0 1.778) (xy 0.254 1.778) (xy 0 1.778) (xy 0 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy -0.762 0) (xy 0.762 1.016) (xy 0.762 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
-			(symbol "LED_BKGR_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 6.35) (xy -1.27 3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 6.35) (xy -1.27 3.81) (xy -1.27 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy 1.27 5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy -2.032 5.08) (xy -2.032 -5.08) (xy -1.016 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -3.81) (xy -1.27 -6.35)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy 1.27 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 6.35) (xy 0.508 7.874) (xy -0.254 7.874) (xy 0.508 7.874) (xy 0.508 7.112)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 1.27) (xy 0.508 2.794) (xy -0.254 2.794) (xy 0.508 2.794) (xy 0.508 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.016 -3.81) (xy 0.508 -2.286) (xy -0.254 -2.286) (xy 0.508 -2.286) (xy 0.508 -3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 6.35) (xy 1.524 7.874) (xy 0.762 7.874) (xy 1.524 7.874) (xy 1.524 7.112)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 1.524 2.794) (xy 0.762 2.794) (xy 1.524 2.794) (xy 1.524 2.032)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -3.81) (xy 1.524 -2.286) (xy 0.762 -2.286) (xy 1.524 -2.286) (xy 1.524 -3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 6.35) (xy 1.27 3.81) (xy -1.27 5.08) (xy 1.27 6.35)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 1.27 6.35)
-					(end 1.27 6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 5.08) (xy 2.54 5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 1.27 3.81)
-					(end 1.27 6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 1.27 1.27)
-					(end 1.27 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 1.27 -1.27)
-					(end 1.27 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -3.81) (xy 1.27 -6.35) (xy -1.27 -5.08) (xy 1.27 -3.81)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 2.54 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.794 8.382)
-					(end -2.794 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "LED_BKGR_1_1"
+			(symbol "LED_Small_1_1"
 				(pin passive line
-					(at 5.08 -5.08 180)
-					(length 2.54)
-					(name "BA"
+					(at -2.54 0 0)
+					(length 1.778)
+					(name "K"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -870,9 +579,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "K"
+					(at 2.54 0 180)
+					(length 1.778)
+					(name "A"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -880,42 +589,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "GA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 5.08 180)
-					(length 2.54)
-					(name "RA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3865,16 +3538,6 @@
 		)
 		(uuid "43d1d211-326c-45da-b5c9-b75197a307d4")
 	)
-	(text "uprzedzam pytanie, tak piny\ngpio mają rating na ten prąd\nto całe 2mA XD"
-		(exclude_from_sim no)
-		(at 141.605 186.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "6dfda340-bfb3-4ea6-8fdb-b32c4796987d")
-	)
 	(text "Oscilator"
 		(exclude_from_sim no)
 		(at 49.53 107.95 0)
@@ -4032,10 +3695,6 @@
 		(uuid "4f110d76-1db4-4e99-9059-57d45882431e")
 	)
 	(no_connect
-		(at 208.915 114.935)
-		(uuid "5f11e026-7c36-47e3-b04f-3d6260c4ba9a")
-	)
-	(no_connect
 		(at 46.355 161.925)
 		(uuid "62a1fb8f-0709-4ede-b196-271920da60f5")
 	)
@@ -4046,6 +3705,10 @@
 	(no_connect
 		(at 46.355 172.085)
 		(uuid "6b6c4e16-b742-44e8-b11b-b3dacde146ff")
+	)
+	(no_connect
+		(at 173.355 97.155)
+		(uuid "6c750cf5-8090-4c3c-8e07-d43a9c060428")
 	)
 	(no_connect
 		(at 208.915 112.395)
@@ -4227,6 +3890,16 @@
 	)
 	(wire
 		(pts
+			(xy 126.365 179.07) (xy 129.54 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0085c924-7dd8-4336-9eb8-a6e724544316")
+	)
+	(wire
+		(pts
 			(xy 208.915 66.675) (xy 217.805 66.675)
 		)
 		(stroke
@@ -4244,6 +3917,16 @@
 			(type default)
 		)
 		(uuid "03c5a42f-3f0e-4199-aa07-19c11dc99f36")
+	)
+	(wire
+		(pts
+			(xy 134.62 173.99) (xy 137.16 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "077f527f-bfb1-4597-b141-49d606d1aa02")
 	)
 	(wire
 		(pts
@@ -4497,6 +4180,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 173.99) (xy 159.385 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32bf27dc-cc55-418e-9444-048e4c6cc5d4")
+	)
+	(wire
+		(pts
 			(xy 191.135 55.245) (xy 193.675 55.245)
 		)
 		(stroke
@@ -4524,6 +4217,16 @@
 			(type default)
 		)
 		(uuid "3f304d1d-a553-43a1-b6da-f1335508c3bd")
+	)
+	(wire
+		(pts
+			(xy 141.605 168.91) (xy 159.385 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fbb3b4d-2c25-4c2c-875b-7b79735cb26c")
 	)
 	(bus
 		(pts
@@ -4604,6 +4307,16 @@
 			(type default)
 		)
 		(uuid "4b60354e-b951-4d20-a9b2-a5d5fad6cb91")
+	)
+	(wire
+		(pts
+			(xy 142.24 179.07) (xy 159.385 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c7cabfd-e38b-49f2-ad36-83827db1b920")
 	)
 	(wire
 		(pts
@@ -4807,16 +4520,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 179.07) (xy 159.385 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cb5cb9f-fd24-4e6d-9ac9-9220eb61ba07")
-	)
-	(wire
-		(pts
 			(xy 188.595 55.245) (xy 188.595 59.055)
 		)
 		(stroke
@@ -4977,16 +4680,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 97.155) (xy 173.355 97.155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "889a908b-1bd7-4d1a-8866-7d13137cd64d")
-	)
-	(wire
-		(pts
 			(xy 208.915 147.955) (xy 214.63 147.955)
 		)
 		(stroke
@@ -5004,6 +4697,16 @@
 			(type default)
 		)
 		(uuid "90f3fff8-f3cb-4e3e-a105-833dd1d51f11")
+	)
+	(wire
+		(pts
+			(xy 125.73 168.91) (xy 128.905 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "932a19eb-d1ce-4461-b066-1617771769d0")
 	)
 	(wire
 		(pts
@@ -5047,6 +4750,16 @@
 	)
 	(wire
 		(pts
+			(xy 133.985 168.91) (xy 136.525 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "964e71df-125a-45ce-9900-2034451afe21")
+	)
+	(wire
+		(pts
 			(xy 208.915 84.455) (xy 220.345 84.455)
 		)
 		(stroke
@@ -5067,16 +4780,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 173.99) (xy 159.385 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5ee4548-10d3-4906-888c-48b285b3767b")
-	)
-	(wire
-		(pts
 			(xy 75.565 77.47) (xy 75.565 75.565)
 		)
 		(stroke
@@ -5084,16 +4787,6 @@
 			(type default)
 		)
 		(uuid "a6ffbed4-0051-4ee2-92b7-618886c0e52b")
-	)
-	(wire
-		(pts
-			(xy 147.32 168.91) (xy 159.385 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8a0b955-e100-4dd1-94a8-7e9c15f54e8c")
 	)
 	(wire
 		(pts
@@ -5184,6 +4877,16 @@
 			(type default)
 		)
 		(uuid "b81ab924-7e35-44dd-9d1c-8e058bebe19f")
+	)
+	(wire
+		(pts
+			(xy 134.62 179.07) (xy 137.16 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba3181f8-4239-4906-95cb-bf6abe1dec08")
 	)
 	(wire
 		(pts
@@ -5424,6 +5127,16 @@
 			(type default)
 		)
 		(uuid "e8a94dea-a88f-41b5-95ec-0e85e56b6b3f")
+	)
+	(wire
+		(pts
+			(xy 126.365 173.99) (xy 129.54 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1aa21b-d0cd-4f21-9f4f-b59c28cee7b5")
 	)
 	(wire
 		(pts
@@ -10750,6 +10463,16 @@
 		)
 		(uuid "256453ce-0f1f-4685-b15e-0d0acfd6d269")
 	)
+	(label "3V3"
+		(at 126.365 179.07 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2692f75e-50fb-484b-a756-a13eafc01697")
+	)
 	(label "SPI.SCK"
 		(at 220.345 79.375 180)
 		(effects
@@ -10919,6 +10642,26 @@
 			(justify right bottom)
 		)
 		(uuid "6564213b-c6db-4f69-a373-bb290ff46597")
+	)
+	(label "3V3"
+		(at 126.365 173.99 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "664df742-5d4c-4e13-9d08-c49c4de112fb")
+	)
+	(label "3V3"
+		(at 125.73 168.91 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69a4f696-a371-4bdd-ad00-737cf11521a8")
 	)
 	(label "GREEN"
 		(at 215.9 122.555 180)
@@ -11272,14 +11015,14 @@
 	)
 	(hierarchical_label "Current_sensor_in"
 		(shape input)
-		(at 171.45 97.155 180)
+		(at 208.915 114.935 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "11c2d57d-49bb-4141-bf27-273655422f68")
+		(uuid "06b2a235-8ed6-4097-8499-4284de7b04ec")
 	)
 	(hierarchical_label "Transistor_control"
 		(shape output)
@@ -12874,6 +12617,148 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED_Small")
+		(at 139.7 179.07 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "49f70c97-afcd-4625-b001-cf32ef23bee0")
+		(property "Reference" "D21"
+			(at 139.065 177.165 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" ""
+			(at 140.9064 177.165 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 139.7 179.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060SS75000.pdf"
+			(at 139.7 179.07 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 139.7 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Wurth-Elektronik/150060SS75000?qs=LlUlMxKIyB0oQaxwspeTEA%3D%3D"
+			(at 139.7 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Author" ""
+			(at 139.7 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 139.7 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 139.7 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 139.7 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 139.7 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e80eb68b-4f73-47c9-ab17-c80c98664137")
+		)
+		(pin "2"
+			(uuid "73e3df85-1149-4f54-beac-9af3d4349d18")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 220.345 130.175 270)
 		(unit 1)
@@ -13246,6 +13131,148 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 132.08 179.07 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5c815ec8-88c4-4783-9637-22e0ccbf78b9")
+		(property "Reference" "R26"
+			(at 130.8099 177.165 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 135.255 177.165 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 132.08 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 132.08 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 132.08 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Vishay-Dale/CRCW06031K00FKED?qs=sGAEpiMZZMtlubZbdhIBIKbhzOdzan%2FGTch9K0lp5pQ%3D"
+			(at 132.08 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Author" ""
+			(at 132.08 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 132.08 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 132.08 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 132.08 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 132.08 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a41c3177-3634-4937-9d39-19d6a808ff38")
+		)
+		(pin "2"
+			(uuid "c8f3947a-0af9-4502-8b76-621f62986c1e")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Samacsys_kicad_sym:FTSH-107-01-L-D-K")
 		(at 40.005 169.545 0)
 		(unit 1)
@@ -13449,232 +13476,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 144.78 179.07 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "71ab26bb-39f7-48c3-916b-33b13a9f7815")
-		(property "Reference" "R26"
-			(at 149.86 177.165 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "750R"
-			(at 144.78 177.165 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 144.78 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 144.78 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
-			(at 144.78 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Author" ""
-			(at 144.78 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "License" ""
-			(at 144.78 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" ""
-			(at 144.78 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 144.78 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 144.78 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4059609f-3b48-4f23-a141-0106516b92d4")
-		)
-		(pin "2"
-			(uuid "357f4334-b7cd-433a-9e66-b4a0191f8eab")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "R26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED_BKGR")
-		(at 137.16 173.99 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "72b2b8e0-2eea-4eb2-9faa-87d4d6180a3c")
-		(property "Reference" "D2"
-			(at 137.16 160.655 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED_BKGR"
-			(at 137.16 163.195 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Footprint:APFA2507LSURKSYKZGKC"
-			(at 137.16 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://eu.mouser.com/ProductDetail/Kingbright/APFA2507LSURKSYKZGKC?qs=YCa%2FAAYMW00SGdMeVEoOAQ%3D%3D"
-			(at 137.16 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "RGB LED, blue/cathode/green/red"
-			(at 137.16 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5ddb390b-f7dd-4c20-b133-4eb4a9938dac")
-		)
-		(pin "2"
-			(uuid "9cb26d84-8b20-437d-931d-823dec23628a")
-		)
-		(pin "3"
-			(uuid "d859c141-88e2-44c5-bf13-50896208e242")
-		)
-		(pin "4"
-			(uuid "ae76a773-1914-4bdd-b402-d3ae57ac6b21")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -14021,8 +13822,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 144.78 168.91 90)
+		(lib_id "Device:LED_Small")
+		(at 139.065 168.91 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14030,29 +13831,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "81f26499-5328-4ecb-a4da-349ec2ee3afb")
-		(property "Reference" "R20"
-			(at 149.86 167.005 90)
+		(uuid "7bc88bed-68a2-4efc-8d2e-92e3db48280b")
+		(property "Reference" "D19"
+			(at 137.7314 167.005 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "750R"
-			(at 144.78 167.005 90)
+		(property "Value" ""
+			(at 140.2714 167.005 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 144.78 168.91 0)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 139.065 168.91 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14062,8 +13865,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 144.78 168.91 0)
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060SS75000.pdf"
+			(at 139.065 168.91 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14073,8 +13876,8 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 144.78 168.91 0)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 139.065 168.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14084,8 +13887,8 @@
 				)
 			)
 		)
-		(property "Mouser Price/Stock" ""
-			(at 144.78 168.91 0)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Wurth-Elektronik/150060SS75000?qs=LlUlMxKIyB0oQaxwspeTEA%3D%3D"
+			(at 139.065 168.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14096,7 +13899,7 @@
 			)
 		)
 		(property "Author" ""
-			(at 144.78 168.91 0)
+			(at 139.065 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14106,7 +13909,7 @@
 			)
 		)
 		(property "License" ""
-			(at 144.78 168.91 0)
+			(at 139.065 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14116,7 +13919,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 144.78 168.91 0)
+			(at 139.065 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14126,7 +13929,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 144.78 168.91 0)
+			(at 139.065 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14136,7 +13939,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 144.78 168.91 0)
+			(at 139.065 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14146,15 +13949,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "b3feada1-f689-4c86-a7c1-fd51402cfc0d")
+			(uuid "86e2c6c3-1728-4cb4-969e-5e9b51d121ce")
 		)
 		(pin "2"
-			(uuid "6db1cac8-4e4c-4148-8c91-6f2b5a9c10b1")
+			(uuid "b2434e43-11af-4ec5-9f3d-293a7aed863e")
 		)
 		(instances
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "R20")
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -14775,8 +14578,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 144.78 173.99 90)
+		(lib_id "Device:LED_Small")
+		(at 139.7 173.99 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14784,29 +14587,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d3430b50-a577-4698-a08f-11eec8994832")
-		(property "Reference" "R19"
-			(at 149.86 172.085 90)
+		(uuid "b6679fe1-1c78-4073-8d32-fdf7b4d6bdd8")
+		(property "Reference" "D20"
+			(at 138.43 172.085 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "750R"
-			(at 144.78 172.085 90)
+		(property "Value" ""
+			(at 140.9064 172.085 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 144.78 173.99 0)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
+			(at 139.7 173.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14816,8 +14621,8 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 144.78 173.99 0)
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060SS75000.pdf"
+			(at 139.7 173.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14827,8 +14632,8 @@
 				)
 			)
 		)
-		(property "Description" "Resistor, small symbol"
-			(at 144.78 173.99 0)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 139.7 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14838,8 +14643,8 @@
 				)
 			)
 		)
-		(property "Mouser Price/Stock" ""
-			(at 144.78 173.99 0)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Wurth-Elektronik/150060SS75000?qs=LlUlMxKIyB0oQaxwspeTEA%3D%3D"
+			(at 139.7 173.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14850,7 +14655,7 @@
 			)
 		)
 		(property "Author" ""
-			(at 144.78 173.99 0)
+			(at 139.7 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14860,7 +14665,7 @@
 			)
 		)
 		(property "License" ""
-			(at 144.78 173.99 0)
+			(at 139.7 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14870,7 +14675,7 @@
 			)
 		)
 		(property "MPN" ""
-			(at 144.78 173.99 0)
+			(at 139.7 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14880,7 +14685,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 144.78 173.99 0)
+			(at 139.7 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14890,7 +14695,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 144.78 173.99 0)
+			(at 139.7 173.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14900,92 +14705,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a885e5ef-2e4a-4051-b940-c8a68f7995cf")
+			(uuid "8747af4d-6569-46a0-a1da-e3c1cf9c6499")
 		)
 		(pin "2"
-			(uuid "db1668f4-da4b-4302-8873-1fb0f5af75e5")
+			(uuid "b9a4c2f3-c14b-430a-9f3f-29c3a56784de")
 		)
 		(instances
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "R19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 132.08 173.99 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d6da7fb3-e2aa-403e-9e23-f55369b8ba30")
-		(property "Reference" "#PWR028"
-			(at 125.73 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 127.6858 174.117 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 173.99 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3ea35cc6-e052-4b5e-bef6-0edcc88ee379")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "#PWR028")
+					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -15489,6 +15217,148 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 132.08 173.99 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f7b08e07-8cfb-4b3d-b12e-e8d92f557114")
+		(property "Reference" "R20"
+			(at 130.8099 172.085 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 136.525 172.085 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 132.08 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 132.08 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 132.08 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Vishay-Dale/CRCW06031K00FKED?qs=sGAEpiMZZMtlubZbdhIBIKbhzOdzan%2FGTch9K0lp5pQ%3D"
+			(at 132.08 173.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Author" ""
+			(at 132.08 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 132.08 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 132.08 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 132.08 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 132.08 173.99 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "72569fff-9a13-4389-86b1-8aa6daad1cbb")
+		)
+		(pin "2"
+			(uuid "bfda3d29-ff39-4120-ad64-40118a7fc575")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 32.385 80.01 180)
 		(unit 1)
@@ -15746,6 +15616,148 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 131.445 168.91 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fc4bfd14-0cbd-4558-bf55-743ee5268eed")
+		(property "Reference" "R19"
+			(at 130.1749 167.005 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 135.89 167.005 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 131.445 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 131.445 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 131.445 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Vishay-Dale/CRCW06031K00FKED?qs=sGAEpiMZZMtlubZbdhIBIKbhzOdzan%2FGTch9K0lp5pQ%3D"
+			(at 131.445 168.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Author" ""
+			(at 131.445 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 131.445 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 131.445 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 131.445 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 131.445 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6bf48a53-885e-48f6-9e28-210a8ba096a2")
+		)
+		(pin "2"
+			(uuid "964e9996-02e8-458b-8f5f-feff8d436afe")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "R19")
 					(unit 1)
 				)
 			)
