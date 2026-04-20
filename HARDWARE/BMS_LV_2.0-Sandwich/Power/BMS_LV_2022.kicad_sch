@@ -651,131 +651,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "BMS_LV_2022-rescue:VCC-power"
-			(power global)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "power_VCC"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "VCC-power_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC-power_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_01x26"
 			(pin_names
 				(offset 1.016)
@@ -2752,12 +2627,6 @@
 		(uuid "66ef8dec-5455-476d-a922-d3bddb3825ce")
 	)
 	(junction
-		(at 129.54 36.195)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b27e5fa4-a48c-46cc-bebf-c41f63d1cd9a")
-	)
-	(junction
 		(at 177.165 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2794,10 +2663,6 @@
 	(no_connect
 		(at 180.34 49.53)
 		(uuid "954fdb48-1f00-4ec0-8151-4eeaf5e33c47")
-	)
-	(no_connect
-		(at 180.34 57.15)
-		(uuid "c3b07659-131e-4bb9-97d0-442743e11576")
 	)
 	(no_connect
 		(at 180.34 44.45)
@@ -3053,6 +2918,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 57.15) (xy 180.34 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "524e003f-71ce-4877-b096-c17ddf2e49a8")
+	)
+	(wire
+		(pts
 			(xy 177.165 92.71) (xy 177.165 90.17)
 		)
 		(stroke
@@ -3153,16 +3028,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 36.195) (xy 132.08 36.195)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "871afc6a-72b3-49d2-a641-344e64603b60")
-	)
-	(wire
-		(pts
 			(xy 177.165 95.25) (xy 180.34 95.25)
 		)
 		(stroke
@@ -3203,7 +3068,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 36.195) (xy 129.54 36.195)
+			(xy 124.46 36.195) (xy 132.715 36.195)
 		)
 		(stroke
 			(width 0)
@@ -3711,6 +3576,16 @@
 		)
 		(uuid "b792eed6-fe39-4209-ba9a-484f79386f0e")
 	)
+	(label "CurrentSensor_Out"
+		(at 162.56 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c07d8f75-7b7c-4a61-8b17-c9739bd5a1ec")
+	)
 	(label "V_Out_Pin_2"
 		(at 46.355 68.58 0)
 		(effects
@@ -3763,7 +3638,7 @@
 	)
 	(global_label "VCC"
 		(shape input)
-		(at 137.795 84.455 0)
+		(at 132.715 36.195 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3771,33 +3646,9 @@
 			)
 			(justify left)
 		)
-		(uuid "52e6b97c-5bbf-4846-8342-44103e03ffa9")
+		(uuid "cc47c0e5-cdf7-453d-b039-942e607a95f5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 143.7546 84.455 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "VCC"
-		(shape output)
-		(at 132.08 36.195 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "eb02a4db-e835-4f3d-8c89-b439c0f6a2d9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 138.0396 36.195 0)
+			(at 138.6746 36.195 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4276,83 +4127,6 @@
 		)
 	)
 	(symbol
-		(lib_id "BMS_LV_2022-rescue:+24V-power")
-		(at 129.54 36.195 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000061f35fda")
-		(property "Reference" "#PWR0119"
-			(at 129.54 40.005 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+24V"
-			(at 129.921 31.8008 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 129.54 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3cbf2e07-d89a-44dc-b456-61c9fc3882a3")
-		)
-		(instances
-			(project "BMS_LV_2022"
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "#PWR0119")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 41.91 116.205 0)
 		(unit 1)
@@ -4423,6 +4197,84 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
 					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "BMS_LV_2022-rescue:+24V-power")
+		(at 137.795 84.455 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1f157ba9-079c-4ab1-a9d6-498dc5856c6f")
+		(property "Reference" "#PWR0119"
+			(at 133.985 84.455 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+24V"
+			(at 143.51 84.455 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.795 84.455 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 137.795 84.455 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 137.795 84.455 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b59f5f2-ce90-4e8e-957a-3ccb413926d9")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
+					(reference "#PWR0119")
 					(unit 1)
 				)
 			)
@@ -4500,6 +4352,83 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
 					(reference "#PWR0123")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "BMS_LV_2022-rescue:+24V-power")
+		(at 173.355 80.01 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4facfdce-8523-4ba9-8e65-68034c279fd7")
+		(property "Reference" "#PWR0124"
+			(at 177.165 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+24V"
+			(at 167.64 80.01 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.355 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.355 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 173.355 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "26b28a01-66da-4dba-b94d-7332e4477a57")
+		)
+		(instances
+			(project "BMS_LV_2022"
+				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
+					(reference "#PWR0124")
 					(unit 1)
 				)
 			)
@@ -5544,83 +5473,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
 					(reference "#PWR025")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BMS_LV_2022-rescue:VCC-power")
-		(at 173.355 80.01 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ef26745d-ecec-4ac5-80e8-7499f08ecf29")
-		(property "Reference" "#PWR015"
-			(at 177.165 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 168.783 80.01 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.355 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.355 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 173.355 80.01 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9d7d86b5-cb84-4f82-b01e-288463e8a04b")
-		)
-		(instances
-			(project "BMS_LV_2022"
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d"
-					(reference "#PWR015")
 					(unit 1)
 				)
 			)

@@ -8,131 +8,6 @@
 		(title "Battery Management System Main Page")
 	)
 	(lib_symbols
-		(symbol "BMS_LV_2022-rescue:+24V-power"
-			(power global)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "power_+24V"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+24V-power_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+24V-power_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "+24V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "BMS_LV_2022-rescue:GND-power"
 			(power global)
 			(pin_names
@@ -1437,12 +1312,6 @@
 		(uuid "2dc50431-eeb2-4bbd-a8e4-39bc7e24b347")
 	)
 	(junction
-		(at 107.95 71.12)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "371622ed-ad54-491b-8560-fa2a9eb90641")
-	)
-	(junction
 		(at 151.13 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1483,6 +1352,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8aa06b60-f9bb-474c-86cd-213798e1b984")
+	)
+	(junction
+		(at 114.3 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab23cf08-a09e-40ba-b334-f14ecb8a9554")
 	)
 	(junction
 		(at 180.34 81.28)
@@ -1540,7 +1415,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 71.12) (xy 123.19 71.12)
+			(xy 100.33 71.12) (xy 114.3 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1700,6 +1575,16 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 68.58) (xy 114.3 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a0545c4-7fa6-4ea4-a806-1dbe5618a2aa")
+	)
+	(wire
+		(pts
 			(xy 153.67 92.71) (xy 153.67 96.52)
 		)
 		(stroke
@@ -1790,13 +1675,13 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 71.12) (xy 100.33 71.12)
+			(xy 114.3 71.12) (xy 123.19 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9b29fa36-cd9c-4d12-a81f-54e4494b0fbc")
+		(uuid "9bd0dd38-a4a4-4550-893f-6717e238a850")
 	)
 	(wire
 		(pts
@@ -1930,6 +1815,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 68.58) (xy 114.3 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4d19ca0-c2d3-4d0a-9f1e-8e00f1a00cb5")
+	)
+	(wire
+		(pts
 			(xy 129.54 71.12) (xy 129.54 85.09)
 		)
 		(stroke
@@ -2007,6 +1902,30 @@
 			(justify right bottom)
 		)
 		(uuid "71098d71-6c47-4329-8520-24b19c146fa1")
+	)
+	(global_label "VCC"
+		(shape input)
+		(at 111.76 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "73a1b4b7-937a-433b-9e1b-b38a6da45a87")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 105.8004 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
 	)
 	(hierarchical_label "VCC_Pin"
 		(shape output)
@@ -2457,83 +2376,6 @@
 			(project "BMS_LV_2022"
 				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
 					(reference "#PWR0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "BMS_LV_2022-rescue:+24V-power")
-		(at 107.95 71.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-0000626b571f")
-		(property "Reference" "#PWR047"
-			(at 107.95 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+24V"
-			(at 108.331 66.7258 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 107.95 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 107.95 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 107.95 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a7f3a3d9-efe4-46c1-b11c-bf8a1848eeb5")
-		)
-		(instances
-			(project "BMS_LV_2022"
-				(path "/fb6504b5-591d-4b10-ab86-0c46f59e8b7d/00000000-0000-0000-0000-00006269845f"
-					(reference "#PWR047")
 					(unit 1)
 				)
 			)

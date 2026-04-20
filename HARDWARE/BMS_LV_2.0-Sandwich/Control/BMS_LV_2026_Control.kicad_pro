@@ -66,7 +66,15 @@
           ""
         ],
         [
+          "starved_thermal|149790000|106990000|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|925d5aeb-0728-4df7-839f-ba301fc48cc9|B.Cu",
+          ""
+        ],
+        [
           "starved_thermal|157600000|95737499|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|bd6aed8c-fa2d-4732-853c-d6f658f0c11d|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|163837500|93500000|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|dc196e9d-b388-4ee0-a23f-e8715e32ebbf|F.Cu",
           ""
         ]
       ],
@@ -464,11 +472,14 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
+      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
+      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
+      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -491,8 +502,10 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
+      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -581,6 +594,10 @@
   },
   "schematic": {
     "annotate_start_num": 0,
+    "annotation": {
+      "method": 0,
+      "sort_order": 0
+    },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -660,6 +677,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
+      "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -683,6 +701,7 @@
     "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -696,14 +715,16 @@
       {
         "filename": "BMS_LV_2026_Control.kicad_sch",
         "name": "BMS_LV_2026_Control",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "61cadedd-f367-4fd1-937a-9fd9456f4804"
       }
-    ]
+    ],
+    "used_designators": "",
+    "variants": []
   },
   "sheets": [
     [
       "61cadedd-f367-4fd1-937a-9fd9456f4804",
-      "Root"
+      "BMS_LV_2026_Control"
     ],
     [
       "2dcfb724-c7cf-4380-9a1f-f4a92cc481d4",
