@@ -71,10 +71,16 @@ void Error_Handler(void);
 #define THERM_3_GPIO_Port GPIOA
 #define THERM_7_Pin GPIO_PIN_3
 #define THERM_7_GPIO_Port GPIOA
-#define Standby_Pin GPIO_PIN_0
-#define Standby_GPIO_Port GPIOB
+#define CAN_STANDBY_Pin GPIO_PIN_0
+#define CAN_STANDBY_GPIO_Port GPIOB
+#define CURRENT_SENSOR_Pin GPIO_PIN_2
+#define CURRENT_SENSOR_GPIO_Port GPIOB
 #define EFUSE_Pin GPIO_PIN_11
 #define EFUSE_GPIO_Port GPIOB
+#define CAN_RX_Pin GPIO_PIN_12
+#define CAN_RX_GPIO_Port GPIOB
+#define CAN_TX_Pin GPIO_PIN_13
+#define CAN_TX_GPIO_Port GPIOB
 #define THERM_8_Pin GPIO_PIN_14
 #define THERM_8_GPIO_Port GPIOB
 #define FUSE_VOLTAGE_Pin GPIO_PIN_15
@@ -85,6 +91,8 @@ void Error_Handler(void);
 #define SPI1_CS_GPIO_Port GPIOA
 #define UART_TX_Pin GPIO_PIN_10
 #define UART_TX_GPIO_Port GPIOC
+#define UART_RX_Pin GPIO_PIN_11
+#define UART_RX_GPIO_Port GPIOC
 #define RED_Pin GPIO_PIN_4
 #define RED_GPIO_Port GPIOB
 #define GREEN_Pin GPIO_PIN_5
