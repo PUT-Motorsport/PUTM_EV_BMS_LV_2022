@@ -62,6 +62,16 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ${CXX_SRC}
     ${C_SRC}
     # Add user defined source files
+    Core/Src/balance_task.cpp
+    Core/Src/comm_err_task.cpp
+    Core/Src/global_variables.cpp
+    Core/Src/ltc_library.cpp
+    Core/Src/ltc_task.cpp
+    Core/Src/main.cpp
+    Core/Src/parser.cpp
+    Core/Src/soc_ekf.cpp
+    Core/Src/soc_update_task.cpp
+    Core/Src/ring_buffer.c
 )
 
 # Add include paths
