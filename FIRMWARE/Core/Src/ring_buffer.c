@@ -4,7 +4,7 @@
  *  Created on: Mar 22, 2024
  *      Author: Michał Błotniak
  */
-#include <ring_buffer.h>
+#include "ring_buffer.h"
 #include "main.h"
 
 //

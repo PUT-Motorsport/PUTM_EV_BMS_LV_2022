@@ -31,7 +31,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "global_variables.hpp"
+#include "soc_ekf.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,7 +112,21 @@ int main(void)
   MX_TIM6_Init();
   MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
+  
+  HAL_Delay(2000); //dodanie dealya w poprzendij itercji projektu byl osDelay
+  
+  HAL_GPIO_WritePin(EFUSE_GPIO_Port, EFUSE_Pin, GPIO_PIN_SET);
 
+  HAL_TIM_Base_Start_IT(&htim3);
+  HAL_TIM_Base_Start(&htim6);
+  HAL_TIM_Base_Start(&htim8);
+
+  HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
+  HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED);
+
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)data.temperatures.adc, MAX_NUMBER_OF_TEMPERATURES);
+  HAL_ADC_Start_DMA(&hadc2, (uint32_t*)data.current.adc, NUMBER_OF_CS_SAMPLES);
+  
   /* USER CODE END 2 */
 
   /* Init scheduler */
