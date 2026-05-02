@@ -78,6 +78,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     "${PROJECT_SOURCE_DIR}/Drivers/ETL/include/"
     "${PROJECT_SOURCE_DIR}/Core/Inc"
+    "${PROJECT_SOURCE_DIR}/Components"
     "${PROJECT_SOURCE_DIR}/Core/Inc/PUTM_EV_CAN_LIBRARY/include"
     "${PROJECT_SOURCE_DIR}/Core/Inc/PUTM_EV_CAN_LIBRARY/database/generated"
     # Add user defined include paths
