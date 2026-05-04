@@ -67,7 +67,6 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     Core/Src/global_variables.cpp
     Core/Src/ltc_library.cpp
     Core/Src/ltc_task.cpp
-    Core/Src/main.cpp
     Core/Src/parser.cpp
     Core/Src/soc_ekf.cpp
     Core/Src/soc_update_task.cpp
