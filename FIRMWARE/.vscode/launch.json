@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "stlinkgdbtarget",
+            "request": "launch",
+            "name": "STM32 Debug (Connect Under Reset)",
+            "origin": "snippet",
+            "cwd": "${workspaceFolder}",
+            "preBuild": "${command:st-stm32-ide-debug-launch.build}",
+            "runEntry": "main",
+            // --- KLUCZOWE PARAMETRY DLA TWOJEGO PROBLEMU ---
+            "interface": "swd",
+            "connectionMode": "normal", // Łączy się, trzymając procesor w resecie
+            "resetMode": "hardware",        // Używa fizycznego pinu NRST
+            // ----------------------------------------------
+            "imagesAndSymbols": [
+                {
+                    "imageFileName": "${command:st-stm32-ide-debug-launch.get-projects-binary-from-context1}"
+                }
+            ]
+        }
+    ]
+}
