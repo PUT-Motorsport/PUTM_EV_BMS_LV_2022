@@ -62,10 +62,6 @@
       ],
       "drc_exclusions": [
         [
-          "starved_thermal|149790000|106990000|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|925d5aeb-0728-4df7-839f-ba301fc48cc9|B.Cu",
-          ""
-        ],
-        [
           "starved_thermal|157600000|95737499|eaa85342-dfdc-4e3b-b94e-3ff3ee9d91ae|bd6aed8c-fa2d-4732-853c-d6f658f0c11d|F.Cu",
           ""
         ],
@@ -714,7 +710,7 @@
         "uuid": "61cadedd-f367-4fd1-937a-9fd9456f4804"
       }
     ],
-    "used_designators": "D8",
+    "used_designators": "#PWR34,D8,D10",
     "variants": []
   },
   "sheets": [
