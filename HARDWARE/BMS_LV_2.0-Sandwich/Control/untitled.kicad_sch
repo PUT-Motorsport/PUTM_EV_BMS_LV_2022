@@ -4030,6 +4030,16 @@
 	)
 	(wire
 		(pts
+			(xy 97.155 163.195) (xy 101.6 163.195)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f6cb408-99c6-422d-8bda-b030d90a5f62")
+	)
+	(wire
+		(pts
 			(xy 191.135 55.245) (xy 191.135 59.055)
 		)
 		(stroke
@@ -4390,16 +4400,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 179.705) (xy 105.41 179.705)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55610cfd-f7ec-4175-a762-4e4044fbeba7")
-	)
-	(wire
-		(pts
 			(xy 49.53 75.565) (xy 49.53 77.47)
 		)
 		(stroke
@@ -4407,6 +4407,16 @@
 			(type default)
 		)
 		(uuid "5ac9099a-d066-40e1-991e-a3ba5cd860de")
+	)
+	(wire
+		(pts
+			(xy 96.52 177.165) (xy 100.965 177.165)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5da5c451-7a7a-4fd3-b5f7-bff272edece2")
 	)
 	(wire
 		(pts
@@ -4720,16 +4730,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 174.625) (xy 105.41 174.625)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "93f95dbf-88c5-46db-85e5-6f2589fcd42d")
-	)
-	(wire
-		(pts
 			(xy 128.27 125.73) (xy 132.08 125.73)
 		)
 		(stroke
@@ -4787,6 +4787,16 @@
 			(type default)
 		)
 		(uuid "a6ffbed4-0051-4ee2-92b7-618886c0e52b")
+	)
+	(wire
+		(pts
+			(xy 96.52 174.625) (xy 104.775 174.625)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a80dec16-9ae6-43f7-bef7-eca07b6da85a")
 	)
 	(wire
 		(pts
@@ -4937,6 +4947,16 @@
 			(type default)
 		)
 		(uuid "bdb570fb-6851-41cf-b02b-ba08a44c6f17")
+	)
+	(wire
+		(pts
+			(xy 96.52 179.705) (xy 104.775 179.705)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bed7cb2c-a1c1-4910-8f99-019fa5ee0f3c")
 	)
 	(wire
 		(pts
@@ -10444,7 +10464,7 @@
 		(uuid "202db28b-b319-46f8-9104-ad58d092adc2")
 	)
 	(label "URAT_TX"
-		(at 105.41 174.625 180)
+		(at 104.775 179.705 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10544,7 +10564,7 @@
 		(uuid "3b9cada7-65f1-4721-be6d-4ea11eb655c8")
 	)
 	(label "URAT_RX"
-		(at 105.41 179.705 180)
+		(at 104.775 174.625 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10612,6 +10632,16 @@
 			(justify right bottom)
 		)
 		(uuid "545bcef9-c844-4606-b82e-7732ac94807f")
+	)
+	(label "3V3"
+		(at 101.6 163.195 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "57c8dc19-dafd-4ac6-b038-6778a9b69c3a")
 	)
 	(label "URAT_RX"
 		(at 164.465 114.935 0)
@@ -10892,6 +10922,16 @@
 			(justify left bottom)
 		)
 		(uuid "c34dc6e6-22fd-4c15-b6d9-a2d8b419cf22")
+	)
+	(label "3V3"
+		(at 100.965 177.165 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c4fa007c-3e40-44c7-9b70-c65664c3e83e")
 	)
 	(label "SPI{MOSI MISO SCK CS} "
 		(at 222.885 74.93 0)
@@ -13668,160 +13708,6 @@
 		)
 	)
 	(symbol
-		(lib_id "D5V0P4UR6SO-7:D5V0P4UR6SO-7")
-		(at 68.58 174.625 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7856b2df-a289-4d2c-a5f8-b83fa479c860")
-		(property "Reference" "D8"
-			(at 82.55 167.005 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Quad TVS"
-			(at 82.55 169.545 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "SOT95P285X140-6N"
-			(at 92.71 269.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com//assets/Datasheets/D5V0P4UR6SO.pdf"
-			(at 92.71 369.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "ESD Suppressors / TVS Diodes General Protection PP"
-			(at 68.58 174.625 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "1.4"
-			(at 92.71 569.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "621-D5V0P4UR6SO-7"
-			(at 92.71 669.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/D5V0P4UR6SO-7?qs=rN85NNvew%2FSjbewGRfhy7A%3D%3D"
-			(at 92.71 769.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 92.71 869.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "D5V0P4UR6SO-7"
-			(at 92.71 969.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "4"
-			(uuid "7209e438-003b-4bdd-9935-17f86a25ea24")
-		)
-		(pin "5"
-			(uuid "51c99d7d-26a7-462e-b438-5481125261e6")
-		)
-		(pin "2"
-			(uuid "d6599cbb-e7cc-4159-9c1c-834b87bad5e9")
-		)
-		(pin "1"
-			(uuid "21ff4b1d-794a-44e8-9010-dbf648f150ba")
-		)
-		(pin "3"
-			(uuid "cdfb7f51-e686-4053-9d41-ff51b3ab979f")
-		)
-		(pin "6"
-			(uuid "a7abc42b-bfa5-4985-97cc-384d0076d69d")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED_Small")
 		(at 139.065 168.91 180)
 		(unit 1)
@@ -13965,82 +13851,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 96.52 177.165 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "860d5a89-f502-46a7-b9d8-37a706005985")
-		(property "Reference" "#PWR0151"
-			(at 102.87 177.165 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 101.6 177.165 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 96.52 177.165 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 177.165 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 96.52 177.165 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e8093a4d-c545-42cd-a11c-21854b90ded8")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "#PWR0151")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 49.53 86.36 0)
 		(unit 1)
 		(body_style 1)
@@ -14148,7 +13958,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT95P285X140-6N"
+		(property "Footprint" "Footprint:SOT65P210X110-6N"
 			(at 93.345 255.575 0)
 			(hide yes)
 			(show_name no)
@@ -14160,7 +13970,7 @@
 				(justify left top)
 			)
 		)
-		(property "Datasheet" "https://www.diodes.com//assets/Datasheets/D5V0P4UR6SO.pdf"
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Diodes-Incorporated/D1213A-04S-7?qs=gfe7vQ8txpXU%252BxSNETe%2FjA%3D%3D"
 			(at 93.345 355.575 0)
 			(hide yes)
 			(show_name no)
@@ -14195,7 +14005,7 @@
 				(justify left top)
 			)
 		)
-		(property "Mouser Part Number" "621-D5V0P4UR6SO-7"
+		(property "Mouser Part Number" "D1213A-04S-7 "
 			(at 93.345 655.575 0)
 			(hide yes)
 			(show_name no)
@@ -14419,82 +14229,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 97.155 163.195 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a4a1c33a-9fd9-432c-bc8f-f55ea8f87feb")
-		(property "Reference" "#PWR0150"
-			(at 103.505 163.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 102.235 163.195 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 97.155 163.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 97.155 163.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 97.155 163.195 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3d7f202e-1b12-4998-be5a-c4049f533da8")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "#PWR0150")
 					(unit 1)
 				)
 			)
@@ -15211,6 +14945,160 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR059")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "D5V0P4UR6SO-7:D5V0P4UR6SO-7")
+		(at 68.58 174.625 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f41f168a-ad7b-4d7f-b681-c3b47be2d5ce")
+		(property "Reference" "D8"
+			(at 82.55 167.005 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Quad TVS"
+			(at 82.55 169.545 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Footprint:SOT65P210X110-6N"
+			(at 92.71 269.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Diodes-Incorporated/D1213A-04S-7?qs=gfe7vQ8txpXU%252BxSNETe%2FjA%3D%3D"
+			(at 92.71 369.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Description" "ESD Suppressors / TVS Diodes General Protection PP"
+			(at 68.58 174.625 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Height" "1.4"
+			(at 92.71 569.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Part Number" "D1213A-04S-7 "
+			(at 92.71 669.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/D5V0P4UR6SO-7?qs=rN85NNvew%2FSjbewGRfhy7A%3D%3D"
+			(at 92.71 769.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Name" "Diodes Incorporated"
+			(at 92.71 869.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Manufacturer_Part_Number" "D5V0P4UR6SO-7"
+			(at 92.71 969.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "4"
+			(uuid "4cc1776e-a688-463c-8fd1-264b7e2498da")
+		)
+		(pin "5"
+			(uuid "edb69829-1361-44e4-a3ab-4386e33ebc05")
+		)
+		(pin "2"
+			(uuid "8bcbe073-4af7-4141-8c9b-0fe6decd2d51")
+		)
+		(pin "1"
+			(uuid "76f25daf-6211-4ded-ad76-466b1e74c6f1")
+		)
+		(pin "3"
+			(uuid "e68a8f19-b7d5-4b67-a318-d3db532512e0")
+		)
+		(pin "6"
+			(uuid "64aa24e1-5241-4ad8-b7e3-9a8a0ea36bca")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D8")
 					(unit 1)
 				)
 			)

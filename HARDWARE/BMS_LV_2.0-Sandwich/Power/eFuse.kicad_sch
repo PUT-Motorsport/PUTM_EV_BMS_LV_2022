@@ -991,7 +991,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:Q_PMOS_GDS"
+		(symbol "Transistor_FET:Q_PMOS_GSD"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1012,7 +1012,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "Q_PMOS_GDS"
+			(property "Value" "Q_PMOS_GSD"
 				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1045,7 +1045,7 @@
 					)
 				)
 			)
-			(property "Description" "P-MOSFET transistor, gate/drain/source"
+			(property "Description" "P-MOSFET transistor, gate/source/drain"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1067,7 +1067,7 @@
 					)
 				)
 			)
-			(symbol "Q_PMOS_GDS_0_1"
+			(symbol "Q_PMOS_GSD_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -1234,7 +1234,7 @@
 					)
 				)
 			)
-			(symbol "Q_PMOS_GDS_1_1"
+			(symbol "Q_PMOS_GSD_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -1254,9 +1254,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 5.08 270)
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "D"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1272,9 +1272,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "S"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2948,7 +2948,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_PMOS_GDS")
+		(lib_id "Transistor_FET:Q_PMOS_GSD")
 		(at 166.37 59.69 270)
 		(mirror x)
 		(unit 1)
@@ -2987,9 +2987,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-					(italic yes)
 				)
-				(justify left)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Vishay-Siliconix/SIR5607DP-T1-RE3?qs=1Kr7Jg1SGW%252Bh75TxpAj3gw%3D%3D"
@@ -3001,10 +2999,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "P-MOSFET transistor, gate/source/drain"
 			(at 166.37 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -3045,7 +3042,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_PMOS_GDS")
+		(lib_id "Transistor_FET:Q_PMOS_GSD")
 		(at 135.89 87.63 90)
 		(unit 1)
 		(body_style 1)
@@ -3057,7 +3054,7 @@
 		(fields_autoplaced yes)
 		(uuid "2efa8a09-430d-46cc-ad5f-3ceb4483c883")
 		(property "Reference" "Q15"
-			(at 135.89 78.105 90)
+			(at 135.89 78.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3067,7 +3064,7 @@
 			)
 		)
 		(property "Value" "SIR5607DP-T1-RE3"
-			(at 135.89 80.645 90)
+			(at 135.89 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3084,9 +3081,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-					(italic yes)
 				)
-				(justify left)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Vishay-Siliconix/SIR5607DP-T1-RE3?qs=1Kr7Jg1SGW%252Bh75TxpAj3gw%3D%3D"
@@ -3098,10 +3093,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "P-MOSFET transistor, gate/source/drain"
 			(at 135.89 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3142,7 +3136,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_PMOS_GDS")
+		(lib_id "Transistor_FET:Q_PMOS_GSD")
 		(at 135.89 59.69 90)
 		(unit 1)
 		(body_style 1)
@@ -3154,7 +3148,7 @@
 		(fields_autoplaced yes)
 		(uuid "d7fb36de-9f97-41b4-a3f6-b504f03c12ff")
 		(property "Reference" "Q13"
-			(at 135.89 50.165 90)
+			(at 135.89 50.8 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3164,7 +3158,7 @@
 			)
 		)
 		(property "Value" "SIR5607DP-T1-RE3"
-			(at 135.89 52.705 90)
+			(at 135.89 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3181,9 +3175,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-					(italic yes)
 				)
-				(justify left)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Vishay-Siliconix/SIR5607DP-T1-RE3?qs=1Kr7Jg1SGW%252Bh75TxpAj3gw%3D%3D"
@@ -3195,10 +3187,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "P-MOSFET transistor, gate/source/drain"
 			(at 135.89 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -3239,7 +3230,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:Q_PMOS_GDS")
+		(lib_id "Transistor_FET:Q_PMOS_GSD")
 		(at 166.37 87.63 270)
 		(mirror x)
 		(unit 1)
@@ -3278,9 +3269,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
-					(italic yes)
 				)
-				(justify left)
 			)
 		)
 		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Vishay-Siliconix/SIR5607DP-T1-RE3?qs=1Kr7Jg1SGW%252Bh75TxpAj3gw%3D%3D"
@@ -3292,10 +3281,9 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "P-MOSFET transistor, gate/source/drain"
 			(at 166.37 87.63 0)
 			(hide yes)
 			(show_name no)
