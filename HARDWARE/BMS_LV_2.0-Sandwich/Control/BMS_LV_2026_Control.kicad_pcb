@@ -35761,12 +35761,6 @@
 		(path "/f41557be-03ed-4b92-916e-2af68004fe27/6fdec6b5-d57c-413e-89de-b0328704a939")
 		(sheetname "/Control/")
 		(sheetfile "untitled.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "3" "5" "7" "9" "11" "13" "2" "4" "6" "8" "10" "12" "14")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35913,7 +35907,7 @@
 			)
 		)
 		(pad "1" smd rect
-			(at 3.81 1.525 180)
+			(at 3.81 -1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "unconnected-(J3-Pin_1-Pad1)")
@@ -35922,7 +35916,7 @@
 			(uuid "714026e6-9971-4e6a-9e67-6a0afde03031")
 		)
 		(pad "2" smd rect
-			(at 3.81 -1.525 180)
+			(at 3.81 1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "unconnected-(J3-Pin_2-Pad2)")
@@ -35931,7 +35925,7 @@
 			(uuid "3f321898-0c36-45be-96c2-6120f37f21a7")
 		)
 		(pad "3" smd rect
-			(at 2.54 1.525 180)
+			(at 2.54 -1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/3V3")
@@ -35940,7 +35934,7 @@
 			(uuid "8cd6a9c5-e7d9-4054-b8a5-efca09f494bc")
 		)
 		(pad "4" smd rect
-			(at 2.54 -1.525 180)
+			(at 2.54 1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/Control/SWDIO")
@@ -35949,7 +35943,7 @@
 			(uuid "f9639732-9a98-4aea-b479-1f1753442c91")
 		)
 		(pad "5" smd rect
-			(at 1.27 1.525 180)
+			(at 1.27 -1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "GND")
@@ -35958,7 +35952,7 @@
 			(uuid "6cfc1114-b3e1-452f-b828-831c7060af7c")
 		)
 		(pad "6" smd rect
-			(at 1.27 -1.525 180)
+			(at 1.27 1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/Control/SWCLK")
@@ -35967,7 +35961,7 @@
 			(uuid "dbb4db5f-c196-4bd8-aaed-27414a90b49d")
 		)
 		(pad "7" smd rect
-			(at 0 1.525 180)
+			(at 0 -1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "GND")
@@ -35976,7 +35970,7 @@
 			(uuid "eaa2c063-434b-4970-a690-2a8b679d74b3")
 		)
 		(pad "8" smd rect
-			(at 0 -1.525 180)
+			(at 0 1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/Control/SWO")
@@ -35985,7 +35979,7 @@
 			(uuid "c5965a65-2f8e-489f-a343-9b38de33b734")
 		)
 		(pad "9" smd rect
-			(at -1.27 1.525 180)
+			(at -1.27 -1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "unconnected-(J3-Pin_9-Pad9)")
@@ -35994,7 +35988,7 @@
 			(uuid "b3a6e33b-fb28-4b72-995c-757edff27738")
 		)
 		(pad "10" smd rect
-			(at -1.27 -1.525 180)
+			(at -1.27 1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "unconnected-(J3-Pin_10-Pad10)")
@@ -36003,7 +35997,7 @@
 			(uuid "7c487f27-3b0e-4e3f-b70f-15f5bc2138bf")
 		)
 		(pad "11" smd rect
-			(at -2.54 1.525 180)
+			(at -2.54 -1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "GND")
@@ -36012,7 +36006,7 @@
 			(uuid "925d5aeb-0728-4df7-839f-ba301fc48cc9")
 		)
 		(pad "12" smd rect
-			(at -2.54 -1.525 180)
+			(at -2.54 1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/Control/NRST")
@@ -36021,7 +36015,7 @@
 			(uuid "9592cc6c-d354-4996-93d6-3a7df1043ab4")
 		)
 		(pad "13" smd rect
-			(at -3.81 1.525 180)
+			(at -3.81 -1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/Control/URAT_RX")
@@ -36030,7 +36024,7 @@
 			(uuid "df11ae70-e93b-4169-b894-e6f1107a2176")
 		)
 		(pad "14" smd rect
-			(at -3.81 -1.525 180)
+			(at -3.81 1.525 180)
 			(size 0.76 2.03)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(net "/Control/URAT_TX")
@@ -36047,7 +36041,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -180 -0 -180)
+				(xyz -0 180 -0)
 			)
 		)
 	)
@@ -38892,14 +38886,6 @@
 		(layer "B.Cu")
 		(net "GND")
 		(uuid "9976f1d9-ca26-4550-a5c2-fea3c7228a6a")
-	)
-	(segment
-		(start 185 86.75)
-		(end 185 85.5)
-		(width 0.2)
-		(layer "B.Cu")
-		(net "GND")
-		(uuid "d26a1d0c-3813-4919-97a2-50299f566ccd")
 	)
 	(segment
 		(start 143.800001 108.5)
@@ -42130,6 +42116,14 @@
 		(layer "B.Cu")
 		(net "/Control/NRST")
 		(uuid "c66b14c6-c56d-4c31-a8e2-1dd04b509fe2")
+	)
+	(segment
+		(start 185 86.75)
+		(end 185 85.5)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "/Control/NRST")
+		(uuid "d26a1d0c-3813-4919-97a2-50299f566ccd")
 	)
 	(segment
 		(start 175.25 92.5)
