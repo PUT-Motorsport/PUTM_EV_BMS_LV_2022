@@ -5,252 +5,6 @@
 	(uuid "ca316b09-a9c3-46e9-831d-8efcceb9166f")
 	(paper "A4")
 	(lib_symbols
-		(symbol "D5V0P4UR6SO-7:D5V0P4UR6SO-7"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 24.13 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "D5V0P4UR6SO-7"
-				(at 24.13 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "SOT95P285X140-6N"
-				(at 24.13 -94.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Datasheet" "https://www.diodes.com//assets/Datasheets/D5V0P4UR6SO.pdf"
-				(at 24.13 -194.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Description" "ESD Suppressors / TVS Diodes General Protection PP"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "1.4"
-				(at 24.13 -394.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Part Number" "621-D5V0P4UR6SO-7"
-				(at 24.13 -494.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/D5V0P4UR6SO-7?qs=rN85NNvew%2FSjbewGRfhy7A%3D%3D"
-				(at 24.13 -594.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Name" "Diodes Incorporated"
-				(at 24.13 -694.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Manufacturer_Part_Number" "D5V0P4UR6SO-7"
-				(at 24.13 -794.92 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(symbol "D5V0P4UR6SO-7_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 22.86 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "I/O1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "I/O2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 27.94 -5.08 180)
-					(length 5.08)
-					(name "I/O3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 27.94 -2.54 180)
-					(length 5.08)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 27.94 0 180)
-					(length 5.08)
-					(name "I/O4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -616,6 +370,172 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Zener_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener_Small"
+				(at 0 -2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Zener diode, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "D_Zener_Small_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.762 1.016) (xy -0.762 -1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 1.016) (xy -0.762 0) (xy 0.762 -1.016) (xy 0.762 1.016)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0) (xy -0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_Small_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.778)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
+					(length 1.778)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3836,6 +3756,12 @@
 		(uuid "5c1e1869-4a85-421f-880b-cffe66513ed9")
 	)
 	(junction
+		(at 162.56 104.775)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ecbd9b7-cf1f-449a-b586-8c0e22dc6c91")
+	)
+	(junction
 		(at 193.675 55.245)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3894,10 +3820,6 @@
 		(uuid "16b44ca1-51b6-4117-99f3-759c9e36ad88")
 	)
 	(no_connect
-		(at 68.58 174.625)
-		(uuid "241a2664-de4b-4815-9713-ae85a4d3fcfc")
-	)
-	(no_connect
 		(at 173.355 84.455)
 		(uuid "2afbe8f1-4154-4820-a463-460917fca7c0")
 	)
@@ -3922,10 +3844,6 @@
 		(uuid "4f110d76-1db4-4e99-9059-57d45882431e")
 	)
 	(no_connect
-		(at 69.215 160.655)
-		(uuid "5e560201-9b06-4bac-aea5-356749f73d96")
-	)
-	(no_connect
 		(at 46.355 161.925)
 		(uuid "62a1fb8f-0709-4ede-b196-271920da60f5")
 	)
@@ -3940,10 +3858,6 @@
 	(no_connect
 		(at 173.355 97.155)
 		(uuid "6c750cf5-8090-4c3c-8e07-d43a9c060428")
-	)
-	(no_connect
-		(at 173.355 114.935)
-		(uuid "7be7f58a-2831-44d3-ba82-717957ba4fff")
 	)
 	(no_connect
 		(at 208.915 112.395)
@@ -3966,10 +3880,6 @@
 		(uuid "a4015449-eb69-4fe8-b01f-1a6bb30dad16")
 	)
 	(no_connect
-		(at 97.155 160.655)
-		(uuid "be9c9ddf-8df2-49f9-83fd-9e1400ee1cc3")
-	)
-	(no_connect
 		(at 208.915 92.075)
 		(uuid "c200d0c9-339a-45d9-a835-5dc7374b6d72")
 	)
@@ -3980,10 +3890,6 @@
 	(no_connect
 		(at 33.655 172.085)
 		(uuid "cce49bfb-19e9-40a9-8321-d688342ad7d5")
-	)
-	(no_connect
-		(at 173.355 117.475)
-		(uuid "d652aebb-97b2-4058-a5cb-dbc89d99f3f1")
 	)
 	(no_connect
 		(at 186.055 59.055)
@@ -4155,6 +4061,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.85 153.67) (xy 74.93 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "074e53f8-1cc2-40e7-ad39-6a200a960216")
+	)
+	(wire
+		(pts
 			(xy 134.62 173.99) (xy 137.16 173.99)
 		)
 		(stroke
@@ -4175,13 +4091,13 @@
 	)
 	(wire
 		(pts
-			(xy 97.155 165.735) (xy 101.6 165.735)
+			(xy 88.9 160.655) (xy 95.885 160.655)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "09c91f8b-19ac-4997-af6e-c16e7a831b8e")
+		(uuid "0bd0f8f1-beda-4253-b8ac-3ddcdc70c5f5")
 	)
 	(bus
 		(pts
@@ -4255,16 +4171,6 @@
 	)
 	(wire
 		(pts
-			(xy 62.865 165.735) (xy 69.215 165.735)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1cb1d347-d041-4c22-99cf-abdff12bd017")
-	)
-	(wire
-		(pts
 			(xy 64.135 127.635) (xy 69.215 127.635)
 		)
 		(stroke
@@ -4272,16 +4178,6 @@
 			(type default)
 		)
 		(uuid "1eb9d7fa-a924-44cc-82d0-a66c1f544f2d")
-	)
-	(wire
-		(pts
-			(xy 97.155 163.195) (xy 101.6 163.195)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f6cb408-99c6-422d-8bda-b030d90a5f62")
 	)
 	(wire
 		(pts
@@ -4473,6 +4369,16 @@
 		)
 		(uuid "3b92f333-9299-4de5-94e3-3f6c77d2135a")
 	)
+	(wire
+		(pts
+			(xy 69.85 167.64) (xy 74.93 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ed5d598-0d44-4f85-a64e-0883d9aee31a")
+	)
 	(bus
 		(pts
 			(xy 222.885 74.93) (xy 222.885 76.835)
@@ -4635,6 +4541,16 @@
 	)
 	(wire
 		(pts
+			(xy 70.485 160.655) (xy 74.93 160.655)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54c2c5c6-6a44-49bb-ab94-60c1d758c6ea")
+	)
+	(wire
+		(pts
 			(xy 49.53 75.565) (xy 49.53 77.47)
 		)
 		(stroke
@@ -4672,6 +4588,16 @@
 			(type default)
 		)
 		(uuid "5e31e739-bc52-4459-8b13-350436470005")
+	)
+	(wire
+		(pts
+			(xy 88.9 153.67) (xy 95.885 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6289aaab-4e5e-4250-8d67-186e5bc1e541")
 	)
 	(bus
 		(pts
@@ -4815,16 +4741,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.135 179.705) (xy 68.58 179.705)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d3d4313-03ac-45f2-97a2-3f52f1e22e74")
-	)
-	(wire
-		(pts
 			(xy 46.355 174.625) (xy 47.625 174.625)
 		)
 		(stroke
@@ -4872,6 +4788,16 @@
 			(type default)
 		)
 		(uuid "82d89b29-4aba-4056-b519-56d7f1bebda1")
+	)
+	(wire
+		(pts
+			(xy 158.115 104.775) (xy 162.56 104.775)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "845c0512-f1b3-4e05-b687-8a056190cda4")
 	)
 	(bus
 		(pts
@@ -4925,16 +4851,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 179.705) (xy 103.505 179.705)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89927e2f-a2bf-4320-80b4-3b1d11a4d2ae")
-	)
-	(wire
-		(pts
 			(xy 208.915 147.955) (xy 214.63 147.955)
 		)
 		(stroke
@@ -4945,6 +4861,16 @@
 	)
 	(wire
 		(pts
+			(xy 155.575 117.475) (xy 173.355 117.475)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f5f464a-3c64-4303-8706-1b83ee2617cd")
+	)
+	(wire
+		(pts
 			(xy 75.565 82.55) (xy 75.565 87.63)
 		)
 		(stroke
@@ -4952,6 +4878,16 @@
 			(type default)
 		)
 		(uuid "90f3fff8-f3cb-4e3e-a105-833dd1d51f11")
+	)
+	(wire
+		(pts
+			(xy 170.815 71.755) (xy 173.355 71.755)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "924b0b73-5dcd-411c-a02a-64a57098c92b")
 	)
 	(wire
 		(pts
@@ -5025,6 +4961,16 @@
 	)
 	(wire
 		(pts
+			(xy 162.56 104.775) (xy 173.355 104.775)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3c61714-2943-47e8-8607-9346660e5051")
+	)
+	(wire
+		(pts
 			(xy 75.565 77.47) (xy 75.565 75.565)
 		)
 		(stroke
@@ -5095,6 +5041,16 @@
 	)
 	(wire
 		(pts
+			(xy 87.63 175.26) (xy 96.52 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1d0aab9-2760-48b2-b97f-3ea73f09f6a0")
+	)
+	(wire
+		(pts
 			(xy 69.215 127.635) (xy 69.215 126.365)
 		)
 		(stroke
@@ -5102,16 +5058,6 @@
 			(type default)
 		)
 		(uuid "b2199c77-e208-43a6-adc4-f27db2ba1591")
-	)
-	(wire
-		(pts
-			(xy 96.52 177.165) (xy 102.235 177.165)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5971522-d037-45a8-816a-4ca447ef2321")
 	)
 	(wire
 		(pts
@@ -5335,6 +5281,16 @@
 	)
 	(wire
 		(pts
+			(xy 155.575 114.935) (xy 173.355 114.935)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6200136-7390-4aa3-b29d-54bd7a9ad82f")
+	)
+	(wire
+		(pts
 			(xy 186.055 55.245) (xy 188.595 55.245)
 		)
 		(stroke
@@ -5342,16 +5298,6 @@
 			(type default)
 		)
 		(uuid "d7578cd9-6cd0-4090-b591-1d13876cb2a3")
-	)
-	(wire
-		(pts
-			(xy 96.52 174.625) (xy 104.14 174.625)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d76a2a4c-3349-4156-98d6-3b7966be6c39")
 	)
 	(wire
 		(pts
@@ -5392,6 +5338,16 @@
 			(type default)
 		)
 		(uuid "e58e31e6-6491-4590-9e3c-3f315a3465c6")
+	)
+	(wire
+		(pts
+			(xy 161.925 71.755) (xy 165.735 71.755)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e60aca7e-a65e-41e2-9870-d344aebaf312")
 	)
 	(wire
 		(pts
@@ -5472,6 +5428,16 @@
 			(type default)
 		)
 		(uuid "ed519693-73bc-43b5-9362-c45708e6b313")
+	)
+	(wire
+		(pts
+			(xy 88.265 167.64) (xy 95.885 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0e57d9f-3332-490a-a3e0-d615b6ee94ee")
 	)
 	(wire
 		(pts
@@ -10708,6 +10674,26 @@
 		)
 		(uuid "05013665-4a59-4ffd-85f5-78243c052784")
 	)
+	(label "URAT_RX"
+		(at 87.63 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "06ae03b3-ca6d-4514-bc59-da96cfb72283")
+	)
+	(label "3V3"
+		(at 162.56 99.695 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0b8cab3b-f09e-4d70-9f1a-a9d07c10c240")
+	)
 	(label "3V3A"
 		(at 66.675 72.39 0)
 		(effects
@@ -10729,14 +10715,24 @@
 		(uuid "1cfa498b-c634-410b-900b-76b3ce7f34bd")
 	)
 	(label "SWDIO"
-		(at 103.505 179.705 180)
+		(at 88.9 160.655 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "202db28b-b319-46f8-9104-ad58d092adc2")
+	)
+	(label "URAT_TX"
+		(at 88.265 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "217c3855-f471-4fa8-896e-48ea02e09219")
 	)
 	(label "Therm_4"
 		(at 132.08 120.65 0)
@@ -10777,6 +10773,16 @@
 			(justify left bottom)
 		)
 		(uuid "2f0e72ff-7b10-435d-bb54-9d1327c60402")
+	)
+	(label "URAT_TX"
+		(at 155.575 117.475 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3160f05b-9c21-4324-b48a-fa9cd46741ac")
 	)
 	(label "3V3"
 		(at 23.495 73.025 0)
@@ -10839,12 +10845,12 @@
 		(uuid "437803c0-35c3-41ac-8c2d-0da889007b47")
 	)
 	(label "NRST"
-		(at 101.6 165.735 180)
+		(at 69.85 167.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "4988d39b-646b-47e4-b095-2d48f88f6a65")
 	)
@@ -10889,7 +10895,7 @@
 		(uuid "545bcef9-c844-4606-b82e-7732ac94807f")
 	)
 	(label "SWO"
-		(at 62.865 165.735 0)
+		(at 69.85 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10899,12 +10905,12 @@
 		(uuid "56698f8b-1ff0-4af8-9acc-684152ef3fd2")
 	)
 	(label "3V3"
-		(at 101.6 163.195 180)
+		(at 70.485 160.655 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "57c8dc19-dafd-4ac6-b038-6778a9b69c3a")
 	)
@@ -11028,6 +11034,16 @@
 		)
 		(uuid "7e10a76f-3d9d-4469-a6b3-ed29a305eba3")
 	)
+	(label "URAT_RX"
+		(at 155.575 114.935 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f33bfe5-fa56-4003-bf23-9ae87ea170fa")
+	)
 	(label "Therm_3"
 		(at 132.08 118.11 0)
 		(effects
@@ -11047,16 +11063,6 @@
 			(justify right bottom)
 		)
 		(uuid "8c1972dd-e169-4870-ad72-0236c09708e0")
-	)
-	(label "3V3"
-		(at 64.135 179.705 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "97e6a95f-946e-4d69-b4b8-421973d146cd")
 	)
 	(label "SPI.MOSI"
 		(at 220.345 84.455 180)
@@ -11178,16 +11184,6 @@
 		)
 		(uuid "c34dc6e6-22fd-4c15-b6d9-a2d8b419cf22")
 	)
-	(label "3V3"
-		(at 102.235 177.165 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c4fa007c-3e40-44c7-9b70-c65664c3e83e")
-	)
 	(label "SPI{MOSI MISO SCK CS} "
 		(at 222.885 74.93 0)
 		(effects
@@ -11209,12 +11205,12 @@
 		(uuid "cf2b6769-3811-4ebb-bd9a-a75c2e8d3b65")
 	)
 	(label "SWCLK"
-		(at 104.14 174.625 180)
+		(at 88.9 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "d3e1779f-c023-49fb-9dac-03f060589d79")
 	)
@@ -11249,7 +11245,7 @@
 		(uuid "e7eb5b27-c2d6-4c67-ba02-55ee1f21c745")
 	)
 	(label "NRST"
-		(at 173.355 71.755 180)
+		(at 161.925 71.755 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11343,7 +11339,7 @@
 	)
 	(hierarchical_label "Interlock"
 		(shape input)
-		(at 173.355 104.775 180)
+		(at 158.115 104.775 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -11896,7 +11892,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 69.215 163.195 270)
+		(at 80.01 153.67 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11906,7 +11902,7 @@
 		(dnp no)
 		(uuid "0f62d77b-0951-4a7b-952b-0e3d5518cfa3")
 		(property "Reference" "#PWR0149"
-			(at 62.865 163.195 0)
+			(at 86.36 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11917,7 +11913,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 64.135 163.195 90)
+			(at 85.09 153.67 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11927,7 +11923,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.215 163.195 0)
+			(at 80.01 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11938,7 +11934,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.215 163.195 0)
+			(at 80.01 153.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11949,7 +11945,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 69.215 163.195 0)
+			(at 80.01 153.67 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12536,6 +12532,85 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener_Small")
+		(at 77.47 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "369a5388-4207-44ac-815a-73dfe210db32")
+		(property "Reference" "D7"
+			(at 77.47 163.195 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMF3.0"
+			(at 77.47 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 77.47 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SMF3.0?qs=a2MtRaTmNOTXI%2FQkladrTA%3D%3D"
+			(at 77.47 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode, small symbol"
+			(at 77.47 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ffbecd1a-4a1d-4d09-a19a-cb9f1883f874")
+		)
+		(pin "2"
+			(uuid "4143066e-efb8-49e5-b549-bcdf1ad65765")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -13323,6 +13398,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 80.01 160.655 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4f0fd8bc-f248-49fa-a300-9e67357dcef2")
+		(property "Reference" "#PWR0150"
+			(at 86.36 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 85.09 160.655 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 160.655 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2d0dbd29-19d7-443f-9461-7fc987b74647")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR0150")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 166.37 66.675 270)
 		(unit 1)
@@ -13937,6 +14088,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Zener_Small")
+		(at 98.425 160.655 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7125d805-0e48-405b-9618-0fa0073c561b")
+		(property "Reference" "D11"
+			(at 98.425 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMF3.0"
+			(at 98.425 158.115 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 98.425 160.655 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SMF3.0?qs=a2MtRaTmNOTXI%2FQkladrTA%3D%3D"
+			(at 98.425 160.655 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode, small symbol"
+			(at 98.425 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2b9d16cf-5650-4db2-8be6-d7d090b8a0c5")
+		)
+		(pin "2"
+			(uuid "20f7d6ac-125b-4cd1-83c6-88fa55bd2fca")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 41.275 80.01 180)
 		(unit 1)
@@ -14265,6 +14495,224 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 168.275 71.755 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "837c9527-7341-4f6a-ac78-03dc1b05f90b")
+		(property "Reference" "R29"
+			(at 167.0049 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100"
+			(at 172.72 69.85 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 168.275 71.755 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/20035/dcrcwe3.pdf"
+			(at 168.275 71.755 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 168.275 71.755 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/Vishay-Dale/CRCW06031K00FKED?qs=sGAEpiMZZMtlubZbdhIBIKbhzOdzan%2FGTch9K0lp5pQ%3D"
+			(at 168.275 71.755 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Author" ""
+			(at 168.275 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 168.275 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 168.275 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 168.275 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 168.275 71.755 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "325a3dd6-2137-4b13-8318-f3a1929acc2e")
+		)
+		(pin "2"
+			(uuid "d1779f6f-fbb6-495c-a41b-a5f568fabe60")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "R29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 80.01 167.64 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8d931bc3-c6b1-4874-b9e9-852385793104")
+		(property "Reference" "#PWR0151"
+			(at 86.36 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 85.09 167.64 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 80.01 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 80.01 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b924dcd6-bd01-43cc-ba40-c5d02e758690")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR0151")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 49.53 86.36 0)
 		(unit 1)
@@ -14336,160 +14784,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR026")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "D5V0P4UR6SO-7:D5V0P4UR6SO-7")
-		(at 69.215 160.655 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "932b6181-1dc8-4dd0-8219-0816dcd46268")
-		(property "Reference" "D7"
-			(at 83.185 153.035 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Quad TVS"
-			(at 83.185 155.575 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Footprint:SOT65P210X110-6N"
-			(at 93.345 255.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Diodes-Incorporated/D1213A-04S-7?qs=gfe7vQ8txpXU%252BxSNETe%2FjA%3D%3D"
-			(at 93.345 355.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "ESD Suppressors / TVS Diodes General Protection PP"
-			(at 69.215 160.655 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "1.4"
-			(at 93.345 555.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "D1213A-04S-7 "
-			(at 93.345 655.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/D5V0P4UR6SO-7?qs=rN85NNvew%2FSjbewGRfhy7A%3D%3D"
-			(at 93.345 755.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 93.345 855.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "D5V0P4UR6SO-7"
-			(at 93.345 955.575 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "4"
-			(uuid "09b15d8a-88c8-4975-98bb-1137e2b2cc8e")
-		)
-		(pin "5"
-			(uuid "4c77972f-73b5-4383-84fb-e043b9d17bfb")
-		)
-		(pin "2"
-			(uuid "d7d33981-a20f-48fe-9708-76812b1c4968")
-		)
-		(pin "1"
-			(uuid "feea07a9-79a8-4628-84fd-3ea85decb199")
-		)
-		(pin "3"
-			(uuid "13f7f042-c09d-4fdc-9e69-54237a2e4b0b")
-		)
-		(pin "6"
-			(uuid "925eaecd-2b2a-4982-9356-565de473c9f3")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -14727,6 +15021,161 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 100.965 160.655 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b4766697-35c3-453d-a927-13dbac9b6d25")
+		(property "Reference" "#PWR0154"
+			(at 107.315 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.045 160.655 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.965 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.965 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 160.655 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5fd50c50-8e8e-4f72-9257-7e41481f7515")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR0154")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener_Small")
+		(at 77.47 160.655 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b5d874b3-be7e-4160-bcc2-f7ad289a924e")
+		(property "Reference" "D6"
+			(at 77.47 156.21 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMF3.0"
+			(at 77.47 158.115 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 77.47 160.655 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SMF3.0?qs=a2MtRaTmNOTXI%2FQkladrTA%3D%3D"
+			(at 77.47 160.655 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode, small symbol"
+			(at 77.47 160.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "58e42312-ab10-4f79-af88-6d0797860612")
+		)
+		(pin "2"
+			(uuid "ef8d9181-e345-4cf1-bf2d-071152f60f67")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_Small")
 		(at 139.7 173.99 180)
 		(unit 1)
@@ -14869,6 +15318,320 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Zener_Small")
+		(at 98.425 167.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cee8bf93-0032-4379-bd15-8c827161b2fe")
+		(property "Reference" "D12"
+			(at 98.425 163.195 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMF3.0"
+			(at 98.425 165.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 98.425 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SMF3.0?qs=a2MtRaTmNOTXI%2FQkladrTA%3D%3D"
+			(at 98.425 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode, small symbol"
+			(at 98.425 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "68d11358-f8f2-457a-8932-21037ffe554a")
+		)
+		(pin "2"
+			(uuid "843a3449-2041-4803-8abd-fde8b0599fa0")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.965 153.67 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cfb5faa7-c1b0-4f47-b78b-acff0af478c3")
+		(property "Reference" "#PWR0153"
+			(at 107.315 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.045 153.67 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 100.965 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100.965 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 100.965 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "44cd715f-8636-4584-a02a-bc5ab5a81027")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR0153")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener_Small")
+		(at 77.47 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d2cedee0-39a6-4b1d-bcf9-d0c7d5548844")
+		(property "Reference" "D5"
+			(at 77.47 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMF3.0"
+			(at 77.47 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 77.47 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SMF3.0?qs=a2MtRaTmNOTXI%2FQkladrTA%3D%3D"
+			(at 77.47 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode, small symbol"
+			(at 77.47 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "86b14c30-bd36-4de6-9199-dc4686783e84")
+		)
+		(pin "2"
+			(uuid "438bb8b1-93d3-4121-bd2c-2e9ecb997b2a")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener_Small")
+		(at 99.06 175.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d4f9d254-732b-4437-a679-39a46c8cb7bf")
+		(property "Reference" "D13"
+			(at 99.06 170.815 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMF3.0"
+			(at 99.06 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 99.06 175.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SMF3.0?qs=a2MtRaTmNOTXI%2FQkladrTA%3D%3D"
+			(at 99.06 175.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode, small symbol"
+			(at 99.06 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "02ebc826-ea67-451c-89b1-a11b5d3f99ac")
+		)
+		(pin "2"
+			(uuid "7ace9703-bcd6-4c6a-8cac-6fcf39b654f0")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 193.675 160.655 0)
 		(unit 1)
@@ -14940,6 +15703,268 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 162.56 102.235 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e2d5f493-2a1a-4f1e-9618-086cad439028")
+		(property "Reference" "R27"
+			(at 165.1 103.505 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 165.1 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Name" "--"
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer_Part_Number" "RT0603DRE07100KL"
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "In Order" ""
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Part Number" "603-RT0603DRE07100KL"
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.pl/ProductDetail/KOA-Speer/RK73B1JTTD104J?qs=sGAEpiMZZMvdGkrng054t2HaaJFon%252B0pQ1vDU7rpyKc%3D"
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Author" ""
+			(at 162.56 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "License" ""
+			(at 162.56 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" ""
+			(at 162.56 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 162.56 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 162.56 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3ec6fb6f-05e5-4260-89ab-ec7063f725f1")
+		)
+		(pin "2"
+			(uuid "47bead41-920b-4875-b06f-e328ac3146a7")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 101.6 175.26 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e35e8d48-29d9-4375-bce0-e22c39de17eb")
+		(property "Reference" "#PWR0156"
+			(at 107.95 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 175.26 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 175.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e1eb3ce8-bc2d-4067-91aa-32108addde51")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "#PWR0156")
 					(unit 1)
 				)
 			)
@@ -15027,8 +16052,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 68.58 177.165 270)
+		(lib_id "Device:D_Zener_Small")
+		(at 98.425 153.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15036,9 +16061,88 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ee0e111d-e85a-43c9-8a07-303c87d69157")
-		(property "Reference" "#PWR0152"
-			(at 62.23 177.165 0)
+		(uuid "e8a1bd9b-7051-4ac6-a99b-a9c19c9d4e29")
+		(property "Reference" "D8"
+			(at 98.425 149.225 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMF3.0"
+			(at 98.425 151.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
+			(at 98.425 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Littelfuse/SMF3.0?qs=a2MtRaTmNOTXI%2FQkladrTA%3D%3D"
+			(at 98.425 153.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Zener diode, small symbol"
+			(at 98.425 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e076d0b1-9447-4ca0-851f-cd69042931f4")
+		)
+		(pin "2"
+			(uuid "83ce85a9-1a5d-4fbb-bff4-fe57d932ff7b")
+		)
+		(instances
+			(project "BMS_LV_2026_Control"
+				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 100.965 167.64 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eb828134-55e4-4df1-9436-3c41d90f657b")
+		(property "Reference" "#PWR0155"
+			(at 107.315 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15049,7 +16153,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 63.5 177.165 90)
+			(at 106.045 167.64 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15059,7 +16163,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 177.165 0)
+			(at 100.965 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15070,7 +16174,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 177.165 0)
+			(at 100.965 167.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15081,7 +16185,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 177.165 0)
+			(at 100.965 167.64 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15091,12 +16195,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a92c7019-7d68-45ec-b229-039b7ce24c36")
+			(uuid "08b986c5-1bd7-4300-bc97-a2e13292a95a")
 		)
 		(instances
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "#PWR0152")
+					(reference "#PWR0155")
 					(unit 1)
 				)
 			)
@@ -15360,160 +16464,6 @@
 			(project "BMS_LV_2026_Control"
 				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
 					(reference "#PWR059")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "D5V0P4UR6SO-7:D5V0P4UR6SO-7")
-		(at 68.58 174.625 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f41f168a-ad7b-4d7f-b681-c3b47be2d5ce")
-		(property "Reference" "D8"
-			(at 82.55 167.005 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Quad TVS"
-			(at 82.55 169.545 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Footprint:SOT65P210X110-6N"
-			(at 92.71 269.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.pl/ProductDetail/Diodes-Incorporated/D1213A-04S-7?qs=gfe7vQ8txpXU%252BxSNETe%2FjA%3D%3D"
-			(at 92.71 369.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Description" "ESD Suppressors / TVS Diodes General Protection PP"
-			(at 68.58 174.625 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "1.4"
-			(at 92.71 569.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Part Number" "D1213A-04S-7 "
-			(at 92.71 669.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/D5V0P4UR6SO-7?qs=rN85NNvew%2FSjbewGRfhy7A%3D%3D"
-			(at 92.71 769.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 92.71 869.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(property "Manufacturer_Part_Number" "D5V0P4UR6SO-7"
-			(at 92.71 969.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "4"
-			(uuid "4cc1776e-a688-463c-8fd1-264b7e2498da")
-		)
-		(pin "5"
-			(uuid "edb69829-1361-44e4-a3ab-4386e33ebc05")
-		)
-		(pin "2"
-			(uuid "8bcbe073-4af7-4141-8c9b-0fe6decd2d51")
-		)
-		(pin "1"
-			(uuid "76f25daf-6211-4ded-ad76-466b1e74c6f1")
-		)
-		(pin "3"
-			(uuid "e68a8f19-b7d5-4b67-a318-d3db532512e0")
-		)
-		(pin "6"
-			(uuid "64aa24e1-5241-4ad8-b7e3-9a8a0ea36bca")
-		)
-		(instances
-			(project "BMS_LV_2026_Control"
-				(path "/61cadedd-f367-4fd1-937a-9fd9456f4804/f41557be-03ed-4b92-916e-2af68004fe27"
-					(reference "D8")
 					(unit 1)
 				)
 			)
