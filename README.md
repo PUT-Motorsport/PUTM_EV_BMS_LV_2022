@@ -1,4 +1,4 @@
-# PUTM_EV_BMS_LV_2022
+# PUTM_EV_BMS_LV
 
 ## About
 Battery Management System (BMS) is an electronic system that manages a rechargeable battery. In case of this project, it will be battery made of 21700 cells packed in 6S2P configuration.
