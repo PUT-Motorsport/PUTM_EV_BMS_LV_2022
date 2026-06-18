@@ -591,7 +591,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../../../CONTROL/",
+      "plot": "../../../../BMW_LV_CONTROL_1.1/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "../Assembly/BMS_LV_2026_Control_v2.step",
@@ -726,7 +726,7 @@
         "uuid": "61cadedd-f367-4fd1-937a-9fd9456f4804"
       }
     ],
-    "used_designators": "#PWR150-151,#PWR153-156,D1-8,D11-13,F6,R27,R29",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [

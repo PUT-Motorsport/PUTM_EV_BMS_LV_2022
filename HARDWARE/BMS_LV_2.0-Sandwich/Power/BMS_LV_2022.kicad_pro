@@ -1152,7 +1152,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../../../POWER/",
+      "plot": "../../../../BMS_LV_POWER_1.1/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "../Assembly/BMS_LV_2022.step",
